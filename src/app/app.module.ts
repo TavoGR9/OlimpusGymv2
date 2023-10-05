@@ -31,6 +31,7 @@ import { AsistenciaComponent } from './admin/asistencia/asistencia.component';
 import { EntrenamientoPiernaComponent } from './trainer/entrenamiento-pierna/entrenamiento-pierna.component';
 import { MembresiasComponent } from './recepcionist/membresias/membresias.component';
 import { CarruselComponent } from './user/carrusel/carrusel.component';
+import { AboutUsComponent } from './user/about-us/about-us.component';
 
 
 @NgModule({
@@ -49,20 +50,21 @@ import { CarruselComponent } from './user/carrusel/carrusel.component';
     AsistenciaComponent,
     EntrenamientoPiernaComponent,
     MembresiasComponent,
-    CarruselComponent
+    CarruselComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
-    SharedModule, 
-    MatMenuModule, 
-    MatButtonModule, 
-    MatIconModule, 
-    MatInputModule, 
-    MatFormFieldModule, 
-    ReactiveFormsModule, 
+    SharedModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatIconModule,
+    MatInputModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
     FormsModule,
     MatSelectModule,
     MatTabsModule,

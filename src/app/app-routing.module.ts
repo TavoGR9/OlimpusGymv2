@@ -14,6 +14,7 @@ import { AsistenciaComponent } from './admin/asistencia/asistencia.component';
 import { EntrenamientoPiernaComponent } from './trainer/entrenamiento-pierna/entrenamiento-pierna.component';
 import { MembresiasComponent } from './recepcionist/membresias/membresias.component';
 import { CarruselComponent } from './user/carrusel/carrusel.component';
+import { AboutUsComponent } from '../app/user/about-us/about-us.component'
 
 const routes: Routes = [
   //cuando el usuario no ponga nada
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: "finaliza-compra", component: FinalizarCompraComponent },
   { path: "productos", component: ProductosComponent },
   { path: "carrusel", component: CarruselComponent },
+  { path: "sobre-nosotros", component: AboutUsComponent },
   //componentes recepcionista
   { path: "stock", component: StockComponent },
   { path: "detalles-compra", component: DetalleCompraComponent },
