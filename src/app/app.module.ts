@@ -30,6 +30,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { AsistenciaComponent } from './admin/asistencia/asistencia.component';
 import { EntrenamientoPiernaComponent } from './trainer/entrenamiento-pierna/entrenamiento-pierna.component';
 import { MembresiasComponent } from './recepcionist/membresias/membresias.component';
+import { AboutUsComponent } from './user/about-us/about-us.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { MembresiasComponent } from './recepcionist/membresias/membresias.compon
     ProductosComponent,
     AsistenciaComponent,
     EntrenamientoPiernaComponent,
-    MembresiasComponent
+    MembresiasComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
