@@ -1,0 +1,81 @@
+/**propiedades botones  header - toolbar**/
+.btn {
+    margin: 10px;
+    width: 150px;
+    height: 50px;
+    border-radius: 19px;
+    background: #F9A640;
+    color: black;
+    font-weight: bold;
+}
+
+/**Styles para la tabla**/
+.styled-table { 
+    border-collapse: collapse; 
+    margin: 25px 0; 
+    font-size: 1em; 
+    font-family: sans-serif; 
+    min-width: 450px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); 
+    margin: 0 auto; 
+    text-align:center;
+}
+
+.styled-table-thead-tr { 
+    background-color: #f9a640; 
+    color: black;
+    font-weight: bold;
+    text-align: middle;
+}
+/*tamaño de encabezado de tabla*/
+.styled-table-td { 
+    padding: 10px 40px; 
+}
+/*tamaño de celdas del body de tabla*/
+.styled-table-td-body { 
+    padding: 15px 40px; 
+}
+
+.styled-table-tbody-tr {
+    border-bottom: 1px solid #dddddd; 
+}
+
+/** BODY Y FOOTER*/
+.body-component{
+    position: relative;
+    padding-bottom: 180px;
+    min-height: 100vh;
+}
+
+/** INPUT Y BOTON SEARCH*/
+.input-wrapper {
+    position: relative;
+    width: 400px;
+    height: 40px;
+    margin-left: 70px;
+    border-width: 3px;
+    border-radius: 15px;
+  }
+
+.button-search{
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    margin-left: 5px;
+    border-radius: 15px;
+}
+
+/** INPUT DATE*/
+.input-date{
+    width: 150px;
+    height: 40px;
+    border-radius: 15px;
+    text-align:center;
+    border-width: 3px;
+}
+
+/** TAMAÑO IMAGEN*/
+.img-size{
+    width: 70px;
+    height: 70px;
+}

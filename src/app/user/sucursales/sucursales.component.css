@@ -1,0 +1,36 @@
+/**propiedades grid padre**/
+.grid_padre {
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+
+/**propiedades contenedor titulo**/
+.title_page {
+    text-align: center;
+}
+
+/**contenedor searchbar**/
+.content_searchbar {
+    width: 90%;
+    text-align: right;
+}
+
+/**propiedades input search bar**/
+.inputs_css {
+    width: 40%;
+}
+
+/**propiedades checkbox**/
+.item-checkbox {
+    display: block;
+}
+
+/**porpiedades contenedor de filtros **/
+#filters_container {
+    margin: 0 50px;
+    align-items: center;
+    text-align: center;
+    border: green solid;
+    width: 90%;
+}
+

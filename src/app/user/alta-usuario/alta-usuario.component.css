@@ -1,0 +1,53 @@
+/**propiedades body**/
+.body {
+    margin: 0;
+    position: relative;
+    padding-bottom: 139px;
+    min-height: 100vh;
+    background: #F3F3F3;
+}
+
+/**propiedades contenedor padre**/
+.content_body {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    background: white;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+/**propiedades contenedor titulo**/
+.title_page {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+/**propiedades btn ingresar**/
+.btn_int {
+    width: 350px;
+    height: 50px;
+    font-size: larger;
+}
+
+/**propiedades inputs **/
+.inputs_properties {
+    width: 350px;
+}
+
+/**propiedades btn redes sociales **/
+.btn_social {
+    margin: 10px;
+}
+
+/**propiedades de los iconos google y facebook**/
+fa-icon {
+    font-size: xx-large;
+}
+
+/**propiedades contenedor redes sociales **/
+.btns_redess {
+    padding-bottom: 50px;
+}

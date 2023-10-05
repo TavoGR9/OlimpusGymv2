@@ -1,0 +1,124 @@
+
+/**.footerc{
+    position: absolute;
+    bottom: 0;
+    width: 100%;----
+    padding: 1em 0;
+    margin-top: auto; 
+}
+*/
+body *, html * {
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+.footerc{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+div{
+    display: block;
+}
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.membresia-w {
+    display: table;
+    border-spacing: 22px;
+    max-width: 790px;
+    margin: 0 auto;
+    padding: 75px 0;
+    width: 80%;
+}
+.membresia-box {
+    text-align: justify;
+    text-justify: distribute;
+    font-size: 0;
+}
+.membresia--inverse {
+    background: #1f2123;
+    border-color: #1f2123;
+    
+    
+    padding-top: 58px;
+    padding-bottom: 28px;
+
+}
+
+.membresia {
+    display: inline-block;
+    vertical-align: top;
+    display: table-cell;
+    width: 355px;
+    height: 300px;
+    padding: 0 0 10px;
+    border: 1px solid #ffffff;
+    border-radius: 1px;
+    text-align: center;
+}
+.membresia_info {
+    padding: 0 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.membresia .membresia_info .membresia-titulo {
+    font-size: 25px;
+}
+.membresia-titulo {
+    font: 700 20px Roboto,helvetica,arial,sans-serif;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+}
+.membresia--inverse .membresia_list_item, .membresia--inverse .membresia_list_titulo, .membresia--inverse .membresia_list_trigger, .membresia--inverse .membresia_list__trigger__icon, .membresia--inverse .membresia-precio, .membresia--inverse .membresia-texto, .membresia--inverse .membresia-titulo {
+    color: #fff;
+}
+
+.membresia-discla {
+    height: 55px;
+    text-align: center;
+}
+
+.membresia_button {
+    width: 210px;
+}
+.membresia--buy, .membresia--leaked {
+    background-color: #fff;
+    border: 1px solid #dcd0e0;
+    color: #000;
+}
+
+.Button {
+    vertical-align: middle;
+    padding: 26px;
+    border: none;
+    border-radius: 2px;
+    background-color: #ffffff;
+    font: 700 14px Roboto,helvetica,arial,sans-serif;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    outline: 0;
+    transition: background .5s ease;
+}
+.membresia-titulo .precio{
+    font-size: 20px;
+}

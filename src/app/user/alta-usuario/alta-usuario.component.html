@@ -1,0 +1,87 @@
+<div class="body">
+    <!--SE AGREGA EL HEADER-->
+  <div class="header_component">
+    <app-header></app-header>
+  </div>
+
+  <!--SE AGREGA CONTENIDO DE LA PANTALLA-->
+  <div class="content_body">
+    <div class="title_page">
+        <h1>Registrate</h1>
+    </div><!--cierra title page-->
+    <div class="form_content">
+        <form [formGroup]="form" (ngSubmit)="registrar()">
+            <p>
+                <mat-form-field appearance="outline" class="inputs_properties">
+                    <mat-label>Nombre</mat-label>
+                    <input type="text" matInput placeholder="Nombre" autocomplete="off" formControlName="nombre">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline" class="inputs_properties">
+                    <mat-label>Apellido paterno</mat-label>
+                    <input type="text" matInput placeholder="Apellido paterno" autocomplete="off" formControlName="paterno">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline" class="inputs_properties">
+                    <mat-label>Apellido materno</mat-label>
+                    <input type="text" matInput placeholder="Apellido materno" autocomplete="off" formControlName="materno">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline" class="inputs_properties">
+                    <mat-label>Telefono</mat-label>
+                    <input type="text" matInput placeholder="Telefono" autocomplete="off" minlength="8" maxlength="10" formControlName="telefono">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline" class="inputs_properties">
+                    <mat-label>Dirección</mat-label>
+                    <input type="text" matInput placeholder="Dirección" autocomplete="off" formControlName="direccion">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline" class="inputs_properties" formControlName="nacimiento">
+                   <mat-label>Fecha de nacimiento</mat-label>
+                   <input type="date" matInput autocomplete="off">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline" class="inputs_properties">
+                    <mat-label>Correo</mat-label>
+                    <input type="text" placeholder="Correo" matInput autocomplete="off" formControlName="email">
+                  </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline" class="inputs_properties">
+                    <mat-label>Asignar contraseña</mat-label>
+                    <input matInput  matInput [type]="hide ? 'password' : 'text'" placeholder="Asignar contraseña" formControlName="password">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+            </p>
+            <button type="submit" class="btn_int" mat-raised-button style="background: #FD9727; color: white;">
+                Registrar</button>
+        </form>
+    </div><!--cierra form content-->
+    <div class="opciones_acceso">
+        <p>Otras opciones de acceso</p>
+      </div><!--cierra div opciones de acceso-->
+      <div class="btns_redess">
+        <button class="btn_social" mat-fab color="warn">
+          <fa-icon [icon]="['fab', 'google']"></fa-icon>
+        </button>
+        <button class="btn_social" mat-fab color="primary">
+          <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+        </button>
+      </div><!--cierra div btns redes sociales-->
+  </div><!--cierra content body-->
+
+    <!--SE AGREGA EL FOOTER-->
+  <div class="footer_component">
+    <app-footer></app-footer>
+  </div>
+
+</div>

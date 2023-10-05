@@ -1,0 +1,104 @@
+/**propiedades del body **/
+.body {
+    margin: 0;
+    position: relative;
+    padding-bottom: 139px;
+    min-height: 100vh;
+}
+
+.container-filters {
+    width: 20%;
+    float: left;
+}
+
+.container-products {
+    width: 80%;
+    float: left;
+    min-height: 100vh;
+    position: relative;
+}
+
+.container-searchbar {
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 50px;
+    padding-right: 50px;
+    box-sizing: border-box;
+}
+
+.container-searchbar #search-bar {
+    width: 50%;
+}
+
+.results {
+    float: left;
+    width: 100%;
+    padding-left: 50px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+}
+
+.products-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    float: left;
+    gap: 15px;
+    row-gap: 70px;
+    padding: 10px;
+    box-sizing: border-box;
+    padding-bottom: 50px;
+}
+
+.product-item {
+
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.image-product {
+    display: flex;
+    justify-content: center;
+}
+
+.image-product img {
+    display: block;
+    width: 65%;
+    height: 160px;
+}
+
+#container-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#container-buttons button {
+    background-color: #000000;
+    margin: 10px;
+}
+
+
+/**PROPIEDADES DEL FILTER BAR **/
+#filters-container {
+    border-right: 1px solid #eee;
+    width: 100%;
+}
+
+.filters h3 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.filters mat-checkbox {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/**PROPIEDADES DEL SEARCHBAR **/
+mat-form-field {
+    width: 100%;
+}
+

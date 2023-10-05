@@ -1,0 +1,321 @@
+<div class="body-component">
+    <!----Header-->
+    <div>
+        <app-header></app-header>
+    </div>
+
+    <!----Body-->
+    <div>
+
+        <mat-tab-group animationDuration="2000ms">
+            <!---TAB DE PROVEEDORES DE STOCK-->
+            <mat-tab label="Proveedores De Stock">
+                
+                <br>
+
+                <div style="text-align:right; margin-right: 75px;">
+                    <button mat-raised-button class="button-search"
+                        style="background-color: #f9a640; color: black;">Agregar
+                    </button>
+                    <button mat-raised-button class="button-search"
+                        style="background-color: #f9a640; color: black; margin-left: 25px;">Descargar
+                    </button>
+                </div>
+                
+                <br>
+                
+                <div>
+                    <input class="input-wrapper" type="search" placeholder="Buscar"/>
+                    <button mat-raised-button class="button-search"
+                        style="background-color: #f9a640; color: black;">Buscar
+                    </button>
+                    <label style="margin-left: 350px;">Desde:
+                    <input type="date" class="input-date" id="start" value="2023-09-17" min="2020-01-01" max="4000-12-31"/></label>
+                    <label style="margin-left: 25px;">Hasta:
+                    <input type="date" class="input-date" id="end" value="2023-09-23" min="2020-01-01" max="4000-12-31"/></label>
+                </div>
+                
+                <br>
+                
+                <div>
+                    <table class="styled-table">
+
+                        <tr class="styled-table-thead-tr">
+          
+                            <td class="styled-table-td">Proveedor</td>
+          
+                            <td class="styled-table-td">Tipo producto</td>
+          
+                            <td class="styled-table-td">Numero de productos ingresados</td>
+
+                            <td class="styled-table-td">Fecha / Hora</td>
+
+                            <td class="styled-table-td">Total pagado a proveedor</td>
+
+                            <td class="styled-table-td">Producto</td>
+          
+                        </tr>
+          
+                        <tr class="styled-table-tbody-tr">
+          
+                            <td class="styled-table-td-body">Coca Cola</td>
+          
+                            <td class="styled-table-td-body">Bebidas</td>
+          
+                            <td class="styled-table-td-body">30 pz</td>
+
+                            <td class="styled-table-td-body">2023/09/18 
+                                <p>12:07 PM</p>
+                            </td>
+
+                            <td class="styled-table-td-body">$300.00</td>
+
+                            <td class="styled-table-td-body">Botella Ciel 1L 
+                                <p>00023</p>
+                            </td>
+          
+                        </tr>
+
+                        <tr class="styled-table-tbody-tr">
+          
+                            <td class="styled-table-td-body">Coca Cola</td>
+          
+                            <td class="styled-table-td-body">Bebidas</td>
+          
+                            <td class="styled-table-td-body">25 pz</td>
+
+                            <td class="styled-table-td-body">2023/09/18 
+                                <p>12:07 PM</p>
+                            </td>
+
+                            <td class="styled-table-td-body">$532.00</td>
+
+                            <td class="styled-table-td-body">Powerade Azul 1L 
+                                <p>00098</p>
+                            </td>
+            
+                        </tr>
+
+                        <tr class="styled-table-tbody-tr">
+          
+                            <td class="styled-table-td-body">Gym Co.</td>
+          
+                            <td class="styled-table-td-body">Proteinas</td>
+          
+                            <td class="styled-table-td-body">50 pz</td>
+
+                            <td class="styled-table-td-body">2023/09/19 
+                                <p>5:29 PM</p>
+                            </td>
+
+                            <td class="styled-table-td-body">$8000.00</td>
+
+                            <td class="styled-table-td-body">Proteina 597g 
+                                <p>00071</p>
+                            </td>
+            
+                        </tr>
+
+                        <tr class="styled-table-tbody-tr">
+          
+                            <td class="styled-table-td-body">Sport</td>
+          
+                            <td class="styled-table-td-body">Ropa</td>
+          
+                            <td class="styled-table-td-body">15 pz</td>
+
+                            <td class="styled-table-td-body">2023/09/20 
+                                <p>9:00 AM</p>
+                            </td>
+
+                            <td class="styled-table-td-body">$3500.00</td>
+
+                            <td class="styled-table-td-body">Ropa deportiva Talla: XL 
+                                <p>00080</p>
+                            </td>
+            
+                        </tr>
+
+                        <tr class="styled-table-thead-tr">
+          
+                            <td class="styled-table-td">Total</td>
+          
+                            <td class="styled-table-td"></td>
+          
+                            <td class="styled-table-td">120 pz</td>
+
+                            <td class="styled-table-td"></td>
+
+                            <td class="styled-table-td">$12,332.00</td>
+
+                            <td class="styled-table-td"></td>
+
+                        </tr>
+          
+                    </table>
+                </div>
+
+            </mat-tab>
+
+            <!---TAB DE STOCK-->
+            <mat-tab label="Stock Actual">
+                <br>
+
+                <div style="text-align:right; margin-right: 75px;">
+                    <button mat-raised-button class="button-search"
+                        style="background-color: #f9a640; color: black;">Agregar
+                    </button>
+                    <button mat-raised-button class="button-search"
+                        style="background-color: #f9a640; color: black; margin-left: 25px;">Descargar
+                    </button>
+                </div>
+                
+                <br>
+                
+                <div>
+                    <input class="input-wrapper" type="search" placeholder="Buscar"/>
+                    <button mat-raised-button class="button-search"
+                        style="background-color: #f9a640; color: black;">Buscar
+                    </button>
+                </div>
+                
+                <br>
+                
+                <div>
+                    <table class="styled-table">
+
+                        <tr class="styled-table-thead-tr">
+          
+                            <td class="styled-table-td">Imagen</td>
+          
+                            <td class="styled-table-td">Producto</td>
+          
+                            <td class="styled-table-td">Stock Actual</td>
+
+                            <td class="styled-table-td">Pedidos</td>
+
+                            <td class="styled-table-td">Disponibles</td>
+
+                            <td class="styled-table-td">Proveedor</td>
+
+                            <td class="styled-table-td">Vendidos</td>
+          
+                        </tr>
+          
+                        <tr class="styled-table-tbody-tr">
+          
+                            <td class="styled-table-td-body"><img class="img-size" src="../../../assets/img/stock-img/agua.jpg"></td>
+          
+                            <td class="styled-table-td-body">Botella Ciel 1L
+                                <p>00023</p>
+                                <p>$20</p>
+                            </td>
+          
+                            <td class="styled-table-td-body">15 pz</td>
+
+                            <td class="styled-table-td-body">0 pz</td>
+
+                            <td class="styled-table-td-body">15 pz</td>
+
+                            <td class="styled-table-td-body">Coca Cola</td>
+
+                            <td class="styled-table-td-body">15 pz</td>
+          
+                        </tr>
+
+                        <tr class="styled-table-tbody-tr">
+          
+                            <td class="styled-table-td-body"><img class="img-size" src="../../../assets/img/stock-img/power.jpg"></td>
+          
+                            <td class="styled-table-td-body">Powerade Moras 1L
+                                <p>00098</p>
+                                <p>$28</p>
+                            </td>
+          
+                            <td class="styled-table-td-body">3 pz</td>
+
+                            <td class="styled-table-td-body">0 pz</td>
+
+                            <td class="styled-table-td-body">3 pz</td>
+
+                            <td class="styled-table-td-body">Coca Cola</td>
+
+                            <td class="styled-table-td-body">22 pz</td>
+            
+                        </tr>
+
+                        <tr class="styled-table-tbody-tr">
+          
+                            <td class="styled-table-td-body"><img class="img-size" src="../../../assets/img/stock-img/proteina.jpg"></td>
+          
+                            <td class="styled-table-td-body">Proteina 597g
+                                <p>00071</p>
+                                <p>$200</p>
+                            </td>
+          
+                            <td class="styled-table-td-body">25 pz</td>
+
+                            <td class="styled-table-td-body">5 pz</td>
+
+                            <td class="styled-table-td-body">25 pz</td>
+
+                            <td class="styled-table-td-body">Gym Co.</td>
+
+                            <td class="styled-table-td-body">20 pz</td>
+            
+                        </tr>
+
+                        <tr class="styled-table-tbody-tr">
+          
+                            <td class="styled-table-td-body"><img class="img-size" src="../../../assets/img/stock-img/ropa_sport.png"></td>
+          
+                            <td class="styled-table-td-body">Ropa deportiva Talla: XL
+                                <p>00125</p>
+                                <p>$350</p>
+                            </td>
+          
+                            <td class="styled-table-td-body">11 pz</td>
+
+                            <td class="styled-table-td-body">2 pz</td>
+
+                            <td class="styled-table-td-body">11 pz</td>
+
+                            <td class="styled-table-td-body">Sport</td>
+
+                            <td class="styled-table-td-body">2 pz</td>
+            
+                        </tr>
+          
+                        <tr class="styled-table-thead-tr">
+          
+                            <td class="styled-table-td">Total</td>
+          
+                            <td class="styled-table-td"></td>
+          
+                            <td class="styled-table-td">61 pz</td>
+
+                            <td class="styled-table-td">7 pz</td>
+
+                            <td class="styled-table-td">54 pz</td>
+
+                            <td class="styled-table-td"></td>
+
+                            <td class="styled-table-td">59 pz</td>
+          
+                        </tr>
+                    </table>
+                </div>
+
+            </mat-tab>
+        </mat-tab-group>
+
+
+
+
+    </div>
+
+    <!----Footer-->
+    <div>
+        <app-footer></app-footer>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+
+<!--Toolbar-->
+<mat-toolbar>
+    <div class="grid_tool">
+        <div class="tool_logo">
+            <img class="logo_h" src="../../../assets/img/login-img/logo.jpeg">
+        </div>
+        <div class="tool_menu">
+            <button class="btn" mat-raised-button style="background: #DF7E54; color: black;">
+                <p class="txt_btn_footer">Inicio</p></button>
+            <button class="btn" mat-raised-button style="background: #DF7E54; color: black;">
+                <p class="txt_btn_footer">Sucursales</p></button>
+            <button class="btn" mat-raised-button style="background: #DF7E54; color: black;">
+                <p class="txt_btn_footer">Membresias</p></button>
+            <button class="btn" mat-raised-button style="background: #DF7E54; color: black;">
+                <p class="txt_btn_footer">Nosotros</p></button>
+                <!--<button (click)="navegarLogin()">Login</button>-->
+
+            <button class="btn_icon_user" mat-fab [matMenuTriggerFor]="menu" >
+                <fa-icon style="font-size: 40px;" [icon]="['fas', 'circle-user']"></fa-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="navegarLogin()">
+                    <fa-icon style="font-size: 20px;" [icon]="['fas', 'circle-user']"></fa-icon>
+                  <span class="data_user">Iniciar sesion</span>
+                </button>
+                <hr width="90%" style="border-color: #6f42c1;">
+                <button mat-menu-item >
+                    <fa-icon style="font-size: 20px;" [icon]="['fas', 'circle-user']"></fa-icon>
+                  <span class="data_user">Registrame</span>
+                </button>
+                <hr width="90%" style="border-color: #6f42c1;">
+                <button mat-menu-item>
+                    <fa-icon style="font-size: 20px;" [icon]="['fas', 'circle-user']"></fa-icon>
+                  <span class="data_user">Cerrar sesión</span>
+                </button>
+              </mat-menu>
+
+        </div>
+    </div>    
+</mat-toolbar>

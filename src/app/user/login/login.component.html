@@ -1,0 +1,62 @@
+<div class="body">
+    <!--SE AGREGA EL HEADER-->
+    <div class="header_component">
+      <app-header></app-header>
+    </div>
+  
+    <!--Contenido login-->
+    <div class="content_body">
+      <div class="content_margin">
+        <div class="content_grid_padre">
+          <div class="content_grid_h1">
+            <div class="title_page">
+              <h1>Iniciar sesión</h1>
+            </div><!--cierra div title pagina-->
+            <div class="form_data">
+              <form [formGroup]="form" (ngSubmit)="ingresar()">
+                <p>
+                    <mat-form-field appearance="outline" class="inputs_css">
+                        <mat-label>Correo o telefono</mat-label>
+                        <input type="text" matInput placeholder="Correo o telefono" autocomplete="off" autofocus="" formControlName="email">
+                        <mat-icon matSuffix>alternate_email</mat-icon>
+                      </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline" class="inputs_css">
+                      <mat-label>Contraseña</mat-label>
+                      <input matInput  matInput [type]="hide ? 'password' : 'text'" placeholder="Contraseña" formControlName="password">
+                      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      </button>
+                    </mat-form-field>
+                  </p>
+                  <p class="txt_a"><a class="f_pass" href="#">Olvide mi contraseña</a></p>
+                  <button type="submit" class="btn_int" mat-raised-button style="background: #FD9727; color: white;" [disabled]="form.invalid">
+                    Ingresar</button>
+                </form>
+            </div><!--cierra div contenedor de formulario-->
+            <div class="opciones_acceso">
+              <p>Otras opciones de acceso</p>
+            </div><!--cierra div opciones de acceso-->
+            <div class="btns_redess">
+              <button class="btn_social" mat-fab color="warn">
+                <fa-icon [icon]="['fab', 'google']"></fa-icon>
+              </button>
+              <button class="btn_social" mat-fab color="primary">
+                <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+              </button>
+            </div><!--cierra div btns redes sociales-->
+            <div class="registrate">
+              <p>¿Aún no tiene cuenta? <a (click)="navegarRegistro()"><strong> Regístrate</strong></a></p>
+            </div><!--cierra div texto registrate-->
+          </div><!--cierra div content grid hino1 -->
+          <div class="content_grid_h2"></div><!--cierra div content grid hijo2 -->
+        </div><!--cierra div content grid padre-->
+      </div><!--cierra div content_margin-->
+    </div><!--cierra div content_body-->
+  
+    <!--SE AGREGA EL FOOTER-->
+    <div class="footer_component">
+      <app-footer></app-footer>
+    </div>
+  </div>

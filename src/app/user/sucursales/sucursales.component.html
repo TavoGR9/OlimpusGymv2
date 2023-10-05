@@ -1,0 +1,60 @@
+<div class="body">
+    <!--SE AGREGA EL HEADER-->
+    <div class="header_component">
+        <app-header></app-header>
+      </div>
+
+      <div class="content_page">
+        <div class="margin_page">
+
+            <div class="title_page">
+                <h1>Entonces, ¿en dónde quieres entrenar?</h1>
+            </div><!--cierra div title page -->
+
+            <div class="content_searchbar">
+                <mat-form-field appearance="outline" class="inputs_css">
+                    <input type="text" matInput placeholder="Ingresa lo que quieres buscar" autocomplete="off" autofocus="" >
+                    <mat-icon matSuffix>search</mat-icon>
+                </mat-form-field>
+            </div><!--cierra div content search bar-->
+
+            <div class="grid_padre">
+                <div class="h1_filters">
+                    <!--CONTENIDO - OPCIONES DE FILTRO-->
+                    <div id="filters_container">
+                        <div id="first-section-filters" class="filters">
+                            <h3>Añade filtros</h3>
+                            <p class="txt_filters">Estructura</p>
+                            <mat-checkbox class="item-checkbox">Casilleros</mat-checkbox>
+                            <mat-checkbox class="item-checkbox">Estacionamiento</mat-checkbox>
+                            <mat-checkbox class="item-checkbox">Bicicletero</mat-checkbox>
+                            <mat-checkbox class="item-checkbox">Aire acondicionado</mat-checkbox>
+                            <mat-checkbox class="item-checkbox">Elevador</mat-checkbox>
+                            <mat-checkbox class="item-checkbox">Energy</mat-checkbox>
+                            <mat-checkbox class="item-checkbox">Nutri</mat-checkbox>
+                        </div>
+                        <div id="second-section-filters" class="filters">
+                            <p class="txt_filters">Clases</p>
+                            <mat-checkbox class="item-checkbox">Zumba</mat-checkbox>
+                            <mat-checkbox class="item-checkbox">Spining</mat-checkbox>
+                            <mat-checkbox class="item-checkbox">Yoga</mat-checkbox>
+                            <mat-checkbox class="item-checkbox">Taitiano</mat-checkbox>
+                        </div>
+                    </div><!--cierra div filters container-->
+                </div><!--cierra div h1 filters-->
+
+                <div class="h2_items">
+                    <div class="content_items">
+
+                    </div><!--cierra content items-->
+                </div><!--cierra div h2 items-->
+            </div><!--cierre div grid padre-->
+        </div><!--cierra div margin page-->
+      </div><!--cierra div content page-->
+
+
+    <!--SE AGREGA EL FOOTER-->
+    <div class="footer_component">
+        <app-footer></app-footer>
+      </div>
+</div><!--cierra contenedor body-->

@@ -1,0 +1,319 @@
+<div class="body">
+    <!--SE AGREGA EL HEADER-->
+  <div class="header_component">
+    <app-header></app-header>
+  </div>
+
+    <!--SE AGREGA EL CONTENIDO DE LA PANTALLA-->
+    <div class="content_body">
+      <div class="title_page">
+        <h1>Finalizar compra</h1>
+      </div>
+        <div class="grid_padre_content">
+            <div class="grid_hijo1">
+
+              <!--items de comprar-->
+              <div class="items">
+                <div class="item_hijo1">
+                    <img id="img_item" src="../../../assets/img/pago-img/art1.png" alt="item">
+                </div>
+                <div class="item_hijo2">
+                    <label id="title_item">Tapete Yoga Wilson 3mm</label>
+                    <label id="talla_item">Talla: 000</label>
+                    <label id="price_item">Precio: 000</label>
+                    <label id="units_item">Unidades: 000</label>
+                </div>
+              </div><!--cierre div grid items padre-->
+
+              <!--items de comprar-->
+              <div class="items">
+                <div class="item_hijo1">
+                    <img id="img_item" src="../../../assets/img/pago-img/art1.png" alt="item">
+                </div>
+                <div class="item_hijo2">
+                    <label id="title_item">Tapete Yoga Wilson 3mm</label>
+                    <label id="talla_item">Talla: 000</label>
+                    <label id="price_item">Precio: 000</label>
+                    <label id="units_item">Unidades: 000</label>
+                </div>
+              </div><!--cierre div grid items padre-->
+              
+              <br/>
+              <hr style="color: #adbac0;">
+
+              <div class="metodos_pago">
+                <div class="subtitle_page">
+                  <h4 class="subtitle_block">Seleciona tu metodo de pago</h4>
+                </div><!--cierra contenedor subtitlepage-->
+                <div class="content_tabs">
+
+                  <mat-tab-group [(selectedIndex)]="selectedTabIndex">
+                    <mat-tab>
+                        <ng-template mat-tab-label>
+                            <img src="../../../assets/img/pago-img/icons8-tarjetas-bancarias-48.png" alt="icon_tc" class="tc_logo">
+                            Tarjeta de credito
+                          </ng-template>
+                        <div class="example-large-box mat-elevation-z4">
+                          <form class="tc">
+                            <div class="form_padre">
+                                <div class="form_hijo1">
+                                  <h5 class="subtitle_tc">Llena los campos correspondientes al metodo de pago TARJETA DE CREDITO</h5>
+                                    <p>
+                                      <mat-form-field appearance="outline" class="inputs_properties">
+                                        <mat-label>Titular de la tarjeta</mat-label>
+                                          <input type="text" matInput placeholder="Titular de la tarjeta" autocomplete="off">
+                                         </mat-form-field>
+                                    </p>
+                                    <p>
+                                      <mat-form-field appearance="outline" class="inputs_properties">
+                                        <mat-label>Número de tarjeta</mat-label>
+                                          <input type="num" matInput placeholder="0000 0000 0000 0000 0000" autocomplete="off" maxlength="16">
+                                         </mat-form-field>
+                                    </p>
+                                    <p>
+                                      <mat-form-field appearance="outline" class="inputs_properties2">
+                                        <mat-label>Mes</mat-label>
+                                        <mat-select id="mes" >
+                                          <mat-option></mat-option>
+                                          <mat-option value="01">01</mat-option>
+                                          <mat-option value="02">02</mat-option>
+                                          <mat-option value="03">03</mat-option>
+                                          <mat-option value="04">04</mat-option>
+                                          <mat-option value="05">05</mat-option>
+                                          <mat-option value="06">06</mat-option>
+                                          <mat-option value="07">07</mat-option>
+                                          <mat-option value="08">08</mat-option>
+                                          <mat-option value="09">09</mat-option>
+                                          <mat-option value="10">10</mat-option>
+                                          <mat-option value="11">11</mat-option>
+                                          <mat-option value="12">12</mat-option>
+                                        </mat-select>
+                                      </mat-form-field>
+
+                                      <mat-form-field appearance="outline" class="inputs_properties3">
+                                        <mat-label>Año</mat-label>
+                                          <input type="text" id="text_input" matInput placeholder="00" autocomplete="off" maxlength="2">
+                                         </mat-form-field>
+
+                                      <mat-form-field appearance="outline" class="inputs_properties3">
+                                        <mat-label>CVV</mat-label>
+                                          <input type="text" id="text_input" matInput placeholder="000" autocomplete="off" maxlength="3">
+                                      </mat-form-field>
+                                    </p>
+                                      
+                                </div>
+                                <div class="form_hijo2">
+                                    <button mat-stroked-button id="btn_tc_ok">Aceptar esta forma de pago</button>
+                                    <fieldset class="content_check">
+                                        <input type="checkbox" id="myCheckbox">
+                                        <label for="myCheckbox">Recordar mis datos.</label>
+                                    </fieldset>                                   
+                                      <img src="../../../assets/img/pago-img/Mastercard_icon-icons.com_60554.png" alt="icon_mc" class="icon_logo">
+                                      <img src="../../../assets/img/pago-img/Visa_icon-icons.com_60549.png" alt="icon_v" class="icon_logo">
+                                </div>
+                            </div>
+                          </form>
+
+                        </div>
+                    </mat-tab>
+                    <mat-tab>
+                        <ng-template mat-tab-label>
+                            <img src="../../../assets/img/pago-img/iconoxxo_ok.png" alt="icon_ox" class="ox_logo">
+                            OXXO
+                          </ng-template>
+                        <div class="example-large-box mat-elevation-z4">
+                          Large content
+                        </div>
+                    </mat-tab>
+                    <mat-tab>
+                        <ng-template mat-tab-label>
+                            <img src="../../../assets/img/pago-img/icons8-paypal-48.png" alt="icon_pp" class="pp_logo">
+                            Paypal
+                          </ng-template>
+                        <div class="example-large-box mat-elevation-z4">
+                          Large content
+                        </div>
+                      </mat-tab>
+                      <mat-tab>
+                        <ng-template mat-tab-label>
+                            <img src="../../../assets/img/pago-img/icons8-mercado-pago-48.png" alt="icon_mp" class="mp_logo">
+                            Mercado Pago
+                          </ng-template>
+                        <div class="example-large-box mat-elevation-z4">
+                          Large content
+                        </div>
+                      </mat-tab>
+                  </mat-tab-group>
+
+                </div><!--cierra contenerdor div de tabs metodos de pago-->
+              </div><!--cierra div contenedor metodos de pago-->
+            </div><!--cierra div grid_hijo1-->
+            <div class="grid_hijo2"></div><!--cierra div grid_hijo2-->
+        </div><!--cierra div grid_padre_content-->
+        
+        <div class="grid_factura_resumen">
+          <div class="grid_factura_resumen_h1">
+            <br/>
+          <!--<hr style="color: #adbac0;">-->
+            
+          <div class="subtitle_page">
+            <mat-slide-toggle [(ngModel)]="toggleValue" class="subtitle_block">
+              <h4 class="subtitle_block">Requiero factura</h4>
+            </mat-slide-toggle>
+          </div>
+
+            <div class="factura_content">
+              <ng-container *ngIf="toggleValue">
+                  <!-- Contenido que se muestra cuando el mat-slide-toggle está activado -->
+                  <div class="factura_padre">
+                      <form>
+                          <p>
+                              <mat-form-field appearance="outline" class="inputs_factura">
+                                  <mat-label>Nombre o razón social</mat-label>
+                                  <input type="text" matInput autocomplete="off">
+                                </mat-form-field>
+                          
+                                <mat-form-field appearance="outline" class="inputs_factura">
+                                  <mat-label>Tipo de facturación</mat-label>
+                                  <mat-select>
+                                    <mat-option></mat-option>
+                                    <mat-option value="option1">Persona moral</mat-option>
+                                    <mat-option value="option2">Persona física</mat-option>
+                                  </mat-select>
+                                </mat-form-field>
+                          
+                              <mat-form-field appearance="outline" class="inputs_factura">
+                                  <mat-label>RFC</mat-label>
+                                  <input type="text" matInput autocomplete="off">
+                                </mat-form-field>
+                          </p>
+                          <p>
+                              <mat-form-field appearance="outline" class="inputs_factura">
+                                  <mat-label>Calle</mat-label>
+                                  <input type="text" matInput autocomplete="off">
+                                </mat-form-field>
+                          
+                              <mat-form-field appearance="outline" class="inputs_factura">
+                                  <mat-label>No. Exterior</mat-label>
+                                  <input type="text" matInput autocomplete="off">
+                                </mat-form-field>
+                          
+                              <mat-form-field appearance="outline" class="inputs_factura">
+                                  <mat-label>No. Interior</mat-label>
+                                  <input type="text" matInput autocomplete="off">
+                                </mat-form-field>
+                          </p>
+                          <p>
+                              <mat-form-field appearance="outline" class="inputs_factura">
+                                  <mat-label>CP</mat-label>
+                                  <input type="text" matInput autocomplete="off">
+                                </mat-form-field>
+                          
+                              <mat-form-field appearance="outline" class="inputs_factura">
+                                  <mat-label>Calle</mat-label>
+                                  <input type="text" matInput autocomplete="off">
+                                </mat-form-field>
+              
+                                <mat-form-field appearance="outline" class="inputs_factura">
+                                  <mat-label>Estado</mat-label>
+                                  <mat-select id="estado">
+                                    <mat-option></mat-option>
+                                    <mat-option value="option1">Persona moral</mat-option>
+                                    <mat-option value="option2">Persona física</mat-option>
+                                  </mat-select>
+                                </mat-form-field>
+                          </p>
+                          <p>
+                              <mat-form-field appearance="outline" class="inputs_factura">
+                                  <mat-label>Ciudad</mat-label>
+                                  <mat-select id="ciudad">
+                                    <mat-option></mat-option>
+                                    <mat-option value="option1">Persona moral</mat-option>
+                                    <mat-option value="option2">Persona física</mat-option>
+                                  </mat-select>
+                              </mat-form-field>
+              
+                              <mat-form-field appearance="outline" class="inputs_factura">
+                                  <mat-label>Colonia</mat-label>
+                                  <mat-select id="colonia">
+                                    <mat-option></mat-option>
+                                    <mat-option value="option1">Persona moral</mat-option>
+                                    <mat-option value="option2">Persona física</mat-option>
+                                  </mat-select>
+                              </mat-form-field>
+                                
+                              <mat-form-field appearance="outline" class="inputs_factura">
+                                  <mat-label>Régimen fiscal</mat-label>
+                                  <mat-select id="regimen">
+                                    <mat-option></mat-option>
+                                    <mat-option value="option1">Persona moral</mat-option>
+                                    <mat-option value="option2">Persona física</mat-option>
+                                  </mat-select>
+                              </mat-form-field>
+                          </p>
+                          <p>
+                             <mat-form-field appearance="outline" class="inputs_factura">
+                                  <mat-label>Uso de CFDI</mat-label>
+                                  <mat-select id="cfdi">
+                                    <mat-option></mat-option>
+                                    <mat-option value="option1">Persona moral</mat-option>
+                                    <mat-option value="option2">Persona física</mat-option>
+                                  </mat-select>
+                              </mat-form-field>
+                          </p>
+                          <button mat-stroked-button id="btn_factura_ok">Guardar mis datos de facturación</button>
+                      </form>
+                  </div>
+                </ng-container>
+            </div><!--cierre div contenedor ngcontainer campos facturas-->
+          </div><!--cierre contenedor grid_factura_resumen_h1-->
+
+          <div class="grid_factura_resumen_h2">
+            <div class="resumen">
+              <div class="subtitle_page_resumen">
+                <h4 class="subtitle_block">Resumen de la compra</h4>
+              </div>
+              <div class="resumen_form">
+                <form>
+                  <fieldset class="content_check">
+                    <input type="text" id="input_codigo" class="input_codigo" placeholder="Còdigo promocional"/>
+                    <button mat-stroked-button id="btn_cod_sum">Sumar</button>
+                </fieldset>
+                </form>
+              </div><!--cierre div contenedor formulario codigo promocional-->
+              <div class="txt_padre_resumen">
+                <div class="txt_hijo1_resumen">
+                  <label class="txt_resumen1">Descuento</label>
+                  <label class="txt_resumen1">Subtotal</label>
+                </div>
+                <div class="txt_hijo2_resumen">
+                  <label class="txt_resumen2">$ 000.00</label>
+                  <label class="txt_resumen2">$ 000.00</label>
+                </div>
+              </div><!--cierra contenido txt_padre_resumen subtotal / descuento-->
+              <hr width="80%">
+            <div class="txt_padre_resumen">
+              <div class="txt_hijo1_resumen">
+                <label class="txt_resumen3">Total</label>
+              </div>
+              <div class="txt_hijo2_resumen">
+                <label class="txt_resumen4">$ 000.00</label>
+              </div>
+            </div><!--cierre contenido txt_padre_resumen total-->
+            </div><!--cierre contenedor resumen - margen-->
+          </div><!--cierre contenedor grid_factura_resumen_h2-->
+        </div><!--cierra contenedor padre grid_factura_resumen-->
+    
+        <div class="btns_ok_cancel">
+          <button type="submit" class="btn_ok_cancel" mat-raised-button color="warn">
+            Cancelar</button>
+          <button type="submit" class="btn_ok_cancel" mat-raised-button style="background: #FD9727; color: white;">
+            Confirmar compra</button>
+        </div><!--cierra div contenido bloque btns_ok_cancel-->
+    </div><!--cierra div content body-->
+
+   <!--SE AGREGA EL FOOTER-->
+   <div class="footer_component">
+    <app-footer></app-footer>
+  </div>
+</div>

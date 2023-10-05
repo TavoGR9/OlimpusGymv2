@@ -1,0 +1,254 @@
+/**propiedades del contenedor body**/
+.body {
+    margin: 0;
+    position: relative;
+    padding-bottom: 139px;
+    min-height: 100vh;
+}
+
+/**Pripiedades grid padre**/
+.grid_padre_content {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+/**propiedades contenedor body**/
+.content_body {
+    margin: 0 auto;
+    align-content: center;
+    text-align: center;
+    width: 80%;
+}
+
+/**propiedades contenedor titulo pagina**/
+.title_page {
+    margin: 50px 50px;
+}
+
+/**propiedades grid padre items**/
+.items {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 65%;
+    max-width: 50%;
+    height: auto;
+}
+
+/**propiedades imagen item**/
+#img_item {
+    width: 70%;
+}
+
+/**propiedades div contenedor textos item**/
+.item_hijo2 {
+    text-align: left;
+}
+
+/**propiedades textos items**/
+#title_item {
+    display: block;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#talla_item {
+    display: block;
+    padding-top: 10px;
+    font-size: large;
+}
+
+#price_item {
+    display: block;
+    padding-top: 5px;
+    font-size: large;
+}
+
+#units_item {
+    display: block;
+    padding-top: 5px;
+    font-size: large;
+}
+
+/**propiedades subtitulo bloque **/
+.subtitle_page {
+    text-align: left;
+}
+
+/**propiedades subtitulo tc - h4 **/
+.subtitle_tc {
+    padding: 15px 0;
+}
+
+/**propiedades inputs tc - titular - no tarjeta**/
+.inputs_properties {
+    width: 350px;
+}
+
+/**propiedades combo - select tc**/
+.inputs_properties2 {
+    width: 120px;
+    padding: 0 10px;
+    font-size: large;
+}
+
+/**propiedades inputs tc - año - cvv**/
+.inputs_properties3 {
+    width: 95px;
+    padding: 0 10px;
+    font-size: larger;
+}
+
+/**propiedades textos tc dentro de inputs año - cvv **/
+#text_input {
+    text-align: center;
+    font-size: larger;
+}
+
+/**propiedades btn tc **/
+#btn_tc_ok {
+    width: 350px;
+    height: 50px;
+    font-size: larger;
+}
+
+/**propiedades contenedor fieldset **/
+.content_check {
+    border: none;
+}
+
+/**porpiedades checkbox**/
+#myCheckbox {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+/**porpiedades iconos tc - visa - mc **/
+.icon_logo {
+    width: 10%;
+    padding: 0 10px;
+}
+
+/**INICIAN PROPIEDADES FACTURACION - RESUMEN DE PAGO**/
+/**propiedades grid padre **/
+.grid_factura_resumen {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+/**INICIAN PROPIEDADES BLOQUE FACTURACION **/
+.inputs_factura {
+    padding: 0 10px;
+}
+
+/**INICIAN PROPIEDADES BLOQUE RESUMEN**/
+/**propiedades contenedor resumen**/
+.grid_factura_resumen_h2 {
+    text-align: center;
+    margin: 0 auto;
+}
+/**porpiedades contenedor resumen - margen**/
+.resumen {
+    background: #EFEFEF;
+    width: 90%;
+    min-width: 350px;
+    border-radius: 10px;
+    min-height: 250px;
+}
+
+/**propiedades input cupon**/
+.input_codigo {
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: medium;
+    margin: 0 10px;
+}
+
+/**propiedades boton sumar codigo**/
+#btn_cod_sum {
+    height: 47px;
+    width: 70px;
+    font-size: medium;
+    margin: 0 10px;
+}
+
+/**propiedades texto titulo resumen de la compra**/
+.subtitle_page_resumen {
+    padding-top: 20px;
+}
+
+/**propiedades grid textos resumen**/
+.txt_padre_resumen {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/**propiedades texto contenedor textos hijo1**/
+.txt_hijo1_resumen {
+    text-align: left;
+}
+
+/**propiedades texto contenedor textos hijo2**/
+.txt_hijo2_resumen {
+    text-align: left;
+}
+
+/**propiedades texto total**/
+.txt_total {
+    margin-left: 10%;
+    font-weight: bold;
+    font-size: larger;
+    margin-bottom: 50px;
+}
+
+/**textos resumen**/
+.txt_resumen1 {
+    display: block;
+    margin-left: 20%;
+}
+
+/**propiedades texto subtitulo**/
+.txt_resumen2 {
+    display: block;
+}
+
+/**textos resumen **/
+.txt_resumen3 {
+    display: block;
+    margin-left: 20%;
+    font-weight: bold;
+    font-size: larger;
+}
+
+/**propiedades texto subtitulo**/
+.txt_resumen4 {
+    display: block;
+    font-weight: bold;
+    font-size: larger;
+}
+
+/**CONTENIDO BLOQUE BOTONES CANCELAR - FINALIZAR COMPRA**/
+.btns_ok_cancel {
+    text-align: right;
+}
+
+/**propiedades botones cancelar - finalizar compra **/
+.btn_ok_cancel {
+    width: 350px;
+    font-size: larger;
+    margin: 50px 10px;
+    height: 50px;
+}
+/**propiedades contenedor tabs
+.content_tabs {
+    border: green solid;
+}
+
+.metodos_pago {
+    border: red solid;
+}
+
+.grid_hijo1 {
+    border: violet solid;
+}**/
