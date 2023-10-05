@@ -12,10 +12,10 @@ export class HeaderComponent {
 
   }
 
-  navegarLogin() {
-    console.log("Va a navegar");
-    
-    this.router.navigate(['login']);
+  navegarPagina(url: String): void {
+    console.log("Va a navegar", url);
+
+    this.router.navigate([ url ]);
   }
 
 }
