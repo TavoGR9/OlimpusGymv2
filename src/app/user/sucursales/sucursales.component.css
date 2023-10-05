@@ -1,12 +1,27 @@
+/**propiedades body **/
+.body {
+    margin: 0;
+    position: relative;
+    padding-bottom: 139px;
+    min-height: 100vh;
+}
+
 /**propiedades grid padre**/
 .grid_padre {
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 20% 80%;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 
 /**propiedades contenedor titulo**/
 .title_page {
     text-align: center;
+}
+
+/**propiedades contenedor filters**/
+.filters {
+    margin: 10px 20px;
 }
 
 /**contenedor searchbar**/
@@ -28,9 +43,91 @@
 /**porpiedades contenedor de filtros **/
 #filters_container {
     margin: 0 50px;
-    align-items: center;
-    text-align: center;
-    border: green solid;
+    padding: 20px 0px;
     width: 90%;
+    background: #F3F3F3;
+    border-radius: 10px;
 }
 
+/**INICIAN PROPIEDADES DE ITEMS**/
+.item_x {
+    width: 350px;
+    height: 450px;
+    border-radius: 10px;
+    border: #CCCCCC solid;
+    margin: 0 50px;
+    display: inline-block;
+}
+
+/**propiedades grid padre **/
+.grid_plan_item {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding-bottom: 15px;
+}
+
+/**propiedades btn inscribete ya**/
+.btn_int {
+    width: 250px;
+    height: 40px;
+    font-size: medium;
+}
+
+/**propiedades content_link_item **/
+.content_link_item {
+    text-align: center;
+}
+
+/**propiedades contenedor content_pack_item **/
+.content_pack_item {
+    background: #C2DDB9;
+}
+
+/**propiedades texto txt planes**/
+.txt_palnes {
+    margin: 15px;
+    color: green;
+}
+
+/**propiedades texto direccion item**/
+.txt_addr {
+    margin-left: 7px;
+}
+
+/**propiedades texto titulo**/
+.txt_title {
+    margin-left: 7px;
+}
+
+/**propiedades contenedor btn item**/
+.content_btn_buy {
+    text-align: center;
+}
+
+/**propiedades contenedores textos planes **/
+.h1_plan_item, .h2_plan_item, .h3_plan_item {
+    text-align: center;
+}
+
+/**propiedades textos planes**/
+.txt_plan_name, .txt_new_price {
+    display: block;
+    font-weight: bold;
+}
+
+/**propiedades textos planes**/
+.txt_old_price {
+    display: block;
+    text-decoration:line-through;
+}
+
+/**propiedades subtitulos en filtros**/
+.txt_filters {
+    font-weight: bold; 
+}
+
+/**propiedades item img**/
+.img_item {
+    width: 350px;
+    border-radius: 10px 10px 0px 0px;
+}
