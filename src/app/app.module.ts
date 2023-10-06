@@ -34,7 +34,6 @@ import { CarruselComponent } from './user/carrusel/carrusel.component';
 import { AboutUsComponent } from './user/about-us/about-us.component';
 import { SucursalComponent } from './user/sucursal/sucursal.component';
 
-import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -72,7 +71,7 @@ import { ToastrModule } from 'ngx-toastr';
     MatSelectModule,
     MatTabsModule,
     MatSlideToggleModule,
-    MatCheckboxModule, ToastrModule.forRoot()
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
