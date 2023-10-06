@@ -32,6 +32,7 @@ import { EntrenamientoPiernaComponent } from './trainer/entrenamiento-pierna/ent
 import { MembresiasComponent } from './recepcionist/membresias/membresias.component';
 import { CarruselComponent } from './user/carrusel/carrusel.component';
 import { AboutUsComponent } from './user/about-us/about-us.component';
+import { SucursalComponent } from './user/sucursal/sucursal.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { AboutUsComponent } from './user/about-us/about-us.component';
     EntrenamientoPiernaComponent,
     MembresiasComponent,
     CarruselComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    SucursalComponent
   ],
   imports: [
     BrowserModule,
