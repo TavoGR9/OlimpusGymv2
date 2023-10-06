@@ -33,9 +33,4 @@ export class LoginComponent {
     this.router.navigate([ url ]);
   }
   
-  navegarRegistro() {
-    console.log("Va a navegar");
-    
-    this.router.navigate(['registro']);
-  }
 }
