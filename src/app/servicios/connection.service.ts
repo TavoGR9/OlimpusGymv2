@@ -8,9 +8,9 @@ export class ConnectionService {
   URLServices = "http://localhost/inmoplusMovil/servicios/";
   constructor( private http: HttpClient) { }
 
-  password_change(oldPassword:string, newPassword:string){
+  credenciales(user_data:string, Password:string){
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
-    let parameters = 'oldPassword=' + oldPassword + '&newPassword=' + newPassword;
+    let parameters = 'oldPassword=' + user_data + '&newPassword=' + Password;
     return this.http.post(this.URLServices + 'Movil_password_ch.php', parameters, { headers });
   }
 }

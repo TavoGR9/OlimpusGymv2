@@ -33,6 +33,7 @@ import { MembresiasComponent } from './recepcionist/membresias/membresias.compon
 import { CarruselComponent } from './user/carrusel/carrusel.component';
 import { AboutUsComponent } from './user/about-us/about-us.component';
 
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,7 @@ import { AboutUsComponent } from './user/about-us/about-us.component';
     MatSelectModule,
     MatTabsModule,
     MatSlideToggleModule,
-    MatCheckboxModule
+    MatCheckboxModule, ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
