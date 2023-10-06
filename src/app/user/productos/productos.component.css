@@ -9,26 +9,33 @@
 /**propiedades grid padre**/
 .grid_padre {
     display: grid;
-    grid-template-columns: 20% 80%;
-    padding-top: 70px;
+    grid-template-columns: 25% 75%;
+    padding-top: 20px;
     padding-bottom: 70px;
 }
 
 /**propiedades contenedor filters**/
 .filters {
-    margin: 10px 20px;
+    margin: 0px 20px;
 }
 
 /**contenedor searchbar**/
 .content_searchbar {
-    padding-top: 50px;
+    padding-top: 20px;
     width: 90%;
     text-align: right;
 }
 
+/**contenedor text resultados **/
+.results_number {
+    text-align: left;
+    padding: 10px 0;
+}
+
 /**propiedades numerpo de resultados productos **/
 .num_products {
-    margin-left: 10%;
+    font-weight: bold;
+    padding-left: 20px;
 }
 
 /**propiedades input search bar**/
@@ -43,22 +50,23 @@
 
 /**porpiedades contenedor de filtros **/
 #filters_container {
-    margin: 0 50px;
-    padding: 20px 0px;
-    width: 90%;
+    margin: 0 auto;
+    padding: 10px 0px;
+    width: 80%;
     background: #F3F3F3;
     border-radius: 10px;
 }
 
 /**INICIAN PROPIEDADES DE ITEMS**/
 .item_x {
-    width: 300px;
-    height: 450px;
+    width: 200px;
+    height: 340px;
     border-radius: 10px;
-    border: #CCCCCC solid;
-    margin: 0 50px;
+    /**border: #CCCCCC solid;**/
+    margin: 0 10px;
     display: inline-block;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 /**propiedades subtitulos en filtros**/
@@ -68,7 +76,7 @@
 
 /**propiedades item img**/
 .img_item {
-    width: 300px;
+    width: 200px;
     border-radius: 10px 10px 0px 0px;
 }
 
@@ -76,10 +84,28 @@
 .price-product {
     font-weight: bold;
     font-size: large;
+    display: block;
 }
 
 /**propiedades texto marca **/
 .brand-product {
     font-size: small;
     color: goldenrod;
+    display: block;
+}
+
+/**propeidades contenedor texto titulo **/
+.content_title_item {
+    height: 50px;
+}
+
+/**propiedades texto titulo item **/
+.title_product {
+    display: block;
+}
+
+.btn_int {
+    width: 150px;
+    height: 40px;
+    font-size: medium;
 }
