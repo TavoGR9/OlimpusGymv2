@@ -56,6 +56,7 @@ body {
     border-right: none;
     background-color: #000;
     color: #fff;
+    box-sizing: border-box;
 }
 
 #search-bar button:hover {
@@ -134,6 +135,7 @@ body {
 /*----------MEMBERSHIP SECTION---------*/
 
 #membership-section {
+    width: 100%;
     margin-top: 100px;
 }
 
@@ -144,6 +146,7 @@ body {
     margin-top: 50px;
 }
 
+/*
 .membership-card {
     border-radius: 15px;
     background-color: #F9A640;
@@ -171,14 +174,87 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     padding: 15px;
     border-radius: 15px;
+}*/
+
+.table-membership {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
 }
+
+.table-membership table {
+    width: 80%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+}
+
+table tr th img {
+    display: block;
+    width: 200px;
+}
+
+table tr td{
+    padding: 20px;
+}
+
+table tr th {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table tr th span {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table tr td {
+    text-align: center;
+}
+
+table tr td:nth-child(1) {
+    text-align: left;
+}
+
+.checked {
+    background-color: #F9A640;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.closed {
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.choose {
+    width: 150px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 10px;
+    background-color: #F9A640;
+    border: none;
+    border-radius: 15px;
+}
+
+.choose:hover {
+    cursor: pointer;
+}
+
+
 
 /*----------RUTINS SECTION---------*/
 #rutins-section {
     margin-top: 100px;
 }
 
-#option-container {
+/*#option-container {
     width: 90%;
     height: 800px;
     display: grid;
@@ -229,6 +305,56 @@ body {
     background-image: url('../../../assets/img/index-img/areas.jpg');
     background-size: cover;
     border-radius: 0px 0px 15px 0px;
+}*/
+
+.virtual-container {
+    width: 90%;
+    border-radius: 15px;
+    display: flex;
+    margin-top: 30px;
+    box-shadow: 5px 5px 15px #eee;
+}
+
+.image-content {
+    width: 30%;
+    border-radius: 15px;
+}
+
+.image-content img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.info-virtualgym {
+    width: 70%;
+    padding: 10%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-virtualgym h2 {
+    font-size: 2em;
+    padding-bottom: 20px;
+}
+
+.info-virtualgym span {
+    color: #F9A640;
+}
+
+.info-virtualgym button {
+    margin-top: 30px;
+    width: 30%;
+    border-radius: 15px;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+.info-virtualgym button:hover {
+    cursor: pointer;
 }
 
 
