@@ -17,6 +17,7 @@ import { CarruselComponent } from './user/carrusel/carrusel.component';
 import { AboutUsComponent } from '../app/user/about-us/about-us.component'
 import { SolicitudComponent } from './user/solicitud/solicitud.component';
 
+
 const routes: Routes = [
   //cuando el usuario no ponga nada
  { path: "", redirectTo: "index", pathMatch: "full" },
