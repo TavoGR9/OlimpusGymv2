@@ -34,6 +34,7 @@ import { CarruselComponent } from './user/carrusel/carrusel.component';
 import { AboutUsComponent } from './user/about-us/about-us.component';
 import { SolicitudComponent } from './user/solicitud/solicitud.component';
 import { SucursalComponent } from './user/sucursal/sucursal.component';
+import { PlanComponent } from './user/plan/plan.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { SucursalComponent } from './user/sucursal/sucursal.component';
     CarruselComponent,
     AboutUsComponent,
     SolicitudComponent,
-    SucursalComponent
+    SucursalComponent,
+    PlanComponent
   ],
   imports: [
     BrowserModule,

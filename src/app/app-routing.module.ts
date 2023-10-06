@@ -16,6 +16,7 @@ import { MembresiasComponent } from './recepcionist/membresias/membresias.compon
 import { CarruselComponent } from './user/carrusel/carrusel.component';
 import { AboutUsComponent } from '../app/user/about-us/about-us.component'
 import { SolicitudComponent } from './user/solicitud/solicitud.component';
+import { PlanComponent } from './user/plan/plan.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: "carrusel", component: CarruselComponent },
   { path: "sobre-nosotros", component: AboutUsComponent },
   { path: "solicitud", component: SolicitudComponent },
+  { path: "plan", component: PlanComponent },
   //componentes recepcionista
   { path: "stock", component: StockComponent },
   { path: "detalles-compra", component: DetalleCompraComponent },
