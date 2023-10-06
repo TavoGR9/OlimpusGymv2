@@ -15,8 +15,8 @@
   
   .body {
     margin: 0 7em;
-    height: 90%;
-    width: 90%;
+    position: relative;
+    min-height: 100vh;
   padding-bottom: 139px;
   min-height: 100vh;
   }
@@ -47,4 +47,28 @@
   
     background: color #f9A640; ;
   }
-  
+
+  .footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  .tabla {
+    max-width: 100%;
+    overflow-x: auto;  /* Permite desplazarse horizontalmente si la tabla es más ancha que el contenedor */
+  }
+  table {
+    width: 100%;  /* Establece el ancho de la tabla al 100% del contenedor */
+    table-layout: fixed; /* Evita que las celdas cambien de tamaño en función del contenido */
+  }
+
+  .mi-clase-columna {
+    width: 15%;  /* o cualquier otro valor que prefieras */
+    
+  }
+
+  .label{
+    color: #000000;
+    width: min-content;
+    height: min-content;
+  }
