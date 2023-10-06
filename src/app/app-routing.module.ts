@@ -15,6 +15,7 @@ import { EntrenamientoPiernaComponent } from './trainer/entrenamiento-pierna/ent
 import { MembresiasComponent } from './recepcionist/membresias/membresias.component';
 import { CarruselComponent } from './user/carrusel/carrusel.component';
 import { AboutUsComponent } from '../app/user/about-us/about-us.component'
+import { RutinasEntrenadorComponent } from './trainer/rutinas-entrenador/rutinas-entrenador.component';
 
 const routes: Routes = [
   //cuando el usuario no ponga nada
@@ -37,6 +38,7 @@ const routes: Routes = [
   { path: "alta-colaborador", component: AltaColaboradorComponent },
   { path: "asistencia", component: AsistenciaComponent },
   //componentes trainer
+  {path: "entrenador-rutinas", component:RutinasEntrenadorComponent},
   { path: "rutina-pierna", component: EntrenamientoPiernaComponent },
   //cuando el usuario agrega cualquier cosa como ruta
   { path: "**", redirectTo: "index", pathMatch: "full" },

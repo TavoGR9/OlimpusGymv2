@@ -2,11 +2,10 @@
 
 .icono-usuario-container {
     display: inline-block;
-    position: absolute;
     font-size: x-large;
     text-align:center;
     top: 20%;
-    left: 30px;
+    left: 10px;
   }
   
   .material-icons {
@@ -18,7 +17,12 @@
     margin: 0 7em;
     height: 90%;
     width: 90%;
+  padding-bottom: 139px;
+  min-height: 100vh;
   }
+
+  /**propiedades body **/
+
   .nombre {
     display: inline-block;
     text-align: center;
@@ -43,3 +47,4 @@
   
     background: color #f9A640; ;
   }
+  
