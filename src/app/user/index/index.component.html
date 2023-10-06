@@ -12,40 +12,11 @@
             </div>
         </div>
     </div>
-    <div id="products-section">
-        <h2 class="title_section">Nuestros Productos</h2>
-        <div class="flex-container">
-        <div id="container-content">
-        <div class="container-button" id="button-left"><</div>
-        <div id="carrousel-products">
-            <div class="product">
-                <img src="../../../assets/img/index-img/proteway.jpg" alt="" width="200px">
-                <div class="product-title">
-                    <a href="#">Proteina Whey 1kg</a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="../../../assets/img/index-img/shaker.jpg" alt="" width="200px">
-                <div class="product-title">
-                    <a href="#">Shaker Gym 700ml</a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="../../../assets/img/index-img/playera.jpg" alt="" width="200px">
-                    <div class="product-title">
-                        <a href="#">Playera Deportiva Talla s</a>
-                    </div>
-                </div>
-            </div>
-        <div class="container-button" id="button-left">></div>
-        </div>
-    </div>
-    </div>
     <div id="membership-section">
         <h2 class="title_section">Nuestros Planes</h2>
         <div class="flex-container">
         <div id="container-memberships">
-            <div class="membership-card">
+            <!--<div class="membership-card">
                 <h3 id="title-card-membership" class="title-cards">PLAN BASICO</h3>
                 <span class="price-membership">
                     199/MES
@@ -71,16 +42,95 @@
                 <div class="learn-more">
                     <button>CONOCE MAS</button>
                 </div>
+            //</div>-->
+            <div class="table-membership">
+                <table>
+                    <tr>
+                        <th>
+                            <img src="assets/img/index-img/logo.jpeg" alt="">
+                        </th>
+                        <th>Basico
+                            <span>$199</span>
+                        </th>
+                        <th>Estandar
+                            <span>$299</span>
+                        </th>
+                        <th>Premium
+                            <span>$399</span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>Acceso a Gimnasios</td>
+                        <td><button class="checked"><mat-icon>check</mat-icon></button></td>
+                        <td><button class="checked"><mat-icon>check</mat-icon></button></td>
+                        <td><button class="checked"><mat-icon>check</mat-icon></button></td>
+                    </tr>
+                    <tr>
+                        <td>Entrenadores</td>
+                        <td><button class="closed"><mat-icon>close</mat-icon></button></td>
+                        <td><button class="checked"><mat-icon>check</mat-icon></button></td>
+                        <td><button class="checked"><mat-icon>check</mat-icon></button></td>
+                    </tr>
+                    <tr>
+                        <td>Acesso a canchas,alberca</td>
+                        <td><button class="closed"><mat-icon>close</mat-icon></button></td>
+                        <td><button class="closed"><mat-icon>close</mat-icon></button></td>
+                        <td><button class="checked"><mat-icon>check</mat-icon></button></td>
+                    </tr>
+                    <tr>
+                        <td>Ofertas especiales</td>
+                        <td><button class="closed"><mat-icon>close</mat-icon></button></td>
+                        <td><button class="checked"><mat-icon>check</mat-icon></button></td>
+                        <td><button class="checked"><mat-icon>check</mat-icon></button></td>
+                    </tr>
+                    <tr>
+                        <td>Descuentos</td>
+                        <td><button class="closed"><mat-icon>close</mat-icon></button></td>
+                        <td><button class="closed"><mat-icon>close</mat-icon></button></td>
+                        <td><button class="checked"><mat-icon>check</mat-icon></button></td>
+                    </tr>
+                </table>
+                <button class="choose">Elige tu plan</button>
             </div>
         </div>
     </div>
     </div>
-    <div id="rutins-section">
-        <h2 class="title_section">Rutinas Olimpus<span>Gym</span></h2>
+
+    <div id="products-section">
+        <h2 class="title_section">Nuestros Productos</h2>
         <div class="flex-container">
-        <div id="option-container">
+        <div id="container-content">
+        <div class="container-button" id="button-left"><mat-icon>chevron_left</mat-icon></div>
+        <div id="carrousel-products">
+            <div class="product">
+                <img src="../../../assets/img/index-img/proteway.jpg" alt="" width="200px">
+                <div class="product-title">
+                    <a href="#">Proteina Whey 1kg</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="../../../assets/img/index-img/shaker.jpg" alt="" width="200px">
+                <div class="product-title">
+                    <a href="#">Shaker Gym 700ml</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="../../../assets/img/index-img/playera.jpg" alt="" width="200px">
+                    <div class="product-title">
+                        <a href="#">Playera Deportiva Talla s</a>
+                    </div>
+                </div>
+            </div>
+        <div class="container-button" id="button-left"><mat-icon>chevron_right</mat-icon></div>
+    </div>
+    </div>
+</div>
+    <div id="rutins-section">
+        <h2 class="title_section">Virtual<span>Gym</span></h2>
+        <div class="flex-container">
+        <!--<div id="option-container">
             <div class="image-section" id="image-section-one">
-                <!--<img src="assets/images/index-img/equipo.jpg" alt="" width="200px">-->
+                <img src="assets/images/index-img/equipo.jpg" alt="" width="200px">
                 <div class="info-section-container">
                 <h3 class="title-img">Variedad de equipo</h3>
                 <p class="text-img">
@@ -89,7 +139,7 @@
                 </div>
             </div>
             <div class="image-section" id="image-section-two">
-                <!--<img src="assets/images/index-img/comunidad.jpg" alt="" width="200px">-->
+                <img src="assets/images/index-img/comunidad.jpg" alt="" width="200px">
                 <div class="info-section-container">
                 <h3 class="title-img">Variedad de equipo</h3>
                 <p class="text-img">
@@ -98,7 +148,7 @@
                 </div>
             </div>
             <div class="image-section" id="image-section-three">
-                <!--<img src="assets/images/index-img/entrenadores.jpg" alt="" width="200px">-->
+                <img src="assets/images/index-img/entrenadores.jpg" alt="" width="200px">
                 <div class="info-section-container">
                 <h3 class="title-img">Variedad de equipo</h3>
                 <p class="text-img">
@@ -107,7 +157,7 @@
                 </div>
             </div>
             <div class="image-section" id="image-section-four">
-                <!--<img src="assets/images/index-img/areas.jpg" alt="" width="200px">-->
+                <img src="assets/images/index-img/areas.jpg" alt="" width="200px">
                 <div class="info-section-container">
                 <h3 class="title-img">Variedad de equipo</h3>
                 <p class="text-img">
@@ -115,7 +165,19 @@
                 </p>
                 </div>
             </div>
-        </div>
+        //</div> -->
+        <div class="virtual-container">
+            <div class="image-content">
+                <img src="assets/img/index-img/virtualGym.jpg" alt="">
+            </div>
+            <div class="info-virtualgym">
+                <h2>¡Transforma tu vida con Olimpus<span>Gym</span></h2>
+                <p>
+                    "Descubre una nueva forma de mantenerte en forma y saludable desde la comodidad de tu hogar. Nuestra suscripción especial te brinda acceso exclusivo a entrenamientos en casa, videos de expertos y rutinas personalizadas. No importa tu horario, aquí encontrarás la solución perfecta para tu estilo de vida. ¡Haz clic para empezar tu viaje hacia una versión más fuerte y saludable de ti mismo!"
+                </p>
+                <button>Conoce mas</button>
+            </div>
+        </div>  
     </div>
     </div>
 
