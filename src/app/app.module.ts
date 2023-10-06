@@ -30,6 +30,13 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { AsistenciaComponent } from './admin/asistencia/asistencia.component';
 import { EntrenamientoPiernaComponent } from './trainer/entrenamiento-pierna/entrenamiento-pierna.component';
 import { MembresiasComponent } from './recepcionist/membresias/membresias.component';
+import { HistorialComprasComponent } from './recepcionist/historial-compras/historial-compras.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule } from '@angular/material/card';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatTableModule } from '@angular/material/table';
 
 
 @NgModule({
@@ -47,7 +54,8 @@ import { MembresiasComponent } from './recepcionist/membresias/membresias.compon
     ProductosComponent,
     AsistenciaComponent,
     EntrenamientoPiernaComponent,
-    MembresiasComponent
+    MembresiasComponent,
+    HistorialComprasComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +73,13 @@ import { MembresiasComponent } from './recepcionist/membresias/membresias.compon
     MatSelectModule,
     MatTabsModule,
     MatSlideToggleModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatProgressBarModule,
+    MatDividerModule,
+    MatCardModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
