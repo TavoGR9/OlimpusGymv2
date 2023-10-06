@@ -1,0 +1,68 @@
+.mi-tabla {
+    margin-top: 2px;
+    margin-bottom: 50px;
+    margin-right: 100px;
+    margin-left:215px;
+  
+  }
+  
+  .plan {
+    background-color: #DF7E54;
+    color:white;
+    font-size:200%;
+  
+  }
+  
+  .card{
+    border: 3px solid #DF7E54;
+    width:310px;
+  }
+  
+  button{
+    width:250px;
+  }
+  
+  .b2 {
+    border: 2px;
+    margin-right: 80px;
+    margin-left:80px;
+    background-color:#DF7E54;
+    color: white;
+    width: 150px;
+  
+  }
+  
+  .ayuda {
+    background-color: #000000;
+    color:white;
+    font-size:130%;
+  
+  }
+  
+  .tabla {
+    margin-top: 2px;
+    margin-bottom: 50px;
+    margin-right: 100px;
+    margin-left:300px;
+  
+  }
+  
+  .tool_logo{
+    border: 3px solid #DF7E54;  
+  }
+  
+  .uniforme{
+    background-color: #DF7E54;
+    color:white;
+    font-size:130%;
+    width:700px;
+    margin-left:430px;
+  }
+
+ /**propiedades body **/
+.body {
+    margin: 0;
+    position: relative;
+    padding-bottom: 139px;
+    min-height:100vh;
+}
