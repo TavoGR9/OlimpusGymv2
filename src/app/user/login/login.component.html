@@ -31,7 +31,7 @@
                     </mat-form-field>
                   </p>
                   <p class="txt_a"><a class="f_pass" href="#">Olvide mi contraseña</a></p>
-                  <button type="submit" class="btn_int" mat-raised-button style="background: #FD9727; color: white;" [disabled]="form.invalid">
+                  <button type="submit" (click)="navegarPagina('sobre-nosotros')" class="btn_int" mat-raised-button style="background: #FD9727; color: white;" [disabled]="form.invalid">
                     Ingresar</button>
                 </form>
             </div><!--cierra div contenedor de formulario-->

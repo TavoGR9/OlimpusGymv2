@@ -26,6 +26,13 @@ export class LoginComponent {
     console.log(bodyData);
   }
 
+  
+  navegarPagina(url: String): void {
+    console.log("Va a navegar", url);
+
+    this.router.navigate([ url ]);
+  }
+  
   navegarRegistro() {
     console.log("Va a navegar");
     
