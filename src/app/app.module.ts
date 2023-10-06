@@ -14,6 +14,7 @@ import { RecuperarPasswordComponent } from './user/recuperar-password/recuperar-
 import { IndexComponent } from './user/index/index.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { SharedModule } from './shared/shared.module';
 
 import { MatMenuModule } from '@angular/material/menu';
@@ -33,10 +34,15 @@ import { MembresiasComponent } from './recepcionist/membresias/membresias.compon
 import { CarruselComponent } from './user/carrusel/carrusel.component';
 import { AboutUsComponent } from './user/about-us/about-us.component';
 
+import { StarRatingComponent, RutinasEntrenadorComponent } from './trainer/rutinas-entrenador/rutinas-entrenador.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
     AppComponent,
+    StarRatingComponent,
     AltaColaboradorComponent,
     StockComponent,
     DetalleCompraComponent,
@@ -51,11 +57,15 @@ import { AboutUsComponent } from './user/about-us/about-us.component';
     EntrenamientoPiernaComponent,
     MembresiasComponent,
     CarruselComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    RutinasEntrenadorComponent
   ],
   imports: [
     BrowserModule,
+    MatTooltipModule,
     AppRoutingModule,
+    MatGridListModule,
+    MatTableModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
     SharedModule,
