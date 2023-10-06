@@ -2,26 +2,26 @@
     margin-top: 2px;
     margin-bottom: 50px;
     margin-right: 100px;
-    margin-left:215px;
-  
+    margin-left:100px;
+
   }
-  
+
   .plan {
     background-color: #DF7E54;
     color:white;
     font-size:200%;
-  
+
   }
-  
+
   .card{
     border: 3px solid #DF7E54;
     width:310px;
   }
-  
+
   button{
     width:250px;
   }
-  
+
   .b2 {
     border: 2px;
     margin-right: 80px;
@@ -29,34 +29,35 @@
     background-color:#DF7E54;
     color: white;
     width: 150px;
-  
+
   }
-  
+
   .ayuda {
     background-color: #000000;
     color:white;
     font-size:130%;
-  
+
   }
-  
+
   .tabla {
     margin-top: 2px;
     margin-bottom: 50px;
-    margin-right: 100px;
-    margin-left:300px;
-  
+    margin-left: 200px;
+    /* padding-right: 100px;
+    padding-left: 300px; */
+
   }
-  
+
   .tool_logo{
-    border: 3px solid #DF7E54;  
+    border: 3px solid #DF7E54;
   }
-  
+
   .uniforme{
     background-color: #DF7E54;
     color:white;
     font-size:130%;
     width:700px;
-    margin-left:430px;
+    margin-left:330px;
   }
 
  /**propiedades body **/
@@ -65,4 +66,80 @@
     position: relative;
     padding-bottom: 139px;
     min-height:100vh;
+}
+
+/** CARRUSEL **/
+
+.slide {
+  position: relative;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.64);
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.slide-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: calc( 350px + 0em);
+  text-align: -webkit-center;
+}
+
+.slide-open:checked + .slide-item {
+  position: static;
+  opacity: 100;
+}
+
+.slide-item {
+  position: absolute;
+  opacity: 0;
+  /* -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out; */
+}
+
+.slide-item img {
+  display: block;
+  /* height: auto; */
+  height: 400px;
+  max-width: 100%;
+  width: 80%;
+  text-align: center;
+}
+
+.slide-control {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  color: #000;
+  cursor: pointer;
+  display: none;
+  font-size: 40px;
+  height: 40px;
+  line-height: 30px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
+
+.slide-control.prev {
+  left: 2%;
+}
+
+.slide-control.next {
+  right: 2%;
+}
+
+.slide-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+#slide-1:checked ~ .control-1,
+#slide-2:checked ~ .control-2,
+#slide-3:checked ~ .control-3 {
+  display: block;
 }
