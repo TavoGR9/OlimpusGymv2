@@ -19,7 +19,7 @@ import { SolicitudComponent } from './user/solicitud/solicitud.component';
 
 const routes: Routes = [
   //cuando el usuario no ponga nada
-  { path: "", redirectTo: "index", pathMatch: "full" },
+ { path: "", redirectTo: "index", pathMatch: "full" },
   //componentes usuario
   { path: "index", component: IndexComponent },
   { path: "login", component: LoginComponent },
