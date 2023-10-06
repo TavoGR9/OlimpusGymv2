@@ -1,0 +1,80 @@
+<div class="body">
+    <!--SE AGREGA EL HEADER-->
+    <div class="header_component">
+        <app-header></app-header>
+    </div>
+    <br/>
+    <div class="mi-div-con-borde">
+        <div class="elemento-interno">
+            <div>
+                <label for="nombre" style="margin-right: 20px;">Nombre solicitante: </label>
+                <input id="nombre" style="font-family: Arial; font-size: 16px;" type="text" >
+            </div>
+            <br/>
+            <div>
+                <label for="contacto" style="margin-right: 105px;">Contacto:</label>
+                <input id="contacto" style="font-family: Arial; font-size: 16px;" type="text" >
+            </div>
+            <br/>
+            <div style="display: flex;">
+                <label for="producto" style="margin-right: 125px;">Producto/cantidad:</label>
+             
+                <table class="tabla-con-bordes">
+                    <tbody class="tabla-con-bordes">
+                    <tr>
+                        <td class="tabla-con-bordes">Agua 1 ltr.</td>
+                        <td class="tabla-con-bordes editable">
+                            <input style="font-family: Arial; font-size: 14px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tabla-con-bordes">Agua 600 ml</td>
+                        <td class="tabla-con-bordes editable">
+                            <input style="font-family: Arial; font-size: 14px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td  class="tabla-con-bordes">Monster</td>
+                        <td class="tabla-con-bordes editable">
+                            <input style="font-family: Arial; font-size: 14px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td  class="tabla-con-bordes">Volt.</td>
+                        <td class="tabla-con-bordes editable">
+                            <input style="font-family: Arial; font-size: 14px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td  class="tabla-con-bordes">Powerade</td>
+                        <td class="tabla-con-bordes editable" style="font-family: Arial; font-size: 14px;">
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <!-- Agrega más filas según sea necesario -->
+                    </tbody>
+                </table>
+            </div>
+            <br/>
+            
+            <div style="display: flex; align-items: center;">
+                <label for="contacto" style="margin-right: 83px;">Descripción:</label>
+                <textarea rows="4" cols="50" class="fixed-width" style="width: 440px; resize: none;font-family: Arial; font-size: 16px;"></textarea>
+            </div>
+            <br/>
+            <div style="text-align: center;">
+                <button mat-raised-button style="background-color: #F9A640;">Aceptar</button>
+            </div>
+        </div>
+    </div> 
+    <br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/>
+    
+    <!--SE AGREGA EL FOOTER-->
+    <div class="flex-container">
+        <div class="footer_component">
+            <app-footer></app-footer>
+        </div>
+    </div>
+</div>
+
