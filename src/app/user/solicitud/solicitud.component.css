@@ -1,0 +1,71 @@
+.mi-div-con-borde {
+    width: 800px; /*Ancho*/
+    height: 700px; /*Altura*/
+    background-color: #ffffff; 
+    border: 1px solid #000; 
+    color: #000000; /* Color del texto */
+    line-height: 40px; /* Alineación vertical del texto */
+    font-size: 18px; /* Tamaño de fuente */
+    margin: 0 auto;  /*centrar*/
+    border-radius: 20px; 
+    font-family: Arial, sans-serif;
+    }
+    
+    input[type="text"] {
+      width: 440px;
+      height: 30px;
+    }
+  
+    .elemento-interno {
+      margin: 80px; /* Margen de 10 píxeles para los elementos internos */
+    }
+    
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+  
+  .tabla-con-bordes {
+      font-size: 15px; /* Tamaño de fuente */
+      width: 6cm; /* Ancho total de la tabla */
+      table-layout: fixed; /* Fija el ancho de la tabla */
+      margin: 0 auto; /* Centra la tabla horizontalmente en su contenedor */
+      border: 1px solid #000000;
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Establece el ancho de las celdas (td) y los encabezados (th) */
+    .tabla-con-bordes th,
+    .tabla-con-bordes td {
+      border-spacing: 0; 
+      text-align: center; /* Alineación del contenido en las celdas */
+      width: 4.4cm; /* Ancho de cada celda */  
+    }
+  
+    .editable {
+      position: relative;
+    }
+    
+    .editable input {
+      border: none; /* Elimina el borde del input */
+      width: 90%;
+      height: 100%;
+      margin-top: 0; /* Elimina el margen superior */
+      margin-bottom: 0; /* Elimina el margen inferior */
+      margin-left: 10px; /* Margen derecho */
+      margin-right: 10px; /* Margen izquierdo */
+      outline: none; /* Elimina el contorno al hacer clic */
+      background: transparent; /* Fondo transparente */
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  
+    .footer_component {
+      position: relative;
+      left:0px;
+      bottom:0px;
+      width:100%;
+     }
+    
+  

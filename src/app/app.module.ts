@@ -32,6 +32,7 @@ import { EntrenamientoPiernaComponent } from './trainer/entrenamiento-pierna/ent
 import { MembresiasComponent } from './recepcionist/membresias/membresias.component';
 import { CarruselComponent } from './user/carrusel/carrusel.component';
 import { AboutUsComponent } from './user/about-us/about-us.component';
+import { SolicitudComponent } from './user/solicitud/solicitud.component';
 
 import { ToastrModule } from 'ngx-toastr';
 
@@ -52,7 +53,8 @@ import { ToastrModule } from 'ngx-toastr';
     EntrenamientoPiernaComponent,
     MembresiasComponent,
     CarruselComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    SolicitudComponent
   ],
   imports: [
     BrowserModule,
