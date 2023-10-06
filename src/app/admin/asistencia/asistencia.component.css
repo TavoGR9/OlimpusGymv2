@@ -2,13 +2,13 @@
     height: 70%;
     margin: 0 5em;
   }
-  
+
   .conten_inputs {
     align-items: center;
     text-align: center;
     justify-content: center;
   }
-  
+
   .select-asistence {
     position: relative;
       bottom: 3em;
@@ -17,27 +17,27 @@
       font-size: 20px;
       padding: 5px 10px;
   }
-  
+
   .show-mobile {
     padding: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  
+
   h1 {
     text-align: left;
     padding-left: 50px;
     padding-bottom: 7px;
     padding-top: 10px;
   }
-  
+
   table {
     border-collapse: collapse;
     width: 100%;
     margin: auto;
   }
-  
+
   td, th {
     border: 1px solid black;
     text-align: center;
@@ -45,20 +45,20 @@
     font-weight: 300;
     height: 30px;
   }
-  
+
   .card-body {
     flex: 1 1 auto;
     min-height: 1px;
     padding: 1.25rem;
   }
-  
+
   .table-responsive {
     display: block;
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
-  
+
   .btn {
     margin: 0 50px;
     width: 160px;
@@ -67,7 +67,44 @@
     background: #FD9727;
     color: black;
   }
-  
+
   .txt_btn_footer {
     font-size: larger;
   }
+
+
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .select-asistence {
+    position: relative;
+      bottom: 3em;
+      right: -2em;
+      width: 200px;
+      font-size: 20px;
+      padding: 5px 10px;
+  }
+}
+
+/* MOBILE */
+@media screen and (max-width: 767px) {
+  .select-asistence {
+    position: relative;
+      bottom: 0em;
+      right: 2em;
+      width: 200px;
+      font-size: 20px;
+      padding: 5px 10px;
+  }
+  .body {
+    height: 70%;
+    margin: 0 0em;
+  }
+  .btn {
+    margin: 10px 50px;
+    width: 160px;
+    height: 50px;
+    border-radius: 0px;
+    background: #FD9727;
+    color: black;
+  }
+}
