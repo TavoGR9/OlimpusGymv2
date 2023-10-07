@@ -8,7 +8,7 @@ body {
     position: relative;
 }
 
-/*----------MAIN IMAGE SECTION---------*/
+/*----------MAIN IMAGE SECTION---------
 #banner {
     width: 100%;
     display: flex;
@@ -19,6 +19,11 @@ body {
     width: 90%;
     height: 600px;
     border-radius: 15px;
+}*/
+
+/*--------------Alto - img - carrusel------*/
+.alto_img {
+    height: 600px;
 }
 
 /*----------LOCATION SECTION---------*/
