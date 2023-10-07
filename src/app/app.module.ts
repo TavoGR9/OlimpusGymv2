@@ -38,6 +38,7 @@ import { StarRatingComponent, RutinasEntrenadorComponent } from './trainer/rutin
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTableModule } from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { MatTableModule } from '@angular/material/table';
   ],
   imports: [
     BrowserModule,
+    MatSortModule,
     MatTooltipModule,
     AppRoutingModule,
     MatGridListModule,

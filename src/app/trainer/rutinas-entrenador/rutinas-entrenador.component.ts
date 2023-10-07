@@ -1,12 +1,12 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {LiveAnnouncer} from '@angular/cdk/a11y';
-import {AfterViewInit, ViewChild} from '@angular/core';
-import {MatSort, Sort, MatSortModule} from '@angular/material/sort';
-
+import {ViewChild} from '@angular/core';
+import {MatSort} from '@angular/material/sort';
+import { Sort } from '@angular/material/sort';
 export interface PeriodicElement {
-  duracion: string;
   Ejercicio: string;
+  duracion: string;
   Series: number;
   Repeticiones: string;
   descanso: string;
@@ -25,31 +25,30 @@ const ELEMENT_DATA: PeriodicElement[] = [
   selector: 'app-rutinas-entrenador',
   templateUrl: './rutinas-entrenador.component.html',
   styleUrls: ['./rutinas-entrenador.component.css'],
-  standalone: true,
-  imports: [MatTableModule, MatSortModule],
+
 })
 export class RutinasEntrenadorComponent {
   userRating: number = 0;  // Agregada la propiedad userRating con un valor inicial de 0
-  displayedColumns: string[] = ['Ejercicio', 'Duracion', 'Series', 'Repeticiones/serie  ', 'descanzo', 'demo'];
+  displayedColumns: string[] = ['Ejercicio', 'duracion', 'Series', 'Repeticiones', 'descanso', 'demo'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   constructor(private _liveAnnouncer: LiveAnnouncer) { }
 
   
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatSort)sort!: MatSort;
 
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
   }
 
   /** Announce the change in sort state for assistive technology. */
-  announceSortChange(sortState: Sort) {
+  announceSortChange(sortData: Sort) {
     // This example uses English messages. If your application supports
     // multiple language, you would internationalize these strings.
     // Furthermore, you can customize the message to add additional
     // details about the values being sorted.
-    if (sortState.direction) {
-      this._liveAnnouncer.announce(`Sorted ${sortState.direction}ending`);
+    if (sortData.direction) {
+      this._liveAnnouncer.announce(`Sorted ${sortData.direction}ending`);
     } else {
       this._liveAnnouncer.announce('Sorting cleared');
     }
