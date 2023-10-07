@@ -1,0 +1,22 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <ul class="list-container">
+            <li class="list-item"><mat-icon>account_circle</mat-icon><a href="#">Perfil</a></li>
+            <li class="list-item"><mat-icon>settings</mat-icon><a href="#">Editar Perfil</a></li>
+            <li class="list-item"><mat-icon>account_balance_wallet</mat-icon><a href="#">Cartera</a></li>
+            <li class="list-item"><mat-icon>accessibility</mat-icon><a href="#">Acceso</a></li>
+        </ul>
+    </mat-drawer>
+    <mat-drawer-content class="section-main">
+        <div id="container-wallet">
+            <h1 class="title-wallet">¡Bienvenido a tu cartera!</h1>
+            <div id="add-card-section">
+                <div id="content-add-card">
+                    <span>Aun no tienes tarjetas en tu cartera</span>
+                    <button (click)="navegarPagina('agregartarjeta')">agregar</button>
+                </div>
+            </div>
+        </div>
+    </mat-drawer-content>
+  </mat-drawer-container>
+  

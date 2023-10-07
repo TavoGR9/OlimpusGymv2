@@ -16,6 +16,10 @@ import { MembresiasComponent } from './recepcionist/membresias/membresias.compon
 import { CarruselComponent } from './user/carrusel/carrusel.component';
 import { AboutUsComponent } from '../app/user/about-us/about-us.component'
 import { SolicitudComponent } from './user/solicitud/solicitud.component';
+import { UserOptionBarComponent } from './user/user-option-bar/user-option-bar.component';
+import { DetailscardComponent } from './user/detailscard/detailscard.component';
+import { WalletcardsComponent } from './user/walletcards/walletcards.component';
+
 
 
 const routes: Routes = [
@@ -32,6 +36,9 @@ const routes: Routes = [
   { path: "carrusel", component: CarruselComponent },
   { path: "sobre-nosotros", component: AboutUsComponent },
   { path: "solicitud", component: SolicitudComponent },
+  { path: "cartera" , component: UserOptionBarComponent},
+  { path: "agregartarjeta" , component: DetailscardComponent},
+  { path: "tutarjeta" , component: WalletcardsComponent},
   //componentes recepcionista
   { path: "stock", component: StockComponent },
   { path: "detalles-compra", component: DetalleCompraComponent },

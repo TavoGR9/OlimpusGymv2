@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.example-container {
+    width: 100%;
+    height: 100vh;
+    border: 1px solid #555;
+  }
+
+mat-drawer {
+    width: 20%;
+}
+
+.list-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.list-item {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.list-item:hover {
+    border-bottom: 1px solid #ccc;
+}
+
+.list-item a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+}
+
+
+.section-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-wallet {
+    width: 40%;
+    height: 70%;
+}
+
+.title-wallet {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+#add-card-section {
+    border: 1px solid #eee;
+    border-radius: 15px;
+    width: 100%;
+    height: 90%;
+    box-shadow: 5px 5px 15px #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content-add-card {
+    
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#content-add-card span{
+    color: #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    padding-bottom: 100px;
+}
+
+#content-add-card button {
+    padding: 10px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 300ms ease-in-out;
+}
+
+#content-add-card button:hover {
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+}

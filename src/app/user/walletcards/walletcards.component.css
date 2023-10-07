@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.example-container {
+    width: 100%;
+    height: 100vh;
+    border: 1px solid #555;
+  }
+
+mat-drawer {
+    width: 20%;
+}
+
+.list-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.list-item {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.list-item:hover {
+    border-bottom: 1px solid #ccc;
+}
+
+.list-item a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+}
+
+
+.section-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-wallet {
+    width: 40%;
+    height: 70%;
+}
+
+.title-wallet {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+#add-card-section {
+    border-radius: 15px;
+    width: 100%;
+    height: 50%;
+    box-shadow: 5px 5px 15px #eee;
+    padding-top: 20px;
+}
+
+#add-card-section span {
+    display: block;
+    text-align: center;
+    color: #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content-add-card {
+    width: 80%;
+    height: 60%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#content-add-card button {
+    margin-top: 30px;
+    display: block;
+    padding: 10px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 300ms ease-in-out;
+    width: 100px;
+}
+
+#content-add-card button:hover {
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.flex-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-data {
+    border-radius: 15px;
+}
+
+.content-data input {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: #eee;
+}
+
+.content-data input:nth-child(1) {
+    border-radius: 15px 15px 0px 0px;
+}
+
+.content-data input:nth-child(5) {
+    border-radius: 0px 0px 15px 15px;
+}
+
+.card-info {
+    background-color: #333;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 0px 15px 15px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.card-info span {
+    padding-bottom: 10px;
+}
+
+.buttons a {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 20px;
+    color: #000000;
+
+}
+
+.numbercard {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    letter-spacing: 5px;
+}
+
+.card-info .nameclient {
+    display: block;
+    width: 100%;
+    text-align: left !important;
+    padding-left: 10px;
+}

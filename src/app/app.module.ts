@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {MatSidenavModule} from '@angular/material/sidenav';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,6 +36,9 @@ import { CarruselComponent } from './user/carrusel/carrusel.component';
 import { AboutUsComponent } from './user/about-us/about-us.component';
 import { SolicitudComponent } from './user/solicitud/solicitud.component';
 import { SucursalComponent } from './user/sucursal/sucursal.component';
+import { UserOptionBarComponent } from './user/user-option-bar/user-option-bar.component';
+import { DetailscardComponent } from './user/detailscard/detailscard.component';
+import { WalletcardsComponent } from './user/walletcards/walletcards.component';
 
 
 @NgModule({
@@ -55,7 +60,10 @@ import { SucursalComponent } from './user/sucursal/sucursal.component';
     CarruselComponent,
     AboutUsComponent,
     SolicitudComponent,
-    SucursalComponent
+    SucursalComponent,
+    UserOptionBarComponent,
+    DetailscardComponent,
+    WalletcardsComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,7 +81,8 @@ import { SucursalComponent } from './user/sucursal/sucursal.component';
     MatSelectModule,
     MatTabsModule,
     MatSlideToggleModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSidenavModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

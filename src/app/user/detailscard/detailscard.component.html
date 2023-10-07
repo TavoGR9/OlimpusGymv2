@@ -1,0 +1,36 @@
+<app-header></app-header>
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <ul class="list-container">
+            <li class="list-item"><mat-icon>account_circle</mat-icon><a href="#">Perfil</a></li>
+            <li class="list-item"><mat-icon>settings</mat-icon><a href="#">Editar Perfil</a></li>
+            <li class="list-item"><mat-icon>account_balance_wallet</mat-icon><a href="#">Cartera</a></li>
+            <li class="list-item"><mat-icon>accessibility</mat-icon><a href="#">Acceso</a></li>
+        </ul>
+    </mat-drawer>
+    <mat-drawer-content class="section-main">
+        <div id="container-wallet">
+            <h1 class="title-wallet">Detalles de la tarjeta</h1>
+            <div id="add-card-section">
+                <span>Ingresa la informacion de la tarjeta</span>
+                <div class="flex-container">
+                    <div id="content-add-card">
+                        <div class="content-data">
+                            <input type="text" matInput placeholder="Nombre" >
+                            <input type="text" placeholder="No. Tarjeta" >
+                            <input type="text" placeholder="Mes" >
+                            <input type="text" placeholder="Año" >
+                            <input type="text" placeholder="Cv" >
+                        </div>
+                        <button (click)="navegarPagina('tutarjeta')">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-drawer-content>
+  </mat-drawer-container>
+  <div>
+    <app-footer></app-footer>
+  </div>
+  
+  

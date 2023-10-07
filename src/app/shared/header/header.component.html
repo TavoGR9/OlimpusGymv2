@@ -20,6 +20,10 @@
                 <fa-icon style="font-size: 40px;" [icon]="['fas', 'circle-user']"></fa-icon>
               </button>
               <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="navegarPagina('cartera')">
+                    <fa-icon style="font-size: 20px;" [icon]="['fas', 'circle-user']"></fa-icon>
+                  <span class="data_user">Mi perfil</span>
+                </button>
                 <button mat-menu-item (click)="navegarPagina('login')">
                     <fa-icon style="font-size: 20px;" [icon]="['fas', 'circle-user']"></fa-icon>
                   <span class="data_user">Iniciar sesion</span>
