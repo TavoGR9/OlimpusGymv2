@@ -39,6 +39,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTableModule } from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
+import { MatSidenavModule } from '@angular/material/sidenav';
+
 
 @NgModule({
   declarations: [
@@ -64,6 +66,7 @@ import {MatSortModule} from '@angular/material/sort';
   imports: [
     BrowserModule,
     MatSortModule,
+    MatSidenavModule,
     MatTooltipModule,
     AppRoutingModule,
     MatGridListModule,

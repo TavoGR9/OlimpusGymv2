@@ -4,6 +4,8 @@ import {LiveAnnouncer} from '@angular/cdk/a11y';
 import {ViewChild} from '@angular/core';
 import {MatSort} from '@angular/material/sort';
 import { Sort } from '@angular/material/sort';
+import { MatDrawer } from '@angular/material/sidenav';
+
 export interface PeriodicElement {
   Ejercicio: string;
   duracion: string;
@@ -36,6 +38,7 @@ export class RutinasEntrenadorComponent {
 
   
   @ViewChild(MatSort)sort!: MatSort;
+  @ViewChild('drawer') drawer!: MatDrawer;
 
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
