@@ -39,6 +39,7 @@ import { SucursalComponent } from './user/sucursal/sucursal.component';
 import { UserOptionBarComponent } from './user/user-option-bar/user-option-bar.component';
 import { DetailscardComponent } from './user/detailscard/detailscard.component';
 import { WalletcardsComponent } from './user/walletcards/walletcards.component';
+import { PlanComponent } from './user/plan/plan.component';
 
 
 @NgModule({
@@ -64,6 +65,7 @@ import { WalletcardsComponent } from './user/walletcards/walletcards.component';
     UserOptionBarComponent,
     DetailscardComponent,
     WalletcardsComponent,
+    PlanComponent,
   ],
   imports: [
     BrowserModule,

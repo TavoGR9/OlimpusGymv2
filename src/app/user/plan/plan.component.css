@@ -1,0 +1,52 @@
+.mi-div-con-borde {
+    width: 1700px; /*Ancho*/
+    height: 750px; /*Altura*/
+    background-color: #ffffff; 
+    border: 1px solid #000; 
+    color: #000000; /* Color del texto */
+    line-height: 40px; /* Alineación vertical del texto */
+    font-size: 18px; /* Tamaño de fuente */
+    margin: 0 auto;  /*centrar*/
+    border-radius: 20px; 
+    font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .small-column {
+      flex: 1;
+      min-width: 200px; /* Ancho mínimo de columna pequeña */
+      min-height: 110px;
+      margin: 10px;
+      padding: 10px;
+    
+      box-sizing: border-box;
+    }
+    
+    .large-column {
+      flex: 3; /* El doble del tamaño de las columnas pequeñas */
+      min-width: 400px;/* Ancho mínimo de columna grande */
+      min-height: 110px;
+      margin: 10px;
+      padding: 0px;
+    
+      box-sizing: border-box;
+    }
+    
+      
+      input[type="text"] {
+        width: 550px;
+        height: 50px;
+        border: 1px solid #ccc;
+      }
+
+      .footer_component {
+        position: relative;
+        left:0px;
+        bottom:0px;
+        width:100%;
+       }
+      

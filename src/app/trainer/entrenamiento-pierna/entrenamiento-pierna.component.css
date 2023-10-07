@@ -8,13 +8,13 @@
 .body {
     margin: 0 7em;
   }
-  
+
   .conten_inputs {
     align-items: center;
     text-align: center;
     justify-content: center;
   }
-  
+
   .btn {
     margin: 5px 10px;
     width: 160px;
@@ -23,18 +23,48 @@
     background-color: #F9A640;
     color: #fff;
   }
-  
+
   .btn-asistence-title {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
   }
-  
+
   .txt_btn_footer {
     font-size: larger;
   }
-  
+
   .parrafo-entrenamientoD {
     text-align: left;
     font-size: 18px;
   }
-  
+
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .btn-asistence-title {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  iframe {
+    height: 315px;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+/* MOBILE */
+@media screen and (max-width: 767px) {
+  .body {
+    margin: 0 2em;
+  }
+  .btn-asistence-title {
+    display: flex;
+    flex-direction: column;
+  }
+  iframe {
+    height: 300px;
+  }
+  img {
+    width: 100%;
+  }
+}
