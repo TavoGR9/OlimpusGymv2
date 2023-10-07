@@ -11,13 +11,15 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { CarroComponent } from './carro/carro.component';
 
 
 
 @NgModule({
   declarations: [
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    CarroComponent
   ],
   imports: [
     CommonModule,
@@ -36,6 +38,7 @@ import {MatIconModule} from '@angular/material/icon';
     MatToolbarModule,
     MatMenuModule,
     FontAwesomeModule,
+    CarroComponent
   ]
 })
 export class SharedModule { 
