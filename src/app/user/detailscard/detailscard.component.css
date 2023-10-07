@@ -43,6 +43,14 @@ mat-drawer {
     padding-left: 10px;
 }
 
+.list-item a:hover {
+    cursor: pointer;
+}
+
+.list-item a:focus {
+    color: orange;
+}
+
 
 .section-main {
     display: flex;
@@ -86,9 +94,9 @@ mat-drawer {
 }
 
 #content-add-card button {
-    margin-top: 30px;
+    margin-top: 20px;
     display: block;
-    padding: 10px;
+    padding: 5px;
     border-radius: 15px;
     outline: none;
     border: none;

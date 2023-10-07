@@ -43,6 +43,10 @@ mat-drawer {
     padding-left: 10px;
 }
 
+.list-item a:hover {
+    cursor: pointer;
+}
+
 
 .section-main {
     display: flex;

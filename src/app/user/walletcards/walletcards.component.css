@@ -43,6 +43,9 @@ mat-drawer {
     padding-left: 10px;
 }
 
+.list-item a:hover {
+    cursor: pointer;
+}
 
 .section-main {
     display: flex;
@@ -153,7 +156,10 @@ mat-drawer {
     font-family: Arial, Helvetica, sans-serif;
     margin-right: 20px;
     color: #000000;
+}
 
+.buttons a:hover {
+    cursor: pointer;
 }
 
 .numbercard {

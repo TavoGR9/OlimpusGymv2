@@ -2,10 +2,10 @@
 <mat-drawer-container class="example-container">
     <mat-drawer mode="side" opened>
         <ul class="list-container">
-            <li class="list-item"><mat-icon>account_circle</mat-icon><a href="#">Perfil</a></li>
-            <li class="list-item"><mat-icon>settings</mat-icon><a href="#">Editar Perfil</a></li>
-            <li class="list-item"><mat-icon>account_balance_wallet</mat-icon><a href="#">Cartera</a></li>
-            <li class="list-item"><mat-icon>accessibility</mat-icon><a href="#">Acceso</a></li>
+            <li class="list-item"><mat-icon>account_circle</mat-icon><a (click)="navegarPagina('cartera')">Perfil</a></li>
+            <li class="list-item"><mat-icon>settings</mat-icon><a (click)="navegarPagina('cartera')">Editar Perfil</a></li>
+            <li class="list-item"><mat-icon>account_balance_wallet</mat-icon><a (click)="navegarPagina('cartera')">Cartera</a></li>
+            <!--<li class="list-item"><mat-icon>accessibility</mat-icon><a (click)="navegarPagina('cartera')">Acceso</a></li>-->
         </ul>
     </mat-drawer>
     <mat-drawer-content class="section-main">
@@ -18,8 +18,8 @@
                         <span class="nameclient">Gustavo Guzman</span>
                     </div>
                     <div class="buttons">
-                        <a href="#">Eliminar</a>
-                        <a href="#">Modificar</a>
+                        <a (click)="navegarPagina('cartera')">Eliminar</a>
+                        <a (click)="navegarPagina('agregartarjeta')">Modificar</a>
                     </div>
                 </div>
         </div>
