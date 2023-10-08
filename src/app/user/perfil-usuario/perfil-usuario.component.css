@@ -60,41 +60,49 @@ mat-drawer {
     border-radius: 0px 0px 20px 0px;
 }
 
-/*propiedades contenedor padre*/
-.content_grid {
-    display: grid;
-    grid-template-columns: 25% 75%;
-    background: white;
-    padding-top: 50px;
-}
-
-/*propiedades contenedor hijo derecho */
-.content_right {
-    /*border-radius: 25px 0px 0px 25px;*/
-    border-bottom: #FD9727 solid 5px;
-    border-top: #FD9727 solid 5px;
-    height: 500px;
-    background: white;
-}
-
-/*propiedades contenedor hijo izquierdo */
-.content_left {
-    display: flex;
-    justify-content: flex-end;
+/*propiedades contenedor body**/
+.container_data_user{
     width: 100%;
-}
-/*propiedades contenedor de datosdentro de hijo izquierdo*/
-.data_left {
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-left: #FD9727 solid 5px;
-    border-top: #FD9727 solid 5px;
-    border-bottom: #FD9727 solid 5px;
-    height: 100%;
-    width: 70%;
-    text-align: center;
     align-items: center;
-    
+    justify-content: center;
+    display: flex;
+    height: 100%;
+}
+
+/*propiedades contenedor padre*/
+.container_grid_padre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+}
+
+
+
+
+.h1_container {
+    background: #ffffff;
+    text-align: center;
+    border-radius: 10px 0px 0px 10px;
+    width: 400px;
+    border-bottom: #999999 solid 1px;
+    border-top: #999999 solid 1px;
+    border-left: #999999 solid 1px;
+    min-height: 550px;
+}
+
+.h2_container {
+    min-height: 550px;
+    background: #0b2d39;
+    border-radius: 0px 10px 10px 0px;
+    width: 500px;
+    border-bottom: #999999 solid 1px;
+    border-top: #999999 solid 1px;
+    border-right: #999999 solid 1px;
+    box-shadow: 5px 5px 15px #999999;
 }
 
 /**propiedades imagen perfil**/
@@ -104,70 +112,46 @@ mat-drawer {
     margin-top: 50px;
 }
 
-/**propieades status**/
-.status {
-    margin: 10px;
+/*propiedades nombre usuario */
+.name_user {
+    display: block;
+    font-size: larger;
+    font-weight: bolder;
+    margin: 15px 0px;
 }
 
-/**propiedades contenedor data right dentro de contenedor content right */
-.data_right {
-    width: 100%;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-left: #6f42c1 solid;
-    border-top: #6f42c1 solid;
-    border-bottom: #6f42c1 solid;
-    height: 100%;
-    /*background-color: #041676;
-    opacity: 0.8;
-    background-image: radial-gradient( ellipse farthest-corner at 4px 4px , #3b3b2b, #3b3b2b 50%, #041676 50%);
-    background-size: 4px 4px;*/
-
-    background-color: #888;
-opacity: 0.8;
-background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #888 6px ), repeating-linear-gradient( #cecfe455, #cecfe4 );
-}
-
-/**propiedades texto bienvenida **/
-.contanier_name_greet {
-    background: white;
-    width: 80%;
-    min-height: 50px;
-    border-radius: 10px;
-    align-items: center;
-    display: flex;
-    margin-top: 20px;
-    margin-left: 30px
-}
-
-.greet_user {
+/*.txt_status {
+    margin-top: 50px;
     font-size: medium;
     font-weight: bold;
-    padding: 0px 5px;
+}*/
+
+.status_value {
+    color: #005200;
+    background: #9bfab0;
+    width: 110px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: larger;
+    border-radius: 3px;
 }
 
-/*propiedades texto usuario*/
-.name_user {
-    font-size: large;
-    font-weight: bolder;
-}
-
-/**propiedades contenedor planes**/
 .container_plan {
+    width: 85%;
     background: white;
-    width: 80%;
-    min-height: auto;
-    border-radius: 10px;
+    border-radius: 5px;
     align-items: center;
+    justify-content: center;
     display: flex;
-    margin-top: 20px;
-    margin-left: 30px;
+    margin: 30px auto;
+
 }
 
-/**propiedades imagen codigo qr**/
-.qr_image {
-    width: 150px;
-    border-radius: 10px;
+.plan_title {
+    align-items: center;
 }
 
 /*propiedades textos planes**/
@@ -176,94 +160,45 @@ background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #888
     margin-left: 5px;
     margin-right: 10px;
     font-weight: bold;
-    font-size: medium;
+    font-size: small;
 }
 
 /**propiedades textos fechas planes*/
 .datebuy_txt, .dateend_txt {
     display: inline-block;
-    font-size: medium;
+    font-size: small;
     margin: 0px 5px;
 }
 
 /*propiedades nombre plan texto */
 .name_txt {
     margin-left: 5px;
-    font-size: medium;
+    font-size: small;
 }
 
 /*propiedades textos valores fechas planes**/
 .date_buy, .date_end {
-    font-size: medium;
+    font-size: small;
     font-weight: bold;
 }
 
-/*propiedades contenedor imagen qr*/
+/*propiedades contenedor qr*/
 .container_qr {
     width: 100%;
     text-align: center;
-    margin-top: 20px;
+}
+
+/**propiedades imagen codigo qr**/
+.qr_image {
+    width: 150px;
+    border-radius: 10px;
 }
 
 
-
-
-
-/*marcador--------------------------------*/
-/*
 .section-main {
     display: flex;
     justify-content: center;
     align-items: center;
-}*/
-
-#container-wallet {
-    width: 40%;
-    height: 70%;
 }
 
-.title-wallet {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-  
-#add-card-section {
-    border: 1px solid #eee;
-    border-radius: 15px;
-    width: 100%;
-    height: 90%;
-    box-shadow: 5px 5px 15px #eee;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#content-add-card {
-    
-    width: 50%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-}
-
-#content-add-card span{
-    color: #ccc;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2em;
-    padding-bottom: 100px;
-}
-
-#content-add-card button {
-    padding: 10px;
-    border-radius: 15px;
-    outline: none;
-    border: none;
-    font-family: Arial, Helvetica, sans-serif;
-    transition: all 300ms ease-in-out;
-}
-
-#content-add-card button:hover {
-    background-color: #000000;
-    color: #ffffff;
-    cursor: pointer;
-}
+/*marcador ...........................................................................*/
