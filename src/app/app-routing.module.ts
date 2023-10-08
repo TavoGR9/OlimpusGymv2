@@ -21,6 +21,7 @@ import { UserOptionBarComponent } from './user/user-option-bar/user-option-bar.c
 import { DetailscardComponent } from './user/detailscard/detailscard.component';
 import { PlanComponent } from './user/plan/plan.component';
 import { SucursalComponent } from './user/sucursal/sucursal.component'
+import { PlanvirtualComponent } from './user/planvirtual/planvirtual.component';
 
 
 const routes: Routes = [
@@ -42,6 +43,8 @@ const routes: Routes = [
   { path: "tutarjeta" , component: WalletcardsComponent},
   { path: "plan", component: PlanComponent },
   { path: "sucursal", component: SucursalComponent},
+  { path: "VirtualOlimpusGym", component: PlanvirtualComponent },
+
   //componentes recepcionista
   { path: "stock", component: StockComponent },
   { path: "detalles-compra", component: DetalleCompraComponent },
