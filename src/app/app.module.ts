@@ -40,6 +40,7 @@ import { UserOptionBarComponent } from './user/user-option-bar/user-option-bar.c
 import { DetailscardComponent } from './user/detailscard/detailscard.component';
 import { WalletcardsComponent } from './user/walletcards/walletcards.component';
 import { PlanComponent } from './user/plan/plan.component';
+import { PerfilUsuarioComponent } from './user/perfil-usuario/perfil-usuario.component';
 
 
 @NgModule({
@@ -66,6 +67,7 @@ import { PlanComponent } from './user/plan/plan.component';
     DetailscardComponent,
     WalletcardsComponent,
     PlanComponent,
+    PerfilUsuarioComponent,
   ],
   imports: [
     BrowserModule,

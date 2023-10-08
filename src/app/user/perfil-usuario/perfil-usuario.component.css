@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.example-container {
+    width: 100%;
+    height: 100vh;
+    border: 1px solid #555;
+  }
+
+mat-drawer {
+    width: 20%;
+}
+
+.list-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.list-item {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.list-item:hover {
+    border-bottom: 1px solid #ccc;
+}
+
+.list-item a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+}
+
+.list-item a:hover {
+    cursor: pointer;
+}
+
+/*marcador ...........................................................................*/
+.logo_h {
+    width: 30%;
+}
+
+.toolbar_imag {
+    width: 100%;
+    height: auto;
+    text-align: right;
+    background-color: white;
+    border-radius: 0px 0px 20px 0px;
+}
+
+/*propiedades contenedor padre*/
+.content_grid {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    background: white;
+    padding-top: 50px;
+}
+
+/*propiedades contenedor hijo derecho */
+.content_right {
+    /*border-radius: 25px 0px 0px 25px;*/
+    border-bottom: #FD9727 solid 5px;
+    border-top: #FD9727 solid 5px;
+    height: 500px;
+    background: white;
+}
+
+/*propiedades contenedor hijo izquierdo */
+.content_left {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+/*propiedades contenedor de datosdentro de hijo izquierdo*/
+.data_left {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-left: #FD9727 solid 5px;
+    border-top: #FD9727 solid 5px;
+    border-bottom: #FD9727 solid 5px;
+    height: 100%;
+    width: 70%;
+    text-align: center;
+    align-items: center;
+    
+}
+
+/**propiedades imagen perfil**/
+.pic_profile {
+    width: 150px;
+    border-radius: 75px;
+    margin-top: 50px;
+}
+
+/**propieades status**/
+.status {
+    margin: 10px;
+}
+
+/**propiedades contenedor data right dentro de contenedor content right */
+.data_right {
+    width: 100%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-left: #6f42c1 solid;
+    border-top: #6f42c1 solid;
+    border-bottom: #6f42c1 solid;
+    height: 100%;
+    /*background-color: #041676;
+    opacity: 0.8;
+    background-image: radial-gradient( ellipse farthest-corner at 4px 4px , #3b3b2b, #3b3b2b 50%, #041676 50%);
+    background-size: 4px 4px;*/
+
+    background-color: #888;
+opacity: 0.8;
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #888 6px ), repeating-linear-gradient( #cecfe455, #cecfe4 );
+}
+
+/**propiedades texto bienvenida **/
+.contanier_name_greet {
+    background: white;
+    width: 80%;
+    min-height: 50px;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 30px
+}
+
+.greet_user {
+    font-size: medium;
+    font-weight: bold;
+    padding: 0px 5px;
+}
+
+/*propiedades texto usuario*/
+.name_user {
+    font-size: large;
+    font-weight: bolder;
+}
+
+/**propiedades contenedor planes**/
+.container_plan {
+    background: white;
+    width: 80%;
+    min-height: auto;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+/**propiedades imagen codigo qr**/
+.qr_image {
+    width: 150px;
+    border-radius: 10px;
+}
+
+/*propiedades textos planes**/
+.planes_title {
+    display:block;
+    margin-left: 5px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: medium;
+}
+
+/**propiedades textos fechas planes*/
+.datebuy_txt, .dateend_txt {
+    display: inline-block;
+    font-size: medium;
+    margin: 0px 5px;
+}
+
+/*propiedades nombre plan texto */
+.name_txt {
+    margin-left: 5px;
+    font-size: medium;
+}
+
+/*propiedades textos valores fechas planes**/
+.date_buy, .date_end {
+    font-size: medium;
+    font-weight: bold;
+}
+
+/*propiedades contenedor imagen qr*/
+.container_qr {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+
+/*marcador--------------------------------*/
+/*
+.section-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+#container-wallet {
+    width: 40%;
+    height: 70%;
+}
+
+.title-wallet {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+#add-card-section {
+    border: 1px solid #eee;
+    border-radius: 15px;
+    width: 100%;
+    height: 90%;
+    box-shadow: 5px 5px 15px #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content-add-card {
+    
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#content-add-card span{
+    color: #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    padding-bottom: 100px;
+}
+
+#content-add-card button {
+    padding: 10px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 300ms ease-in-out;
+}
+
+#content-add-card button:hover {
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+}

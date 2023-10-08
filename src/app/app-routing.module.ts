@@ -21,6 +21,7 @@ import { UserOptionBarComponent } from './user/user-option-bar/user-option-bar.c
 import { DetailscardComponent } from './user/detailscard/detailscard.component';
 import { PlanComponent } from './user/plan/plan.component';
 import { SucursalComponent } from './user/sucursal/sucursal.component'
+import { PerfilUsuarioComponent } from './user/perfil-usuario/perfil-usuario.component';
 
 
 const routes: Routes = [
@@ -42,6 +43,7 @@ const routes: Routes = [
   { path: "tutarjeta" , component: WalletcardsComponent},
   { path: "plan", component: PlanComponent },
   { path: "sucursal", component: SucursalComponent},
+  { path: "perfil-usuario", component: PerfilUsuarioComponent},
   //componentes recepcionista
   { path: "stock", component: StockComponent },
   { path: "detalles-compra", component: DetalleCompraComponent },

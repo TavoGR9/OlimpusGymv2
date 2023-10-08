@@ -1,0 +1,69 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <ul class="list-container">
+            <li class="list-item"><mat-icon>account_circle</mat-icon><a (click)="navegarPagina('cartera')">Perfil</a></li>
+            <li class="list-item"><mat-icon>settings</mat-icon><a (click)="navegarPagina('cartera')">Editar Perfil</a></li>
+            <li class="list-item"><mat-icon>account_balance_wallet</mat-icon><a (click)="navegarPagina('cartera')">Cartera</a></li>
+            <!--<li class="list-item"><mat-icon>accessibility</mat-icon><a (click)="navegarPagina('cartera')">Acceso</a></li>-->
+        </ul>
+    </mat-drawer>
+    <mat-drawer-content class="section-main">
+        <div class="toolbar_imag">
+            <img class="logo_h" src="../../../assets/img/login-img/logo.jpeg">
+        </div><!--cierra container img-->
+
+        <div class="content_grid">
+
+            <div class="content_left">
+                <div class="data_left">
+                    <img src="../../../assets/img/profile-img/prof1.jpg" alt="im_perfil" class="pic_profile">
+                    <h6 class="status">Estatus</h6>
+                    <p class="status_value">Activo</p>
+                    <mat-icon style="color: green;">check_circle</mat-icon>
+                </div>
+            </div><!--cierra content - left-->
+
+            <div class="content_right">
+                <div class="data_right">
+                    <div class="contanier_name_greet">
+                        <label class="greet_user">Hola</label>
+                        <label class="name_user">Arturo Javier Morales Rosas</label>
+                    </div>
+                    <div class="container_plan">
+                        <p class="planes_title">Planes adquiridos</p>
+                        <div class="plan_content">
+                            <p class="name_txt">Plan: 
+                                <label class="date_buy">Plan Basico Plus</label></p>
+                            <label class="datebuy_txt">Fecha de compra:</label>
+                            <label class="date_buy">11/09/23</label>
+                            <label class="dateend_txt">Fecha de termino:</label>
+                            <label class="date_end">11/09/23</label>
+                            <hr>
+                            <p class="name_txt">Plan: 
+                                <label class="date_buy">Plan Online fit</label></p>
+                            <label class="datebuy_txt">Fecha de compra:</label>
+                            <label class="date_buy">11/09/23</label>
+                            <label class="dateend_txt">Fecha de termino:</label>
+                            <label class="date_end">11/09/23</label>
+                        </div>
+                       
+                    </div>
+                    <div class="container_qr">
+                        <img src="../../../assets/img/profile-img/frame.png" alt="" class="qr_image">
+                    </div>
+                    
+                </div><!--cierra datra rigth-->
+            </div><!--cierra content - rigth-->
+        </div><!--cierra content grid-->
+
+        <!--<div id="container-wallet">
+            <h1 class="title-wallet">¡Bienvenido a tu cartera!</h1>
+            <div id="add-card-section">
+                <div id="content-add-card">
+                    <span>Aun no tienes tarjetas en tu cartera</span>
+                    <button (click)="navegarPagina('agregartarjeta')">agregar</button>
+                </div>
+            </div>
+        </div>-->
+    </mat-drawer-content>
+  </mat-drawer-container>
