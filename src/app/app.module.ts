@@ -43,6 +43,7 @@ import { PlanComponent } from './user/plan/plan.component';
 import { PerfilUsuarioComponent } from './user/perfil-usuario/perfil-usuario.component';
 import { EditarPerfilComponent } from './user/editar-perfil/editar-perfil.component';
 import { ConfirmacionComponent } from './user/confirmacion/confirmacion.component';
+import { PlanvirtualComponent } from './user/planvirtual/planvirtual.component';
 
 
 @NgModule({
@@ -72,6 +73,7 @@ import { ConfirmacionComponent } from './user/confirmacion/confirmacion.componen
     PerfilUsuarioComponent,
     EditarPerfilComponent,
     ConfirmacionComponent,
+    PlanvirtualComponent,
   ],
   imports: [
     BrowserModule,

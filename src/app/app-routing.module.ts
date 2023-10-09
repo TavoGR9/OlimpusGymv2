@@ -24,6 +24,7 @@ import { SucursalComponent } from './user/sucursal/sucursal.component'
 import { PerfilUsuarioComponent } from './user/perfil-usuario/perfil-usuario.component';
 import { EditarPerfilComponent } from './user/editar-perfil/editar-perfil.component';
 import { ConfirmacionComponent } from './user/confirmacion/confirmacion.component';
+import { PlanvirtualComponent } from './user/planvirtual/planvirtual.component';
 
 
 const routes: Routes = [
@@ -48,6 +49,8 @@ const routes: Routes = [
   { path: "perfil-usuario", component: PerfilUsuarioComponent},
   { path: "editar-perfil", component: EditarPerfilComponent},
   { path: "confirmacion", component: ConfirmacionComponent},
+  { path: "VirtualOlimpusGym", component: PlanvirtualComponent },
+
   //componentes recepcionista
   { path: "stock", component: StockComponent },
   { path: "detalles-compra", component: DetalleCompraComponent },
