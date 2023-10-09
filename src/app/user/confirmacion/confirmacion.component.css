@@ -1,0 +1,18 @@
+.mi-div-con-borde {
+    width: 600px; /* Ancho*/
+    height: 560px; /* Altura*/
+    background-color: #ffffff; 
+    border: 2px solid #000; /* Borde del div*/
+    color: #000000; /*Color del texto*/
+    line-height: 100px; /* Alineación vertical*/
+    font-size: 18px; /* Tamaño de fuente del texto */
+    margin: 0 auto;  /*centrar*/
+    border-radius: 20px; 
+}
+
+.footer_component {
+    position: relative;
+    left:0px;
+    bottom:0px;
+    width:100%;
+   }

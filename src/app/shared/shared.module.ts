@@ -5,7 +5,7 @@ import { HeaderComponent } from './header/header.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faFacebook, faGoogle, faInstagram, faTwitter, faPaypal, faXTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faCircleUser, faCreditCard } from '@fortawesome/free-solid-svg-icons';
+import { faCircleUser, faCreditCard, faCheckCircle  } from '@fortawesome/free-solid-svg-icons';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
@@ -44,7 +44,7 @@ import { CarroComponent } from './carro/carro.component';
 export class SharedModule { 
   constructor(library: FaIconLibrary) {
     library.addIcons(
-      faFacebook, faGoogle, faInstagram, faTwitter, faCircleUser, faCreditCard, faPaypal, faXTwitter
+      faFacebook, faGoogle, faInstagram, faTwitter, faCircleUser, faCreditCard, faPaypal, faXTwitter,faCheckCircle 
     ); 
   }
 }

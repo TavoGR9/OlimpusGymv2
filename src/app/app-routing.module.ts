@@ -23,6 +23,7 @@ import { PlanComponent } from './user/plan/plan.component';
 import { SucursalComponent } from './user/sucursal/sucursal.component'
 import { PerfilUsuarioComponent } from './user/perfil-usuario/perfil-usuario.component';
 import { EditarPerfilComponent } from './user/editar-perfil/editar-perfil.component';
+import { ConfirmacionComponent } from './user/confirmacion/confirmacion.component';
 
 
 const routes: Routes = [
@@ -46,6 +47,7 @@ const routes: Routes = [
   { path: "sucursal", component: SucursalComponent},
   { path: "perfil-usuario", component: PerfilUsuarioComponent},
   { path: "editar-perfil", component: EditarPerfilComponent},
+  { path: "confirmacion", component: ConfirmacionComponent},
   //componentes recepcionista
   { path: "stock", component: StockComponent },
   { path: "detalles-compra", component: DetalleCompraComponent },

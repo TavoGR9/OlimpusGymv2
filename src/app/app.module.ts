@@ -42,6 +42,7 @@ import { WalletcardsComponent } from './user/walletcards/walletcards.component';
 import { PlanComponent } from './user/plan/plan.component';
 import { PerfilUsuarioComponent } from './user/perfil-usuario/perfil-usuario.component';
 import { EditarPerfilComponent } from './user/editar-perfil/editar-perfil.component';
+import { ConfirmacionComponent } from './user/confirmacion/confirmacion.component';
 
 
 @NgModule({
@@ -70,6 +71,7 @@ import { EditarPerfilComponent } from './user/editar-perfil/editar-perfil.compon
     PlanComponent,
     PerfilUsuarioComponent,
     EditarPerfilComponent,
+    ConfirmacionComponent,
   ],
   imports: [
     BrowserModule,
