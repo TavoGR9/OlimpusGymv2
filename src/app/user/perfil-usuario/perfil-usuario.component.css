@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.example-container {
+    width: 100%;
+    height: 100vh;
+    border: 1px solid #555;
+  }
+
+mat-drawer {
+    width: 20%;
+}
+
+.list-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.list-item {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.list-item:hover {
+    border-bottom: 1px solid #ccc;
+}
+
+.list-item a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+}
+
+.list-item a:hover {
+    cursor: pointer;
+}
+
+/*marcador ...........................................................................*/
+.logo_h {
+    width: 30%;
+}
+
+.toolbar_imag {
+    width: 100%;
+    height: auto;
+    text-align: right;
+    background-color: white;
+    border-radius: 0px 0px 20px 0px;
+}
+
+/*propiedades contenedor body**/
+.container_data_user{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+}
+
+/*propiedades contenedor padre*/
+.container_grid_padre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+}
+
+
+
+
+.h1_container {
+    background: #ffffff;
+    text-align: center;
+    border-radius: 10px 0px 0px 10px;
+    width: 400px;
+    border-bottom: #999999 solid 1px;
+    border-top: #999999 solid 1px;
+    border-left: #999999 solid 1px;
+    min-height: 550px;
+}
+
+.h2_container {
+    min-height: 550px;
+    background: #0b2d39;
+    border-radius: 0px 10px 10px 0px;
+    width: 500px;
+    border-bottom: #999999 solid 1px;
+    border-top: #999999 solid 1px;
+    border-right: #999999 solid 1px;
+    box-shadow: 5px 5px 15px #999999;
+}
+
+/**propiedades imagen perfil**/
+.pic_profile {
+    width: 150px;
+    border-radius: 75px;
+    margin-top: 50px;
+}
+
+/*propiedades nombre usuario */
+.name_user {
+    display: block;
+    font-size: larger;
+    font-weight: bolder;
+    margin: 15px 0px;
+}
+
+/*.txt_status {
+    margin-top: 50px;
+    font-size: medium;
+    font-weight: bold;
+}*/
+
+.status_value {
+    color: #005200;
+    background: #9bfab0;
+    width: 110px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: larger;
+    border-radius: 3px;
+}
+
+.container_plan {
+    width: 85%;
+    background: white;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 30px auto;
+
+}
+
+.plan_title {
+    align-items: center;
+}
+
+/*propiedades textos planes**/
+.planes_title {
+    display:block;
+    margin-left: 5px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: small;
+}
+
+/**propiedades textos fechas planes*/
+.datebuy_txt, .dateend_txt {
+    display: inline-block;
+    font-size: small;
+    margin: 0px 5px;
+}
+
+/*propiedades nombre plan texto */
+.name_txt {
+    margin-left: 5px;
+    font-size: small;
+}
+
+/*propiedades textos valores fechas planes**/
+.date_buy, .date_end {
+    font-size: small;
+    font-weight: bold;
+}
+
+/*propiedades contenedor qr*/
+.container_qr {
+    width: 100%;
+    text-align: center;
+}
+
+/**propiedades imagen codigo qr**/
+.qr_image {
+    width: 150px;
+    border-radius: 10px;
+}
+
+
+.section-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*marcador ...........................................................................*/

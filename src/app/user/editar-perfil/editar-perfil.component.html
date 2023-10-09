@@ -1,0 +1,77 @@
+
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <ul class="list-container">
+            <li class="list-item"><mat-icon>account_circle</mat-icon><a (click)="navegarPagina('cartera')">Perfil</a></li>
+            <li class="list-item"><mat-icon>settings</mat-icon><a (click)="navegarPagina('cartera')">Editar Perfil</a></li>
+            <li class="list-item"><mat-icon>account_balance_wallet</mat-icon><a (click)="navegarPagina('cartera')">Cartera</a></li>
+            <!--<li class="list-item"><mat-icon>accessibility</mat-icon><a (click)="navegarPagina('cartera')">Acceso</a></li>-->
+        </ul>
+    </mat-drawer>
+    <mat-drawer-content class="section-main">
+        
+        <div class="content_data">
+            <div class="title_page">
+                <h4>Editar información de perfil</h4>
+            </div><!-- cierra contenedor title page-->
+            <div class="form_content">
+                <form [formGroup]="form" (ngSubmit)="guardar()">
+                    <p>
+                        <mat-form-field appearance="outline" class="inputs_properties">
+                            <mat-label>Nombre</mat-label>
+                            <input type="text" matInput placeholder="Nombre" autocomplete="off" formControlName="nombre">
+                        </mat-form-field>
+                    
+                        <mat-form-field appearance="outline" class="inputs_properties">
+                            <mat-label>Apellido paterno</mat-label>
+                            <input type="text" matInput placeholder="Apellido paterno" autocomplete="off" formControlName="paterno">
+                        </mat-form-field>
+                    </p>
+                    <p>
+                        <mat-form-field appearance="outline" class="inputs_properties">
+                            <mat-label>Apellido materno</mat-label>
+                            <input type="text" matInput placeholder="Apellido materno" autocomplete="off" formControlName="materno">
+                        </mat-form-field>
+                    
+                        <mat-form-field appearance="outline" class="inputs_properties">
+                            <mat-label>Telefono</mat-label>
+                            <input type="text" matInput placeholder="Telefono" autocomplete="off" minlength="8" maxlength="10" formControlName="telefono">
+                        </mat-form-field>
+                    </p>
+                    <p>
+                        <mat-form-field appearance="outline" class="inputs_properties">
+                            <mat-label>Dirección</mat-label>
+                            <input type="text" matInput placeholder="Dirección" autocomplete="off" formControlName="direccion">
+                        </mat-form-field>
+                    
+                        <mat-form-field appearance="outline" class="inputs_properties" formControlName="nacimiento">
+                           <mat-label>Fecha de nacimiento</mat-label>
+                           <input type="date" matInput autocomplete="off">
+                        </mat-form-field>
+                    </p>
+                    <p>
+                        <mat-form-field appearance="outline" class="inputs_properties">
+                            <mat-label>Correo</mat-label>
+                            <input type="text" placeholder="Correo" matInput autocomplete="off" formControlName="email">
+                          </mat-form-field>
+                    
+                        <mat-form-field appearance="outline" class="inputs_properties">
+                            <mat-label>Contraseña</mat-label>
+                            <input matInput  matInput [type]="hide ? 'password' : 'text'" placeholder="Asignar contraseña" formControlName="password">
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                    </p>
+                    <fieldset>
+                        Selecciona imagen: <input type="file" class="btn_int" id="photo">
+                    </fieldset>
+                    <button type="submit" class="btn_int" mat-raised-button color="warn">
+                        Cancelar</button>
+                    <button type="submit" class="btn_int" mat-raised-button style="background: #FD9727; color: white;">
+                        Guardar</button>
+                </form>
+            </div><!--cierra form content-->
+        </div><!--cierra content data-->
+    </mat-drawer-content>
+  </mat-drawer-container>
