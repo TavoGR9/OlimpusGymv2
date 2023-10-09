@@ -94,3 +94,7 @@ fa-icon {
     background-repeat: no-repeat;
 }
 
+/*propiedades de links resgistrate - olvide contraseña*/
+.txt_link {
+    cursor: pointer;
+}
