@@ -44,6 +44,9 @@ import { PerfilUsuarioComponent } from './user/perfil-usuario/perfil-usuario.com
 import { EditarPerfilComponent } from './user/editar-perfil/editar-perfil.component';
 import { ConfirmacionComponent } from './user/confirmacion/confirmacion.component';
 import { PlanvirtualComponent } from './user/planvirtual/planvirtual.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
+
 
 
 @NgModule({
