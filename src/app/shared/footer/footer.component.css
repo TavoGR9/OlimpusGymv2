@@ -38,7 +38,7 @@
 /**propiedades footer**/
 footer {
     background-color: #434343;
-    height: 139px;
+    min-height: 139px;
     position: absolute;
     bottom: 0;
     width: 100%;

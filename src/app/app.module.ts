@@ -93,6 +93,8 @@ import { PlanvirtualComponent } from './user/planvirtual/planvirtual.component';
     MatSlideToggleModule,
     MatCheckboxModule,
     MatSidenavModule,
+    ToastrModule.forRoot(),
+    HttpClientModule,  
   ],
   providers: [],
   bootstrap: [AppComponent]
