@@ -42,6 +42,8 @@ import { WalletcardsComponent } from './user/walletcards/walletcards.component';
 import { PlanComponent } from './user/plan/plan.component';
 import { PerfilUsuarioComponent } from './user/perfil-usuario/perfil-usuario.component';
 import { EditarPerfilComponent } from './user/editar-perfil/editar-perfil.component';
+import { ToastrModule } from 'ngx-toastr'; //mostrar alertas pop up
+import { HttpClientModule } from '@angular/common/http'; //libreria - conexion w. back
 
 
 @NgModule({
@@ -89,6 +91,8 @@ import { EditarPerfilComponent } from './user/editar-perfil/editar-perfil.compon
     MatSlideToggleModule,
     MatCheckboxModule,
     MatSidenavModule,
+    ToastrModule.forRoot(),
+    HttpClientModule,  
   ],
   providers: [],
   bootstrap: [AppComponent]
