@@ -49,14 +49,14 @@
                         <th>
                             <img src="assets/img/index-img/logo.jpeg" alt="">
                         </th>
-                        <th>Basico
-                            <span>$199</span>
+                        <th>Basica
+                            <span>$320</span>
                         </th>
-                        <th>Estandar
-                            <span>$299</span>
+                        <th>Avanzada
+                            <span>$599</span>
                         </th>
                         <th>Premium
-                            <span>$399</span>
+                            <span>$799</span>
                         </th>
                     </tr>
                     <tr>
@@ -90,7 +90,7 @@
                         <td><button class="checked"><mat-icon>check</mat-icon></button></td>
                     </tr>
                 </table>
-                <button class="choose">Elige tu plan</button>
+                <button class="choose" (click)="navegarPagina('membresias')">Elige tu plan</button>
             </div>
         </div>
     </div>
@@ -100,28 +100,32 @@
         <h2 class="title_section">Nuestros Productos</h2>
         <div class="flex-container">
         <div id="container-content">
-        <div class="container-button" id="button-left"><mat-icon>chevron_left</mat-icon></div>
+        <div class="container-button" id="button-left">
+            <button mat-raised-button><mat-icon>chevron_left</mat-icon></button>
+        </div>
         <div id="carrousel-products">
-            <div class="product">
+            <div class="product" (click)="navegarPagina('productos')">
                 <img src="../../../assets/img/index-img/proteway.jpg" alt="" width="200px">
                 <div class="product-title">
                     <a href="#">Proteina Whey 1kg</a>
                 </div>
             </div>
-            <div class="product">
+            <div class="product" (click)="navegarPagina('productos')">
                 <img src="../../../assets/img/index-img/shaker.jpg" alt="" width="200px">
                 <div class="product-title">
                     <a href="#">Shaker Gym 700ml</a>
                 </div>
             </div>
-            <div class="product">
+            <div class="product" (click)="navegarPagina('productos')">
                 <img src="../../../assets/img/index-img/playera.jpg" alt="" width="200px">
                     <div class="product-title">
                         <a href="#">Playera Deportiva Talla s</a>
                     </div>
                 </div>
             </div>
-        <div class="container-button" id="button-left"><mat-icon>chevron_right</mat-icon></div>
+        <div class="container-button" id="button-left">
+            <button mat-raised-button><mat-icon>chevron_right</mat-icon></button>
+        </div>
     </div>
     </div>
 </div>
@@ -183,7 +187,9 @@
 
     <div id="movil-section">
         <div id="movil-banner">
-            <img src="../../../assets/img/index-img/banner-movil-app.jpg" alt="">
+            <a href="https://play.google.com/store/games?device=windows&pli=1" target="_blank">
+                <img src="../../../assets/img/index-img/banner-movil-app.jpg">
+            </a>
         </div>
     </div>
 </div>
