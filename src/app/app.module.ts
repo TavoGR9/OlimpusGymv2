@@ -46,6 +46,7 @@ import { ConfirmacionComponent } from './user/confirmacion/confirmacion.componen
 import { PlanvirtualComponent } from './user/planvirtual/planvirtual.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
+import { CarritoComponent } from './recepcionist/carrito/carrito.component';
 
 
 
@@ -77,6 +78,7 @@ import { ToastrModule } from 'ngx-toastr';
     EditarPerfilComponent,
     ConfirmacionComponent,
     PlanvirtualComponent,
+    CarritoComponent,
   ],
   imports: [
     BrowserModule,
