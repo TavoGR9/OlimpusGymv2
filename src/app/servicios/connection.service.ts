@@ -5,12 +5,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ConnectionService {
-  URLServices = "http://localhost/inmoplusMovil/servicios/";
+  URLServices = "http://localhost/olimpus-gym/";
   constructor( private http: HttpClient) { }
 
-  credenciales(user_data:string, Password:string){
+  credenciales(data:string, password:string){
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
-    let parameters = 'oldPassword=' + user_data + '&newPassword=' + Password;
-    return this.http.post(this.URLServices + 'Movil_password_ch.php', parameters, { headers });
+    let parameters = 'data=' + data + '&password=' + password;
+    return this.http.post(this.URLServices + 'login.php', parameters, { headers });
   }
 }
