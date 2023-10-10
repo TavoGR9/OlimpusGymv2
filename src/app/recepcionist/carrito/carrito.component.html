@@ -1,1 +1,193 @@
-<p>carrito works!</p>
+<div class="body-component">
+    <!--HEADER-->
+    <div>
+        <app-header></app-header>
+    </div>
+
+    <!--BODY-->
+    <div>
+        <br>
+        <div class="grid">
+            <div style="text-align:right;">
+                <input class="input-wrapper" type="search" placeholder="Buscar"/>
+                <button mat-raised-button class="button-search"
+                    style="background-color: #f9a640; color: black; margin-right: 60px;">Buscar
+                </button>    
+            </div>
+            <div style="text-align:center;">
+                <button mat-raised-button class="button-search"
+                    style="background-color: #df7e54; color: black; margin: 0 auto; font-size: 13px;">Historial compras
+                </button> 
+            </div>
+        </div>
+
+        <br>
+
+        <div>
+            <form class="form-first" style="margin: 0 auto; background-color: #f9a640;">
+                <div style="text-align:center;">
+                    <label style="font-weight: bold; font-size: 20px;">
+                        Productos
+                    </label> 
+                </div>
+                <br>
+                <table class="styled-table" style="background-color: #ffffff;">
+                    <tr class="styled-table-tr">
+                        <td class="styled-table-td">
+                            <div class="grid-table">
+                                <div style="text-align:center;">
+                                    <img class="img-size" src="../../../../assets/img/stock-img/power.jpg"/>
+                                </div>
+
+                                <div>
+                                    <br>
+                                    <div>
+                                        <label style="font-weight: bold; font-size: 20px;">
+                                            Bebida Hidratante Powerade 1L
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label style="font-size: 15px;">
+                                            Sabor: Moras
+                                        </label>
+                                    </div>
+                                    <br>
+                                    <div class="grid-btns-articulo">
+                                        <div style="text-align:center;">
+                                            <button class="button-compra-articulos">
+                                                Eliminar
+                                            </button>
+                                        </div>
+                                        <div style="text-align:center;">
+                                            <button class="button-compra-articulos">
+                                                Editar 
+                                            </button>
+                                        </div>
+                                        <div style="text-align:center;">
+                                            <button class="button-compra-articulos">
+                                                Comprar Ahora
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div style="text-align:center; margin-top: 40px;">
+                                    <input class="input-number" type="number" value="1" min="1" max="5">
+                                    <br>
+                                    <label style="color: #f9a640; font-weight: bold; font-size: 13px;">(15 disponibles)</label>
+                                </div>
+
+                                <div style="text-align:center; margin-top: 40px;">
+                                    <label style="font-size: 25px;">$28.00</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+      
+                    <tr class="styled-table-tr">
+                        <td class="styled-table-td">
+                            <div class="grid-table">
+                                <div style="text-align:center;">
+                                    <img class="img-size" src="../../../../assets/img/stock-img/ropa_sport.png"/>
+                                </div>
+
+                                <div>
+                                    <br>
+                                    <div>
+                                        <label style="font-weight: bold; font-size: 20px;">
+                                            Conjunto de ropa deportiva
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label style="font-size: 15px;">
+                                            Talla: XL
+                                        </label>
+                                    </div>
+                                    <br>
+                                    <div class="grid-btns-articulo">
+                                        <div style="text-align:center;">
+                                            <button class="button-compra-articulos">
+                                                Eliminar
+                                            </button>
+                                        </div>
+                                        <div style="text-align:center;">
+                                            <button class="button-compra-articulos">
+                                                Editar 
+                                            </button>
+                                        </div>
+                                        <div style="text-align:center;">
+                                            <button class="button-compra-articulos">
+                                                Comprar Ahora
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div style="text-align:center; margin-top: 40px;">
+                                    <input class="input-number" type="number" value="1" min="1" max="5">
+                                    <br>
+                                    <label style="color: #f9a640; font-weight: bold; font-size: 13px;">(13 disponibles)</label>
+                                </div>
+
+                                <div style="text-align:center; margin-top: 40px;">
+                                    <label style="font-size: 25px;">$350.00</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <br>
+        <div class="grid-review">
+            <div>
+
+            </div>
+            <div>
+                <form class="form-second" style="background-color: #f9a640;">
+                    <div style="text-align:center;">
+                        <label style="font-weight: bold; font-size: 20px;">
+                            Resumen de compra
+                        </label> 
+                    </div>
+                    <br>
+                    <table class="styled-table" style="background-color: #ffffff;">
+                        <tr class="styled-table-tr">
+                            <td class="styled-table-review-td">
+                                <div style="text-align:center; margin-bottom: 20px;">
+                                    <label style="font-weight: bold; font-size: 18px;">
+                                        Productos (2)
+                                    </label> 
+                                </div>
+                                <div class="grid-review" style="text-align:center; margin-bottom: 20px;" >
+                                    <div>
+                                        <label style="font-weight: bold; font-size: 18px;">
+                                            Total:
+                                        </label> 
+                                    </div>
+                                    <div>
+                                        <label style="font-weight: bold; font-size: 18px;">
+                                            $378.00
+                                        </label> 
+                                    </div>
+                                </div>
+                                <div style="text-align:center;">
+                                    <button mat-raised-button class="button-compra"
+                                        style="background-color: #f9a640; color: black; margin-right: 0 auto;">Continuar compra
+                                    </button>  
+                                </div>
+
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    
+    <!--FOOTER-->
+    <div>
+        <app-footer></app-footer>
+    </div>
+</div>
