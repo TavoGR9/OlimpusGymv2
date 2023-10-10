@@ -1,0 +1,141 @@
+/** BODY Y FOOTER*/
+.body-component{
+    position: relative;
+    padding-bottom: 180px;
+    min-height: 100vh;
+}
+
+/** INPUT Y BOTON SEARCH*/
+.input-wrapper {
+    position: relative;
+    width: 600px;
+    height: 40px;
+    margin-left: 70px;
+    border-width: 3px;
+    border-radius: 15px;
+    text-align:center;
+  }
+
+.button-search{
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    margin-left: 5px;
+    border-radius: 15px;
+}
+/** ESTILOS DE LOS DIFERENTES FORM*/
+.form-first{
+    width: 1000px;
+    height: 1000px;
+    border: 1px solid #f9a640;
+    border-radius: 15px;
+    border-width: 3px;
+}
+
+.form-second{
+    width: 450px;
+    height: 400px;
+    border: 1px solid #f9a640;
+    background-color: #dddddd;
+    border-radius: 15px;
+    border-width: 3px;
+}
+
+.form-third{
+    width: 450px;
+    height: 300px;
+    border: 1px solid #f9a640;
+    background-color: #dddddd;
+    border-radius: 15px;
+    border-width: 3px;
+}
+
+.form-img{
+    width: 450px;
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border-width: 3px;
+}
+
+/**Estilos de botones (otros productos)**/
+.button-products{
+    width: 200px;
+    height: 220px;
+    border: 1px solid #f9a640;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border-width: 3px;
+}
+
+/** TAMAÑO DE IMAGENES (OTROS PRODUCTOS)*/
+.img-size-other{
+    width: 125px;
+    height: 110px;
+}
+
+/** TAMAÑO DE IMAGEN PRODUCTO PRINCIPAL*/
+.img-size{
+    width: 300px;
+    height: 350px;
+}
+
+/** TAMAÑO Y CENTRADO DE LOS GRID*/
+.grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.price_check {
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+/** ESTILOS DEL INPUT SELECT*/
+.input-select{
+    background-color: #dddddd;
+    border: 0px solid #dddddd;
+    width: 110px;
+    height: 40px;
+    text-align:center;
+    font-size: 15px;
+    border-radius: 15px;
+}
+/** ESTILOS PARA LOS BOTONES DE COMPRA Y CARRITO*/
+.button-compra{
+    width: 350px;
+    height: 40px;
+    font-weight: bold;
+    margin-left: 5px;
+    border-radius: 15px;
+}
+
+
+/**Styles para la tabla**/
+.styled-table { 
+    border-collapse: collapse; 
+    margin: 25px 0; 
+    font-size: 1em; 
+    font-family: sans-serif; 
+    min-width: 450px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); 
+    margin: 0 auto; 
+    text-align:center;
+    border-bottom: 1px solid #dddddd; 
+}
+
+.styled-table-line1-tr { 
+    background-color: #f9a640;
+    color: black;
+    text-align: middle;
+    border-bottom: 1px solid #dddddd; 
+}
+
+.styled-table-line2-tr {
+    border-bottom: 1px solid #dddddd; 
+}
+
+/*tamaño de encabezado de tabla*/
+.styled-table-td { 
+    padding: 7px 18px; 
+}

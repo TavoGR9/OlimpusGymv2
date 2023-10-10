@@ -1,1 +1,196 @@
-<p>detalle-compra works!</p>
+<div class="body-component">
+    <!--HEADER-->
+    <div>
+        <app-header></app-header>
+    </div>
+
+    <!----BODY-->
+    <div>
+        <br>
+        <div style="text-align:center;">
+            <input class="input-wrapper" style="margin: 0 auto;" type="search" placeholder="Buscar"/>
+            <button mat-raised-button class="button-search"
+                style="background-color: #f9a640; color: black;">Buscar
+            </button>    
+        </div>
+
+        <br>
+
+        <div>
+            <form class="form-first" style="margin: 0 auto;">
+                <br>
+                <div class="grid">
+                    <div class="price_check">
+                        <form class="form-img" style="margin: 0 auto;">
+                            <img class="img-size" src="../../../../assets/images/stock-img/power.jpg" />
+                        </form>
+                    </div>
+                    
+                    <div>
+                        <form class="form-second" style="margin: 0 auto;">
+                            <br>
+                            <div style="text-align:center;">
+                                <label style="font-weight: bold; font-size: 23px;">
+                                    Detalle del producto
+                                </label> 
+                            </div>
+                            <div style="margin: 20px">
+                                <label style="font-size: 20px;">
+                                    Bebida Hidratante Powerade Moras 1L
+                                </label>
+                                <br>
+                                <br>
+                                <label style="font-size: 35px;">
+                                    $28.00
+                                </label>
+                                <br>
+                                <label style="font-size: 20px; color: #f9a640; font-weight: bold;">
+                                    IVA Incluido
+                                </label>
+                                <br>
+                                <br>
+                                <label style="font-size: 20px; font-weight: bold;">
+                                    Stock disponible
+                                </label>
+                                <br>
+                                <label style="font-size: 20px;">
+                                    Cantidad: 
+                                </label>
+                                <select class="input-select">
+
+                                    <option>1 unidad</option>
+                                    <option>2 unidades</option>
+                                    <option>3 unidades</option>
+                                    <option>4 unidades</option>
+                                    <option>+ 5 unidades</option>
+                                </select>
+                                <label style="font-size: 15px; color: #f9a640; font-weight: bold;">
+                                    (8 disponibles) 
+                                </label>
+                                <br><br>
+                                <div style="text-align:center;">
+                                    <button mat-raised-button class="button-compra"
+                                        style="background-color: #f9a640; color: black; margin: 0 auto; font-weight: bold;">Comprar Ahora
+                                    </button>  
+                                </div>
+                                <br>
+                                <div style="text-align:center;">
+                                    <button mat-raised-button class="button-compra"
+                                        style="background-color: #ffffff; color: #f9a640; margin: 0 auto; font-weight: bold;">Agregar al Carrito
+                                    </button>  
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <br><br>
+
+                <div class="grid">
+                    <div class="price_check">
+                        <label style="font-size: 18px; font-weight: bold;">
+                            Caracteristicas del producto
+                        </label>
+                        <table class="styled-table">
+
+                            <tr class="styled-table-line1-tr">
+                                <td class="styled-table-td">Marca</td>
+                                <td class="styled-table-td">Powarade</td>
+                            </tr>
+              
+                            <tr class="styled-table-line2-tr">
+                                <td class="styled-table-td">Linea</td>
+                                <td class="styled-table-td">Bebida para deportistas</td>
+                            </tr>
+    
+                            <tr class="styled-table-line1-tr">
+                                <td class="styled-table-td">Sabor</td>
+                                <td class="styled-table-td">Moras</td>
+                            </tr>
+
+                            <tr class="styled-table-line2-tr">
+                                <td class="styled-table-td">Formato de venta</td>
+                                <td class="styled-table-td">Unidad</td>
+                            </tr>
+    
+                            <tr class="styled-table-line1-tr">
+                                <td class="styled-table-td">Volumen de la unidad</td>
+                                <td class="styled-table-td">1L</td>
+                            </tr>
+    
+                            <tr class="styled-table-line2-tr">
+                                <td class="styled-table-td">Conservación del producto</td>
+                                <td class="styled-table-td">Temperatura ambiente</td>
+                            </tr>
+              
+                        </table>
+                    </div>
+
+                    <div>
+                        <form class="form-third" style="margin: 0 auto;">
+                            <br>
+                            <div style="text-align:center;">
+                                <label style="font-weight: bold; font-size: 23px;">
+                                    Otros productos
+                                </label> 
+                            </div>
+                            <br>
+                            <div class="grid">
+                                <div class="price_check">
+                                    <button mat-raised-button class="button-products" style="margin: 0 auto;">
+                                        <br>
+                                        <img class="img-size-other" src="../../../../assets/images/stock-img/proteina.jpg"/>
+                                        <br><br>
+                                        <label style="font-size: 20px;">
+                                            $200.00
+                                        </label>
+                                        <br>
+                                        <label style="font-size: 17px;">
+                                            Proteina 597g
+                                        </label>
+                                    </button>
+                                </div>
+
+                                <div class="price_check">
+                                    <button mat-raised-button class="button-products" style="margin: 0 auto;">
+                                        <br>
+                                        <img class="img-size-other" src="../../../../assets/images/stock-img/ropa_sport.png"/>
+                                        <br><br>
+                                        <label style="font-size: 20px;">
+                                            $350.00
+                                        </label>
+                                        <br>
+                                        <label style="font-size: 17px;">
+                                            Ropa Deportiva. Talla: XL
+                                        </label>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div style="margin: 20px">
+                <label style="font-size: 20px; font-weight: bold; ">Descripción</label>
+                    <label style="font-size: 18px;"><br>
+                        - Bebida rehidratante Powerade sabor moras de 1 Litro.<br>
+                        - Bebida ideal para deportistas, ya que cuenta con un sistema recargado de electrolitos.<br>
+                        - Ayuda a reponer 4 minerales que pierdes al sudar, como: sodio, calcio, potasio y magnesio.<br>
+                        - Está adicionado con vitaminas B3, B6 y B12 que contribuyen a metabolizar los carbohidratos y obtener energía para seguir ejercitándote sin desgastar tu cuerpo.<br>
+                        - Siente el poder por tu cuerpo con Powerade y llévalo ahora mismo.<br>
+                    </label>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!----Footer-->
+    <div>
+        <app-footer></app-footer>
+    </div>
+
+
+</div>
+
+
