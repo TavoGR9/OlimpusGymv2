@@ -10,11 +10,21 @@
 body *, html * {
     box-sizing: border-box;
     word-wrap: break-word;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .footerc{
-    position: absolute;
     bottom: 0;
     width: 100%;
+    padding-bottom: 139px;
+}
+
+.body-membresia {
+    margin-top: 100px;
+    position: relative;
+}
+
+h1 { 
+    margin-bottom: 50px;
 }
 
 div{
@@ -50,6 +60,14 @@ li {
     text-justify: distribute;
     font-size: 0;
 }
+
+.membresias-caja {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
 .membresia--inverse {
     background: #1f2123;
     border-color: #1f2123;
@@ -61,15 +79,14 @@ li {
 }
 
 .membresia {
-    display: inline-block;
     vertical-align: top;
     display: table-cell;
     width: 355px;
     height: 300px;
     padding: 0 0 10px;
-    border: 1px solid #ffffff;
-    border-radius: 1px;
     text-align: center;
+    border-radius: 15px;
+    padding-bottom: 50px;
 }
 .membresia_info {
     padding: 0 40px;
@@ -109,7 +126,7 @@ li {
     padding: 26px;
     border: none;
     border-radius: 2px;
-    background-color: #ffffff;
+    background-color: #DF7E54;
     font: 700 14px Roboto,helvetica,arial,sans-serif;
     color: #000;
     text-align: center;
@@ -118,6 +135,7 @@ li {
     cursor: pointer;
     outline: 0;
     transition: background .5s ease;
+    border-radius: 15px;
 }
 .membresia-titulo .precio{
     font-size: 20px;
