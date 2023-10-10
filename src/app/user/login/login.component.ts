@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ConnectionService } from 'src/app/servicios/connection.service';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -22,9 +21,6 @@ export class LoginComponent {
       data: ['', Validators.required],
       password: ['', Validators.required]
     })
-  }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 
   ingresar(){
