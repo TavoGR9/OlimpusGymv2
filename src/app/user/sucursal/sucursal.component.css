@@ -42,9 +42,16 @@
   .tabla {
     margin-top: 2px;
     margin-bottom: 50px;
+<<<<<<< Updated upstream
     margin-right: 100px;
     margin-left:300px;
   
+=======
+    margin-left: 240px;
+    /* padding-right: 100px;
+    padding-left: 300px; */
+
+>>>>>>> Stashed changes
   }
   
   .tool_logo{
@@ -56,7 +63,11 @@
     color:white;
     font-size:130%;
     width:700px;
+<<<<<<< Updated upstream
     margin-left:430px;
+=======
+    margin-left:410px;
+>>>>>>> Stashed changes
   }
 
  /**propiedades body **/
