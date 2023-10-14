@@ -48,11 +48,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { AltaRecepcionComponent } from './recepcionist/alta-recepcion/alta-recepcion.component';
 
+import { StarRatingComponent, RutinasEntrenadorComponent } from './trainer/rutinas-entrenador/rutinas-entrenador.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatTableModule } from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort';
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    StarRatingComponent,
     AltaColaboradorComponent,
     StockComponent,
     DetalleCompraComponent,
@@ -79,9 +87,14 @@ import { AltaRecepcionComponent } from './recepcionist/alta-recepcion/alta-recep
     ConfirmacionComponent,
     PlanvirtualComponent,
     AltaRecepcionComponent,
+    RutinasEntrenadorComponent,
   ],
   imports: [
     BrowserModule,
+    MatTooltipModule,
+    MatSortModule,
+    MatTableModule,
+    MatGridListModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FontAwesomeModule,

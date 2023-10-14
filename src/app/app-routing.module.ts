@@ -26,6 +26,7 @@ import { EditarPerfilComponent } from './user/editar-perfil/editar-perfil.compon
 import { ConfirmacionComponent } from './user/confirmacion/confirmacion.component';
 import { PlanvirtualComponent } from './user/planvirtual/planvirtual.component';
 import { AltaRecepcionComponent } from './recepcionist/alta-recepcion/alta-recepcion.component';
+import { RutinasEntrenadorComponent } from './trainer/rutinas-entrenador/rutinas-entrenador.component';
 
 
 const routes: Routes = [
@@ -61,6 +62,7 @@ const routes: Routes = [
   { path: "alta-colaborador", component: AltaColaboradorComponent },
   { path: "asistencia", component: AsistenciaComponent },
   //componentes trainer
+  {path: "entrenador-rutinas", component:RutinasEntrenadorComponent},
   { path: "rutina-pierna", component: EntrenamientoPiernaComponent },
   //cuando el usuario agrega cualquier cosa como ruta
   { path: "**", redirectTo: "index", pathMatch: "full" },
