@@ -25,6 +25,7 @@ import { PerfilUsuarioComponent } from './user/perfil-usuario/perfil-usuario.com
 import { EditarPerfilComponent } from './user/editar-perfil/editar-perfil.component';
 import { ConfirmacionComponent } from './user/confirmacion/confirmacion.component';
 import { PlanvirtualComponent } from './user/planvirtual/planvirtual.component';
+import { AltaRecepcionComponent } from './recepcionist/alta-recepcion/alta-recepcion.component';
 
 
 const routes: Routes = [
@@ -55,6 +56,7 @@ const routes: Routes = [
   { path: "stock", component: StockComponent },
   { path: "detalles-compra", component: DetalleCompraComponent },
   { path: "membresias", component: MembresiasComponent },
+  { path: "alta-recepcion", component: AltaRecepcionComponent },
   //componentes admin
   { path: "alta-colaborador", component: AltaColaboradorComponent },
   { path: "asistencia", component: AsistenciaComponent },
