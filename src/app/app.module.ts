@@ -46,6 +46,7 @@ import { ConfirmacionComponent } from './user/confirmacion/confirmacion.componen
 import { PlanvirtualComponent } from './user/planvirtual/planvirtual.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
+
 import { AltaRecepcionComponent } from './recepcionist/alta-recepcion/alta-recepcion.component';
 
 
