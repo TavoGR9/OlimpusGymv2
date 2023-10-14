@@ -53,7 +53,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTableModule } from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
-
+import { HistorialComprasComponent } from './recepcionist/historial-compras/historial-compras.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { DetalleHistorialCompraComponent } from './recepcionist/detalle-historial-compra/detalle-historial-compra.component';
 
 
 
@@ -88,6 +90,8 @@ import {MatSortModule} from '@angular/material/sort';
     PlanvirtualComponent,
     AltaRecepcionComponent,
     RutinasEntrenadorComponent,
+    HistorialComprasComponent,
+    DetalleHistorialCompraComponent,
   ],
   imports: [
     BrowserModule,
@@ -113,6 +117,7 @@ import {MatSortModule} from '@angular/material/sort';
     MatSidenavModule,
     ToastrModule.forRoot(),
     HttpClientModule,  
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,31 @@
+.footer-component{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+h1{
+    text-align: center;
+   
+}
+
+mat-form-field{
+    width:12rem !important;
+    height: 4rem !important;
+    background-color: rgb(255, 255, 255) !important;
+    border-bottom: none !important;
+  } 
+.mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined) .mat-mdc-form-field-infix {
+    padding-top: 18px !important;
+    padding-bottom: 8px;
+}
+
+
+/* Structure */
+table {
+    width: 80%;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 80%;
+  }

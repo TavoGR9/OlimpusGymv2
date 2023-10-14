@@ -1,0 +1,72 @@
+<div class="body-component">
+    <!-- Header -->
+    <div>
+      <app-header></app-header>
+    </div>
+    <!-- Body -->
+    <div style="text-align: center;">
+      <h1>Detalles de Compra</h1>
+    </div>
+    <div class="centered-container">
+      <div class="divcontenido">
+        <div class="div-redondeado jus">
+          <div class="custom-div">
+            <div class="info-pair">
+              <div><a>Fecha de envío:</a></div>
+              <div><a>25/09/2023</a></div>
+            </div>
+            <div class="info-pair">
+              <div><a>No. de Pedido</a></div>
+              <div><a>2896532</a></div>
+            </div>
+            <div class="info-pair">
+              <div><a>Total del Pedido:</a></div>
+              <div><a>$2055.00</a></div>
+            </div>
+          </div>
+          <div class="custom-div">
+            <div class="info-pair">
+              <div><a>Fecha de envío:</a></div>
+              <div><a>25/09/2023</a></div>
+            </div>
+            <div class="info-pair">
+              <div><a>No. de Pedido</a></div>
+              <div><a>2896532</a></div>
+            </div>
+            <div class="info-pair">
+              <div><a>Total del Pedido:</a></div>
+              <div><a>$2055.00</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="divDetalleproduc">
+          <!-- Itera sobre la lista de productos -->
+          <div class="product-row" *ngFor="let product of productList">
+            <div class="product-details">
+              <img [src]="product.imageUrl" alt="Producto" />
+              <div class="product-description">
+                <h2>{{ product.name }}</h2>
+                <p>Descripción: {{ product.description }}</p>
+                <p>Cantidad: {{product.cantidad}}</p>
+                
+              </div>
+              
+              <div class="product-price">
+                <p>Precio: {{ product.price | currency }}</p>
+                <div class="product-actions">
+                    <button (click)="volverAComprar(product)">Volver a comprar</button>
+                  </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Footer -->
+    <div>
+      <app-footer></app-footer>
+    </div>
+  </div>
+  
