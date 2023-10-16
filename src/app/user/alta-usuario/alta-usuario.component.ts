@@ -18,6 +18,7 @@ export class AltaUsuarioComponent {
       telefono: ['', Validators.required],
       direccion: ['', Validators.required],
       nacimiento: ['', Validators.required],
+      curp: ['', Validators.required],
       email: ['', Validators.required],
       password: ['', Validators.required]
     })

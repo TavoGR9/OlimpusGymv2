@@ -42,10 +42,16 @@
                 </mat-form-field>
             </p>
             <p>
-                <mat-form-field appearance="outline" class="inputs_properties" formControlName="nacimiento">
+                <mat-form-field appearance="outline" class="inputs_properties">
                    <mat-label>Fecha de nacimiento</mat-label>
-                   <input type="date" matInput autocomplete="off">
+                   <input type="date" matInput autocomplete="off" formControlName="nacimiento">
                 </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="inputs_properties">
+                 <mat-label>Curp</mat-label>
+                 <input type="text" matInput placeholder="curp" autocomplete="off" formControlName="curp">
+              </mat-form-field>
             </p>
             <p>
                 <mat-form-field appearance="outline" class="inputs_properties">
@@ -66,17 +72,17 @@
                 Registrar</button>
         </form>
     </div><!--cierra form content-->
-    <div class="opciones_acceso">
-        <p>Otras opciones de acceso</p>
-      </div><!--cierra div opciones de acceso-->
-      <div class="btns_redess">
+    <!--<div class="opciones_acceso">
+      <p>Otras opciones de acceso</p>
+    </div>cierra div opciones de acceso
+    <div class="btns_redess">
         <button class="btn_social" mat-fab color="warn">
           <fa-icon [icon]="['fab', 'google']"></fa-icon>
         </button>
         <button class="btn_social" mat-fab color="primary">
           <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
         </button>
-      </div><!--cierra div btns redes sociales-->
+    </div>cierra div btns redes sociales-->
   </div><!--cierra content body-->
 
     <!--SE AGREGA EL FOOTER-->
