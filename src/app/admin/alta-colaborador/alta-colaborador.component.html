@@ -11,27 +11,27 @@
                 <h1>Administrador - Alta de colaborador</h1>
             </div>
             <div class="form_data">
-                <form>
+                <form [formGroup]="form" (ngSubmit)="registrar()">
                     <p>
                         <mat-form-field appearance="outline" class="inputs_properties">
                            <mat-label>Nombre</mat-label>
-                             <input type="text" matInput placeholder="Nombre" autocomplete="off">
+                             <input type="text" matInput placeholder="Nombre" autocomplete="off" formControlName="nombre">
                             </mat-form-field>
                     
                         <mat-form-field appearance="outline" class="inputs_properties">
                             <mat-label>Apellido paterno</mat-label>
-                            <input type="text" matInput placeholder="Apellido materno" autocomplete="off">
+                            <input type="text" matInput placeholder="Apellido materno" autocomplete="off" formControlName="apPaterno">
                         </mat-form-field>
                     
                         <mat-form-field appearance="outline" class="inputs_properties">
                             <mat-label>Apellido materno</mat-label>
-                            <input type="text" placeholder="Apellido materno" matInput autocomplete="off">
+                            <input type="text" placeholder="Apellido materno" matInput autocomplete="off" formControlName="apMaterno">
                         </mat-form-field>
                     </p>
                     <p>
                         <mat-form-field appearance="outline" class="inputs_properties">
-                            <mat-label>Correo</mat-label>
-                            <input type="text" placeholder="Correo" matInput autocomplete="off">
+                            <mat-label>RFC</mat-label>
+                            <input type="text" placeholder="RFC" matInput autocomplete="off" formControlName="rfc">
                           </mat-form-field>
                     
                         <mat-form-field appearance="outline" class="inputs_properties">
@@ -99,7 +99,7 @@
                     <p>
                         <mat-form-field appearance="outline" class="inputs_properties">
                             <mat-label>Asignar contraseña</mat-label>
-                            <input matInput  matInput [type]="hide ? 'password' : 'text'" placeholder="Asignar contraseña" formControlName="password">
+                            <input matInput  matInput [type]="hide ? 'password' : 'text'" placeholder="Asignar contraseña">
                             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                               <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                             </button>
@@ -116,10 +116,10 @@
 
                        <mat-form-field appearance="outline" class="inputs_properties">
                             <mat-label>Sucursal</mat-label>
-                            <mat-select id="sucursal">
+                            <mat-select id="sucursal" formControlName="Gimnasio_idGimnasio">
                               <mat-option></mat-option>
-                              <mat-option value="1">... 1</mat-option>
-                              <mat-option value="1">... 2</mat-option>
+                              <mat-option *ngFor="let sucursal of sucursales" value="{{sucursal.idGimnasio}}">{{sucursal.nombre}}</mat-option>
+                              
                             </mat-select>
                         </mat-form-field>
                     </p>
