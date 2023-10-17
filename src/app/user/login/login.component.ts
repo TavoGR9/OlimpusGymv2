@@ -30,7 +30,7 @@ export class LoginComponent {
     };
     console.log(bodyData);
     //this.toastr.success('Entraste', 'Exíto!!!');
-    this.http.credenciales(this.form.value.data, this.form.value.password).subscribe({
+    /*this.http.credenciales(this.form.value.data, this.form.value.password).subscribe({
       next: (resultData) =>{
         console.log(resultData);
         if(resultData == 1){
@@ -42,7 +42,7 @@ export class LoginComponent {
       error: (error) => {
         console.error(error);
       }
-    });
+    });*/
 
   }
 

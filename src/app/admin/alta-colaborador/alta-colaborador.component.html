@@ -8,143 +8,101 @@
     <div class="content_body">
         <div class="content_margin">
             <div class="title_page">
-                <h1>Administrador - Alta de colaborador</h1>
+                <h3>Alta de colaborador</h3>
             </div>
             <div class="form_data">
-                <form>
+                <form [formGroup]="form" (ngSubmit)="registrar()">
                     <p>
                         <mat-form-field appearance="outline" class="inputs_properties">
                            <mat-label>Nombre</mat-label>
-                             <input type="text" matInput placeholder="Nombre" autocomplete="off">
+                             <input type="text" matInput placeholder="Nombre" autocomplete="off" formControlName="nombre">
                             </mat-form-field>
                     
                         <mat-form-field appearance="outline" class="inputs_properties">
                             <mat-label>Apellido paterno</mat-label>
-                            <input type="text" matInput placeholder="Apellido materno" autocomplete="off">
+                            <input type="text" matInput placeholder="Apellido materno" autocomplete="off" formControlName="apPaterno">
                         </mat-form-field>
                     
                         <mat-form-field appearance="outline" class="inputs_properties">
                             <mat-label>Apellido materno</mat-label>
-                            <input type="text" placeholder="Apellido materno" matInput autocomplete="off">
+                            <input type="text" placeholder="Apellido materno" matInput autocomplete="off" formControlName="apMaterno">
                         </mat-form-field>
                     </p>
                     <p>
                         <mat-form-field appearance="outline" class="inputs_properties">
-                            <mat-label>Correo</mat-label>
-                            <input type="text" placeholder="Correo" matInput autocomplete="off">
-                          </mat-form-field>
-                    
-                        <mat-form-field appearance="outline" class="inputs_properties">
-                            <mat-label>Telefono</mat-label>
-                            <input type="text" placeholder="Telefono" maxlength="10" minlength="8" matInput autocomplete="off">
-                          </mat-form-field>
-                    
-                        <mat-form-field appearance="outline" class="inputs_properties">
-                            <mat-label>Fecha de nacimiento</mat-label>
-                            <input type="date" matInput autocomplete="off">
-                          </mat-form-field>
-                    </p>
-                    <p>
-                        <mat-form-field appearance="outline" class="inputs_properties">
-                            <mat-label>Genero</mat-label>
-                            <mat-select id="genero" >
-                              <mat-option></mat-option>
-                              <mat-option value="f">Femenino</mat-option>
-                              <mat-option value="m">Masculino</mat-option>
-                            </mat-select>
+                            <mat-label>RFC</mat-label>
+                            <input type="text" placeholder="RFC" matInput autocomplete="off" formControlName="rfc">
                           </mat-form-field>
 
                           <mat-form-field appearance="outline" class="inputs_properties">
-                            <mat-label>Codigo postal</mat-label>
-                            <input type="text" placeholder="Código postal" matInput autocomplete="off">
-                          </mat-form-field>
-                    
-                          <mat-form-field appearance="outline" class="inputs_properties">
-                            <mat-label>Estado</mat-label>
-                            <mat-select id="estado" >
+                            <mat-label>Sucursal</mat-label>
+                            <mat-select id="sucursal" formControlName="Gimnasio_idGimnasio">
                               <mat-option></mat-option>
-                              <mat-option value="1">Puebla</mat-option>
-                              <mat-option value="2">Sonora</mat-option>
+                              <mat-option *ngFor="let sucursal of sucursales" value="{{sucursal.idGimnasio}}">{{sucursal.nombre}}</mat-option>
                             </mat-select>
-                          </mat-form-field>
+                        </mat-form-field>
+                        
+                        <mat-form-field appearance="outline" class="inputs_properties">
+                          <mat-label>Área</mat-label>
+                          <mat-select id="area" formControlName="area">
+                            <mat-option></mat-option>
+                            <mat-option value="1">Entrenamiento</mat-option>
+                            <mat-option value="2">Recepción</mat-option>
+                          </mat-select>
+                      </mat-form-field>
                     </p>
                     <p>
-                        <mat-form-field appearance="outline" class="inputs_properties">
-                            <mat-label>Ciudad</mat-label>
-                            <mat-select id="ciudad">
-                              <mat-option></mat-option>
-                              <mat-option value="1">... 1</mat-option>
-                              <mat-option value="2">... 2</mat-option>
-                            </mat-select>
-                        </mat-form-field>
-        
-                        <mat-form-field appearance="outline" class="inputs_properties">
-                            <mat-label>Delegación</mat-label>
-                            <mat-select id="delegacion">
-                              <mat-option></mat-option>
-                              <mat-option value="1">... 1</mat-option>
-                              <mat-option value="2">... 2</mat-option>
-                            </mat-select>
-                        </mat-form-field>
-                          
-                        <mat-form-field appearance="outline" class="inputs_properties">
-                            <mat-label>Colonia</mat-label>
-                            <mat-select id="colonia">
-                              <mat-option></mat-option>
-                              <mat-option value="1">... 1</mat-option>
-                              <mat-option value="2">... 2</mat-option>
-                            </mat-select>
-                        </mat-form-field>
+                      <mat-form-field appearance="outline" class="inputs_properties">
+                        <mat-label>Turno laboral</mat-label>
+                        <mat-select id="turno" formControlName="turnoLaboral">
+                          <mat-option></mat-option>
+                          <mat-option value="Matutino">Matutino</mat-option>
+                          <mat-option value="Vespertino">Vespertino</mat-option>
+                          <mat-option value="Nocturno">Nocturno</mat-option>
+                          <mat-option value="FIn de semana">Fin de semana</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+
+                      <mat-form-field appearance="outline" class="inputs_properties">
+                        <mat-label>Salario</mat-label>
+                        <input type="text" placeholder="Salario" matInput autocomplete="off" formControlName="salario">
+                      </mat-form-field>
+
+                      <mat-form-field appearance="outline" class="inputs_properties">
+                        <mat-label>Email</mat-label>
+                        <input type="email" placeholder="ejemplo@yahoo.com" matInput autocomplete="off" formControlName="email">
+                      </mat-form-field>
+
+                    </p>
+                    <p>
+                      <mat-form-field appearance="outline" class="inputs_properties">
+                        <mat-label>Genero</mat-label>
+                        <mat-select id="genero" >
+                          <mat-option></mat-option>
+                          <mat-option value="f">Femenino</mat-option>
+                          <mat-option value="m">Masculino</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+
+                      <mat-form-field appearance="outline" class="inputs_properties">
+                        <mat-label>Telefono</mat-label>
+                        <input type="text" placeholder="Telefono" maxlength="10" minlength="8" matInput autocomplete="off">
+                      </mat-form-field>
+
+                      <mat-form-field appearance="outline" class="inputs_properties">
+                        <mat-label>Dirección</mat-label>
+                        <input type="text" placeholder="Dirección" matInput autocomplete="off">
+                      </mat-form-field>       
                     </p>
                     <p>
                         <mat-form-field appearance="outline" class="inputs_properties">
                             <mat-label>Asignar contraseña</mat-label>
-                            <input matInput  matInput [type]="hide ? 'password' : 'text'" placeholder="Asignar contraseña" formControlName="password">
+                            <input matInput  matInput [type]="hide ? 'password' : 'text'" placeholder="Asignar contraseña" formControlName="pass">
                             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                               <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                             </button>
                           </mat-form-field>
-
-                        <mat-form-field appearance="outline" class="inputs_properties">
-                            <mat-label>Nivel de estudios</mat-label>
-                            <mat-select id="estudios">
-                              <mat-option></mat-option>
-                              <mat-option value="1">... 1</mat-option>
-                              <mat-option value="1">... 2</mat-option>
-                            </mat-select>
-                        </mat-form-field>
-
-                       <mat-form-field appearance="outline" class="inputs_properties">
-                            <mat-label>Sucursal</mat-label>
-                            <mat-select id="sucursal">
-                              <mat-option></mat-option>
-                              <mat-option value="1">... 1</mat-option>
-                              <mat-option value="1">... 2</mat-option>
-                            </mat-select>
-                        </mat-form-field>
-                    </p>
-                    <p>
-                        <mat-form-field appearance="outline" class="inputs_properties">
-                            <mat-label>Área</mat-label>
-                            <mat-select id="area">
-                              <mat-option></mat-option>
-                              <mat-option value="1">... 1</mat-option>
-                              <mat-option value="1">... 2</mat-option>
-                            </mat-select>
-                        </mat-form-field>
-
-                        <mat-form-field appearance="outline" class="inputs_properties">
-                            <mat-label>Nombre de contacto</mat-label>
-                            <input type="text" placeholder="Nombre de contacto" matInput autocomplete="off">
-                          </mat-form-field>
-
-                        <mat-form-field appearance="outline" class="inputs_properties">
-                            <mat-label>Telefono de contacto</mat-label>
-                            <input type="text" placeholder="Telefono contacto" maxlength="10" minlength="8" matInput autocomplete="off">
-                          </mat-form-field>
-                    </p>
-
-                    
+                    </p>                   
                     <button mat-raised-button id="btn_canelar" color="warn">Cancelar</button>
                     <button type="submit" id="btn_guardar" mat-raised-button>Guardar registro</button>
                 </form>

@@ -1,6 +1,7 @@
 /**porpiedades footer --------------------------------------------- **/
 /**propiedades footer logo**/
 .logo_f {
+    padding-top: 30px;
     width: 50%;
 }
 
@@ -22,12 +23,26 @@
 /**propiedades textos footer**/
 .txt_footer {
     color: white;
+    display: block;
+    font-size: medium;
 }
 
 /**propiedades titulos textos footer**/
 .titles_footer {
     text-decoration: underline;
     color: white;
+    padding-top: 25px;
+    font-size: medium;
+    font-weight: bold;
+}
+
+/**propiedades titulo redes **/
+.txt_footer_redes {
+    padding-top: 25px;
+    color: white;
+    font-size: medium;
+    display: block;
+    font-weight: bold;
 }
 
 /**propiedades btn redes sociales **/
