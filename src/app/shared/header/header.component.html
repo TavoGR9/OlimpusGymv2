@@ -8,12 +8,12 @@
         <div class="tool_menu">
             <button (click)="navegarPagina('index')" class="btn" mat-raised-button style="background: #FD9727; color: white;">
                 <p class="txt_btn_footer">Inicio</p></button>
-            <button (click)="navegarPagina('sucursales')" class="btn" mat-raised-button style="background: #FD9727; color: white;">
-                <p class="txt_btn_footer">Sucursales</p></button>
-            <!-- <button (click)="navegarPagina('membresias')" class="btn" mat-raised-button style="background: #FD9727; color: white;">
-                <p class="txt_btn_footer">Membresias</p></button> -->
-            <button (click)="navegarPagina('sobre-nosotros')" class="btn" mat-raised-button style="background: #FD9727; color: white;">
-                <p class="txt_btn_footer">Nosotros</p></button>
+            <button (click)="navegarPagina('blog')" class="btn" mat-raised-button style="background: #FD9727; color: white;">
+                <p class="txt_btn_footer">Blog</p></button>
+            <button (click)="navegarPagina('tu-espacio')" class="btn" mat-raised-button style="background: #FD9727; color: white;">
+                <p class="txt_btn_footer">Tu espacio</p></button>
+            <!--<button (click)="navegarPagina('sobre-nosotros')" class="btn" mat-raised-button style="background: #FD9727; color: white;">
+                <p class="txt_btn_footer">Nosotros</p></button>-->
                 <!--<button (click)="navegarLogin()">Login</button>-->
 
             <button class="btn_icon_user" mat-fab [matMenuTriggerFor]="menu" >
@@ -24,6 +24,7 @@
                     <fa-icon style="font-size: 20px;" [icon]="['fas', 'circle-user']"></fa-icon>
                   <span class="data_user">Mi perfil</span>
                 </button>
+                <hr width="90%" style="border-color: #6f42c1;">
                 <button mat-menu-item (click)="navegarPagina('login')">
                     <fa-icon style="font-size: 20px;" [icon]="['fas', 'circle-user']"></fa-icon>
                   <span class="data_user">Iniciar sesion</span>

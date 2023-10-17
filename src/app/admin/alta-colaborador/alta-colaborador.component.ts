@@ -23,7 +23,12 @@ export class AltaColaboradorComponent {
       apPaterno: ['', Validators.required],
       apMaterno: ['', Validators.required],
       rfc: ['', Validators.required],
-      Gimnasio_idGimnasio: ['', Validators.required]
+      Gimnasio_idGimnasio: ['', Validators.required],
+      area: ['', Validators.required],
+      turnoLaboral: ['', Validators.required],
+      salario: ['', Validators.required],
+      email: ['', Validators.email],
+      pass: ['', Validators.required]
     })
   }
 

@@ -47,9 +47,6 @@ import { PlanvirtualComponent } from './user/planvirtual/planvirtual.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 
-import { AltaRecepcionComponent } from './recepcionist/alta-recepcion/alta-recepcion.component';
-
-
 
 @NgModule({
   declarations: [
@@ -79,7 +76,6 @@ import { AltaRecepcionComponent } from './recepcionist/alta-recepcion/alta-recep
     EditarPerfilComponent,
     ConfirmacionComponent,
     PlanvirtualComponent,
-    AltaRecepcionComponent,
   ],
   imports: [
     BrowserModule,
