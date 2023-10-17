@@ -46,7 +46,6 @@ import { ConfirmacionComponent } from './user/confirmacion/confirmacion.componen
 import { PlanvirtualComponent } from './user/planvirtual/planvirtual.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
-import { AltaRecepcionComponent } from './recepcionist/alta-recepcion/alta-recepcion.component';
 
 import { StarRatingComponent, RutinasEntrenadorComponent } from './trainer/rutinas-entrenador/rutinas-entrenador.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -88,7 +87,6 @@ import { DetalleHistorialCompraComponent } from './recepcionist/detalle-historia
     EditarPerfilComponent,
     ConfirmacionComponent,
     PlanvirtualComponent,
-    AltaRecepcionComponent,
     RutinasEntrenadorComponent,
     HistorialComprasComponent,
     DetalleHistorialCompraComponent,
