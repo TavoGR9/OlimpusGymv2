@@ -5,7 +5,6 @@ import { ToastrService } from 'ngx-toastr';
 import { ConnectionService } from 'src/app/servicios/connection.service';
 import {ErrorStateMatcher} from '@angular/material/core';
 
-
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, formulario: FormGroupDirective | NgForm | null): boolean {
@@ -38,12 +37,10 @@ export class AltaColaboradorComponent {
       Gimnasio_idGimnasio: ['', Validators.compose([ Validators.required])],
       area: ['', Validators.compose([ Validators.required])],
       turnoLaboral: ['', Validators.compose([ Validators.required])],
-      salario: ['', Validators.required, Validators.minLength(3), Validators.pattern(/^(0|[1-9][0-9]*)$/)],
-      email: ['', Validators.required, Validators.pattern(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)],
-      pass: ['', Validators.required, Validators.minLength(8)]
-    })
-
-    
+      salario: ['', Validators.compose([Validators.required, Validators.pattern(/^(0|[1-9][0-9]*)$/)])],
+      email: ['', Validators.compose([Validators.required, Validators.pattern(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)])],
+      pass: ['', Validators.compose([Validators.required, Validators.minLength(8)])]
+    })    
   }
   
   matcher = new MyErrorStateMatcher();

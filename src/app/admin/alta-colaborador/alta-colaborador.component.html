@@ -15,7 +15,7 @@
                     
                         <mat-form-field appearance="outline" class="inputs_properties">
                           <mat-label>Nombre</mat-label>
-                          <input type="text" matInput placeholder="Nombre" autocomplete="off" formControlName="nombre" id="nombre" [errorStateMatcher]="matcher">
+                          <input type="text" matInput placeholder="Juan" autocomplete="off" formControlName="nombre" id="nombre" [errorStateMatcher]="matcher">
                           <mat-error *ngIf="form.get('nombre')?.hasError('pattern') && !form.get('nombre')?.hasError('required')">
                               <strong class="txt_msg">**Numeros no permitidos</strong>
                           </mat-error>
@@ -24,7 +24,7 @@
                           
                         <mat-form-field appearance="outline" class="inputs_properties">
                           <mat-label>Apellido paterno</mat-label>
-                          <input type="text" matInput placeholder="Apellido materno" autocomplete="off" formControlName="apPaterno" id="apPaterno" [errorStateMatcher]="matcher">
+                          <input type="text" matInput placeholder="Pérez" autocomplete="off" formControlName="apPaterno" id="apPaterno" [errorStateMatcher]="matcher">
                           <mat-error *ngIf="form.get('apPaterno')?.hasError('pattern') && !form.get('apPaterno')?.hasError('required')">
                             <strong class="txt_msg">**Numeros no permitidos</strong>
                           </mat-error>
@@ -33,7 +33,7 @@
                     
                         <mat-form-field appearance="outline" class="inputs_properties">
                             <mat-label>Apellido materno</mat-label>
-                            <input type="text" placeholder="Apellido materno" matInput autocomplete="off" formControlName="apMaterno" id="apMaterno" [errorStateMatcher]="matcher">
+                            <input type="text" placeholder="Sanchéz" matInput autocomplete="off" formControlName="apMaterno" id="apMaterno" [errorStateMatcher]="matcher">
                             <mat-error *ngIf="form.get('apMaterno')?.hasError('pattern') && !form.get('apMaterno')?.hasError('required')">
                               <strong class="txt_msg">**Numeros no permitidos</strong>
                             </mat-error>
@@ -89,15 +89,22 @@
                       <mat-form-field appearance="outline" class="inputs_properties">
                         <mat-label>Salario</mat-label>
                         <input type="text" placeholder="Salario" matInput autocomplete="off" formControlName="salario" id="salario" [errorStateMatcher]="matcher">
+                        <mat-error *ngIf="form.get('salario')?.hasError('pattern') && !form.get('salario')?.hasError('required')">
+                          <strong class="txt_msg">**Formato no valido...</strong>
+                        </mat-error>
+                        <mat-error *ngIf="form.get('salario')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
                       </mat-form-field>
 
                       <mat-form-field appearance="outline" class="inputs_properties">
                         <mat-label>Email</mat-label>
                         <input type="email" placeholder="ejemplo@yahoo.com" matInput autocomplete="off" formControlName="email" id="email" [errorStateMatcher]="matcher">
+                        <mat-error *ngIf="form.get('email')?.hasError('pattern') && !form.get('email')?.hasError('required')">
+                          <strong class="txt_msg">**Formato no valido...</strong>
+                        </mat-error>
+                        <mat-error *ngIf="form.get('email')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
                       </mat-form-field>
 
-                    
-                      <mat-form-field appearance="outline" class="inputs_properties">
+                      <!--<mat-form-field appearance="outline" class="inputs_properties">
                         <mat-label>Genero</mat-label>
                         <mat-select id="genero" >
                           <mat-option></mat-option>
@@ -114,15 +121,19 @@
                       <mat-form-field appearance="outline" class="inputs_properties">
                         <mat-label>Dirección</mat-label>
                         <input type="text" placeholder="Dirección" matInput autocomplete="off">
-                      </mat-form-field>       
+                      </mat-form-field>   -->    
                     
                         <mat-form-field appearance="outline" class="inputs_properties">
                             <mat-label>Asignar contraseña</mat-label>
-                            <input matInput  matInput [type]="hide ? 'password' : 'text'" placeholder="Asignar contraseña" formControlName="pass">
+                            <input matInput  matInput [type]="hide ? 'password' : 'text'" placeholder="Asignar contraseña" formControlName="pass" id="pass" [errorStateMatcher]="matcher">
                             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                               <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                             </button>
-                          </mat-form-field>
+                            <mat-error *ngIf="form.get('pass')?.hasError('minlength') && !form.get('pass')?.hasError('required')">
+                              <strong class="txt_msg">**Minimo 8 caracteres</strong>
+                            </mat-error>
+                            <mat-error *ngIf="form.get('pass')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
+                        </mat-form-field>
                                       
                     <button mat-raised-button id="btn_canelar" color="warn">Cancelar</button>
                     <button type="submit" id="btn_guardar" mat-raised-button>Guardar registro</button>
