@@ -54,7 +54,7 @@
 
   /* Estilos específicos para pantallas medianas */
   .large-text {
-    margin-right: 10px; /* Reduce el margen para que los textos no se superpongan */
+    margin-right: 8px; /* Reduce el margen para que los textos no se superpongan */
   }
   .inputs_properties {
     width: 100%; /* Ocupa todo el ancho disponible para los campos de entrada */
@@ -108,6 +108,7 @@
     width: 100%; /* Ocupa todo el ancho disponible */
     height: 100px; /* Establece una altura específica */
   }
+  
 }
 
 

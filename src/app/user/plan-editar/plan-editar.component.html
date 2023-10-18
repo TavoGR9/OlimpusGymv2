@@ -5,10 +5,8 @@
 <mat-label class="large-text" style="font-family: Arial; font-size: 30px;margin-left: 180px;">Plan:</mat-label>
 <br/>
 <br/>
-<form [formGroup]="formulariodePlan">
-
+<form [formGroup]="formularioPlan">
     <div class="mi-div-con-borde responsive-div">
-    <div style="color:red">{{message}}</div>
         <br/>
         <div fxLayout="row">
             <div fxFlex="50%">
@@ -34,6 +32,7 @@
                         <textarea class="textarea" matInput rows="4" placeholder="Detalles" cols="50" style="display: inline-block; width: 100%;height: 100%;" id="detalles" formControlName="detalles"> </textarea>
                     </mat-form-field>
                 </p>
+
                 <p>
                     <label for="IDgimnasio" class="large-text" style="margin-right: 24px;margin-left: 45px;">Sucursal:</label>
                     <mat-form-field style="width: 280px;height: 90px;" required>
@@ -43,9 +42,8 @@
                         </mat-select>
                     </mat-form-field>
                 </p>
-                <br/>
-                <button mat-raised-button type="submit" (click)="enviar()" style="background-color: #fd9727; font-size: 20px;margin-left: 300px; margin-top: 17px;;height: 40px;">Aceptar</button>
-               
+                
+                <button mat-raised-button type="submit"  (click)="actualizar()" style="background-color: #fd9727; font-size: 20px; height: 40px; margin-left: 300px; margin-top: 21px;" >Aceptar</button>
 
             </div>
             <div fxFlex="50%">
@@ -70,49 +68,49 @@
                 <p><label style="margin-right: 40px;margin-left: 45px;" class="large-text">DISPONIBLE:</label></p>
                 <p>
                     <label style="margin-left: 45px;" for="albercaAcc" class="large-text">Alberca:</label>
-                    <mat-radio-group style="margin-left: 70px;" formControlName="albercaAcc" class="custom-radio-group" color="warn" required>
+                    <mat-radio-group style="margin-left: 70px;" formControlName="albercaAcc" class="custom-radio-group" color="warn">
                         <mat-radio-button value="Si" class="custom-radio-button">Sí</mat-radio-button>
                         <mat-radio-button value="No" class="custom-radio-button">No</mat-radio-button>
                     </mat-radio-group>    
                   </p>
                   <p>
                     <label style="margin-left: 45px;" for="entrenador" class="large-text">Entrenador:</label>
-                    <mat-radio-group style="margin-left: 38px;" formControlName="entrenador" class="custom-radio-group" color="warn" required>
+                    <mat-radio-group style="margin-left: 38px;" formControlName="entrenador" class="custom-radio-group" color="warn">
                         <mat-radio-button value="Si" class="custom-radio-button">Sí</mat-radio-button>
                         <mat-radio-button value="No" class="custom-radio-button">No</mat-radio-button>
                     </mat-radio-group>  
                   </p>
                   <p>
                     <label style="margin-left: 45px;" for="canchaAcc" class="large-text">Cancha:</label>
-                    <mat-radio-group style="margin-left: 68px;" formControlName="canchaAcc" class="custom-radio-group" color="warn" required>
+                    <mat-radio-group style="margin-left: 68px;" formControlName="canchaAcc" class="custom-radio-group" color="warn">
                         <mat-radio-button value="Si" class="custom-radio-button">Sí</mat-radio-button>
                         <mat-radio-button value="No" class="custom-radio-button">No</mat-radio-button>
                     </mat-radio-group> 
                   </p>
-
                   <p>
                     <label style="margin-left: 45px;" for="ofertas" class="large-text">Ofertas:</label>
-                    <mat-radio-group style="margin-left: 68px;" formControlName="ofertas" class="custom-radio-group" color="warn" required>
+                    <mat-radio-group style="margin-left: 68px;" formControlName="ofertas" class="custom-radio-group" color="warn">
                         <mat-radio-button value="Si" class="custom-radio-button">Sí</mat-radio-button>
                         <mat-radio-button value="No" class="custom-radio-button">No</mat-radio-button>
                     </mat-radio-group> 
-                  </p>                   
+                  </p>  
                   <p>
                     <label style="margin-left: 45px;" for="gymAcc" class="large-text">Gimnasio:</label>
-                    <mat-radio-group style="margin-left: 53px;" formControlName="gymAcc" class="custom-radio-group" color="warn" required>
-                        <mat-radio-button value="Si" class="custom-radio-button" >Sí</mat-radio-button>
-                        <mat-radio-button value="No" class="custom-radio-button" >No</mat-radio-button>
+                    <mat-radio-group style="margin-left: 53px;" formControlName="gymAcc" class="custom-radio-group" color="warn">
+                        <mat-radio-button value="Si" class="custom-radio-button">Sí</mat-radio-button>
+                        <mat-radio-button value="No" class="custom-radio-button">No</mat-radio-button>
                     </mat-radio-group> 
-                    
                   </p>
                 <br/>
-                <br/>    
-                            
-                <button mat-raised-button (click)="cancelar()" style="background-color: #fd9727; font-size: 20px; margin-left: 100px; margin-top: 50px; height: 40px;">Cancelar</button>
+                <br/>
+                <br/>
+                <button mat-raised-button routerLink="/planLista"  style="background-color: #fd9727; font-size: 20px; height: 40px;margin-left: 100px; margin-top: 2px;">Cancelar</button>
             </div>
         </div>
     </div>
+    <router-outlet></router-outlet>
 </form>
+
 <div class="flex-container">
     <div class="footer_component">
         <app-footer></app-footer>

@@ -66,16 +66,14 @@ li {
     justify-content: center;
     gap: 50px;
     margin-bottom: 100px;
+    
 }
 
 .membresia--inverse {
     background: #1f2123;
     border-color: #1f2123;
-    
-    
     padding-top: 58px;
     padding-bottom: 28px;
-
 }
 
 .membresia {
@@ -84,13 +82,14 @@ li {
     width: 355px;
     height: 300px;
     padding: 0 0 10px;
+    
     text-align: center;
     border-radius: 15px;
     padding-bottom: 50px;
 }
 .membresia_info {
     padding: 0 40px;
-    margin-top: 50px;
+    margin-top: 10px;
     margin-bottom: 50px;
 }
 
@@ -126,7 +125,7 @@ li {
     padding: 26px;
     border: none;
     border-radius: 2px;
-    background-color: #DF7E54;
+    background-color: #d27300;
     font: 700 14px Roboto,helvetica,arial,sans-serif;
     color: #000;
     text-align: center;
@@ -136,6 +135,7 @@ li {
     outline: 0;
     transition: background .5s ease;
     border-radius: 15px;
+    
 }
 .membresia-titulo .precio{
     font-size: 20px;
