@@ -44,57 +44,76 @@
                 </div>
             //</div>-->
             <div class="table-membership">
-                <table>
-                    <tr>
+                <table >
+                    <tr >
                         <th>
                             <img src="assets/img/index-img/logo.jpeg" alt="">
                         </th>
-                        <th>Basica
-                            <span>$320</span>
+                        <ng-container *ngFor="let item of plan">
+                        <th >{{ item.titulo }}
+                            <span >${{ item.precio }}</span>
                         </th>
-                        <th>Avanzada
-                            <span>$599</span>
-                        </th>
-                        <th>Premium
-                            <span>$799</span>
-                        </th>
+                       </ng-container>
                     </tr>
+                    
                     <tr>
                         <td>Acceso a Gimnasios</td>
-                        <td><button class="checked"><mat-icon>check</mat-icon></button></td>
-                        <td><button class="checked"><mat-icon>check</mat-icon></button></td>
-                        <td><button class="checked"><mat-icon>check</mat-icon></button></td>
+                        <ng-container *ngFor="let item of plan">
+                            <td>
+                            <button *ngIf="item.gymAcc === 'Si'" class="checked"><mat-icon>check</mat-icon></button>
+                            <button *ngIf="item.gymAcc === 'No'" class="closed"><mat-icon>close</mat-icon></button>
+                            </td>
+                        </ng-container>
                     </tr>
                     <tr>
                         <td>Entrenadores</td>
-                        <td><button class="closed"><mat-icon>close</mat-icon></button></td>
+                        <ng-container *ngFor="let item of plan">
+                            <td>
+                              <button *ngIf="item.entrenador === 'Si'" class="checked"><mat-icon>check</mat-icon></button>
+                              <button *ngIf="item.entrenador === 'No'" class="closed"><mat-icon>close</mat-icon></button>
+                            </td>
+                        </ng-container>
+                        <!--<td><button class="closed"><mat-icon>close</mat-icon></button></td>
                         <td><button class="checked"><mat-icon>check</mat-icon></button></td>
-                        <td><button class="checked"><mat-icon>check</mat-icon></button></td>
+                        <td><button class="checked"><mat-icon>check</mat-icon></button></td>-->
                     </tr>
                     <tr>
-                        <td>Acesso a canchas,alberca</td>
-                        <td><button class="closed"><mat-icon>close</mat-icon></button></td>
-                        <td><button class="closed"><mat-icon>close</mat-icon></button></td>
-                        <td><button class="checked"><mat-icon>check</mat-icon></button></td>
+                        <td>Acesso a alberca</td>
+                        <ng-container *ngFor="let item of plan">
+                            <td>
+                              <button *ngIf="item.albercaAcc === 'Si'" class="checked"><mat-icon>check</mat-icon></button>
+                              <button *ngIf="item.albercaAcc === 'No'" class="closed"><mat-icon>close</mat-icon></button>
+                            </td>
+                          </ng-container>
                     </tr>
                     <tr>
-                        <td>Ofertas especiales</td>
-                        <td><button class="closed"><mat-icon>close</mat-icon></button></td>
-                        <td><button class="checked"><mat-icon>check</mat-icon></button></td>
-                        <td><button class="checked"><mat-icon>check</mat-icon></button></td>
+                        <td>Acesso a cancha</td>
+                        <ng-container *ngFor="let item of plan">
+                            <td>
+                            <button *ngIf="item.canchaAcc === 'Si'" class="checked"><mat-icon>check</mat-icon></button>
+                            <button *ngIf="item.canchaAcc === 'No'" class="closed"><mat-icon>close</mat-icon></button>
+                            </td>
+                        </ng-container>
                     </tr>
                     <tr>
-                        <td>Descuentos</td>
-                        <td><button class="closed"><mat-icon>close</mat-icon></button></td>
-                        <td><button class="closed"><mat-icon>close</mat-icon></button></td>
-                        <td><button class="checked"><mat-icon>check</mat-icon></button></td>
+                        <td>Ofertas</td>
+                        <ng-container *ngFor="let item of plan">
+                            <td>
+                            <button *ngIf="item.ofertas === 'Si'" class="checked"><mat-icon>check</mat-icon></button>
+                            <button *ngIf="item.ofertas === 'No'" class="closed"><mat-icon>close</mat-icon></button>
+                            </td>
+                        </ng-container>
                     </tr>
+
                 </table>
-                <button class="choose" (click)="navegarPagina('membresias')">Elige tu plan</button>
+                <button class="choose" routerLink="/sucursales">Elige tu plan</button>
+
             </div>
         </div>
     </div>
     </div>
+
+
 
     <div id="products-section">
         <h2 class="title_section">Nuestros Productos</h2>

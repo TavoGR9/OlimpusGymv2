@@ -25,7 +25,8 @@ import { PerfilUsuarioComponent } from './user/perfil-usuario/perfil-usuario.com
 import { EditarPerfilComponent } from './user/editar-perfil/editar-perfil.component';
 import { ConfirmacionComponent } from './user/confirmacion/confirmacion.component';
 import { PlanvirtualComponent } from './user/planvirtual/planvirtual.component';
-import { RutinasEntrenadorComponent } from './trainer/rutinas-entrenador/rutinas-entrenador.component';
+import { PlanListaComponent } from './user/plan-lista/plan-lista.component';
+import { PlanEditarComponent } from './user/plan-editar/plan-editar.component';
 
 
 const routes: Routes = [
@@ -46,6 +47,8 @@ const routes: Routes = [
   { path: "agregartarjeta" , component: DetailscardComponent},
   { path: "tutarjeta" , component: WalletcardsComponent},
   { path: "plan", component: PlanComponent },
+  { path: "planLista", component: PlanListaComponent },
+  { path: "planEditar/:id", component: PlanEditarComponent },
   { path: "sucursal", component: SucursalComponent},
   { path: "perfil-usuario", component: PerfilUsuarioComponent},
   { path: "editar-perfil", component: EditarPerfilComponent},
@@ -55,12 +58,11 @@ const routes: Routes = [
   //componentes recepcionista
   { path: "stock", component: StockComponent },
   { path: "detalles-compra", component: DetalleCompraComponent },
-  { path: "membresias", component: MembresiasComponent },
+  { path: "membresias/:id", component: MembresiasComponent },
   //componentes admin
   { path: "alta-colaborador", component: AltaColaboradorComponent },
   { path: "asistencia", component: AsistenciaComponent },
   //componentes trainer
-  {path: "entrenador-rutinas", component:RutinasEntrenadorComponent},
   { path: "rutina-pierna", component: EntrenamientoPiernaComponent },
   //cuando el usuario agrega cualquier cosa como ruta
   { path: "**", redirectTo: "index", pathMatch: "full" },
