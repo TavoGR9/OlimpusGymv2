@@ -23,14 +23,9 @@ export class AltaColaboradorComponent {
     this.form = this.fb.group({
       nombre: new FormControl('', [Validators.required, Validators.pattern(/^[^\d]*$/)]),
 
-      
-      apPaterno: ['', Validators.required],
-      apMaterno: ['', Validators.required],
-      rfc: ['', Validators.compose([
-        Validators.required,
-        Validators.maxLength(13),
-        Validators.minLength(12)
-      ])],
+      apPaterno: ['', Validators.required, Validators.pattern(/^[^\d]*$/)],
+      apMaterno: ['', Validators.required, Validators.pattern(/^[^\d]*$/)],
+      rfc: ['', Validators.required, Validators.maxLength(12), Validators.maxLength(13)],
       Gimnasio_idGimnasio: ['', Validators.required],
       area: ['', Validators.required],
       turnoLaboral: ['', Validators.required],
