@@ -2,6 +2,7 @@
 .inputs_properties {
     width: 300px;
     padding-left: 15px;
+    display: inline-block;
 }
 
 /**propiedades titulo pagina**/
@@ -49,3 +50,8 @@
     min-height: 100vh;
 }
 
+/**propiedades mensajes de patrones **/
+.content_msg_pattern {
+    width: 350px;
+    border: #FD9727 solid;
+}
