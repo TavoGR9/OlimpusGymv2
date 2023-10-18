@@ -14,14 +14,13 @@
                 <form [formGroup]="form" (ngSubmit)="registrar()">
                     
                         <mat-form-field appearance="outline" class="inputs_properties">
-                          <div *ngIf="form.get('nombre')?.errors && form.get('nombre')?.touched" class="content_msg_pattern">
-                            <label *ngIf="form.get('nombre')?.hasError('required')" class="txt_msg">El nombre es obligatorio.</label>
-                            <label *ngIf="form.get('nombre')?.hasError('pattern')" class="txt_msg">No se permite el uso de numeros/caracteres.</label>
-                          </div>
                            <mat-label>Nombre</mat-label>
                              <input type="text" matInput placeholder="Nombre" autocomplete="off" formControlName="nombre" id="nombre">
                             </mat-form-field>
-                            
+                            <div *ngIf="form.get('nombre')?.errors && form.get('nombre')?.touched" class="content_msg_pattern">
+                              <label *ngIf="form.get('nombre')?.hasError('required')" class="txt_msg">El nombre es obligatorio.</label>
+                              <label *ngIf="form.get('nombre')?.hasError('pattern')" class="txt_msg">No se permite el uso de numeros/caracteres.</label>
+                            </div>
                     
                         <mat-form-field appearance="outline" class="inputs_properties">
                             <mat-label>Apellido paterno</mat-label>

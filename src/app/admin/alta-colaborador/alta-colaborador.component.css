@@ -51,7 +51,9 @@
 }
 
 /**propiedades mensajes de patrones **/
+/**contenedor de mensajes de error patrones**/
 .content_msg_pattern {
-    width: 350px;
+    width: 300px;
     border: #FD9727 solid;
 }
+
