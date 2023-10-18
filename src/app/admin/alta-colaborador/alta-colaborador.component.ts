@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ConnectionService } from 'src/app/servicios/connection.service';
@@ -14,20 +14,34 @@ export class AltaColaboradorComponent {
   form: FormGroup;
   sucursales: any;
 
+  
   constructor (private fb: FormBuilder, 
     private router: Router,
     private http: ConnectionService,
     private toastr: ToastrService ){
+
     this.form = this.fb.group({
-      nombre: ['', Validators.required],
+      nombre: new FormControl('', [Validators.required, Validators.pattern(/^[^\d]*$/)]),
+
+      
       apPaterno: ['', Validators.required],
       apMaterno: ['', Validators.required],
-      rfc: ['', Validators.required],
+      rfc: ['', Validators.compose([
+        Validators.required,
+        Validators.maxLength(13),
+        Validators.minLength(12)
+      ])],
       Gimnasio_idGimnasio: ['', Validators.required],
       area: ['', Validators.required],
       turnoLaboral: ['', Validators.required],
-      salario: ['', Validators.required],
-      email: ['', Validators.email],
+      salario: ['', Validators.compose([
+        Validators.required,
+        Validators.minLength(3)
+      ])],
+      email: ['', Validators.compose([
+        Validators.required,
+        Validators.email,
+      ])],
       pass: ['', Validators.required]
     })
   }

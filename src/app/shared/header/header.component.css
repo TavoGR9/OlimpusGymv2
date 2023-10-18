@@ -48,9 +48,9 @@ mat-toolbar {
 /**propiedades botones  header - toolbar**/
 .btn {
     margin: 10px;
-    width: 150px;
-    height: 50px;
-    border-radius: 19px;
+    width: 110px;
+    height: 45px;
+    border-radius: 15px;
     background: #DF7E54;
     color: black;
 }
