@@ -21,7 +21,7 @@
                               <label *ngIf="form.get('nombre')?.hasError('required')" class="txt_msg">El nombre es obligatorio.</label>
                               <label *ngIf="form.get('nombre')?.hasError('pattern')" class="txt_msg">No se permite el uso de numeros/caracteres.</label>
                             </div>
-                    
+                        
                         <mat-form-field appearance="outline" class="inputs_properties">
                             <mat-label>Apellido paterno</mat-label>
                             <input type="text" matInput placeholder="Apellido materno" autocomplete="off" formControlName="apPaterno">

@@ -21,23 +21,16 @@ export class AltaColaboradorComponent {
     private toastr: ToastrService ){
 
     this.form = this.fb.group({
-      nombre: new FormControl('', [Validators.required, Validators.pattern(/^[^\d]*$/)]),
-
+      nombre: ['', Validators.required, Validators.pattern(/^[^\d]*$/)],
       apPaterno: ['', Validators.required, Validators.pattern(/^[^\d]*$/)],
       apMaterno: ['', Validators.required, Validators.pattern(/^[^\d]*$/)],
-      rfc: ['', Validators.required, Validators.maxLength(12), Validators.maxLength(13)],
+      rfc: ['', Validators.required, Validators.pattern(/^[A-Za-zñÑ&]{1,2}([A-Za-zñÑ&]([A-Za-zñÑ&](\d(\d(\d(\d(\d(\d(\w(\w(\w)?)?)?)?)?)?)?)?)?)?)?$/)],
       Gimnasio_idGimnasio: ['', Validators.required],
       area: ['', Validators.required],
       turnoLaboral: ['', Validators.required],
-      salario: ['', Validators.compose([
-        Validators.required,
-        Validators.minLength(3)
-      ])],
-      email: ['', Validators.compose([
-        Validators.required,
-        Validators.email,
-      ])],
-      pass: ['', Validators.required]
+      salario: ['', Validators.required, Validators.minLength(3), Validators.pattern(/^(0|[1-9][0-9]*)$/)],
+      email: ['', Validators.required, Validators.pattern(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)],
+      pass: ['', Validators.required, Validators.minLength(8)]
     })
   }
 

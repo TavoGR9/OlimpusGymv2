@@ -1,7 +1,7 @@
 /**propiedades por inputs **/
 .inputs_properties {
     width: 300px;
-    padding-left: 15px;
+    padding: 10px;
     display: inline-block;
 }
 
@@ -57,3 +57,8 @@
     border: #FD9727 solid;
 }
 
+.txt_msg {
+    font-size: x-small;
+    color: red;
+    font-weight: bold;
+}
