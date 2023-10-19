@@ -8,7 +8,7 @@ import { plan } from './plan';
 })
 export class PlanService {
 
-  API: string = 'http://localhost/plan/membresia.php'
+  API: string = 'https://olympus.arvispace.com/conPrincipal/'
   constructor(private clienteHttp:HttpClient) {
   }
 
