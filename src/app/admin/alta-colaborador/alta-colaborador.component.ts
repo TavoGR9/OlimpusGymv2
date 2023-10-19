@@ -22,7 +22,6 @@ export class AltaColaboradorComponent {
   hide = true;
   form: FormGroup;
   sucursales: any;
-
   
   constructor (private fb: FormBuilder, 
     private router: Router,
@@ -58,12 +57,24 @@ export class AltaColaboradorComponent {
 
     this.http.agregarEmpleado(this.form.value).subscribe({
       next: (resultData) => {
-        console.log(resultData);
-        this.toastr.success('Empleado agregado correctamente.', 'Exíto!!!');
+        console.log(resultData.msg);
+        if(resultData.msg == 'RfcExists'){
+          this.toastr.error('El rfc ya existe.', 'Error!!!');
+        }
+        if(resultData.msg == 'MailExists'){
+          this.toastr.error('El correo ya existe.', 'Error!!!');
+        }
+        if(resultData.msg == 'Success'){
+          this.toastr.success('Empleado agregado correctamente.', 'Exíto!!!');
+          this.form.reset();  
+        }
+              
       },
       error: (error) => {
         console.error(error);
       }
     })
   }
+
+
 }

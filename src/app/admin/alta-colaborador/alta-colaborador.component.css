@@ -1,3 +1,8 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 /**propiedades por inputs **/
 .inputs_properties {
     width: 300px;
@@ -22,11 +27,12 @@
 .form_data {
     margin: auto;
     text-align: center;
+    padding-bottom: 15px;
 }
 
 /**propiedades btn cancelar**/
 #btn_canelar {
-    width: 300px;
+    width: 290px;
     height: 45px;
     margin: 10px 7px;
     font-size: larger;
@@ -34,7 +40,7 @@
 
 /**propiedades btn aceptar-guardar**/
 #btn_guardar {
-    width: 300px;
+    width: 290px;
     height: 45px;
     margin: 10px 7px;
     background: #FD9727; 

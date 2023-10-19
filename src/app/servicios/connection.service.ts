@@ -18,15 +18,7 @@ export class ConnectionService {
 
   formAltaPersonal():Observable<any>{
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
-    return this.http.get(this.Api+"?nombreGym", {headers});
+    return this.http.get(this.Api+"?nombreGym");
   }
 
-  /*URLServices = "http://localhost/olimpus-gym/";
-  constructor( private http: HttpClient) { }
-
-  credenciales(data:string, password:string){
-    let headers: any = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
-    let parameters = 'data=' + data + '&password=' + password;
-    return this.http.post(this.URLServices + 'login.php', parameters, { headers });
-  }*/
 }

@@ -28,7 +28,7 @@
                           <mat-error *ngIf="form.get('apPaterno')?.hasError('pattern') && !form.get('apPaterno')?.hasError('required')">
                             <strong class="txt_msg">**Numeros no permitidos</strong>
                           </mat-error>
-                          <mat-error *ngIf="form.get('nombre')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
+                          <mat-error *ngIf="form.get('apPaterno')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
                         </mat-form-field>
                     
                         <mat-form-field appearance="outline" class="inputs_properties">
@@ -37,7 +37,7 @@
                             <mat-error *ngIf="form.get('apMaterno')?.hasError('pattern') && !form.get('apMaterno')?.hasError('required')">
                               <strong class="txt_msg">**Numeros no permitidos</strong>
                             </mat-error>
-                            <mat-error *ngIf="form.get('nombre')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
+                            <mat-error *ngIf="form.get('apMaterno')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
                         </mat-form-field>
                     
                         <mat-form-field appearance="outline" class="inputs_properties">
@@ -46,7 +46,7 @@
                             <mat-error *ngIf="form.get('rfc')?.hasError('pattern') && !form.get('rfc')?.hasError('required')">
                               <strong class="txt_msg">**Formato no valido...</strong>
                             </mat-error>
-                            <mat-error *ngIf="form.get('nombre')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
+                            <mat-error *ngIf="form.get('rfc')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
                         </mat-form-field>
 
                           <mat-form-field appearance="outline" class="inputs_properties">
@@ -79,7 +79,7 @@
                           <mat-option value="Matutino">Matutino</mat-option>
                           <mat-option value="Vespertino">Vespertino</mat-option>
                           <mat-option value="Nocturno">Nocturno</mat-option>
-                          <mat-option value="FIn de semana">Fin de semana</mat-option>
+                          <mat-option value="FIn_de_semana">Fin de semana</mat-option>
                         </mat-select>
                         <mat-error *ngIf="form.get('turnoLaboral')?.hasError('required')">
                           <strong class="txt_msg">**Campo requerido</strong>
@@ -134,7 +134,7 @@
                             </mat-error>
                             <mat-error *ngIf="form.get('pass')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
                         </mat-form-field>
-                                      
+                                   
                     <button mat-raised-button id="btn_canelar" color="warn">Cancelar</button>
                     <button type="submit" id="btn_guardar" mat-raised-button>Guardar registro</button>
                 </form>
