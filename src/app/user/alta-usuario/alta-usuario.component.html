@@ -11,6 +11,7 @@
     </div><!--cierra title page-->
     <div class="form_content">
         <form [formGroup]="form" (ngSubmit)="registrar()">
+          <div style="color:red">{{message}}</div>
             <p>
                 <mat-form-field appearance="outline" class="inputs_properties">
                     <mat-label>Nombre</mat-label>
@@ -20,13 +21,13 @@
             <p>
                 <mat-form-field appearance="outline" class="inputs_properties">
                     <mat-label>Apellido paterno</mat-label>
-                    <input type="text" matInput placeholder="Apellido paterno" autocomplete="off" formControlName="paterno">
+                    <input type="text" matInput placeholder="Apellido paterno" autocomplete="off" formControlName="apPaterno">
                 </mat-form-field>
             </p>
             <p>
                 <mat-form-field appearance="outline" class="inputs_properties">
                     <mat-label>Apellido materno</mat-label>
-                    <input type="text" matInput placeholder="Apellido materno" autocomplete="off" formControlName="materno">
+                    <input type="text" matInput placeholder="Apellido materno" autocomplete="off" formControlName="apMaterno">
                 </mat-form-field>
             </p>
             <p>
@@ -44,7 +45,7 @@
             <p>
                 <mat-form-field appearance="outline" class="inputs_properties">
                    <mat-label>Fecha de nacimiento</mat-label>
-                   <input type="date" matInput autocomplete="off" formControlName="nacimiento">
+                   <input type="date" matInput autocomplete="off" formControlName="fechaNacimiento">
                 </mat-form-field>
             </p>
             <p>
@@ -62,7 +63,7 @@
             <p>
                 <mat-form-field appearance="outline" class="inputs_properties">
                     <mat-label>Contraseña</mat-label>
-                    <input matInput  matInput [type]="hide ? 'password' : 'text'" placeholder="Asignar contraseña" formControlName="password">
+                    <input matInput  matInput [type]="hide ? 'password' : 'text'" placeholder="Asignar contraseña" formControlName="pass">
                     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                       <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                     </button>
