@@ -1,3 +1,8 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 /**propiedades body **/
 .body {
     margin: 0;
@@ -17,6 +22,8 @@
 /**propiedades contenedor titulo**/
 .title_page {
     text-align: center;
+    margin-top: 7px;
+    margin-bottom: 7px;
 }
 
 /**propiedades contenedor filters**/

@@ -1,8 +1,17 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ConnectionService } from 'src/app/servicios/connection.service';
+import {ErrorStateMatcher} from '@angular/material/core';
+
+/** Error when invalid control is dirty, touched, or submitted. */
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, formulario: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = formulario && formulario.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  }
+}
 
 @Component({
   selector: 'app-alta-colaborador',
@@ -13,7 +22,6 @@ export class AltaColaboradorComponent {
   hide = true;
   form: FormGroup;
   sucursales: any;
-
   
   constructor (private fb: FormBuilder, 
     private router: Router,
@@ -21,26 +29,20 @@ export class AltaColaboradorComponent {
     private toastr: ToastrService ){
 
     this.form = this.fb.group({
-      nombre: new FormControl('', [Validators.required, Validators.pattern(/^[^\d]*$/)]),
-
-      apPaterno: ['', Validators.required, Validators.pattern(/^[^\d]*$/)],
-      apMaterno: ['', Validators.required, Validators.pattern(/^[^\d]*$/)],
-      rfc: ['', Validators.required, Validators.maxLength(12), Validators.maxLength(13)],
-      Gimnasio_idGimnasio: ['', Validators.required],
-      area: ['', Validators.required],
-      turnoLaboral: ['', Validators.required],
-      salario: ['', Validators.compose([
-        Validators.required,
-        Validators.minLength(3)
-      ])],
-      email: ['', Validators.compose([
-        Validators.required,
-        Validators.email,
-      ])],
-      pass: ['', Validators.required]
-    })
+      nombre: ['', Validators.compose([ Validators.required, Validators.pattern(/^[^\d]*$/)])],
+      apPaterno: ['', Validators.compose([ Validators.required, Validators.pattern(/^[^\d]*$/)])],
+      apMaterno: ['', Validators.compose([ Validators.required, Validators.pattern(/^[^\d]*$/)])],
+      rfc: ['', Validators.compose([ Validators.required, Validators.pattern(/^[A-Za-zñÑ&]{1,2}([A-Za-zñÑ&]([A-Za-zñÑ&](\d(\d(\d(\d(\d(\d(\w(\w(\w)?)?)?)?)?)?)?)?)?)?)?$/)])],
+      Gimnasio_idGimnasio: ['', Validators.compose([ Validators.required])],
+      area: ['', Validators.compose([ Validators.required])],
+      turnoLaboral: ['', Validators.compose([ Validators.required])],
+      salario: ['', Validators.compose([Validators.required, Validators.pattern(/^(0|[1-9][0-9]*)$/)])],
+      email: ['', Validators.compose([Validators.required, Validators.pattern(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)])],
+      pass: ['', Validators.compose([Validators.required, Validators.minLength(8)])]
+    })    
   }
-
+  
+  matcher = new MyErrorStateMatcher();
   ngOnInit():void{
     this.http.formAltaPersonal().subscribe({
       next: (resultData) => {
@@ -55,12 +57,24 @@ export class AltaColaboradorComponent {
 
     this.http.agregarEmpleado(this.form.value).subscribe({
       next: (resultData) => {
-        console.log(resultData);
-        this.toastr.success('Empleado agregado correctamente.', 'Exíto!!!');
+        console.log(resultData.msg);
+        if(resultData.msg == 'RfcExists'){
+          this.toastr.error('El rfc ya existe.', 'Error!!!');
+        }
+        if(resultData.msg == 'MailExists'){
+          this.toastr.error('El correo ya existe.', 'Error!!!');
+        }
+        if(resultData.msg == 'Success'){
+          this.toastr.success('Empleado agregado correctamente.', 'Exíto!!!');
+          this.form.reset();  
+        }
+              
       },
       error: (error) => {
         console.error(error);
       }
     })
   }
+
+
 }
