@@ -26,7 +26,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import {MatTabsModule} from '@angular/material/tabs';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSlideToggleModule, _MatSlideToggleRequiredValidatorModule} from '@angular/material/slide-toggle';
 import { ProductosComponent } from './user/productos/productos.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { AsistenciaComponent } from './admin/asistencia/asistencia.component';
@@ -46,22 +46,21 @@ import { ConfirmacionComponent } from './user/confirmacion/confirmacion.componen
 import { PlanvirtualComponent } from './user/planvirtual/planvirtual.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
-
-import { StarRatingComponent, RutinasEntrenadorComponent } from './trainer/rutinas-entrenador/rutinas-entrenador.component';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatGridListModule } from '@angular/material/grid-list';
+import { PlanListaComponent } from './user/plan-lista/plan-lista.component';
 import { MatTableModule } from '@angular/material/table';
-import {MatSortModule} from '@angular/material/sort';
-import { HistorialComprasComponent } from './recepcionist/historial-compras/historial-compras.component';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { DetalleHistorialCompraComponent } from './recepcionist/detalle-historial-compra/detalle-historial-compra.component';
-
+import { PlanEditarComponent } from './user/plan-editar/plan-editar.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatRadioModule } from '@angular/material/radio';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MensajeEmergentesComponent } from './user/mensaje-emergentes/mensaje-emergentes.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MensajeEmergenteEliminarComponent } from './user/mensaje-emergente-eliminar/mensaje-emergente-eliminar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    StarRatingComponent,
     AltaColaboradorComponent,
     StockComponent,
     DetalleCompraComponent,
@@ -87,16 +86,13 @@ import { DetalleHistorialCompraComponent } from './recepcionist/detalle-historia
     EditarPerfilComponent,
     ConfirmacionComponent,
     PlanvirtualComponent,
-    RutinasEntrenadorComponent,
-    HistorialComprasComponent,
-    DetalleHistorialCompraComponent,
+    PlanListaComponent,
+    PlanEditarComponent,
+    MensajeEmergentesComponent,
+    MensajeEmergenteEliminarComponent,
   ],
   imports: [
     BrowserModule,
-    MatTooltipModule,
-    MatSortModule,
-    MatTableModule,
-    MatGridListModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
@@ -114,8 +110,14 @@ import { DetalleHistorialCompraComponent } from './recepcionist/detalle-historia
     MatCheckboxModule,
     MatSidenavModule,
     ToastrModule.forRoot(),
-    HttpClientModule,  
-    MatDatepickerModule
+    HttpClientModule, 
+    MatTableModule,
+    MatCardModule,
+    MatButtonToggleModule,
+    MatRadioModule,
+    _MatSlideToggleRequiredValidatorModule,
+    FlexLayoutModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
