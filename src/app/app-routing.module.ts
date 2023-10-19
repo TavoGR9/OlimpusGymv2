@@ -25,6 +25,7 @@ import { PerfilUsuarioComponent } from './user/perfil-usuario/perfil-usuario.com
 import { EditarPerfilComponent } from './user/editar-perfil/editar-perfil.component';
 import { ConfirmacionComponent } from './user/confirmacion/confirmacion.component';
 import { PlanvirtualComponent } from './user/planvirtual/planvirtual.component';
+import { PagoInscripcionComponent } from './user/pago-inscripcion/pago-inscripcion.component';
 
 
 const routes: Routes = [
@@ -50,6 +51,7 @@ const routes: Routes = [
   { path: "editar-perfil", component: EditarPerfilComponent},
   { path: "confirmacion", component: ConfirmacionComponent},
   { path: "VirtualOlimpusGym", component: PlanvirtualComponent },
+  { path: "pago-inscripcion", component: PagoInscripcionComponent},
 
   //componentes recepcionista
   { path: "stock", component: StockComponent },

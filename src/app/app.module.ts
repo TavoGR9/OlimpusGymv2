@@ -46,6 +46,7 @@ import { ConfirmacionComponent } from './user/confirmacion/confirmacion.componen
 import { PlanvirtualComponent } from './user/planvirtual/planvirtual.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
+import { PagoInscripcionComponent } from './user/pago-inscripcion/pago-inscripcion.component';
 
 
 @NgModule({
@@ -76,6 +77,7 @@ import { ToastrModule } from 'ngx-toastr';
     EditarPerfilComponent,
     ConfirmacionComponent,
     PlanvirtualComponent,
+    PagoInscripcionComponent,
   ],
   imports: [
     BrowserModule,
