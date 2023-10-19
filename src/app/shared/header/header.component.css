@@ -80,3 +80,9 @@ mat-toolbar {
 at-menu {
     border-radius: 15px;
 }
+
+/**propiedades links externos**/
+.txt_ext_link {
+    text-decoration: none;
+    color: white;
+}
