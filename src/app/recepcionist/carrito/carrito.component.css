@@ -1,0 +1,127 @@
+/** BODY Y FOOTER*/
+.body-component{
+    position: relative;
+    padding-bottom: 180px;
+    min-height: 100vh;
+}
+
+/** INPUT Y BOTON SEARCH*/
+.input-wrapper {
+    position: relative;
+    width: 600px;
+    height: 40px;
+    margin-left: 70px;
+    border-width: 3px;
+    border-radius: 15px;
+    text-align:center;
+  }
+
+.button-search{
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    margin-left: 5px;
+    border-radius: 15px;
+}
+
+/** TAMAÑO Y CENTRADO DE LOS GRID*/
+.grid{
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.grid-table{
+    display: grid;
+    grid-template-columns: 20% 50% 15% 15%;
+}
+
+.grid-review{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.grid-btns-articulo{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+/** ESTILOS DE LOS DIFERENTES FORM*/
+.form-first{
+    width: 1000px;
+    height: 500px;
+    border: 1px solid #f9a640;
+    border-radius: 15px;
+    border-width: 3px;
+}
+
+.form-second{
+    width: 497px;
+    height: 247px;
+    border: 1px solid #f9a640;
+    border-radius: 15px;
+    border-width: 3px;
+}
+
+/**Styles para la tabla**/
+.styled-table { 
+    border-collapse: collapse; 
+    margin: 25px 0; 
+    font-size: 1em; 
+    font-family: sans-serif; 
+    min-width: 450px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); 
+    margin: 0 auto; 
+    /*text-align:center;*/
+    border-bottom: 1px solid #dddddd; 
+}
+
+.styled-table-tr {
+    border-top: 3px solid #f9a640;
+    border-bottom: 3px solid #f9a640;;
+}
+
+/*tamaño de encabezado de tabla*/
+.styled-table-td {
+    width: 1000px;
+    height: 200px;
+}
+
+.styled-table-review-td {
+    width: 1000px;
+    height: 160px;
+}
+
+/** TAMAÑO DE IMAGEN PRODUCTO PRINCIPAL*/
+.img-size{
+    width: 150px;
+    height: 150px;
+}
+
+.input-number{
+    width: 50px;
+    height: 25px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    text-align:center;
+    font-size: 20px;
+}
+
+.button-compra{
+    width: 300px;
+    height: 40px;
+    font-weight: bold;
+    margin-left: 5px;
+    border-radius: 15px;
+    font-size: 17px;
+}
+
+.button-compra-articulos{
+    width: 115px;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 12px;
+    background-color: #ffffff; 
+    color:#f9a640;
+    border: 1px solid #ffffff;
+}

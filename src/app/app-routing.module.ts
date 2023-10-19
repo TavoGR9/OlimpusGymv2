@@ -27,6 +27,7 @@ import { ConfirmacionComponent } from './user/confirmacion/confirmacion.componen
 import { PlanvirtualComponent } from './user/planvirtual/planvirtual.component';
 import { PlanListaComponent } from './user/plan-lista/plan-lista.component';
 import { PlanEditarComponent } from './user/plan-editar/plan-editar.component';
+import { CarritoComponent } from './recepcionist/carrito/carrito.component';
 
 
 const routes: Routes = [
@@ -59,6 +60,7 @@ const routes: Routes = [
   { path: "stock", component: StockComponent },
   { path: "detalles-compra", component: DetalleCompraComponent },
   { path: "membresias/:id", component: MembresiasComponent },
+  { path: "carrito", component: CarritoComponent},
   //componentes admin
   { path: "alta-colaborador", component: AltaColaboradorComponent },
   { path: "asistencia", component: AsistenciaComponent },

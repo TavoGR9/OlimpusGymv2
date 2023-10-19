@@ -56,6 +56,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MensajeEmergentesComponent } from './user/mensaje-emergentes/mensaje-emergentes.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MensajeEmergenteEliminarComponent } from './user/mensaje-emergente-eliminar/mensaje-emergente-eliminar.component';
+import { CarritoComponent } from './recepcionist/carrito/carrito.component';
 
 
 @NgModule({
@@ -90,6 +91,7 @@ import { MensajeEmergenteEliminarComponent } from './user/mensaje-emergente-elim
     PlanEditarComponent,
     MensajeEmergentesComponent,
     MensajeEmergenteEliminarComponent,
+    CarritoComponent,
   ],
   imports: [
     BrowserModule,
