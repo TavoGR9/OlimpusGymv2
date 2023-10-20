@@ -11,9 +11,9 @@
                 <h3>Entonces, ¿En dónde quieres entrenar?</h3>
             </div><!--cierra div title page -->
 
-            <div class="content_searchbar">
+            <div class="content_searchbar" style ="text-align: center;">
                 <mat-form-field appearance="outline" class="inputs_css">
-                    <input type="text" matInput placeholder="Ingresa lo que quieres buscar" autocomplete="off" autofocus="" >
+                    <input type="text" matInput placeholder= "Busca tu Olimpus más cercano." autocomplete="off" autofocus="" >
                     <mat-icon matSuffix>place</mat-icon>
                 </mat-form-field>
             </div><!--cierra div content search bar-->
@@ -25,20 +25,18 @@
                         <div id="first-section-filters" class="filters">
                             <h3>Añade filtros</h3>
                             <p class="txt_filters">Estructura</p>
-                            <mat-checkbox class="item-checkbox">Casilleros</mat-checkbox>
-                            <mat-checkbox class="item-checkbox">Estacionamiento</mat-checkbox>
-                            <mat-checkbox class="item-checkbox">Bicicletero</mat-checkbox>
-                            <mat-checkbox class="item-checkbox">Aire acondicionado</mat-checkbox>
-                            <mat-checkbox class="item-checkbox">Elevador</mat-checkbox>
-                            <mat-checkbox class="item-checkbox">Energy</mat-checkbox>
-                            <mat-checkbox class="item-checkbox">Nutri</mat-checkbox>
-                        </div>
-                        <div id="second-section-filters" class="filters">
-                            <p class="txt_filters">Clases</p>
-                            <mat-checkbox class="item-checkbox">Zumba</mat-checkbox>
-                            <mat-checkbox class="item-checkbox">Spining</mat-checkbox>
-                            <mat-checkbox class="item-checkbox">Yoga</mat-checkbox>
-                            <mat-checkbox class="item-checkbox">Taitiano</mat-checkbox>
+                            <mat-checkbox class="item-checkbox" [(ngModel)]="casilleros" (ngModelChange)="onNombreChange($event, 'casilleros')" >Casilleros</mat-checkbox>
+                            <mat-checkbox class="item-checkbox" [(ngModel)]="estacionamiento" (ngModelChange)="onNombreChange($event, 'estacionamiento')" >Estacionamiento</mat-checkbox>
+                            <mat-checkbox class="item-checkbox" [(ngModel)]="bicicletero" (ngModelChange)="onNombreChange($event, 'bicicletero')">Bicicletero</mat-checkbox>
+                            <mat-checkbox class="item-checkbox" [(ngModel)]="energia" (ngModelChange)="onNombreChange($event, 'energia')">Energy</mat-checkbox>
+
+                        <!--Prueba checkbox -->
+
+                        
+                        
+
+
+
                         </div>
                     </div><!--cierra div filters container-->
 
@@ -53,7 +51,7 @@
                                 <img src="../../../assets/img/sucs-img/suc1.jpeg" alt="img_sucursal" class="img_item">
                             </div><!--cierra div content img item-->
                             <div class="content_title_item">
-                                <h3 class="txt_title">Plaza Zavaleta</h3>
+                                <h3 class="txt_title">Tenancingo</h3>
                             </div><!--cierra div content title item-->
                             <div class="content_addr_item">
                                 <p class="txt_addr">Calz. Zavaleta No. 50 Santa Cruz Buenavista. Puebla - PUE.</p>
@@ -61,28 +59,25 @@
                             <div class="content_link_item">
                                 <a href="#">Ver academia</a>
                             </div><!--cierra div content link item-->
-                            <div class="content_pack_item">
-                                <p class="txt_palnes">Inscripcion gratis + primer mes $49 en los 3 planes.</p>
+                            <br><div class="content_pack_item">
+                                <p class="txt_palnes" style ="text-align: center;">Inscripcion gratis</p>
                             </div>
-                            <div class="grid_plan_item">
+                            <br><div class="grid_plan_item">
                                 <div class="h1_plan_item">
-                                    <label class="txt_plan_name">Smart</label>
-                                    <label class="txt_old_price">$ 359.00</label>
-                                    <label class="txt_new_price">$ 49.00</label>
+                                    <label class="txt_plan_name">Visita</label>
+                                    <label class="txt_new_price">$ 40.00</label>
                                 </div><!--cierra div h1 plan item-->
                                 <div class="h2_plan_item">
-                                    <label class="txt_plan_name">Black</label>
-                                    <label class="txt_old_price">$ 459.00</label>
-                                    <label class="txt_new_price">$ 49.00</label>
+                                    <label class="txt_plan_name">Quincena</label>
+                                    <label class="txt_new_price">$ 230.00</label>
                                 </div><!--cierra div h2 plan item-->
                                 <div class="h3_plan_item">
-                                    <label class="txt_plan_name">Fit</label>
-                                    <label class="txt_old_price">$ 299.00</label>
-                                    <label class="txt_new_price">$ 49.00</label>
+                                    <label class="txt_plan_name">Mensualidad</label>
+                                    <label class="txt_new_price">$ 350.00</label>
                                 </div><!--cierra div h3 plan item-->
                             </div><!--cierra div grid plan item-->
                             <div class="content_btn_buy">
-                                <button type="submit" class="btn_int" mat-raised-button style="background: #FD9727; color: white;">
+                                <button type="submit" class="btn_int" mat-raised-button style="background: #FD9727; color: white;" >
                                     ¡Inscribete ya!</button>
                             </div><!--cierre de div content btn buy-->
                         </div><!--cierra item x-->
@@ -92,7 +87,7 @@
                                 <img src="../../../assets/img/sucs-img/suc1.jpeg" alt="img_sucursal" class="img_item">
                             </div><!--cierra div content img item-->
                             <div class="content_title_item">
-                                <h3 class="txt_title">Plaza Zavaleta</h3>
+                                <h3 class="txt_title">Covadonga</h3>
                             </div><!--cierra div content title item-->
                             <div class="content_addr_item">
                                 <p class="txt_addr">Calz. Zavaleta No. 50 Santa Cruz Buenavista. Puebla - PUE.</p>
@@ -100,24 +95,21 @@
                             <div class="content_link_item">
                                 <a href="#">Ver academia</a>
                             </div><!--cierra div content link item-->
-                            <div class="content_pack_item">
-                                <p class="txt_palnes">Inscripcion gratis + primer mes $49 en los 3 planes.</p>
+                            <br><div class="content_pack_item">
+                                <p class="txt_palnes" style ="text-align: center;">Inscripcion gratis</p>
                             </div>
-                            <div class="grid_plan_item">
+                            <br><div class="grid_plan_item">
                                 <div class="h1_plan_item">
-                                    <label class="txt_plan_name">Smart</label>
-                                    <label class="txt_old_price">$ 359.00</label>
-                                    <label class="txt_new_price">$ 49.00</label>
+                                    <label class="txt_plan_name">Visita</label>
+                                    <label class="txt_new_price">$ 50.00</label>
                                 </div><!--cierra div h1 plan item-->
                                 <div class="h2_plan_item">
-                                    <label class="txt_plan_name">Black</label>
-                                    <label class="txt_old_price">$ 459.00</label>
-                                    <label class="txt_new_price">$ 49.00</label>
+                                    <label class="txt_plan_name">Quincena</label>
+                                    <label class="txt_new_price">$ 250.00</label>
                                 </div><!--cierra div h2 plan item-->
                                 <div class="h3_plan_item">
-                                    <label class="txt_plan_name">Fit</label>
-                                    <label class="txt_old_price">$ 299.00</label>
-                                    <label class="txt_new_price">$ 49.00</label>
+                                    <label class="txt_plan_name">Mensualidad</label>
+                                    <label class="txt_new_price">$ 400.00</label>
                                 </div><!--cierra div h3 plan item-->
                             </div><!--cierra div grid plan item-->
                             <div class="content_btn_buy">
@@ -126,12 +118,13 @@
                             </div><!--cierre de div content btn buy-->
                         </div><!--cierra item x-->
 
+                        <br><br><br>
                         <div class="item_x">
                             <div class="content_img_item">
                                 <img src="../../../assets/img/sucs-img/suc1.jpeg" alt="img_sucursal" class="img_item">
                             </div><!--cierra div content img item-->
                             <div class="content_title_item">
-                                <h3 class="txt_title">Plaza Zavaleta</h3>
+                                <h3 class="txt_title">Santa Ana</h3>
                             </div><!--cierra div content title item-->
                             <div class="content_addr_item">
                                 <p class="txt_addr">Calz. Zavaleta No. 50 Santa Cruz Buenavista. Puebla - PUE.</p>
@@ -139,24 +132,21 @@
                             <div class="content_link_item">
                                 <a href="#">Ver academia</a>
                             </div><!--cierra div content link item-->
-                            <div class="content_pack_item">
-                                <p class="txt_palnes">Inscripcion gratis + primer mes $49 en los 3 planes.</p>
+                            <br><div class="content_pack_item">
+                                <p class="txt_palnes" style ="text-align: center;">Inscripcion gratis</p>
                             </div>
-                            <div class="grid_plan_item">
+                            <br><div class="grid_plan_item">
                                 <div class="h1_plan_item">
-                                    <label class="txt_plan_name">Smart</label>
-                                    <label class="txt_old_price">$ 359.00</label>
-                                    <label class="txt_new_price">$ 49.00</label>
+                                    <label class="txt_plan_name">Visita</label>
+                                    <label class="txt_new_price">$ 70.00</label>
                                 </div><!--cierra div h1 plan item-->
                                 <div class="h2_plan_item">
-                                    <label class="txt_plan_name">Black</label>
-                                    <label class="txt_old_price">$ 459.00</label>
-                                    <label class="txt_new_price">$ 49.00</label>
+                                    <label class="txt_plan_name">Quincena</label>
+                                    <label class="txt_new_price">$ 300.00</label>
                                 </div><!--cierra div h2 plan item-->
                                 <div class="h3_plan_item">
-                                    <label class="txt_plan_name">Fit</label>
-                                    <label class="txt_old_price">$ 299.00</label>
-                                    <label class="txt_new_price">$ 49.00</label>
+                                    <label class="txt_plan_name">Mensualoidad</label>
+                                    <label class="txt_new_price">$ 500.00</label>
                                 </div><!--cierra div h3 plan item-->
                             </div><!--cierra div grid plan item-->
                             <div class="content_btn_buy">
