@@ -1,19 +1,37 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { FormBuilder, FormGroup } from '@angular/forms';
+
 
 @Component({
   selector: 'app-sucursales',
   templateUrl: './sucursales.component.html',
   styleUrls: ['./sucursales.component.css']
 })
+
 export class SucursalesComponent {
-  constructor(private router: Router) {
+  form: FormGroup;
+  casilleros: boolean = false;
+  estacionamiento: boolean = false;
+  bicicletero: boolean = false;
+  energia: boolean = false;
 
+  constructor (private fb: FormBuilder){
+    this.form = this.fb.group({
+      xi: ['']
+    })
   }
 
-  navegarPagina(url: String): void {
-    console.log("Va a navegar", url);
-
-    this.router.navigate([ url ]);
+  onNombreChange(event: any, nombre: string){
+    let bodyData = {
+      casilleros : this.casilleros,
+      estacionamiento : this.estacionamiento,
+      bicicletero : this.bicicletero,
+      energia : this.energia
+    };
+    console.log(bodyData);
+    //console.log(event + ': ' +nombre);
+    //console.log(this.nombre2 + ' check2 estado');
+    //console.log(this.nombrep + ' check1 estado');
   }
+
 }
