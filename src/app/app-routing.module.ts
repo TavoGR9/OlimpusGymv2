@@ -28,6 +28,10 @@ import { PlanvirtualComponent } from './user/planvirtual/planvirtual.component';
 import { PlanListaComponent } from './user/plan-lista/plan-lista.component';
 import { PlanEditarComponent } from './user/plan-editar/plan-editar.component';
 import { CarritoComponent } from './recepcionist/carrito/carrito.component';
+import { HomeMiguelComponent } from './user/home-miguel/home-miguel.component';
+import { MembresiaMiguelComponent } from './user/membresia-miguel/membresia-miguel.component';
+import { PagosMiguelComponent } from './user/pagos-miguel/pagos-miguel.component';
+import { PerfilMiguelComponent } from './user/perfil-miguel/perfil-miguel.component';
 
 
 const routes: Routes = [
@@ -55,6 +59,10 @@ const routes: Routes = [
   { path: "editar-perfil", component: EditarPerfilComponent},
   { path: "confirmacion", component: ConfirmacionComponent},
   { path: "VirtualOlimpusGym", component: PlanvirtualComponent },
+  { path: "home-miguel", component: HomeMiguelComponent },
+  { path: "membresia-miguel", component: MembresiaMiguelComponent },
+  { path: "pagos-miguel", component: PagosMiguelComponent },
+  { path: "perfil-miguel", component: PerfilMiguelComponent },
 
   //componentes recepcionista
   { path: "stock", component: StockComponent },

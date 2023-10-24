@@ -1,5 +1,7 @@
+
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ConnectionService } from 'src/app/servicios/connection.service';
 
 
 @Component({
@@ -9,29 +11,34 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 
 export class SucursalesComponent {
-  form: FormGroup;
   casilleros: boolean = false;
   estacionamiento: boolean = false;
   bicicletero: boolean = false;
   energia: boolean = false;
 
-  constructor (private fb: FormBuilder){
+  form: FormGroup;
+  constructor (private http: ConnectionService, private fb: FormBuilder, ){
     this.form = this.fb.group({
-      xi: ['']
+      casilleros: [false],
+      estacionamiento: [false],
+      bicicletero: [false],
+      energia: [false]
     })
   }
 
-  onNombreChange(event: any, nombre: string){
-    let bodyData = {
-      casilleros : this.casilleros,
-      estacionamiento : this.estacionamiento,
-      bicicletero : this.bicicletero,
-      energia : this.energia
-    };
-    console.log(bodyData);
-    //console.log(event + ': ' +nombre);
-    //console.log(this.nombre2 + ' check2 estado');
-    //console.log(this.nombrep + ' check1 estado');
+  onNombreChange(){
+    // debugger;
+    console.log(this.form.value);
+     
+    this.http.filtrarSuc(this.form.value).subscribe({
+      next: (resultData) => {
+        
+        console.log(resultData);                 
+      },
+      error: (error) => {
+        console.error(error);
+      }
+    })
   }
 
 }

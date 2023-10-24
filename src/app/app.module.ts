@@ -57,6 +57,10 @@ import { MensajeEmergentesComponent } from './user/mensaje-emergentes/mensaje-em
 import { MatDialogModule } from '@angular/material/dialog';
 import { MensajeEmergenteEliminarComponent } from './user/mensaje-emergente-eliminar/mensaje-emergente-eliminar.component';
 import { CarritoComponent } from './recepcionist/carrito/carrito.component';
+import { PerfilMiguelComponent } from './user/perfil-miguel/perfil-miguel.component';
+import { PagosMiguelComponent } from './user/pagos-miguel/pagos-miguel.component';
+import { MembresiaMiguelComponent } from './user/membresia-miguel/membresia-miguel.component';
+import { HomeMiguelComponent } from './user/home-miguel/home-miguel.component';
 
 
 @NgModule({
@@ -92,6 +96,10 @@ import { CarritoComponent } from './recepcionist/carrito/carrito.component';
     MensajeEmergentesComponent,
     MensajeEmergenteEliminarComponent,
     CarritoComponent,
+    PerfilMiguelComponent,
+    PagosMiguelComponent,
+    MembresiaMiguelComponent,
+    HomeMiguelComponent,
   ],
   imports: [
     BrowserModule,
