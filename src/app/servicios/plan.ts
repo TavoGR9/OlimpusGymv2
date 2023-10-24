@@ -9,5 +9,5 @@ export class plan{
     canchaAcc!:string;
     albercaAcc!:string;
     gymAcc!:string;
-    Gimnasio_idGimnasio !:string;
+    Gimnasio_idGimnasio !:number;
 }
