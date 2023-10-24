@@ -45,18 +45,18 @@
                     <div class="content_img_left"></div><!--cierra div content_img_left-->
                 </div><!--cierra div h1 filters-->
 
-                <div class="h2_items">
-                    <div class="content_items">
+                <div class="h2_items" >
+                    <div class="content_items" *ngFor="let sucursal of sucursales">
 
                         <div class="item_x">
                             <div class="content_img_item">
                                 <img src="../../../assets/img/sucs-img/suc1.jpeg" alt="img_sucursal" class="img_item">
                             </div><!--cierra div content img item-->
                             <div class="content_title_item">
-                                <h3 class="txt_title">Plaza Zavaleta</h3>
+                                <h3 class="txt_title">{{sucursal.nombreGym}}</h3>
                             </div><!--cierra div content title item-->
                             <div class="content_addr_item">
-                                <p class="txt_addr">Calz. Zavaleta No. 50 Santa Cruz Buenavista. Puebla - PUE.</p>
+                                <p class="txt_addr">{{sucursal.colonia + " " + sucursal.ciudad + " " + sucursal.estado + " " + sucursal.calle}}</p>
                             </div><!--cierra div content addr item-->
                             <div class="content_link_item">
                                 <a href="#">Ver academia</a>
@@ -65,102 +65,14 @@
                                 <p class="txt_palnes">Inscripcion gratis + primer mes $49 en los 3 planes.</p>
                             </div>
                             <div class="grid_plan_item">
-                                <div class="h1_plan_item">
-                                    <label class="txt_plan_name">Smart</label>
-                                    <label class="txt_old_price">$ 359.00</label>
-                                    <label class="txt_new_price">$ 49.00</label>
+                                <div class="h1_plan_item" *ngFor="let membresia of sucursal.membresias">
+                                    <label class="txt_plan_name">{{membresia.titulo}}</label>
+                                    <!--<label class="txt_old_price">{{"$" + " " + membresia.precio}}</label>-->
+                                    <label class="txt_new_price">{{"$" + " " + membresia.precio}}</label>
                                 </div><!--cierra div h1 plan item-->
-                                <div class="h2_plan_item">
-                                    <label class="txt_plan_name">Black</label>
-                                    <label class="txt_old_price">$ 459.00</label>
-                                    <label class="txt_new_price">$ 49.00</label>
-                                </div><!--cierra div h2 plan item-->
-                                <div class="h3_plan_item">
-                                    <label class="txt_plan_name">Fit</label>
-                                    <label class="txt_old_price">$ 299.00</label>
-                                    <label class="txt_new_price">$ 49.00</label>
-                                </div><!--cierra div h3 plan item-->
                             </div><!--cierra div grid plan item-->
                             <div class="content_btn_buy">
-                                <button (click)="navegarPagina('membresias/:id')" type="submit" class="btn_int" mat-raised-button style="background: #FD9727; color: white;">
-                                    ¡Inscribete ya!</button>
-                            </div><!--cierre de div content btn buy-->
-                        </div><!--cierra item x-->
-
-                        <div class="item_x">
-                            <div class="content_img_item">
-                                <img src="../../../assets/img/sucs-img/suc1.jpeg" alt="img_sucursal" class="img_item">
-                            </div><!--cierra div content img item-->
-                            <div class="content_title_item">
-                                <h3 class="txt_title">Plaza Zavaleta</h3>
-                            </div><!--cierra div content title item-->
-                            <div class="content_addr_item">
-                                <p class="txt_addr">Calz. Zavaleta No. 50 Santa Cruz Buenavista. Puebla - PUE.</p>
-                            </div><!--cierra div content addr item-->
-                            <div class="content_link_item">
-                                <a href="#">Ver academia</a>
-                            </div><!--cierra div content link item-->
-                            <div class="content_pack_item">
-                                <p class="txt_palnes">Inscripcion gratis + primer mes $49 en los 3 planes.</p>
-                            </div>
-                            <div class="grid_plan_item">
-                                <div class="h1_plan_item">
-                                    <label class="txt_plan_name">Smart</label>
-                                    <label class="txt_old_price">$ 359.00</label>
-                                    <label class="txt_new_price">$ 49.00</label>
-                                </div><!--cierra div h1 plan item-->
-                                <div class="h2_plan_item">
-                                    <label class="txt_plan_name">Black</label>
-                                    <label class="txt_old_price">$ 459.00</label>
-                                    <label class="txt_new_price">$ 49.00</label>
-                                </div><!--cierra div h2 plan item-->
-                                <div class="h3_plan_item">
-                                    <label class="txt_plan_name">Fit</label>
-                                    <label class="txt_old_price">$ 299.00</label>
-                                    <label class="txt_new_price">$ 49.00</label>
-                                </div><!--cierra div h3 plan item-->
-                            </div><!--cierra div grid plan item-->
-                            <div class="content_btn_buy">
-                                <button (click)="navegarPagina('membresias/:id')" type="submit" class="btn_int" mat-raised-button style="background: #FD9727; color: white;">
-                                    ¡Inscribete ya!</button>
-                            </div><!--cierre de div content btn buy-->
-                        </div><!--cierra item x-->
-
-                        <div class="item_x">
-                            <div class="content_img_item">
-                                <img src="../../../assets/img/sucs-img/suc1.jpeg" alt="img_sucursal" class="img_item">
-                            </div><!--cierra div content img item-->
-                            <div class="content_title_item">
-                                <h3 class="txt_title">Plaza Zavaleta</h3>
-                            </div><!--cierra div content title item-->
-                            <div class="content_addr_item">
-                                <p class="txt_addr">Calz. Zavaleta No. 50 Santa Cruz Buenavista. Puebla - PUE.</p>
-                            </div><!--cierra div content addr item-->
-                            <div class="content_link_item">
-                                <a href="#">Ver academia</a>
-                            </div><!--cierra div content link item-->
-                            <div class="content_pack_item">
-                                <p class="txt_palnes">Inscripcion gratis + primer mes $49 en los 3 planes.</p>
-                            </div>
-                            <div class="grid_plan_item">
-                                <div class="h1_plan_item">
-                                    <label class="txt_plan_name">Smart</label>
-                                    <label class="txt_old_price">$ 359.00</label>
-                                    <label class="txt_new_price">$ 49.00</label>
-                                </div><!--cierra div h1 plan item-->
-                                <div class="h2_plan_item">
-                                    <label class="txt_plan_name">Black</label>
-                                    <label class="txt_old_price">$ 459.00</label>
-                                    <label class="txt_new_price">$ 49.00</label>
-                                </div><!--cierra div h2 plan item-->
-                                <div class="h3_plan_item">
-                                    <label class="txt_plan_name">Fit</label>
-                                    <label class="txt_old_price">$ 299.00</label>
-                                    <label class="txt_new_price">$ 49.00</label>
-                                </div><!--cierra div h3 plan item-->
-                            </div><!--cierra div grid plan item-->
-                            <div class="content_btn_buy">
-                                <button (click)="navegarPagina('membresias/:id')" type="submit" class="btn_int" mat-raised-button style="background: #FD9727; color: white;">
+                                <button routerLink="/membresias/{{ sucursal.idGimnasio}}"  type="submit" class="btn_int" mat-raised-button style="background: #FD9727; color: white;">
                                     ¡Inscribete ya!</button>
                             </div><!--cierre de div content btn buy-->
                         </div><!--cierra item x-->
