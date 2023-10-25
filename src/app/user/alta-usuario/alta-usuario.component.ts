@@ -1,9 +1,20 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroupDirective, NgForm, Validators, FormGroup } from '@angular/forms';
 import { Router,  ActivatedRoute } from '@angular/router';
 import { ClienteService } from 'src/app/servicios/cliente.service';
 import { MatDialog } from "@angular/material/dialog";
 import { MensajeEmergentesComponent } from "../mensaje-emergentes/mensaje-emergentes.component";
+import {ErrorStateMatcher} from '@angular/material/core';
+import { ToastrService } from 'ngx-toastr';
+import * as bcrypt from 'bcryptjs'; //encriptacion libreria
+
+/** Error when invalid control is dirty, touched, or submitted. */
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, formulario: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = formulario && formulario.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  }
+}
 
 @Component({
   selector: 'app-alta-usuario',
@@ -14,35 +25,29 @@ export class AltaUsuarioComponent {
   hide = true;
   form: FormGroup;
   message: string = "";
+  cliente: any;
 
   constructor (public fb: FormBuilder, private clienteService:ClienteService,
     private router: Router, private activeRoute: ActivatedRoute,
-    public dialog: MatDialog){
+    public dialog: MatDialog, private toastr: ToastrService ){
     this.form = this.fb.group({
-      nombre: ['', Validators.required],
-      apPaterno: ['', Validators.required],
-      apMaterno: ['', Validators.required],
-      telefono: ['', Validators.required],
-      direccion: ['', Validators.required],
+      nombre: ['', Validators.compose([ Validators.required, Validators.pattern(/^[A-Za-zñÑáéíóú ]*[A-Za-z][A-Za-zñÑáéíóú ]*$/)])],
+      apPaterno: ['', Validators.compose([ Validators.required, Validators.pattern(/^[A-Za-zñÑáéíóú ]*[A-Za-z][A-Za-zñÑáéíóú ]*$/)])],
+      apMaterno: ['', Validators.compose([ Validators.required, Validators.pattern(/^[A-Za-zñÑáéíóú ]*[A-Za-z][A-Za-zñÑáéíóú ]*$/)])],
+      telefono: ['', Validators.compose([Validators.required, Validators.pattern(/^(0|[1-9][0-9]*)$/)])],
+      direccion: ['', Validators.compose([ Validators.required, Validators.pattern(/^[A-Za-zñÑáéíóú0-9 ./#]*[A-Za-z][A-Za-zñÑáéíóú0-9 ./#]*$/)])],
       fechaNacimiento: ['', Validators.required],
-      curp: ['', Validators.required],
-      email: ['', Validators.required],
-      pass: ['', Validators.required],
+      curp: ['', Validators.compose([ Validators.minLength(18), Validators.pattern(/^[A-ZÑ0-9]*[A-Z][A-ZÑ0-9]*$/)])],
+      email: ['', Validators.compose([Validators.required, Validators.pattern(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)])],
+      pass: ['', Validators.compose([Validators.required, Validators.minLength(8)])],
       Gimnasio_idGimnasio:[2]
     })
   }
-/*
-  registrar(){
-    let bodyData = {
-      email : this.form.value.email,
-      contrasena : this.form.value.password
-    };
-    console.log(bodyData);
-  }*/
 
   registrar(): any {
     console.log("Me presionaste");
     console.log(this.form.value);
+
     if(this.form.valid){
     this.clienteService.agregarCliente(this.form.value).subscribe((respuesta) => {
         this.dialog.open(MensajeEmergentesComponent, {
@@ -62,4 +67,5 @@ export class AltaUsuarioComponent {
     this.message = "Por favor, complete todos los campos requeridos.";
   }
 }
+
 }
