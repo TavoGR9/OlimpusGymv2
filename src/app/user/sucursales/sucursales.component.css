@@ -65,6 +65,22 @@
     justify-content: center;
 }
 
+.vermas {
+    width: 150px;
+    padding: 5px;
+    margin: 0 auto;
+    background-color: black;
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px #333;
+    transition: transform 0.2s;
+}
+
+.vermas:hover {
+    transform: scale(1.1);
+}
+
 .item_x {
     width: 350px;
     height: 450px;

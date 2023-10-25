@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef,AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { sucursal } from 'src/app/servicios/sucursal';
 import { plan } from 'src/app/servicios/plan';
@@ -11,13 +11,19 @@ import { PlanService } from 'src/app/servicios/plan.service';
   styleUrls: ['./sucursales.component.css']
 })
 export class SucursalesComponent implements OnInit {
+  @ViewChild('loadMoreMarker', { read: ElementRef }) loadMoreMarker: ElementRef | null = null;
   sucursales: sucursal[] = [];
   membresias: plan[] = [];
+  currentPage = 1;
+  gimnasiosPerPage = 4;
+  displayedGimnasios: sucursal[] = [];
+  startIndex = 0;
 
   constructor(
     private router: Router,
     private sucursalService: SucursalService,
-    private planService: PlanService
+    private planService: PlanService,
+    
   ) {}
 
   navegarPagina(url: string): void {
@@ -28,6 +34,7 @@ export class SucursalesComponent implements OnInit {
   ngOnInit(): void {
     this.sucursalService.getSucursales().subscribe((data) => {
       this.sucursales = data; // Asignamos los datos de las sucursales a la propiedad sucursales
+      this.displayedGimnasios = this.sucursales.slice(0, this.gimnasiosPerPage);
 
       this.planService.obternerPlan().subscribe((membresias: Object) => {
         // Mapea las membresías a los gimnasios correspondientes utilizando el ID de gimnasio
@@ -37,4 +44,41 @@ export class SucursalesComponent implements OnInit {
       });
     });
   }
+
+  /*loadMoreGimnasios() {
+    const endIndex = this.startIndex + this.gimnasiosPerPage;
+    if (endIndex >= this.sucursales.length) {
+      // No hay más gimnasios para cargar
+      return;
+    }
+  
+    const newGimnasios = this.sucursales.slice(this.startIndex, endIndex);
+    this.displayedGimnasios = this.displayedGimnasios.concat(newGimnasios);
+    this.startIndex = endIndex;
+  }*/
+
+  loadMoreGimnasios() {
+    this.currentPage++; // Incrementa la página actual
+    const startIndex = (this.currentPage - 1) * this.gimnasiosPerPage;
+    const endIndex = startIndex + this.gimnasiosPerPage;
+    const newGimnasios = this.sucursales.slice(startIndex, endIndex);
+    this.displayedGimnasios = this.displayedGimnasios.concat(newGimnasios);
+  }
+  
+  
+
+  /*ngAfterViewInit() {
+    if (this.loadMoreMarker) { // Comprobar si this.loadMoreMarker no es nulo
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            this.loadMoreGimnasios();
+          }
+        });
+      });
+  
+      observer.observe(this.loadMoreMarker.nativeElement);
+    }
+  }*/
+  
 }
