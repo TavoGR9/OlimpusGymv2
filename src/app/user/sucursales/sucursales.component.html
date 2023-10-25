@@ -46,7 +46,7 @@
                 </div><!--cierra div h1 filters-->
 
                 <div class="h2_items" >
-                    <div class="content_items" *ngFor="let sucursal of sucursales">
+                    <div class="content_items" *ngFor="let sucursal of displayedGimnasios">
 
                         <div class="item_x">
                             <div class="content_img_item">
@@ -76,13 +76,14 @@
                                     ¡Inscribete ya!</button>
                             </div><!--cierre de div content btn buy-->
                         </div><!--cierra item x-->
-
                     </div><!--cierra content items-->
                 </div><!--cierra div h2 items-->
+                <div class="load-more-container" #loadMoreMarker></div>
+                <button (click)="loadMoreGimnasios()" class="vermas">Ver más gimnasios</button>
             </div><!--cierre div grid padre-->
         </div><!--cierra div margin page-->
       </div><!--cierra div content page-->
-
+      
 
     <!--SE AGREGA EL FOOTER-->
     <div class="footer_component">
