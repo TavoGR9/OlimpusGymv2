@@ -41,10 +41,6 @@
 
                         <!--Prueba checkbox -->
 
-                        
-                        
-
-
 
                         </div>
                     </div><!--cierra div filters container-->
@@ -55,15 +51,15 @@
                 <div class="h2_items">
                     <div class="content_items">
 
-                        <div class="item_x">
+                        <div class="item_x" *ngFor="let sucursal of sucursales">
                             <div class="content_img_item">
                                 <img src="../../../assets/img/sucs-img/suc1.jpeg" alt="img_sucursal" class="img_item">
                             </div><!--cierra div content img item-->
                             <div class="content_title_item">
-                                <h3 class="txt_title">Tenancingo</h3>
+                                <h3 class="txt_title">{{sucursal.nombreColonia}}</h3>
                             </div><!--cierra div content title item-->
                             <div class="content_addr_item">
-                                <p class="txt_addr">Calz. Zavaleta No. 50 Santa Cruz Buenavista. Puebla - PUE.</p>
+                                <p class="txt_addr">{{sucursal.direccion}}</p>
                             </div><!--cierra div content addr item-->
                             <div class="content_link_item">
                                 <a href="#">Ver academia</a>
@@ -72,18 +68,11 @@
                                 <p class="txt_palnes" style ="text-align: center;">Inscripcion gratis</p>
                             </div>
                             <br><div class="grid_plan_item">
-                                <div class="h1_plan_item">
-                                    <label class="txt_plan_name">Visita</label>
-                                    <label class="txt_new_price">$ 40.00</label>
+                                <div class="h1_plan_item" *ngFor="let sucursal of sucursales">
+                                    <label class="txt_plan_name">{{sucursal.titulo}}</label>
+                                    <label class="txt_new_price">{{sucursal.precio}}</label>
                                 </div><!--cierra div h1 plan item-->
-                                <div class="h2_plan_item">
-                                    <label class="txt_plan_name">Quincena</label>
-                                    <label class="txt_new_price">$ 230.00</label>
-                                </div><!--cierra div h2 plan item-->
-                                <div class="h3_plan_item">
-                                    <label class="txt_plan_name">Mensualidad</label>
-                                    <label class="txt_new_price">$ 350.00</label>
-                                </div><!--cierra div h3 plan item-->
+                                                                
                             </div><!--cierra div grid plan item-->
                             <div class="content_btn_buy">
                                 <button type="submit" class="btn_int" mat-raised-button style="background: #FD9727; color: white;" >
@@ -91,79 +80,7 @@
                             </div><!--cierre de div content btn buy-->
                         </div><!--cierra item x-->
 
-                        <div class="item_x">
-                            <div class="content_img_item">
-                                <img src="../../../assets/img/sucs-img/suc1.jpeg" alt="img_sucursal" class="img_item">
-                            </div><!--cierra div content img item-->
-                            <div class="content_title_item">
-                                <h3 class="txt_title">Covadonga</h3>
-                            </div><!--cierra div content title item-->
-                            <div class="content_addr_item">
-                                <p class="txt_addr">Calz. Zavaleta No. 50 Santa Cruz Buenavista. Puebla - PUE.</p>
-                            </div><!--cierra div content addr item-->
-                            <div class="content_link_item">
-                                <a href="#">Ver academia</a>
-                            </div><!--cierra div content link item-->
-                            <br><div class="content_pack_item">
-                                <p class="txt_palnes" style ="text-align: center;">Inscripcion gratis</p>
-                            </div>
-                            <br><div class="grid_plan_item">
-                                <div class="h1_plan_item">
-                                    <label class="txt_plan_name">Visita</label>
-                                    <label class="txt_new_price">$ 50.00</label>
-                                </div><!--cierra div h1 plan item-->
-                                <div class="h2_plan_item">
-                                    <label class="txt_plan_name">Quincena</label>
-                                    <label class="txt_new_price">$ 250.00</label>
-                                </div><!--cierra div h2 plan item-->
-                                <div class="h3_plan_item">
-                                    <label class="txt_plan_name">Mensualidad</label>
-                                    <label class="txt_new_price">$ 400.00</label>
-                                </div><!--cierra div h3 plan item-->
-                            </div><!--cierra div grid plan item-->
-                            <div class="content_btn_buy">
-                                <button type="submit" class="btn_int" mat-raised-button style="background: #FD9727; color: white;">
-                                    ¡Inscribete ya!</button>
-                            </div><!--cierre de div content btn buy-->
-                        </div><!--cierra item x-->
-
-                        <br><br><br>
-                        <div class="item_x">
-                            <div class="content_img_item">
-                                <img src="../../../assets/img/sucs-img/suc1.jpeg" alt="img_sucursal" class="img_item">
-                            </div><!--cierra div content img item-->
-                            <div class="content_title_item">
-                                <h3 class="txt_title">Santa Ana</h3>
-                            </div><!--cierra div content title item-->
-                            <div class="content_addr_item">
-                                <p class="txt_addr">Calz. Zavaleta No. 50 Santa Cruz Buenavista. Puebla - PUE.</p>
-                            </div><!--cierra div content addr item-->
-                            <div class="content_link_item">
-                                <a href="#">Ver academia</a>
-                            </div><!--cierra div content link item-->
-                            <br><div class="content_pack_item">
-                                <p class="txt_palnes" style ="text-align: center;">Inscripcion gratis</p>
-                            </div>
-                            <br><div class="grid_plan_item">
-                                <div class="h1_plan_item">
-                                    <label class="txt_plan_name">Visita</label>
-                                    <label class="txt_new_price">$ 70.00</label>
-                                </div><!--cierra div h1 plan item-->
-                                <div class="h2_plan_item">
-                                    <label class="txt_plan_name">Quincena</label>
-                                    <label class="txt_new_price">$ 300.00</label>
-                                </div><!--cierra div h2 plan item-->
-                                <div class="h3_plan_item">
-                                    <label class="txt_plan_name">Mensualoidad</label>
-                                    <label class="txt_new_price">$ 500.00</label>
-                                </div><!--cierra div h3 plan item-->
-                            </div><!--cierra div grid plan item-->
-                            <div class="content_btn_buy">
-                                <button type="submit" class="btn_int" mat-raised-button style="background: #FD9727; color: white;">
-                                    ¡Inscribete ya!</button>
-                            </div><!--cierre de div content btn buy-->
-                        </div><!--cierra item x-->
-
+                        
                     </div><!--cierra content items-->
                 </div><!--cierra div h2 items-->
             </div><!--cierre div grid padre-->

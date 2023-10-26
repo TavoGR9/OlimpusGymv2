@@ -61,7 +61,7 @@ import { PerfilMiguelComponent } from './user/perfil-miguel/perfil-miguel.compon
 import { PagosMiguelComponent } from './user/pagos-miguel/pagos-miguel.component';
 import { MembresiaMiguelComponent } from './user/membresia-miguel/membresia-miguel.component';
 import { HomeMiguelComponent } from './user/home-miguel/home-miguel.component';
-
+import { PagoInscripcionComponent } from './user/pago-inscripcion/pago-inscripcion.component';
 
 @NgModule({
   declarations: [
@@ -100,6 +100,7 @@ import { HomeMiguelComponent } from './user/home-miguel/home-miguel.component';
     PagosMiguelComponent,
     MembresiaMiguelComponent,
     HomeMiguelComponent,
+    PagoInscripcionComponent
   ],
   imports: [
     BrowserModule,

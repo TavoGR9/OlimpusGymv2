@@ -32,6 +32,7 @@ import { HomeMiguelComponent } from './user/home-miguel/home-miguel.component';
 import { MembresiaMiguelComponent } from './user/membresia-miguel/membresia-miguel.component';
 import { PagosMiguelComponent } from './user/pagos-miguel/pagos-miguel.component';
 import { PerfilMiguelComponent } from './user/perfil-miguel/perfil-miguel.component';
+import { PagoInscripcionComponent } from './user/pago-inscripcion/pago-inscripcion.component';
 
 
 const routes: Routes = [
@@ -63,6 +64,7 @@ const routes: Routes = [
   { path: "membresia-miguel", component: MembresiaMiguelComponent },
   { path: "pagos-miguel", component: PagosMiguelComponent },
   { path: "perfil-miguel", component: PerfilMiguelComponent },
+  { path: "pago-inscripcion", component: PagoInscripcionComponent},
 
   //componentes recepcionista
   { path: "stock", component: StockComponent },

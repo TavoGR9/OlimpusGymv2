@@ -11,10 +11,7 @@ import { ConnectionService } from 'src/app/servicios/connection.service';
 })
 
 export class SucursalesComponent {
-  casilleros: boolean = false;
-  estacionamiento: boolean = false;
-  bicicletero: boolean = false;
-  energia: boolean = false;
+  sucursales: any;
 
   form: FormGroup;
   constructor (private http: ConnectionService, private fb: FormBuilder, ){
@@ -27,13 +24,13 @@ export class SucursalesComponent {
   }
 
   onNombreChange(){
-    // debugger;
     console.log(this.form.value);
      
     this.http.filtrarSuc(this.form.value).subscribe({
       next: (resultData) => {
         
-        console.log(resultData);                 
+        console.log(resultData);
+        this.sucursales = resultData;               
       },
       error: (error) => {
         console.error(error);
