@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 /*propiedades body */
@@ -57,7 +58,34 @@
     border-radius: 10px;
 }
 
+<<<<<<< HEAD
 /*INICIAN PROPIEDADES DE ITEMS*/
+=======
+/**INICIAN PROPIEDADES DE ITEMS**/
+
+.h2_items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.vermas {
+    width: 150px;
+    padding: 5px;
+    margin: 0 auto;
+    background-color: black;
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px #333;
+    transition: transform 0.2s;
+}
+
+.vermas:hover {
+    transform: scale(1.1);
+}
+
+>>>>>>> b0ae301b4f03b40570c01ddb71ccce3801e1977d
 .item_x {
     width: 350px;
     height: 450px;
