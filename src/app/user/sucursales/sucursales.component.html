@@ -56,17 +56,10 @@
                                 <img src="../../../assets/img/sucs-img/suc1.jpeg" alt="img_sucursal" class="img_item">
                             </div><!--cierra div content img item-->
                             <div class="content_title_item">
-<<<<<<< HEAD
-                                <h3 class="txt_title">{{sucursal.nombreColonia}}</h3>
-                            </div><!--cierra div content title item-->
-                            <div class="content_addr_item">
-                                <p class="txt_addr">{{sucursal.direccion}}</p>
-=======
                                 <h3 class="txt_title">{{sucursal.nombreGym}}</h3>
                             </div><!--cierra div content title item-->
                             <div class="content_addr_item">
-                                <p class="txt_addr">{{sucursal.colonia + " " + sucursal.ciudad + " " + sucursal.estado + " " + sucursal.calle}}</p>
->>>>>>> b0ae301b4f03b40570c01ddb71ccce3801e1977d
+                                <p class="txt_addr">{{sucursal.calle + ' ' + sucursal.numInt + ' # ' + sucursal.numExt + ', ' + sucursal.colonia + ' '  + sucursal.codigoPostal + ', ' + sucursal.ciudad + ' ' + sucursal.estado}}</p>
                             </div><!--cierra div content addr item-->
                             <div class="content_link_item">
                                 <a href="#">Ver academia</a>
@@ -74,22 +67,6 @@
                             <br><div class="content_pack_item">
                                 <p class="txt_palnes" style ="text-align: center;">Inscripcion gratis</p>
                             </div>
-<<<<<<< HEAD
-                            <br><div class="grid_plan_item">
-                                <div class="h1_plan_item" *ngFor="let sucursal of sucursales">
-                                    <label class="txt_plan_name">{{sucursal.titulo}}</label>
-                                    <label class="txt_new_price">{{sucursal.precio}}</label>
-                                </div><!--cierra div h1 plan item-->
-                                                                
-                            </div><!--cierra div grid plan item-->
-                            <div class="content_btn_buy">
-                                <button type="submit" class="btn_int" mat-raised-button style="background: #FD9727; color: white;" >
-                                    ¡Inscribete ya!</button>
-                            </div><!--cierre de div content btn buy-->
-                        </div><!--cierra item x-->
-
-                        
-=======
                             <div class="grid_plan_item">
                                 <div class="h1_plan_item" *ngFor="let membresia of sucursal.membresias">
                                     <label class="txt_plan_name">{{membresia.titulo}}</label>
@@ -102,7 +79,6 @@
                                     ¡Inscribete ya!</button>
                             </div><!--cierre de div content btn buy-->
                         </div><!--cierra item x-->
->>>>>>> b0ae301b4f03b40570c01ddb71ccce3801e1977d
                     </div><!--cierra content items-->
                 </div><!--cierra div h2 items-->
                 <div class="load-more-container" #loadMoreMarker></div>
