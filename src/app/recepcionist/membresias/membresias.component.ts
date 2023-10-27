@@ -14,7 +14,7 @@ export class MembresiasComponent implements OnInit{
   membresias: any[] = []; // Declarar el tipo de elID como string o nulo
   item: any;
 
-constructor(private activeRoute: ActivatedRoute, private planService: PlanService) {
+constructor(private activeRoute: ActivatedRoute,private router: Router, private planService: PlanService) {
   this.elID = this.activeRoute.snapshot.paramMap.get('id');
   console.log(this.elID);
   if (this.elID) { // Validar si el ID es nulo
@@ -34,6 +34,10 @@ constructor(private activeRoute: ActivatedRoute, private planService: PlanServic
   }
 }
 
+navegarPagina(url: String): void {
+  //console.log("Va a navegar", url);
+  this.router.navigate([ url ]);
+}
 
 
 
