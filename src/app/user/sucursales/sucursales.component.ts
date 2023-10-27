@@ -23,7 +23,6 @@ export class SucursalesComponent implements OnInit {
     private router: Router,
     private sucursalService: SucursalService,
     private planService: PlanService,
-    
   ) {}
 
   navegarPagina(url: string): void {
@@ -45,40 +44,18 @@ export class SucursalesComponent implements OnInit {
     });
   }
 
-  /*loadMoreGimnasios() {
-    const endIndex = this.startIndex + this.gimnasiosPerPage;
-    if (endIndex >= this.sucursales.length) {
-      // No hay más gimnasios para cargar
-      return;
-    }
-  
-    const newGimnasios = this.sucursales.slice(this.startIndex, endIndex);
-    this.displayedGimnasios = this.displayedGimnasios.concat(newGimnasios);
-    this.startIndex = endIndex;
-  }*/
+  /*currentPage = 1;
+  gimnasiosPerPage = 4;
+  displayedGimnasios: sucursal[] = [];
+  startIndex = 0;*/
 
   loadMoreGimnasios() {
-    this.currentPage++; // Incrementa la página actual
-    const startIndex = (this.currentPage - 1) * this.gimnasiosPerPage;
-    const endIndex = startIndex + this.gimnasiosPerPage;
-    const newGimnasios = this.sucursales.slice(startIndex, endIndex);
+    this.currentPage++; // Incrementa la página actual 1 + 1 = 2
+    const startIndex = (this.currentPage - 1) * this.gimnasiosPerPage; //1 * 4 = 4
+    const endIndex = startIndex + this.gimnasiosPerPage; //endIndex = 0 + 4 = 4
+    const newGimnasios = this.sucursales.slice(startIndex, endIndex);// []
     this.displayedGimnasios = this.displayedGimnasios.concat(newGimnasios);
   }
-  
-  
 
-  /*ngAfterViewInit() {
-    if (this.loadMoreMarker) { // Comprobar si this.loadMoreMarker no es nulo
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            this.loadMoreGimnasios();
-          }
-        });
-      });
-  
-      observer.observe(this.loadMoreMarker.nativeElement);
-    }
-  }*/
   
 }
