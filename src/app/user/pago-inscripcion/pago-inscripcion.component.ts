@@ -19,6 +19,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 export class PagoInscripcionComponent {
   hide = true;
   form: FormGroup;
+  radioSeleccionado!: string;
   matcher = new MyErrorStateMatcher();
 
   constructor (private fb: FormBuilder){
@@ -32,6 +33,10 @@ export class PagoInscripcionComponent {
       exterior: ['', Validators.compose([Validators.required, Validators.maxLength(5), Validators.pattern(/^(0|[1-9][0-9]*)$/)])],
       interior: ['']
     })    
+  }
+
+  cambiarSeleccion(radio: string) {
+    this.radioSeleccionado = radio;
   }
 
   hacerAlgo(){

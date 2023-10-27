@@ -10,3 +10,10 @@ export class empleado {
     email!: String;
     pass!: String;
 }
+
+export class filtroSucursales {
+    bicicletero!: boolean;
+    casilleros!: boolean;
+    energia!: boolean;
+    estacionamiento!: boolean;
+}
