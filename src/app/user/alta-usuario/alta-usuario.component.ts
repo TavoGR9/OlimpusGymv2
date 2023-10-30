@@ -7,6 +7,7 @@ import { MensajeEmergentesComponent } from "../mensaje-emergentes/mensaje-emerge
 import { ErrorStateMatcher } from '@angular/material/core';
 import { ToastrService } from 'ngx-toastr';
 import * as bcrypt from 'bcryptjs'; //encriptacion libreria
+import { TestService } from 'src/app/servicios/test.service';
 
 interface Food {
   value: string;
@@ -29,6 +30,8 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 export class AltaUsuarioComponent {
 
+  titulo:any;
+
   foods: Food[] = [
     {value: ' ', viewValue: '-Seleccionar-'},
     {value: 'Tlaxcala', viewValue: 'Tlaxcala'},
@@ -44,9 +47,12 @@ export class AltaUsuarioComponent {
   message: string = "";
   cliente: any;
 
-  constructor (public fb: FormBuilder, private clienteService:ClienteService,
+  constructor (public fb: FormBuilder, private clienteService:ClienteService, public testService:TestService,
     private router: Router, private activeRoute: ActivatedRoute,
-    public dialog: MatDialog, private toastr: ToastrService ){
+    public dialog: MatDialog, private toastr: ToastrService){
+
+      this.titulo = this.activeRoute.snapshot.paramMap.get('id');
+      
     this.form = this.fb.group({
       nombre: ['', Validators.compose([ Validators.required, Validators.pattern(/^[A-Za-zñÑáéíóú ]*[A-Za-z][A-Za-zñÑáéíóú ]*$/)])],
       apPaterno: ['', Validators.compose([ Validators.required, Validators.pattern(/^[A-Za-zñÑáéíóú ]*[A-Za-z][A-Za-zñÑáéíóú ]*$/)])],
