@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { plan } from 'src/app/servicios/plan';
 import { PlanService } from 'src/app/servicios/plan.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { TestService } from 'src/app/servicios/test.service';
 
 @Component({
   selector: 'app-membresias',
@@ -14,9 +15,14 @@ export class MembresiasComponent implements OnInit{
   membresias: any[] = []; // Declarar el tipo de elID como string o nulo
   item: any;
 
-constructor(private activeRoute: ActivatedRoute,private router: Router, private planService: PlanService) {
+constructor(private activeRoute: ActivatedRoute,private router: Router, private planService: PlanService, private testService: TestService) {
   this.elID = this.activeRoute.snapshot.paramMap.get('id');
   console.log(this.elID);
+
+    //servicio test
+    this.testService.idGym=this.elID;
+   
+    
   if (this.elID) { // Validar si el ID es nulo
     this.planService.obternerPlan().subscribe(
       (membresias: any) => {

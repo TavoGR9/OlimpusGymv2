@@ -43,7 +43,7 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "olvide-contrasena", component: RecuperarPasswordComponent },
   { path: "sucursales", component: SucursalesComponent },
-  { path: "registro", component: AltaUsuarioComponent },
+  { path: "registro/:id", component: AltaUsuarioComponent },
   { path: "finaliza-compra", component: FinalizarCompraComponent },
   { path: "productos", component: ProductosComponent },
   { path: "carrusel", component: CarruselComponent },
