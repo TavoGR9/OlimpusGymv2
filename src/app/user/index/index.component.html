@@ -7,8 +7,12 @@
         <h2 class="title_section">Ubica tu O'limpus<span>Gym</span></h2>
         <div id="search-bar-container">
             <div id="search-bar">
-                <button>O</button>
-                <input type="text" name="search" id="search" placeholder="Ingresa tu ubicacion, Estado, Municipio">
+                <div class="container-bar-icon">
+                    <button routerLink="/sucursales"><span class="material-icons">
+                        search
+                        </span></button>
+                    <input type="text" name="search" id="search" placeholder="Comienza a buscar" routerLink="/sucursales">
+                </div>
             </div>
         </div>
     </div>

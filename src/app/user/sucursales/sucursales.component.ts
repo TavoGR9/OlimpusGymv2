@@ -81,10 +81,10 @@ export class SucursalesComponent implements OnInit {
   }
 
   loadMoreGimnasios() {
-    this.currentPage++; // Incrementa la página actual
-    const startIndex = (this.currentPage - 1) * this.gimnasiosPerPage;
-    const endIndex = startIndex + this.gimnasiosPerPage;
-    const newGimnasios = this.sucursales.slice(startIndex, endIndex);
+    this.currentPage++; // Incrementa la página actual 1 + 1 = 2
+    const startIndex = (this.currentPage - 1) * this.gimnasiosPerPage; //1 * 4 = 4
+    const endIndex = startIndex + this.gimnasiosPerPage; //endIndex = 0 + 4 = 4
+    const newGimnasios = this.sucursales.slice(startIndex, endIndex);// []
     this.displayedGimnasios = this.displayedGimnasios.concat(newGimnasios);
   } 
 }
