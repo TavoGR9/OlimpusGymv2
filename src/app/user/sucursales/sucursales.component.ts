@@ -1,5 +1,3 @@
-
-
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ConnectionService } from 'src/app/servicios/connection.service';
 
@@ -16,34 +14,6 @@ import { PlanService } from 'src/app/servicios/plan.service';
   styleUrls: ['./sucursales.component.css']
 })
 
-/*export class SucursalesComponent {
-  sucursales: any;
-
-  form: FormGroup;
-  constructor (private http: ConnectionService, private fb: FormBuilder, ){
-    this.form = this.fb.group({
-      casilleros: [false],
-      estacionamiento: [false],
-      bicicletero: [false],
-      energia: [false]
-    })
-  }
-
-  onNombreChange(){
-    console.log(this.form.value);
-     
-    this.http.filtrarSuc(this.form.value).subscribe({
-      next: (resultData) => {
-        
-        console.log(resultData);
-        this.sucursales = resultData;               
-      },
-      error: (error) => {
-        console.error(error);
-      }
-    })
-  }*/
-
 export class SucursalesComponent implements OnInit {
   form: FormGroup;
   @ViewChild('loadMoreMarker', { read: ElementRef }) loadMoreMarker: ElementRef | null = null;
@@ -58,7 +28,7 @@ export class SucursalesComponent implements OnInit {
     private router: Router,
     private sucursalService: SucursalService,
     private planService: PlanService,
-    private http: ConnectionService, private fb: FormBuilder
+    private http: ConnectionService, private fb: FormBuilder 
   ) {
     this.form = this.fb.group({
       casilleros: [false],
@@ -90,6 +60,7 @@ export class SucursalesComponent implements OnInit {
     })
   }
   
+  
   navegarPagina(url: string): void {
     console.log('Va a navegar', url);
     this.router.navigate([url]);
@@ -109,40 +80,11 @@ export class SucursalesComponent implements OnInit {
     });
   }
 
-  /*loadMoreGimnasios() {
-    const endIndex = this.startIndex + this.gimnasiosPerPage;
-    if (endIndex >= this.sucursales.length) {
-      // No hay más gimnasios para cargar
-      return;
-    }
-  
-    const newGimnasios = this.sucursales.slice(this.startIndex, endIndex);
-    this.displayedGimnasios = this.displayedGimnasios.concat(newGimnasios);
-    this.startIndex = endIndex;
-  }*/
-
   loadMoreGimnasios() {
     this.currentPage++; // Incrementa la página actual
     const startIndex = (this.currentPage - 1) * this.gimnasiosPerPage;
     const endIndex = startIndex + this.gimnasiosPerPage;
     const newGimnasios = this.sucursales.slice(startIndex, endIndex);
     this.displayedGimnasios = this.displayedGimnasios.concat(newGimnasios);
-  }
-  
-  
-
-  /*ngAfterViewInit() {
-    if (this.loadMoreMarker) { // Comprobar si this.loadMoreMarker no es nulo
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            this.loadMoreGimnasios();
-          }
-        });
-      });
-  
-      observer.observe(this.loadMoreMarker.nativeElement);
-    }
-  }*/
-  
+  } 
 }

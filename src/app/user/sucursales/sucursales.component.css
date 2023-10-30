@@ -58,9 +58,7 @@
     border-radius: 10px;
 }
 
-<<<<<<< HEAD
-/*INICIAN PROPIEDADES DE ITEMS*/
-=======
+
 /**INICIAN PROPIEDADES DE ITEMS**/
 
 .h2_items {
@@ -85,7 +83,6 @@
     transform: scale(1.1);
 }
 
->>>>>>> b0ae301b4f03b40570c01ddb71ccce3801e1977d
 .item_x {
     width: 350px;
     height: 450px;
