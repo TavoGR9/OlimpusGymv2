@@ -82,7 +82,7 @@
                     </div><!--cierra content items-->
                 </div><!--cierra div h2 items-->
                 <div class="load-more-container" #loadMoreMarker></div>
-                <button (click)="loadMoreGimnasios()" class="vermas">Ver más gimnasios</button>
+                <button (click)="loadMoreGimnasios()" class="vermas" *ngIf="hasMoreRecords">Ver más gimnasios</button>
             </div><!--cierre div grid padre-->
         </div><!--cierra div margin page-->
       </div><!--cierra div content page-->

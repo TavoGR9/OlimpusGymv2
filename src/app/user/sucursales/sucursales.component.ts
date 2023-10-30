@@ -23,6 +23,7 @@ export class SucursalesComponent implements OnInit {
   gimnasiosPerPage = 4;
   displayedGimnasios: sucursal[] = [];
   startIndex = 0;
+  public hasMoreRecords = true;
 
   constructor(
     private router: Router,
@@ -86,5 +87,9 @@ export class SucursalesComponent implements OnInit {
     const endIndex = startIndex + this.gimnasiosPerPage; //endIndex = 0 + 4 = 4
     const newGimnasios = this.sucursales.slice(startIndex, endIndex);// []
     this.displayedGimnasios = this.displayedGimnasios.concat(newGimnasios);
+
+    if (endIndex >= this.sucursales.length) {
+      this.hasMoreRecords = false; // Ya no hay más registros
+    }
   } 
 }
