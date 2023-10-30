@@ -5,9 +5,17 @@ export class Cliente{
     apPaterno!:String;
     apMaterno!:String;
     telefono!:String;
-    direccion!:String;
+    codigoPostal!:String;
+    ciudad!:String;
+    colonia!:String;
+    calle!:String;
+    numInter!:String;
+    numExterno!:String;
+    estado!:String;
+    //direccion!:String;
     fechaNacimiento!:String;
     email !:String;
     pass!:String;
     Gimnasio_idGimnasio !:String;
+    Membresia_idMem!: String;
 }

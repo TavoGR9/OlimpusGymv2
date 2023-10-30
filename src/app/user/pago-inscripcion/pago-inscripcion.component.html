@@ -85,7 +85,95 @@
                            
               <br/>
               <hr style="color: #adbac0;" width="90%">
+              
+              <div class="grid_metodos_pago">
+                <div class="opciones_pago">
 
+                </div>
+                <div class="datos_pago">
+
+                </div>
+              </div>
+              <div class="form-check">
+                <input type="radio" name="opciones" (change)="cambiarSeleccion('contenedor1')" class="form-check-input" name="flexRadioDefault" id="tc"> 
+                <label class="form-check-label" for="tc">Pago con Tarjeta</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" name="opciones" (change)="cambiarSeleccion('contenedor2')" class="form-check-input" name="flexRadioDefault" id="efectivo">
+                <label class="form-check-label" for="efectivo">Pago en efectivo</label>
+              </div>
+
+              <div *ngIf="radioSeleccionado === 'contenedor1'">
+                <mat-form-field appearance="outline" class="inputs_tc_l">
+                  <mat-label>Titular de la tarjeta</mat-label>
+                  <input type="text" matInput placeholder="Adolfo Tapia Ibarra" autocomplete="off" formControlName="tc_nom" id="tc_nom" [errorStateMatcher]="matcher">
+                  <mat-error *ngIf="form.get('tc_nom')?.hasError('pattern') && !form.get('tc_nom')?.hasError('required')">
+                      <strong class="txt_msg">**Numeros no permitidos</strong>
+                  </mat-error>
+                  <mat-error *ngIf="form.get('tc_nom')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="inputs_tc_l">
+                  <mat-label>Número de la tarjeta</mat-label>
+                  <input type="text" matInput placeholder="0000 0000 0000 0000" autocomplete="off" formControlName="tc_num" id="tc_num" [errorStateMatcher]="matcher">
+                  <mat-error *ngIf="form.get('tc_num')?.hasError('pattern') && !form.get('tc_num')?.hasError('required')">
+                      <strong class="txt_msg">**Solo se permiten números</strong>
+                  </mat-error>
+                  <mat-error *ngIf="form.get('tc_num')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="inputs_tc_s">
+                  <mat-label>Mes</mat-label>
+                  <mat-select id="tc_mes" formControlName="tc_mes" id="tc_mes" [errorStateMatcher]="matcher">
+                    <mat-option></mat-option>
+                    <mat-option value="01">01</mat-option>
+                    <mat-option value="02">02</mat-option>
+                    <mat-option value="03">03</mat-option>
+                    <mat-option value="04">04</mat-option>
+                    <mat-option value="05">05</mat-option>
+                    <mat-option value="06">06</mat-option>
+                    <mat-option value="07">07</mat-option>
+                    <mat-option value="08">08</mat-option>
+                    <mat-option value="09">09</mat-option>
+                    <mat-option value="10">10</mat-option>
+                    <mat-option value="11">11</mat-option>
+                    <mat-option value="12">12</mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="form.get('tc_mes')?.hasError('required')">
+                    <strong class="txt_msg">**Campo requerido</strong>
+                  </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="inputs_tc_s">
+                  <mat-label>Año</mat-label>
+                  <mat-select id="tc_ano" formControlName="tc_ano" id="tc_ano" [errorStateMatcher]="matcher">
+                    <mat-option></mat-option>
+                    <mat-option value="2024">24</mat-option>
+                    <mat-option value="2025">25</mat-option>
+                    <mat-option value="2026">26</mat-option>
+                    <mat-option value="2027">27</mat-option>
+                    <mat-option value="2028">28</mat-option>
+                    <mat-option value="2029">29</mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="form.get('tc_ano')?.hasError('required')">
+                    <strong class="txt_msg">**Campo requerido</strong>
+                  </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="inputs_tc_s">
+                  <mat-label>CVV</mat-label>
+                  <input type="text" matInput placeholder="000" autocomplete="off" formControlName="tc_cvv" id="tc_cvv" [errorStateMatcher]="matcher">
+                  <mat-error *ngIf="form.get('tc_cvv')?.hasError('pattern') && !form.get('tc_cvv')?.hasError('required')">
+                      <strong class="txt_msg">**Solo se permiten números</strong>
+                  </mat-error>
+                  <mat-error *ngIf="form.get('tc_cvv')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
+                </mat-form-field>
+
+              </div>
+
+              <div *ngIf="radioSeleccionado === 'contenedor2'">
+                Contenedor 2
+              </div>
               
             </div><!--cierra div grid_hijo1-->
             <div class="grid_hijo2">

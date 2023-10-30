@@ -1,48 +1,78 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroupDirective, NgForm, Validators, FormGroup } from '@angular/forms';
 import { Router,  ActivatedRoute } from '@angular/router';
 import { ClienteService } from 'src/app/servicios/cliente.service';
 import { MatDialog } from "@angular/material/dialog";
 import { MensajeEmergentesComponent } from "../mensaje-emergentes/mensaje-emergentes.component";
+import { ErrorStateMatcher } from '@angular/material/core';
+import { ToastrService } from 'ngx-toastr';
+import * as bcrypt from 'bcryptjs'; //encriptacion libreria
+
+interface Food {
+  value: string;
+  viewValue: string;
+}
+
+/** Error when invalid control is dirty, touched, or submitted. */
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, formulario: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = formulario && formulario.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  }
+}
 
 @Component({
   selector: 'app-alta-usuario',
   templateUrl: './alta-usuario.component.html',
-  styleUrls: ['./alta-usuario.component.css']
+  styleUrls: ['./alta-usuario.component.css'],
+  
 })
 export class AltaUsuarioComponent {
+
+  foods: Food[] = [
+    {value: ' ', viewValue: '-Seleccionar-'},
+    {value: 'Tlaxcala', viewValue: 'Tlaxcala'},
+    {value: 'Puebla', viewValue: 'Puebla'},
+    {value: 'Ciudad de México', viewValue: 'CDMX'},
+    {value: 'Hidalgo', viewValue: 'Hidalgo'},
+    {value: 'Monterrey', viewValue: 'Monterrey'},
+    {value: 'Guadalajara', viewValue: 'Guadalajara'},
+    {value: 'Morelos', viewValue: 'Morelos'},
+  ];
   hide = true;
   form: FormGroup;
   message: string = "";
+  cliente: any;
 
   constructor (public fb: FormBuilder, private clienteService:ClienteService,
     private router: Router, private activeRoute: ActivatedRoute,
-    public dialog: MatDialog){
+    public dialog: MatDialog, private toastr: ToastrService ){
     this.form = this.fb.group({
-      nombre: ['', Validators.required],
-      apPaterno: ['', Validators.required],
-      apMaterno: ['', Validators.required],
-      telefono: ['', Validators.required],
-      direccion: ['', Validators.required],
+      nombre: ['', Validators.compose([ Validators.required, Validators.pattern(/^[A-Za-zñÑáéíóú ]*[A-Za-z][A-Za-zñÑáéíóú ]*$/)])],
+      apPaterno: ['', Validators.compose([ Validators.required, Validators.pattern(/^[A-Za-zñÑáéíóú ]*[A-Za-z][A-Za-zñÑáéíóú ]*$/)])],
+      apMaterno: ['', Validators.compose([ Validators.required, Validators.pattern(/^[A-Za-zñÑáéíóú ]*[A-Za-z][A-Za-zñÑáéíóú ]*$/)])],
+      telefono: ['', Validators.compose([Validators.required, Validators.pattern(/^(0|[1-9][0-9]*)$/)])],
+      codigoPostal: ['', Validators.compose([Validators.pattern(/^(0|[1-9][0-9]*)$/), Validators.minLength(5)])],
+      ciudad: ['', Validators.compose([Validators.pattern(/^[A-Za-zñÑáéíóú ]*[A-Za-z][A-Za-zñÑáéíóú ]*$/)])],
+      colonia: ['', Validators.compose([Validators.pattern(/^[A-Za-zñÑáéíóú ]*[A-Za-z][A-Za-zñÑáéíóú ]*$/)])],
+      calle: ['', Validators.compose([Validators.pattern(/^[A-Za-zñÑáéíóú0-9 ]*[A-Za-z][A-Za-zñÑáéíóú0-9 ]*$/)])],
+      numInter: ['', Validators.compose([Validators.pattern(/^(0|[1-9][0-9]*)$/)])],
+      numExterno: ['', Validators.compose([Validators.pattern(/^(0|[1-9][0-9]*)$/)])],
+      estado: [''],
+      //direccion: ['', Validators.compose([ Validators.required, Validators.pattern(/^[A-Za-zñÑáéíóú0-9 ./#]*[A-Za-z][A-Za-zñÑáéíóú0-9 ./#]*$/)])],
       fechaNacimiento: ['', Validators.required],
-      curp: ['', Validators.required],
-      email: ['', Validators.required],
-      pass: ['', Validators.required],
-      Gimnasio_idGimnasio:[2]
+      curp: ['', Validators.compose([ Validators.minLength(18), Validators.pattern(/^[A-ZÑ0-9]*[A-Z][A-ZÑ0-9]*$/)])],
+      email: ['', Validators.compose([Validators.required, Validators.pattern(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)])],  
+      pass: ['', Validators.compose([Validators.required, Validators.minLength(8)])],
+      Gimnasio_idGimnasio:[2],
+      Membresia_idMem:[4]
     })
   }
-/*
-  registrar(){
-    let bodyData = {
-      email : this.form.value.email,
-      contrasena : this.form.value.password
-    };
-    console.log(bodyData);
-  }*/
 
   registrar(): any {
     console.log("Me presionaste");
     console.log(this.form.value);
+
     if(this.form.valid){
     this.clienteService.agregarCliente(this.form.value).subscribe((respuesta) => {
         this.dialog.open(MensajeEmergentesComponent, {

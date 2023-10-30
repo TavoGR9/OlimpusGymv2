@@ -11,9 +11,9 @@
                 <h3>Entonces, ¿En dónde quieres entrenar?</h3>
             </div><!--cierra div title page -->
 
-            <div class="content_searchbar">
+            <div class="content_searchbar" style ="text-align: center;">
                 <mat-form-field appearance="outline" class="inputs_css">
-                    <input type="text" matInput placeholder="Ingresa lo que quieres buscar" autocomplete="off" autofocus="" >
+                    <input type="text" matInput placeholder= "Busca tu Olimpus más cercano." autocomplete="off" autofocus="" >
                     <mat-icon matSuffix>place</mat-icon>
                 </mat-form-field>
             </div><!--cierra div content search bar-->
@@ -25,20 +25,23 @@
                         <div id="first-section-filters" class="filters">
                             <h3>Añade filtros</h3>
                             <p class="txt_filters">Estructura</p>
-                            <mat-checkbox class="item-checkbox">Casilleros</mat-checkbox>
-                            <mat-checkbox class="item-checkbox">Estacionamiento</mat-checkbox>
-                            <mat-checkbox class="item-checkbox">Bicicletero</mat-checkbox>
-                            <mat-checkbox class="item-checkbox">Aire acondicionado</mat-checkbox>
-                            <mat-checkbox class="item-checkbox">Elevador</mat-checkbox>
-                            <mat-checkbox class="item-checkbox">Energy</mat-checkbox>
-                            <mat-checkbox class="item-checkbox">Nutri</mat-checkbox>
-                        </div>
-                        <div id="second-section-filters" class="filters">
-                            <p class="txt_filters">Clases</p>
-                            <mat-checkbox class="item-checkbox">Zumba</mat-checkbox>
-                            <mat-checkbox class="item-checkbox">Spining</mat-checkbox>
-                            <mat-checkbox class="item-checkbox">Yoga</mat-checkbox>
-                            <mat-checkbox class="item-checkbox">Taitiano</mat-checkbox>
+
+                            <form [formGroup]="form">
+                            <mat-checkbox class="item-checkbox" formControlName="casilleros" (ngModelChange)="onNombreChange()" >Casilleros</mat-checkbox>
+                            <mat-checkbox class="item-checkbox" formControlName="estacionamiento" (ngModelChange)="onNombreChange()" >Estacionamiento</mat-checkbox>
+                            <mat-checkbox class="item-checkbox" formControlName="bicicletero" (ngModelChange)="onNombreChange()">Bicicletero</mat-checkbox>
+                            <mat-checkbox class="item-checkbox" formControlName="energia" (ngModelChange)="onNombreChange()">Energy</mat-checkbox>
+                            </form>
+                            <!--
+                            <mat-checkbox class="item-checkbox" [(ngModel)]="casilleros" (ngModelChange)="onNombreChange($event, 'casilleros')" >Casilleros</mat-checkbox>
+                            <mat-checkbox class="item-checkbox" [(ngModel)]="estacionamiento" (ngModelChange)="onNombreChange($event, 'estacionamiento')" >Estacionamiento</mat-checkbox>
+                            <mat-checkbox class="item-checkbox" [(ngModel)]="bicicletero" (ngModelChange)="onNombreChange($event, 'bicicletero')">Bicicletero</mat-checkbox>
+                            <mat-checkbox class="item-checkbox" [(ngModel)]="energia" (ngModelChange)="onNombreChange($event, 'energia')">Energy</mat-checkbox>
+                                -->
+
+                        <!--Prueba checkbox -->
+
+
                         </div>
                     </div><!--cierra div filters container-->
 
@@ -56,13 +59,13 @@
                                 <h3 class="txt_title">{{sucursal.nombreGym}}</h3>
                             </div><!--cierra div content title item-->
                             <div class="content_addr_item">
-                                <p class="txt_addr">{{sucursal.colonia + " " + sucursal.ciudad + " " + sucursal.estado + " " + sucursal.calle}}</p>
+                                <p class="txt_addr">{{sucursal.calle + ' ' + sucursal.numInt + ' # ' + sucursal.numExt + ', ' + sucursal.colonia + ' '  + sucursal.codigoPostal + ', ' + sucursal.ciudad + ' ' + sucursal.estado}}</p>
                             </div><!--cierra div content addr item-->
                             <div class="content_link_item">
                                 <a href="#">Ver academia</a>
                             </div><!--cierra div content link item-->
-                            <div class="content_pack_item">
-                                <p class="txt_palnes">Inscripcion gratis + primer mes $49 en los 3 planes.</p>
+                            <br><div class="content_pack_item">
+                                <p class="txt_palnes" style ="text-align: center;">Inscripcion gratis</p>
                             </div>
                             <div class="grid_plan_item">
                                 <div class="h1_plan_item" *ngFor="let membresia of sucursal.membresias">
