@@ -9,12 +9,18 @@ import { Cliente } from './Cliente';
 })
 export class ClienteService {
 
-  URLServices: String = "http://localhost/plan/registro.php";
+  URLServices: String = "https://olympus.arvispace.com/conPrincipal/registro.php"; //http://localhost/plan/registro.php/
   constructor( private http: HttpClient) { }
 
   agregarCliente(datosCliente:Cliente):Observable<any>{
     console.log("aca llega");
     return this.http.post(this.URLServices+"?insertar=1",datosCliente);
+  }
+  
+//validaciones correo y curp 
+  ValiDataCliente():Observable<any>{
+    let headers: any = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
+    return this.http.get(this.URLServices+"consultar");
   }
 
   credenciales(data:string, password:string){

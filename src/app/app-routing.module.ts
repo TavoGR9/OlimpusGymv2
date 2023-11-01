@@ -32,6 +32,11 @@ import { SucursalInsertComponent } from './admin/sucursal-insert/sucursal-insert
 import { SucursalListaComponent } from './admin/sucursal-lista/sucursal-lista.component'; 
 import { SucursaEditComponent } from './admin/sucursa-edit/sucursa-edit.component';
 import { HorariosComponent } from './admin/horarios/horarios.component';
+import { HomeMiguelComponent } from './user/home-miguel/home-miguel.component';
+import { MembresiaMiguelComponent } from './user/membresia-miguel/membresia-miguel.component';
+import { PagosMiguelComponent } from './user/pagos-miguel/pagos-miguel.component';
+import { PerfilMiguelComponent } from './user/perfil-miguel/perfil-miguel.component';
+import { PagoInscripcionComponent } from './user/pago-inscripcion/pago-inscripcion.component';
 
 
 const routes: Routes = [
@@ -42,7 +47,7 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "olvide-contrasena", component: RecuperarPasswordComponent },
   { path: "sucursales", component: SucursalesComponent },
-  { path: "registro", component: AltaUsuarioComponent },
+  { path: "registro/:id", component: AltaUsuarioComponent },
   { path: "finaliza-compra", component: FinalizarCompraComponent },
   { path: "productos", component: ProductosComponent },
   { path: "carrusel", component: CarruselComponent },
@@ -59,6 +64,11 @@ const routes: Routes = [
   { path: "editar-perfil", component: EditarPerfilComponent},
   { path: "confirmacion", component: ConfirmacionComponent},
   { path: "VirtualOlimpusGym", component: PlanvirtualComponent },
+  { path: "home-miguel", component: HomeMiguelComponent },
+  { path: "membresia-miguel", component: MembresiaMiguelComponent },
+  { path: "pagos-miguel", component: PagosMiguelComponent },
+  { path: "perfil-miguel", component: PerfilMiguelComponent },
+  { path: "pago-inscripcion", component: PagoInscripcionComponent},
 
   //componentes recepcionista
   { path: "stock", component: StockComponent },

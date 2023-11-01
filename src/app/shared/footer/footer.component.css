@@ -20,6 +20,13 @@
     text-align: center;
 }
 
+/*propiedades texto derechos reservados*/
+.txt_footer_cr {
+    font-size: small;
+    font-weight: bold;
+    color: white;
+}
+
 /**propiedades textos footer**/
 .txt_footer {
     color: white;

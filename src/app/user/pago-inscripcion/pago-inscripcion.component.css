@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/**propiedades del contenedor body**/
+.body {
+    margin: 0;
+    position: relative;
+    padding-bottom: 139px;
+    min-height: 100vh;
+}
+
+/**propiedades contenedor body**/
+.content_body {
+    margin: 0 auto;
+    align-content: center;
+    text-align: center;
+    width: 85%;
+}
+
+/**Pripiedades grid padre**/
+.grid_padre_content {
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+
+/**propiedades contenedor fomulario**/
+.grid_hijo1 {
+    text-align: left;
+}
+
+/*propiedades titulo pagina*/
+.title_page {
+    margin: 10px 0px;
+}
+
+/**propiedades inputs form**/
+.inputs_properties {
+    width: 300px;
+    padding: 10px;
+    display: inline-block;
+}
+
+/*propiedades mensaje de error pattern input**/
+.txt_msg {
+    font-size: x-small;
+    font-weight: bold;
+}
+
+/*INICIA PROPIEDADES METODOS DE PAGO */
+.grid_metodos_pago {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+.inputs_tc_l {
+    width: 300px;
+    padding: 10px;
+    display: inline-block;
+}
+
+.inputs_tc_s {
+    width: 150px;
+    padding: 10px;
+}
+
+/*INICIA PROPIEDADES DETALLES DE PAQUETE**/
+/*propiedades contenedor content grid_hijo2 **/
+.grid_hijo2{
+    margin: 0 auto;
+}
+.content_grid_hijo2 {
+    margin-top: 65px;
+    width: 300px;
+    border: #adbac0 solid;
+    background: #EFEFEF;
+    border-radius: 15px;
+    min-height: 270px;
+}
+
+/**propiedeades titulo details */
+.title_details {
+    font-size: large;
+    padding-top: 10px;
+    padding-left: 10px;
+    display: block;
+}
+
+/**propiedades subtitle details**/
+.subtitle_details {
+    font-size: medium;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    display: block;
+}
+
+/*propiedades contenedor titulo detalles plan*/
+.header_details {
+    text-align: left;
+    width: 90%;
+}
+
+/**propiedades detalles de compra**/
+.grid_details {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    width: 90%;
+}
+
+/*propiedades textos detalles descripcion*/
+.details_txt_desc {
+    font-size: x-small;
+    padding-left: 10px;
+}
+
+/*textos detalles**/
+.details_txt {
+    font-weight: bold;
+    font-size: small;
+    padding-left: 10px;
+}
+
+/*propiedades contenedores de detalles */
+.data_month {
+    text-align: left;
+}
+
+
+
+
+/**CONTENIDO BLOQUE BOTONES CANCELAR - FINALIZAR COMPRA**/
+.btns_ok_cancel {
+    text-align: right;
+}
+
+/**propiedades botones cancelar - finalizar compra **/
+.btn_ok_cancel {
+    width: 290px;
+    font-size: larger;
+    margin: 50px 10px;
+    height: 50px;
+}

@@ -23,171 +23,64 @@
 
         <br>
 
-        <div>
-            <form class="form-first" style="margin: 0 auto; background-color: #f9a640;">
-                <div style="text-align:center;">
-                    <label style="font-weight: bold; font-size: 20px;">
-                        Productos
-                    </label> 
-                </div>
-                <br>
-                <table class="styled-table" style="background-color: #ffffff;">
-                    <tr class="styled-table-tr">
-                        <td class="styled-table-td">
-                            <div class="grid-table">
-                                <div style="text-align:center;">
-                                    <img class="img-size" src="../../../../assets/img/stock-img/power.jpg"/>
-                                </div>
-
-                                <div>
-                                    <br>
-                                    <div>
-                                        <label style="font-weight: bold; font-size: 20px;">
-                                            Bebida Hidratante Powerade 1L
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label style="font-size: 15px;">
-                                            Sabor: Moras
-                                        </label>
-                                    </div>
-                                    <br>
-                                    <div class="grid-btns-articulo">
-                                        <div style="text-align:center;">
-                                            <button class="button-compra-articulos">
-                                                Eliminar
-                                            </button>
-                                        </div>
-                                        <div style="text-align:center;">
-                                            <button class="button-compra-articulos">
-                                                Editar 
-                                            </button>
-                                        </div>
-                                        <div style="text-align:center;">
-                                            <button class="button-compra-articulos">
-                                                Comprar Ahora
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div style="text-align:center; margin-top: 40px;">
-                                    <input class="input-number" type="number" value="1" min="1" max="5">
-                                    <br>
-                                    <label style="color: #f9a640; font-weight: bold; font-size: 13px;">(15 disponibles)</label>
-                                </div>
-
-                                <div style="text-align:center; margin-top: 40px;">
-                                    <label style="font-size: 25px;">$28.00</label>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-      
-                    <tr class="styled-table-tr">
-                        <td class="styled-table-td">
-                            <div class="grid-table">
-                                <div style="text-align:center;">
-                                    <img class="img-size" src="../../../../assets/img/stock-img/ropa_sport.png"/>
-                                </div>
-
-                                <div>
-                                    <br>
-                                    <div>
-                                        <label style="font-weight: bold; font-size: 20px;">
-                                            Conjunto de ropa deportiva
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label style="font-size: 15px;">
-                                            Talla: XL
-                                        </label>
-                                    </div>
-                                    <br>
-                                    <div class="grid-btns-articulo">
-                                        <div style="text-align:center;">
-                                            <button class="button-compra-articulos">
-                                                Eliminar
-                                            </button>
-                                        </div>
-                                        <div style="text-align:center;">
-                                            <button class="button-compra-articulos">
-                                                Editar 
-                                            </button>
-                                        </div>
-                                        <div style="text-align:center;">
-                                            <button class="button-compra-articulos">
-                                                Comprar Ahora
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div style="text-align:center; margin-top: 40px;">
-                                    <input class="input-number" type="number" value="1" min="1" max="5">
-                                    <br>
-                                    <label style="color: #f9a640; font-weight: bold; font-size: 13px;">(13 disponibles)</label>
-                                </div>
-
-                                <div style="text-align:center; margin-top: 40px;">
-                                    <label style="font-size: 25px;">$350.00</label>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </form>
-        </div>
-        <br>
-        <div class="grid-review">
-            <div>
-
+        <!-- carrito.component.html -->
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Carrito</h1>
+        <a routerLink="/products" class="btn btn-default">Productos</a>
+        <br><br>
+  
+        <!--<div *ngIf="cart.length > 0; else emptyCart">
+          <table class="table table-bordered">
+            <thead>
+              <th>Cantidad</th>
+              <th>Producto</th>
+              <th>Precio Unitario</th>
+              <th>Total</th>
+              <th></th>
+            </thead>
+            <tr *ngFor="let item of cart">
+              <th>{{ item.quantity }}</th>
+              <td>{{ item.product.name }}</td>
+              <td>$ {{ item.product.price }}</td>
+              <td>$ {{ item.quantity * item.product.price }}</td>
+              <td style="width:260px;">
+              <button (click)="removeFromCart(item.product.id)" class="btn btn-danger">Eliminar</button>
+              </td>
+            </tr>
+          </table>-->
+  
+         <!-- <form class="form-horizontal" (ngSubmit)="processSale()" #saleForm="ngForm">
+            <div class="form-group">
+              <label for="email" class="col-sm-2 control-label">Email del cliente</label>
+              <div class="col-sm-5">
+                <input type="email" name="email" required class="form-control" id="email" placeholder="Email del cliente" ngModel>
+              </div>
             </div>
-            <div>
-                <form class="form-second" style="background-color: #f9a640;">
-                    <div style="text-align:center;">
-                        <label style="font-weight: bold; font-size: 20px;">
-                            Resumen de compra
-                        </label> 
-                    </div>
-                    <br>
-                    <table class="styled-table" style="background-color: #ffffff;">
-                        <tr class="styled-table-tr">
-                            <td class="styled-table-review-td">
-                                <div style="text-align:center; margin-bottom: 20px;">
-                                    <label style="font-weight: bold; font-size: 18px;">
-                                        Productos (2)
-                                    </label> 
-                                </div>
-                                <div class="grid-review" style="text-align:center; margin-bottom: 20px;" >
-                                    <div>
-                                        <label style="font-weight: bold; font-size: 18px;">
-                                            Total:
-                                        </label> 
-                                    </div>
-                                    <div>
-                                        <label style="font-weight: bold; font-size: 18px;">
-                                            $378.00
-                                        </label> 
-                                    </div>
-                                </div>
-                                <div style="text-align:center;">
-                                    <button mat-raised-button class="button-compra"
-                                        style="background-color: #f9a640; color: black; margin-right: 0 auto;">Continuar compra
-                                    </button>  
-                                </div>
-
-                            </td>
-                        </tr>
-                    </table>
-                </form>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary">Procesar Venta</button>
+              </div>
             </div>
-
+          /form>-->
         </div>
+  
+        <ng-template #emptyCart>
+          <p class="alert alert-warning">El carrito está vacío.</p>
+        </ng-template>
+        <br><br><hr>
+      </div>
+    </div>
+  </div>
+  
+
+
+
     </div>
     
     <!--FOOTER-->
     <div>
         <app-footer></app-footer>
     </div>
-</div>
+
