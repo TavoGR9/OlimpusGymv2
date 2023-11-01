@@ -28,6 +28,10 @@ import { PlanvirtualComponent } from './user/planvirtual/planvirtual.component';
 import { PlanListaComponent } from './user/plan-lista/plan-lista.component';
 import { PlanEditarComponent } from './user/plan-editar/plan-editar.component';
 import { CarritoComponent } from './recepcionist/carrito/carrito.component';
+import { SucursalInsertComponent } from './admin/sucursal-insert/sucursal-insert.component';
+import { SucursalListaComponent } from './admin/sucursal-lista/sucursal-lista.component'; 
+import { SucursaEditComponent } from './admin/sucursa-edit/sucursa-edit.component';
+import { HorariosComponent } from './admin/horarios/horarios.component';
 import { HomeMiguelComponent } from './user/home-miguel/home-miguel.component';
 import { MembresiaMiguelComponent } from './user/membresia-miguel/membresia-miguel.component';
 import { PagosMiguelComponent } from './user/pagos-miguel/pagos-miguel.component';
@@ -74,6 +78,12 @@ const routes: Routes = [
   //componentes admin
   { path: "alta-colaborador", component: AltaColaboradorComponent },
   { path: "asistencia", component: AsistenciaComponent },
+  { path: "gimnasio", component: SucursalInsertComponent },
+  { path: "gimnasioLista", component: SucursalListaComponent},
+  { path: "gimnasioEdit/:id", component: SucursaEditComponent},
+  { path: "horario/:id", component:HorariosComponent},
+
+
   //componentes trainer
   { path: "rutina-pierna", component: EntrenamientoPiernaComponent },
   //cuando el usuario agrega cualquier cosa como ruta

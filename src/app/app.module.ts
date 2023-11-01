@@ -57,11 +57,16 @@ import { MensajeEmergentesComponent } from './user/mensaje-emergentes/mensaje-em
 import { MatDialogModule } from '@angular/material/dialog';
 import { MensajeEmergenteEliminarComponent } from './user/mensaje-emergente-eliminar/mensaje-emergente-eliminar.component';
 import { CarritoComponent } from './recepcionist/carrito/carrito.component';
+import { SucursalInsertComponent } from './admin/sucursal-insert/sucursal-insert.component';
+import { SucursalListaComponent } from './admin/sucursal-lista/sucursal-lista.component';
+import { SucursaEditComponent } from './admin/sucursa-edit/sucursa-edit.component';
+import { HorariosComponent } from './admin/horarios/horarios.component';
 import { PerfilMiguelComponent } from './user/perfil-miguel/perfil-miguel.component';
 import { PagosMiguelComponent } from './user/pagos-miguel/pagos-miguel.component';
 import { MembresiaMiguelComponent } from './user/membresia-miguel/membresia-miguel.component';
 import { HomeMiguelComponent } from './user/home-miguel/home-miguel.component';
 import { PagoInscripcionComponent } from './user/pago-inscripcion/pago-inscripcion.component';
+
 
 @NgModule({
   declarations: [
@@ -96,6 +101,10 @@ import { PagoInscripcionComponent } from './user/pago-inscripcion/pago-inscripci
     MensajeEmergentesComponent,
     MensajeEmergenteEliminarComponent,
     CarritoComponent,
+    SucursalInsertComponent,
+    SucursalListaComponent,
+    SucursaEditComponent,
+    HorariosComponent,
     PerfilMiguelComponent,
     PagosMiguelComponent,
     MembresiaMiguelComponent,
