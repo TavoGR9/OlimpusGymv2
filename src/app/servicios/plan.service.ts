@@ -8,7 +8,8 @@ import { plan } from './plan';
 })
 export class PlanService {
 
-  API: string = 'https://olympus.arvispace.com/conPrincipal/Membresia.php'
+  API: string = 'https://olympus.arvispace.com/conPrincipal/Membresia.php';
+  apiProducts: string = 'https://olympus.arvispace.com/pruebasp/products.php';
   constructor(private clienteHttp:HttpClient) {
   }
 
@@ -17,7 +18,7 @@ export class PlanService {
   }
 
   obternerPlan(){
-    return this.clienteHttp.get(this.API)
+    return this.clienteHttp.get(this.API);
   }
 
   consultarPlan(id:any):Observable<any>{
@@ -32,5 +33,8 @@ export class PlanService {
     return this.clienteHttp.post(this.API+"?actualizar="+id,datosPlan);
   }  
 
+  obtenerProducts() {
+    return this.clienteHttp.get(this.apiProducts);
+  }
 
 }

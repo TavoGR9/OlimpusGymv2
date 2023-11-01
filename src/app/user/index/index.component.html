@@ -2,7 +2,6 @@
 <app-carro></app-carro>
 
 <div id="index-container">
-   
     <div id="location-section">
         <h2 class="title_section">Ubica tu O'limpus<span>Gym</span></h2>
         <div id="search-bar-container">
@@ -20,33 +19,6 @@
         <h2 class="title_section">Nuestros Planes</h2>
         <div class="flex-container">
         <div id="container-memberships">
-            <!--<div class="membership-card">
-                <h3 id="title-card-membership" class="title-cards">PLAN BASICO</h3>
-                <span class="price-membership">
-                    199/MES
-                </span>
-                <div class="learn-more">
-                    <button>CONOCE MAS</button>
-                </div>
-            </div>
-            <div class="membership-card">
-                <h3 id="title-card-membership" class="title-cards">PLAN PRO</h3>
-                <span class="price-membership">
-                    299/MES
-                </span>
-                <div class="learn-more">
-                    <button>CONOCE MAS</button>
-                </div>
-            </div>
-            <div class="membership-card">
-                <h3 id="title-card-membership" class="title-cards">PLAN PRO MAX</h3>
-                <span class="price-membership">
-                    399/MES
-                </span>
-                <div class="learn-more">
-                    <button>CONOCE MAS</button>
-                </div>
-            //</div>-->
             <div class="table-membership">
                 <table >
                     <tr >
@@ -116,38 +88,24 @@
         </div>
     </div>
     </div>
-
-
-
     <div id="products-section">
         <h2 class="title_section">Nuestros Productos</h2>
         <div class="flex-container">
         <div id="container-content">
-        <div class="container-button" id="button-left">
-            <button mat-raised-button><mat-icon>chevron_left</mat-icon></button>
+        <div class="container-button" id="button-left" #miBoton>
+            <button (click)="botonAnterior()" mat-raised-button><mat-icon>chevron_left</mat-icon></button>
         </div>
         <div id="carrousel-products">
-            <div class="product">
-                <img src="../../../assets/img/index-img/proteway.jpg" alt="" width="200px">
+            <div class="product" *ngFor="let produ of productsIndex">
+                <img src={{produ.urlImage}} alt="" width="200px">
                 <div class="product-title">
-                    <a href="https://olympus.arvispace.com/Ecommerce/">Proteina Whey 1kg</a>
+                    <a href="https://olympus.arvispace.com/Ecommerce/" class="name_prod">{{produ.name}}</a>
+                    <p class="precio_produ">${{produ.price}}</p>
                 </div>
             </div>
-            <div class="product">
-                <img src="../../../assets/img/index-img/shaker.jpg" alt="" width="200px">
-                <div class="product-title">
-                    <a href="https://olympus.arvispace.com/Ecommerce/">Shaker Gym 700ml</a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="../../../assets/img/index-img/playera.jpg" alt="" width="200px">
-                    <div class="product-title">
-                        <a href="https://olympus.arvispace.com/Ecommerce/">Playera Deportiva Talla s</a>
-                    </div>
-                </div>
-            </div>
+        </div>
         <div class="container-button" id="button-left">
-            <button mat-raised-button><mat-icon>chevron_right</mat-icon></button>
+            <button (click)="botonSiguiente()" mat-raised-button><mat-icon>chevron_right</mat-icon></button>
         </div>
     </div>
     </div>
@@ -155,44 +113,6 @@
     <div id="rutins-section">
         <h2 class="title_section">Virtual<span>Gym</span></h2>
         <div class="flex-container">
-        <!--<div id="option-container">
-            <div class="image-section" id="image-section-one">
-                <img src="assets/images/index-img/equipo.jpg" alt="" width="200px">
-                <div class="info-section-container">
-                <h3 class="title-img">Variedad de equipo</h3>
-                <p class="text-img">
-                    te ofrecemos una amplia variedad de equipos de entrenamiento de ultima generacion
-                </p>
-                </div>
-            </div>
-            <div class="image-section" id="image-section-two">
-                <img src="assets/images/index-img/comunidad.jpg" alt="" width="200px">
-                <div class="info-section-container">
-                <h3 class="title-img">Variedad de equipo</h3>
-                <p class="text-img">
-                    te ofrecemos una amplia variedad de equipos de entrenamiento de ultima generacion
-                </p>
-                </div>
-            </div>
-            <div class="image-section" id="image-section-three">
-                <img src="assets/images/index-img/entrenadores.jpg" alt="" width="200px">
-                <div class="info-section-container">
-                <h3 class="title-img">Variedad de equipo</h3>
-                <p class="text-img">
-                    te ofrecemos una amplia variedad de equipos de entrenamiento de ultima generacion
-                </p>
-                </div>
-            </div>
-            <div class="image-section" id="image-section-four">
-                <img src="assets/images/index-img/areas.jpg" alt="" width="200px">
-                <div class="info-section-container">
-                <h3 class="title-img">Variedad de equipo</h3>
-                <p class="text-img">
-                    te ofrecemos una amplia variedad de equipos de entrenamiento de ultima generacion
-                </p>
-                </div>
-            </div>
-        //</div> -->
         <div class="virtual-container">
             <div class="image-content">
                 <img src="assets/img/index-img/virtualGym.jpg" alt="">
