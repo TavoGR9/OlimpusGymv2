@@ -57,7 +57,10 @@ import { MensajeEmergentesComponent } from './user/mensaje-emergentes/mensaje-em
 import { MatDialogModule } from '@angular/material/dialog';
 import { MensajeEmergenteEliminarComponent } from './user/mensaje-emergente-eliminar/mensaje-emergente-eliminar.component';
 import { CarritoComponent } from './recepcionist/carrito/carrito.component';
-
+import { SucursalInsertComponent } from './admin/sucursal-insert/sucursal-insert.component';
+import { SucursalListaComponent } from './admin/sucursal-lista/sucursal-lista.component';
+import { SucursaEditComponent } from './admin/sucursa-edit/sucursa-edit.component';
+import { HorariosComponent } from './admin/horarios/horarios.component';
 
 @NgModule({
   declarations: [
@@ -92,6 +95,10 @@ import { CarritoComponent } from './recepcionist/carrito/carrito.component';
     MensajeEmergentesComponent,
     MensajeEmergenteEliminarComponent,
     CarritoComponent,
+    SucursalInsertComponent,
+    SucursalListaComponent,
+    SucursaEditComponent,
+    HorariosComponent,
   ],
   imports: [
     BrowserModule,
