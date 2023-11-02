@@ -129,7 +129,7 @@ import { PagoInscripcionComponent } from './user/pago-inscripcion/pago-inscripci
     MatSlideToggleModule,
     MatCheckboxModule,
     MatSidenavModule,
-    ToastrModule.forRoot(),
+    ToastrModule.forRoot({positionClass:'toast-bottom-left'}),
     HttpClientModule, 
     MatTableModule,
     MatCardModule,

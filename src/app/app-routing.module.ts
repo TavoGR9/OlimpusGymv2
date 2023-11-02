@@ -47,7 +47,7 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "olvide-contrasena", component: RecuperarPasswordComponent },
   { path: "sucursales", component: SucursalesComponent },
-  { path: "registro/:id", component: AltaUsuarioComponent },
+  { path: "registro/:id/:idName/:idPrecio", component: AltaUsuarioComponent },
   { path: "finaliza-compra", component: FinalizarCompraComponent },
   { path: "productos", component: ProductosComponent },
   { path: "carrusel", component: CarruselComponent },
@@ -73,7 +73,7 @@ const routes: Routes = [
   //componentes recepcionista
   { path: "stock", component: StockComponent },
   { path: "detalles-compra", component: DetalleCompraComponent },
-  { path: "membresias/:id", component: MembresiasComponent },
+  { path: "membresias/:id/:idName", component: MembresiasComponent },
   { path: "carrito", component: CarritoComponent},
   //componentes admin
   { path: "alta-colaborador", component: AltaColaboradorComponent },

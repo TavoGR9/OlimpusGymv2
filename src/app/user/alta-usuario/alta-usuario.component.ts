@@ -30,28 +30,54 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 export class AltaUsuarioComponent {
 
-  titulo:any;
-
   foods: Food[] = [
-    {value: ' ', viewValue: '-Seleccionar-'},
-    {value: 'Tlaxcala', viewValue: 'Tlaxcala'},
-    {value: 'Puebla', viewValue: 'Puebla'},
+    {value: 'Aguascalientes', viewValue: 'Aguascalientes'},
+    {value: 'Baja California', viewValue: 'Baja California'},
+    {value: 'Baja California Sur', viewValue: 'Baja California Sur'},
+    {value: 'Campeche', viewValue: 'Campeche'},
+    {value: 'Chiapas', viewValue: 'Chiapas'},
+    {value: 'Chihuahua', viewValue: 'Chihuahua'},
+    {value: 'Coahuila', viewValue: 'Coahuila'},
+    {value: 'Colima', viewValue: 'Colima'},
     {value: 'Ciudad de México', viewValue: 'CDMX'},
+    {value: 'Durango', viewValue: 'Durango'},
+    {value: 'Guanajuato', viewValue: 'Guanajuato'},
+    {value: 'Guerrero', viewValue: 'Guerrero'},
     {value: 'Hidalgo', viewValue: 'Hidalgo'},
-    {value: 'Monterrey', viewValue: 'Monterrey'},
-    {value: 'Guadalajara', viewValue: 'Guadalajara'},
+    {value: 'Jalisco', viewValue: 'Jalisco'},
+    {value: 'México', viewValue: 'México'},
+    {value: 'Michoacán', viewValue: 'Michoacán'},
     {value: 'Morelos', viewValue: 'Morelos'},
+    {value: 'Nayarit', viewValue: 'Nayarit'},
+    {value: 'Nuevo León', viewValue: 'Nuevo León'},
+    {value: 'Oaxaca', viewValue: 'Oaxaca'},
+    {value: 'Puebla', viewValue: 'Puebla'},
+    {value: 'Querétaro', viewValue: 'Querétaro'},
+    {value: 'San Luis Potosi', viewValue: 'San Luis Potosi'},
+    {value: 'Sinaloa', viewValue: 'Sinaloa'},
+    {value: 'Sonora', viewValue: 'Sonora'},
+    {value: 'Tabasco', viewValue: 'Tabasco'},
+    {value: 'Tamaulipas', viewValue: 'Tamaulipas'},
+    {value: 'Tlaxcala', viewValue: 'Tlaxcala'},
+    {value: 'Veracruz', viewValue: 'Veracruz'},
+    {value: 'Yucatán', viewValue: 'Yucatán'},
+    {value: 'Zacatecas', viewValue: 'Zacatecas'}
   ];
   hide = true;
   form: FormGroup;
   message: string = "";
-  cliente: any;
+  idMembresia:any;
+  nameMembresia:any;
+  precioId: any;
+  email:any;
 
   constructor (public fb: FormBuilder, private clienteService:ClienteService, public testService:TestService,
     private router: Router, private activeRoute: ActivatedRoute,
     public dialog: MatDialog, private toastr: ToastrService){
 
-      this.titulo = this.activeRoute.snapshot.paramMap.get('id');
+      this.idMembresia = this.activeRoute.snapshot.paramMap.get('id');
+      this.nameMembresia = this.activeRoute.snapshot.paramMap.get('idName');
+      this.precioId = this.activeRoute.snapshot.paramMap.get('idPrecio');
       
     this.form = this.fb.group({
       nombre: ['', Validators.compose([ Validators.required, Validators.pattern(/^[A-Za-zñÑáéíóú ]*[A-Za-z][A-Za-zñÑáéíóú ]*$/)])],
@@ -70,32 +96,45 @@ export class AltaUsuarioComponent {
       curp: ['', Validators.compose([ Validators.minLength(18), Validators.pattern(/^[A-ZÑ0-9]*[A-Z][A-ZÑ0-9]*$/)])],
       email: ['', Validators.compose([Validators.required, Validators.pattern(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)])],  
       pass: ['', Validators.compose([Validators.required, Validators.minLength(8)])],
-      Gimnasio_idGimnasio:[2],
-      Membresia_idMem:[4]
+      Gimnasio_idGimnasio:[testService.idGym],
+      Membresia_idMem:[this.idMembresia]
     })
   }
 
   registrar(): any {
-    console.log("Me presionaste");
+    //console.log("Me presionaste");
+    //console.log(this.form.value.email);
     console.log(this.form.value);
+    this.email=this.form.value.email;
+    console.log(this.email);
 
     if(this.form.valid){
-    this.clienteService.agregarCliente(this.form.value).subscribe((respuesta) => {
-        this.dialog.open(MensajeEmergentesComponent, {
-          data: `Usuario registrado exitosamente`,
-        })
-        .afterClosed()
-        .subscribe((cerrarDialogo: Boolean) => {
-          if (cerrarDialogo) {
-            this.router.navigateByUrl("/index");
-          } else {
-            
-          }
-        });
-    });
-  } else {
+
+      this.clienteService.consultarEmail(this.email).subscribe((resultData) => {
+        console.log(resultData.msg);
+        if(resultData.msg == 'emailExist'){
+          this.toastr.warning('El correo ingresado ya existe.', 'Alerta!!!');
+          
+        }
+        if(resultData.msg == 'emailNotExist'){
+          this.clienteService.agregarCliente(this.form.value).subscribe((respuesta) => {
+            this.dialog.open(MensajeEmergentesComponent, {
+              data: `Usuario registrado exitosamente`,
+            })
+            .afterClosed()
+            .subscribe((cerrarDialogo: Boolean) => {
+              if (cerrarDialogo) {
+                this.router.navigateByUrl("/pago-inscripcion");
+              } else {
+                
+              }
+            });
+          });
+        }
+      });
+    } else {
     // El formulario no es válido, muestra un mensaje de error
-    this.message = "Por favor, complete todos los campos requeridos.";
+      this.message = "Por favor, complete todos los campos requeridos.";
+    }
   }
-}
 }

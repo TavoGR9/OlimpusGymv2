@@ -11,16 +11,20 @@ import { TestService } from 'src/app/servicios/test.service';
 })
 export class MembresiasComponent implements OnInit{
   plan: any;
-  elID: any;
   membresias: any[] = []; // Declarar el tipo de elID como string o nulo
-  item: any;
+  elID: any;
+  gymName: any;
 
 constructor(private activeRoute: ActivatedRoute,private router: Router, private planService: PlanService, private testService: TestService) {
   this.elID = this.activeRoute.snapshot.paramMap.get('id');
+  this.gymName = this.activeRoute.snapshot.paramMap.get('idName');
+  
   console.log(this.elID);
+  console.log(this.gymName);
 
     //servicio test
     this.testService.idGym=this.elID;
+    this.testService.nameGym=this.gymName;
    
     
   if (this.elID) { // Validar si el ID es nulo

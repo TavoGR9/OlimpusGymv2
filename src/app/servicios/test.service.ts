@@ -7,7 +7,8 @@ export class TestService {
   constructor() {}
 
   public idGym!: string;
-  public tituloMembresia!: string;
+  public nameGym!: string;
+  //public tituloMembresia!: string;
 
   public status: boolean = false;
 }
