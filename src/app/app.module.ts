@@ -62,6 +62,7 @@ import { PagosMiguelComponent } from './user/pagos-miguel/pagos-miguel.component
 import { MembresiaMiguelComponent } from './user/membresia-miguel/membresia-miguel.component';
 import { HomeMiguelComponent } from './user/home-miguel/home-miguel.component';
 import { PagoInscripcionComponent } from './user/pago-inscripcion/pago-inscripcion.component';
+import { QRCodeModule } from 'angularx-qrcode';
 
 @NgModule({
   declarations: [
@@ -128,7 +129,8 @@ import { PagoInscripcionComponent } from './user/pago-inscripcion/pago-inscripci
     MatRadioModule,
     _MatSlideToggleRequiredValidatorModule,
     FlexLayoutModule,
-    MatDialogModule
+    MatDialogModule,
+    QRCodeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
