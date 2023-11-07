@@ -1,127 +1,54 @@
 
 <div class="body">
-    <!--SE AGREGA EL HEADER-->
-  <div class="header_component">
-    <app-header></app-header>
-  </div>
+  <!--SE AGREGA EL HEADER-->
+<div class="header_component">
+  <app-header></app-header>
+</div>
 
-    <!--SE AGREGA EL CONTENIDO DE LA PANTALLA-->
-    <div class="content_body">
-        <div class="grid_padre_content">
-            <div class="grid_hijo1">
-                <legend class="title_page">Por aca va un titulo xxx</legend>
-                <!--Inicia formulario datos direccion usuario-->
-                <form [formGroup]="form" (ngSubmit)="hacerAlgo()">
-                    <mat-form-field appearance="outline" class="inputs_properties">
-                        <mat-label>Código postal</mat-label>
-                        <input type="text" placeholder="90880" matInput autocomplete="off" formControlName="cp" id="cp" [errorStateMatcher]="matcher">
-                        <mat-error *ngIf="form.get('cp')?.hasError('pattern') && !form.get('cp')?.hasError('required')">
-                          <strong class="txt_msg">**Solo se permiten números...</strong>
-                        </mat-error>
-                        <mat-error *ngIf="form.get('cp')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
-                      </mat-form-field>
+  <!--SE AGREGA EL CONTENIDO DE LA PANTALLA-->
+  <div class="content_body">
+      <div class="grid_padre_content">
+          <div class="grid_hijo1">
+            <legend class="title_page">Seleccione un método de pago</legend>
+                  <hr style="color: #adbac0;" width="90%">
+            <div class="grid_metodos_pago">
+              <div class="opciones_pago"></div>
+              <div class="datos_pago"></div>
+            </div>
+            <div class="form-check">
+              <input type="radio" name="opciones" (change)="cambiarSeleccion('contenedor1')" class="form-check-input" name="flexRadioDefault" id="tc"> 
+              <label class="form-check-label" for="tc">Pago con Tarjeta</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" name="opciones" (change)="cambiarSeleccion('contenedor2')" class="form-check-input" name="flexRadioDefault" id="efectivo">
+              <label class="form-check-label" for="efectivo">Pago en efectivo</label>
+            </div>
 
-                      <mat-form-field appearance="outline" class="inputs_properties">
-                        <mat-label>Estado</mat-label>
-                        <mat-select id="estado" formControlName="estado" id="estado" [errorStateMatcher]="matcher">
-                          <mat-option></mat-option>
-                          <mat-option value="1">Entrenamiento</mat-option>
-                          <mat-option value="2">Recepción</mat-option>
-                        </mat-select>
-                        <mat-error *ngIf="form.get('estado')?.hasError('required')">
-                          <strong class="txt_msg">**Campo requerido</strong>
-                        </mat-error>
-                    </mat-form-field>
-
-                    <mat-form-field appearance="outline" class="inputs_properties">
-                        <mat-label>Ciudad</mat-label>
-                        <mat-select id="ciudad" formControlName="ciudad" id="ciudad" [errorStateMatcher]="matcher">
-                          <mat-option></mat-option>
-                          <mat-option value="1">Entrenamiento</mat-option>
-                          <mat-option value="2">Recepción</mat-option>
-                        </mat-select>
-                        <mat-error *ngIf="form.get('ciudad')?.hasError('required')">
-                          <strong class="txt_msg">**Campo requerido</strong>
-                        </mat-error>
-                    </mat-form-field>
-
-                    <mat-form-field appearance="outline" class="inputs_properties">
-                        <mat-label>Colonia</mat-label>
-                        <input type="text" matInput placeholder="90880" autocomplete="off" formControlName="colonia" id="colonia" [errorStateMatcher]="matcher">
-                        <mat-error *ngIf="form.get('colonia')?.hasError('pattern') && !form.get('colonia')?.hasError('required')">
-                            <strong class="txt_msg">**Numeros no permitidos</strong>
-                        </mat-error>
-                        <mat-error *ngIf="form.get('colonia')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
-                      </mat-form-field>
-
-                      <mat-form-field appearance="outline" class="inputs_properties">
-                        <mat-label>Calle</mat-label>
-                        <input type="text" matInput placeholder="Av. revolución." autocomplete="off" formControlName="calle" id="calle" [errorStateMatcher]="matcher">
-                        <mat-error *ngIf="form.get('calle')?.hasError('pattern') && !form.get('calle')?.hasError('required')">
-                            <strong class="txt_msg">**Numeros no permitidos</strong>
-                        </mat-error>
-                        <mat-error *ngIf="form.get('calle')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
-                      </mat-form-field>
-
-                      <mat-form-field appearance="outline" class="inputs_properties">
-                        <mat-label>Número ext.</mat-label>
-                        <input type="text" matInput placeholder="Av. revolución." autocomplete="off" formControlName="exterior" id="exterior" [errorStateMatcher]="matcher">
-                        <mat-error *ngIf="form.get('exterior')?.hasError('pattern') && !form.get('exterior')?.hasError('required')">
-                            <strong class="txt_msg">**Solo se permiten números...</strong>
-                        </mat-error>
-                        <mat-error *ngIf="form.get('exterior')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
-                      </mat-form-field>
-
-                      <mat-form-field appearance="outline" class="inputs_properties">
-                        <mat-label>Número int.</mat-label>
-                        <input type="text" matInput placeholder="Av. revolución." autocomplete="off" formControlName="interior" id="interior" [errorStateMatcher]="matcher">
-                        <mat-error *ngIf="form.get('interior')?.hasError('pattern') && !form.get('interior')?.hasError('required')">
-                            <strong class="txt_msg">**Numeros no permitidos</strong>
-                        </mat-error>
-                        <mat-error *ngIf="form.get('interior')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
-                      </mat-form-field>
-
-                </form><!--Inicia formulario datos direccion usuario-->
-                           
-              <br/>
-              <hr style="color: #adbac0;" width="90%">
-              
-              <div class="grid_metodos_pago">
-                <div class="opciones_pago">
-
-                </div>
-                <div class="datos_pago">
-
-                </div>
-              </div>
-              <div class="form-check">
-                <input type="radio" name="opciones" (change)="cambiarSeleccion('contenedor1')" class="form-check-input" name="flexRadioDefault" id="tc"> 
-                <label class="form-check-label" for="tc">Pago con Tarjeta</label>
-              </div>
-              <div class="form-check">
-                <input type="radio" name="opciones" (change)="cambiarSeleccion('contenedor2')" class="form-check-input" name="flexRadioDefault" id="efectivo">
-                <label class="form-check-label" for="efectivo">Pago en efectivo</label>
-              </div>
-
-              <div *ngIf="radioSeleccionado === 'contenedor1'">
+            <div *ngIf="radioSeleccionado === 'contenedor1'" style="text-align: center;">
+              <form [formGroup]="form" (ngSubmit)="hacerAlgo()">  
+                <legend class="title_page">Ingresa una nueva tarjeta</legend>
+                  <hr style="color: #adbac0;" width="90%">
                 <mat-form-field appearance="outline" class="inputs_tc_l">
                   <mat-label>Titular de la tarjeta</mat-label>
                   <input type="text" matInput placeholder="Adolfo Tapia Ibarra" autocomplete="off" formControlName="tc_nom" id="tc_nom" [errorStateMatcher]="matcher">
-                  <mat-error *ngIf="form.get('tc_nom')?.hasError('pattern') && !form.get('tc_nom')?.hasError('required')">
-                      <strong class="txt_msg">**Numeros no permitidos</strong>
-                  </mat-error>
                   <mat-error *ngIf="form.get('tc_nom')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
+                  <mat-error *ngIf="form.get('tc_nom')?.hasError('pattern') && !form.get('tc_nom')?.hasError('required')">
+                      <strong class="txt_msg">**Formato no valido, (solo letras)...</strong>
+                  </mat-error>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline" class="inputs_tc_l">
                   <mat-label>Número de la tarjeta</mat-label>
-                  <input type="text" matInput placeholder="0000 0000 0000 0000" autocomplete="off" formControlName="tc_num" id="tc_num" [errorStateMatcher]="matcher">
+                  <input type="text" matInput placeholder="0000 0000 0000 0000" autocomplete="off" formControlName="tc_num" id="tc_num" minlength="16" maxlength="16" [errorStateMatcher]="matcher">
+                  <mat-error *ngIf="form.get('tc_num')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
                   <mat-error *ngIf="form.get('tc_num')?.hasError('pattern') && !form.get('tc_num')?.hasError('required')">
                       <strong class="txt_msg">**Solo se permiten números</strong>
                   </mat-error>
-                  <mat-error *ngIf="form.get('tc_num')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
+                  <mat-error *ngIf="form.get('tc_num')?.hasError('minlength') && !form.get('tc_num')?.hasError('required')">
+                    <strong class="txt_msg">**Minimo 16 carácteres...</strong>
+                  </mat-error>
                 </mat-form-field>
-
+<!--
                 <mat-form-field appearance="outline" class="inputs_tc_s">
                   <mat-label>Mes</mat-label>
                   <mat-select id="tc_mes" formControlName="tc_mes" id="tc_mes" [errorStateMatcher]="matcher">
@@ -158,90 +85,101 @@
                   <mat-error *ngIf="form.get('tc_ano')?.hasError('required')">
                     <strong class="txt_msg">**Campo requerido</strong>
                   </mat-error>
+                </mat-form-field>-->
+                <p></p>
+
+                <mat-form-field appearance="outline" class="inputs_tc_l">
+                  <mat-label>Fecha de vencimiento</mat-label>
+                  <input [(ngModel)]="fecha" (input)="formatearFecha()" type="text" matInput placeholder="MM/YY" minlength="5" maxlength="5" autocomplete="off" formControlName="tc_fecha" id="tc_fecha" [errorStateMatcher]="matcher">
+                  <mat-error *ngIf="form.get('tc_fecha')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
+                  <mat-error *ngIf="form.get('tc_fecha')?.hasError('pattern') && !form.get('tc_fecha')?.hasError('required')">
+                      <strong class="txt_msg">**Ingresa una fecha válida</strong>
+                  </mat-error>
                 </mat-form-field>
 
-                <mat-form-field appearance="outline" class="inputs_tc_s">
+                <mat-form-field appearance="outline" class="inputs_tc_l">
                   <mat-label>CVV</mat-label>
-                  <input type="text" matInput placeholder="000" autocomplete="off" formControlName="tc_cvv" id="tc_cvv" [errorStateMatcher]="matcher">
+                  <input type="text" matInput placeholder="000" autocomplete="off" formControlName="tc_cvv" id="tc_cvv" minlength="3" maxlength="3" [errorStateMatcher]="matcher">
+                  <mat-error *ngIf="form.get('tc_cvv')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
                   <mat-error *ngIf="form.get('tc_cvv')?.hasError('pattern') && !form.get('tc_cvv')?.hasError('required')">
                       <strong class="txt_msg">**Solo se permiten números</strong>
                   </mat-error>
-                  <mat-error *ngIf="form.get('tc_cvv')?.hasError('required')"><strong class="txt_msg">**Campo requerido</strong></mat-error>
+                  <mat-error *ngIf="form.get('tc_cvv')?.hasError('minlength') && !form.get('tc_cvv')?.hasError('required')">
+                    <strong class="txt_msg">**Minimo 3 carácteres...</strong>
+                  </mat-error>
                 </mat-form-field>
 
-              </div>
+                <div class="btns_ok_cancel" style="text-align: center;">
+                  <button type="submit" class="btn_ok_cancel" mat-raised-button color="warn">
+                    Cancelar</button>
+                  <button type="submit" class="btn_ok_cancel" mat-raised-button style="background: #FD9727; color: white;">
+                    Confirmar compra</button>
+                </div><!--cierra div contenido bloque btns_ok_cancel-->
+              </form>
+            </div>
 
-              <div *ngIf="radioSeleccionado === 'contenedor2'">
-                Contenedor 2
-              </div>
-              
-            </div><!--cierra div grid_hijo1-->
-            <div class="grid_hijo2">
-                <div class="content_grid_hijo2">
-                    <div class="header_details">
-                        <label class="title_details">Titulo paquete</label>
-                        <label class="subtitle_details">Nombre sitio</label>
-                    </div>
-    
-                    <!--Inician detalles de plan-->
-                    <div class="grid_details">
-                        <div class="data_month">
-                            <label class="details_txt">1 Mensualidad</label>
-                        </div>
-                        <div class="price_month">
-                            <label class="details_txt">$ 000.00</label>
-                        </div>
-                    </div>
-                    
-                    <div class="grid_details">
-                        <div class="data_month">
-                            <label class="details_txt">Pendiente mensualidad</label>
-                            <label class="details_txt_desc">(datos que vienen de algun lugar)</label>
-                        </div>
-                        <div class="price_month">
-                            <label class="details_txt">$ 400.00</label>
-                        </div>
-                    </div>
-    
-                    <hr style="color: violest; margin: 0 auto;" width="90%">
-    
-                    <div class="grid_details">
-                        <div class="data_month">
-                            <label class="details_txt">Inscripción</label>
-                        </div>
-                        <div class="price_month">
-                            <label class="details_txt">$ 0.00</label>
-                        </div>
-                    </div>
-    
-                    <hr style="color: violest; margin: 0 auto;" width="90%">
-    
-                    <div class="grid_details">
-                        <div class="data_month">
-                            <label class="details_txt">Mantenimiento anual</label>
-                            <label class="details_txt_desc">(datos que vienen de algun lugar)</label>
-                        </div>
-                        <div class="price_month">
-                            <label class="details_txt">$ 599.00</label>
-                        </div>
-                    </div>
-                </div><!--cierra contenedor content grid hijo2-->
-                
+            <div *ngIf="radioSeleccionado === 'contenedor2'">
+              Contenedor 2
+            </div>
+            
+          </div><!--cierra div grid_hijo1-->
+          <div class="grid_hijo2">
+              <div class="content_grid_hijo2">
+                  <div class="header_details">
+                      <label class="title_details">Titulo paquete</label>
+                      <label class="subtitle_details">Nombre sitio</label>
+                  </div>
+  
+                  <!--Inician detalles de plan-->
+                  <div class="grid_details">
+                      <div class="data_month">
+                          <label class="details_txt">1 Mensualidad</label>
+                      </div>
+                      <div class="price_month">
+                          <label class="details_txt">$ 000.00</label>
+                      </div>
+                  </div>
+                  
+                  <!---<div class="grid_details">
+                      <div class="data_month">
+                          <label class="details_txt">Pendiente mensualidad</label>
+                          <label class="details_txt_desc">(datos que vienen de algun lugar)</label>
+                      </div>
+                      <div class="price_month">
+                          <label class="details_txt">$ 400.00</label>
+                      </div>
+                  </div>--->
+  
+                  <hr style="color: violest; margin: 0 auto;" width="90%">
+  
+                  <div class="grid_details">
+                      <div class="data_month">
+                          <label class="details_txt">Inscripción</label>
+                      </div>
+                      <div class="price_month">
+                          <label class="details_txt">$ 0.00</label>
+                      </div>
+                  </div>
+  
+                  <hr style="color: violest; margin: 0 auto;" width="90%">
+  
+                  <div class="grid_details">
+                      <div class="data_month">
+                          <label class="details_txt">Total</label>
+                          <!--<label class="details_txt_desc">(datos que vienen de algun lugar)</label>--->
+                      </div>
+                      <div class="price_month">
+                          <label class="details_txt">$ 599.00</label>
+                      </div>
+                  </div>
+              </div><!--cierra contenedor content grid hijo2-->
+            
+          </div><!--cierra div grid_hijo2-->
+      </div><!--cierra div grid_padre_content-->
+  </div><!--cierra div content body-->
 
-            </div><!--cierra div grid_hijo2-->
-        </div><!--cierra div grid_padre_content-->
-        
-    
-        <div class="btns_ok_cancel">
-          <button type="submit" class="btn_ok_cancel" mat-raised-button color="warn">
-            Cancelar</button>
-          <button type="submit" class="btn_ok_cancel" mat-raised-button style="background: #FD9727; color: white;">
-            Confirmar compra</button>
-        </div><!--cierra div contenido bloque btns_ok_cancel-->
-    </div><!--cierra div content body-->
-
-   <!--SE AGREGA EL FOOTER-->
-   <div class="footer_component">
-    <app-footer></app-footer>
-  </div>
+ <!--SE AGREGA EL FOOTER-->
+ <div class="footer_component">
+  <app-footer></app-footer>
+</div>
 </div>
