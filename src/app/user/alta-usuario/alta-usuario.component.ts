@@ -124,9 +124,8 @@ export class AltaUsuarioComponent {
             .afterClosed()
             .subscribe((cerrarDialogo: Boolean) => {
               if (cerrarDialogo) {
-                this.router.navigateByUrl("/pago-inscripcion");
+                this.router.navigate(['/stripePay', this.idMembresia, this.nameMembresia, this.precioId]);
               } else {
-                
               }
             });
           });

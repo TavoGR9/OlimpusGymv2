@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
+import { StripeServiceService } from 'src/app/servicios/stripe-service.service';
 
 
 /** Error when invalid control is dirty, touched, or submitted. */
@@ -21,8 +22,11 @@ export class PagoInscripcionComponent {
   form: FormGroup;
   radioSeleccionado!: string;
   matcher = new MyErrorStateMatcher();
+  email!: string;
+  priceId!: string;
 
-  constructor (private fb: FormBuilder){
+
+  constructor (private fb: FormBuilder, private stripeService: StripeServiceService){
 
     this.form = this.fb.group({
       cp: ['', Validators.compose([Validators.required, Validators.pattern(/^(0|[1-9][0-9]*)$/)])],
@@ -41,6 +45,16 @@ export class PagoInscripcionComponent {
 
   hacerAlgo(){
     console.log("algo por aca")
+  }
+
+  onSubmit() {
+    this.stripeService.createCustomer(this.email).subscribe((customer) => {
+      this.stripeService
+        .createSubscription(customer.id, this.priceId)
+        .subscribe((subscription) => {
+          console.log(subscription);
+        });
+    });
   }
 
 }

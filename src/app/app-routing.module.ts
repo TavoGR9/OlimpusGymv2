@@ -37,6 +37,7 @@ import { MembresiaMiguelComponent } from './user/membresia-miguel/membresia-migu
 import { PagosMiguelComponent } from './user/pagos-miguel/pagos-miguel.component';
 import { PerfilMiguelComponent } from './user/perfil-miguel/perfil-miguel.component';
 import { PagoInscripcionComponent } from './user/pago-inscripcion/pago-inscripcion.component';
+import { PaymentComponent } from './user/payment/payment.component';
 
 
 const routes: Routes = [
@@ -69,6 +70,7 @@ const routes: Routes = [
   { path: "pagos-miguel", component: PagosMiguelComponent },
   { path: "perfil-miguel", component: PerfilMiguelComponent },
   { path: "pago-inscripcion", component: PagoInscripcionComponent},
+  { path: "stripePay/:id/:idName/:idPrecio", component: PaymentComponent},
 
   //componentes recepcionista
   { path: "stock", component: StockComponent },

@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatSidenavModule} from '@angular/material/sidenav';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AltaColaboradorComponent } from './admin/alta-colaborador/alta-colaborador.component';
@@ -66,6 +65,7 @@ import { PagosMiguelComponent } from './user/pagos-miguel/pagos-miguel.component
 import { MembresiaMiguelComponent } from './user/membresia-miguel/membresia-miguel.component';
 import { HomeMiguelComponent } from './user/home-miguel/home-miguel.component';
 import { PagoInscripcionComponent } from './user/pago-inscripcion/pago-inscripcion.component';
+import { PaymentComponent } from './user/payment/payment.component';
 
 
 @NgModule({
@@ -109,7 +109,8 @@ import { PagoInscripcionComponent } from './user/pago-inscripcion/pago-inscripci
     PagosMiguelComponent,
     MembresiaMiguelComponent,
     HomeMiguelComponent,
-    PagoInscripcionComponent
+    PagoInscripcionComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
@@ -137,7 +138,7 @@ import { PagoInscripcionComponent } from './user/pago-inscripcion/pago-inscripci
     MatRadioModule,
     _MatSlideToggleRequiredValidatorModule,
     FlexLayoutModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
