@@ -7,10 +7,11 @@ import { Observable } from 'rxjs';
 })
 export class PagoInscripcionService {
 
-  URLServices: string = "http://localhost/plan/formaPago.php/"; //http://localhost/plan/registro.php/ https://olympus.arvispace.com/conPrincipal/registro.php
+  URLServices: string = "https://olympus.arvispace.com/conPrincipal/formaPago.php/"; //http://localhost/plan/registro.php/ https://olympus.arvispace.com/conPrincipal/registro.php
   constructor( private http: HttpClient) { }
   
-  obternerDataPagos(){
-    return this.http.get(this.URLServices);
+  consultarDataPago(id:any):Observable<any>{
+    return this.http.get(this.URLServices+"?consultar="+id);
   }
+  
 }
