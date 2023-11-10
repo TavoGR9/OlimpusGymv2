@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
+import { ICreateOrderRequest, IPayPalConfig } from 'ngx-paypal';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 
 /** Error when invalid control is dirty, touched, or submitted. */
@@ -16,14 +18,29 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   templateUrl: './pago-inscripcion.component.html',
   styleUrls: ['./pago-inscripcion.component.css']
 })
-export class PagoInscripcionComponent {
+export class PagoInscripcionComponent implements OnInit {
   hide = true;
   form: FormGroup;
   radioSeleccionado!: string;
   matcher = new MyErrorStateMatcher();
   fecha: string = '';
 
-  constructor (private fb: FormBuilder){
+  public payPalConfig?: IPayPalConfig;
+  cartItems = [];
+  total = 0;
+  datos_gym: any = {
+    precio: 399,
+    cantidad: 1,
+    paquete: 'basico',
+    vigencia: '08/12/2023',
+    nombreUsuario: 'Diego',
+    apPaterno: 'Rreyes',
+    apMaterno: 'Mora',
+    rfc: 'xhml12453pstm'
+  };
+
+
+  constructor (private fb: FormBuilder, private spinner: NgxSpinnerService){
 
     this.form = this.fb.group({
       tc_nom: ['', Validators.compose([ Validators.required, Validators.pattern(/^[A-Za-zñÑáéíóú ]*[A-Za-z][A-Za-zñÑáéíóú ]*$/)])],
@@ -67,4 +84,94 @@ export class PagoInscripcionComponent {
     }
   }
 
+
+  ngOnInit(): void {
+    this.initConfig();
+  
+    //this.getItem();
+    //this.total = this.getTotal();
+  }
+
+  private initConfig(): void {
+    this.payPalConfig = {
+        currency: 'MXN',
+        clientId: 'AcXxpxeoadCNQcHM-pX-lS6w1A61T5tDNTXmOtaO2b-gtIyEibZmrgqG_EBNwv03t48H1-whDLWMJoPD',
+        createOrderOnClient: (data) => < ICreateOrderRequest > {
+            intent: 'CAPTURE',
+            purchase_units: [{
+                amount: {
+                    currency_code: 'MXN',
+                    value: '15',
+                    breakdown: {
+                        item_total: {
+                            currency_code: 'MXN',
+                            value: '15'
+                        }
+                    }
+                },
+                items: [{
+                    name: '`Prueba 1`',
+                    quantity: '1',
+                    category: 'DIGITAL_GOODS',
+                    unit_amount: {
+                        currency_code: 'MXN',
+                        value: '15',
+                    },
+                }]
+            }]
+        },
+        advanced: {
+            commit: 'true'
+        },
+        style: {
+            label: 'paypal',
+            layout: 'vertical'
+        },
+        onApprove: (data, actions) => {
+            console.log('onApprove - transaction was approved, but not authorized', data, actions);
+            actions.order.get().then((details: any) => {
+                console.log('onApprove - you can get full order details inside onApprove: ', details);
+            });
+
+        },
+        onClientAuthorization: (data) => {
+            console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
+        },
+        onCancel: (data, actions) => {
+            console.log('OnCancel', data, actions);
+        },
+        onError: err => {
+            console.log('OnError', err);
+        },
+        onClick: (data, actions) => {
+            console.log('onClick', data, actions);
+        }
+    };
 }
+
+/*
+getItem(): void {
+  this.messageService.getMessage().subscribe((product: Product) => {
+    let exists = false;
+    this.cartItems.forEach(item => {
+      if (item.productId === product.id) {
+        exists = true;
+        item.qty++;
+      }
+    });
+    if (!exists) {
+      const cartItem = new CartItemModel(product);
+      this.cartItems.push(cartItem);
+    }
+    this.total = this.getTotal();
+  });
+}
+
+getTotal(): number {
+  let total = this.datos_gym.precio;
+  return +total.toFixed(2);
+}*/
+
+}
+  
+

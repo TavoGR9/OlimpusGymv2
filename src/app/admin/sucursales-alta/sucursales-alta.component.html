@@ -1,0 +1,298 @@
+<div class="container">
+    <h2 class="mb-3">Alta de sucursal</h2>
+    <form [formGroup]="form" (ngSubmit)="registrar()">
+        <div class="col-md-12">
+            <!-- Contenido de la FILA 1 DATOS GENERALES TABLA GIMANSIOS -->
+            <div class="row">
+                <mat-form-field appearance="outline" class="inputs_properties">
+                    <mat-label>Nombre de sucursal</mat-label>
+                    <input type="text" matInput placeholder="Nombre de sucursal" autocomplete="off"
+                        formControlName="nombreGym" id="nombreGym" [errorStateMatcher]="matcher">
+                    <mat-error
+                        *ngIf="form.get('nombreGym')?.hasError('pattern') && !form.get('nombreGym')?.hasError('required')">
+                        <strong class="txt_msg">**Numeros no permitidos</strong>
+                    </mat-error>
+                    <mat-error *ngIf="form.get('nombreGym')?.hasError('required')"><strong class="txt_msg">**Campo
+                            requerido</strong></mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="inputs_properties">
+                    <mat-label>Télefono de sucursal</mat-label>
+                    <input type="text" matInput placeholder="Télefono de sucursal" autocomplete="off"
+                        formControlName="telefono" id="telefono" [errorStateMatcher]="matcher">
+                    <mat-error
+                        *ngIf="form.get('telefono')?.hasError('pattern') && !form.get('telefono')?.hasError('required')">
+                        <strong class="txt_msg">**Solo se permite números</strong>
+                    </mat-error>
+                    <mat-error *ngIf="form.get('telefono')?.hasError('required')"><strong class="txt_msg">**Campo
+                            requerido</strong></mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="inputs_properties">
+                    <mat-label>Tipo</mat-label>
+                    <mat-select id="tipo" formControlName="tipo" id="tipo" [errorStateMatcher]="matcher">
+                        <mat-option></mat-option>
+                        <mat-option value="Interno">Interno</mat-option>
+                        <mat-option value="Externo">Externo</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="form.get('tipo')?.hasError('required')">
+                        <strong class="txt_msg">**Campo requerido</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="inputs_properties">
+                    <mat-label>Estado</mat-label>
+                    <input type="text" matInput placeholder="Estado" autocomplete="off" formControlName="estado"
+                        id="estado" [errorStateMatcher]="matcher">
+                    <mat-error
+                        *ngIf="form.get('estado')?.hasError('pattern') && !form.get('estado')?.hasError('required')">
+                        <strong class="txt_msg">**No se permiten números</strong>
+                    </mat-error>
+                    <mat-error *ngIf="form.get('estado')?.hasError('required')"><strong class="txt_msg">**Campo
+                            requerido</strong></mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="inputs_properties">
+                    <mat-label>Ciudad</mat-label>
+                    <input type="text" matInput placeholder="Ciudad" autocomplete="off" formControlName="ciudad"
+                        id="ciudad" [errorStateMatcher]="matcher">
+                    <mat-error
+                        *ngIf="form.get('ciudad')?.hasError('pattern') && !form.get('ciudad')?.hasError('required')">
+                        <strong class="txt_msg">**No se permiten números</strong>
+                    </mat-error>
+                    <mat-error *ngIf="form.get('ciudad')?.hasError('required')"><strong class="txt_msg">**Campo
+                            requerido</strong></mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="inputs_properties">
+                    <mat-label>Colonia</mat-label>
+                    <input type="text" matInput placeholder="Colonia" autocomplete="off" formControlName="colonia"
+                        id="colonia" [errorStateMatcher]="matcher">
+                    <mat-error
+                        *ngIf="form.get('colonia')?.hasError('pattern') && !form.get('colonia')?.hasError('required')">
+                        <strong class="txt_msg">**Solo se permite números</strong>
+                    </mat-error>
+                    <mat-error *ngIf="form.get('colonia')?.hasError('required')"><strong class="txt_msg">**Campo
+                            requerido</strong></mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="inputs_properties">
+                    <mat-label>Calle</mat-label>
+                    <textarea matInput placeholder="Calle" id="calle" formControlName="calle"
+                        [errorStateMatcher]="matcher"></textarea>
+                    <mat-error *ngIf="form.get('calle')?.hasError('required')">
+                        <strong class="txt_msg">**Campo requerido</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="inputs_properties">
+                    <mat-label>Código postal</mat-label>
+                    <input type="text" matInput placeholder="Código postal" autocomplete="off"
+                        formControlName="codigoPostal" id="codigoPostal" [errorStateMatcher]="matcher">
+                    <mat-error
+                        *ngIf="form.get('codigoPostal')?.hasError('pattern') && !form.get('codigoPostal')?.hasError('required')">
+                        <strong class="txt_msg">**Código Postal no valido</strong>
+                    </mat-error>
+                    <mat-error *ngIf="form.get('codigoPostal')?.hasError('required')"><strong class="txt_msg">**Campo
+                            requerido</strong></mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="inputs_properties">
+                    <mat-label>Número exterior</mat-label>
+                    <input type="text" matInput placeholder="Número exteior" autocomplete="off" formControlName="numExt"
+                        id="numExt" [errorStateMatcher]="matcher">
+                    <mat-error
+                        *ngIf="form.get('numExt')?.hasError('pattern') && !form.get('numExt')?.hasError('required')">
+                        <strong class="txt_msg">**Solo se permite números</strong>
+                    </mat-error>
+                    <mat-error *ngIf="form.get('numExt')?.hasError('required')"><strong class="txt_msg">**Campo
+                            requerido</strong></mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="inputs_properties">
+                    <mat-label>Número interior</mat-label>
+                    <input type="text" matInput placeholder="Número interior" autocomplete="off"
+                        formControlName="numInt" id="numInt" [errorStateMatcher]="matcher">
+                    <mat-error
+                        *ngIf="form.get('numInt')?.hasError('pattern') && !form.get('numInt')?.hasError('required')">
+                        <strong class="txt_msg">**Solo se permite números</strong>
+                    </mat-error>
+                    <mat-error *ngIf="form.get('numInt')?.hasError('required')"><strong class="txt_msg">**Campo
+                            requerido</strong></mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <!-- Contenido de la FILA 2 - CONTENIDO CORRESPONDIENTE A LAS AREAS DE LOS GIMNASIOS -->
+            <div class="row">
+                <h4 class="mb-3">Areas</h4>
+                <div class="alert alert-light areas" role="alert">
+                    <label for="casilleros" class="large-text">Casilleros:</label>
+                    <mat-radio-group formControlName="casilleros" id="casilleros" class="custom-radio-group"
+                        color="warn" required>
+                        <mat-radio-button value="1" class="custom-radio-button">Sí</mat-radio-button>
+                        <mat-radio-button value="0" class="custom-radio-button">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="alert alert-light areas" role="alert">
+                    <label for="estacionamiento" class="large-text">Estacionamiento:</label>
+                    <mat-radio-group id="estacionamiento" formControlName="estacionamiento" class="custom-radio-group"
+                        color="warn" required>
+                        <mat-radio-button value="1" class="custom-radio-button">Sí</mat-radio-button>
+                        <mat-radio-button value="0" class="custom-radio-button">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="alert alert-light areas" role="alert">
+                    <label for="energia" class="large-text">Energia:</label>
+                    <mat-radio-group id="energia" formControlName="energia" class="custom-radio-group" color="warn"
+                        required>
+                        <mat-radio-button value="1" class="custom-radio-button">Sí</mat-radio-button>
+                        <mat-radio-button value="0" class="custom-radio-button">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="alert alert-light areas" role="alert">
+                    <label for="bicicletero" class="large-text">Bicicletero:</label>
+                    <mat-radio-group id="bicicletero" formControlName="bicicletero" class="custom-radio-group"
+                        color="warn" required>
+                        <mat-radio-button value="1" class="custom-radio-button">Sí</mat-radio-button>
+                        <mat-radio-button value="0" class="custom-radio-button">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="col-md-12">
+        <!-- Contenido de la FILA 2 - CONTENIDO CORRESPONDIENTE A LAS AREAS DE LOS GIMNASIOS -->
+        <div class="row">
+            <h4 class="mb-3">Horarios</h4>
+            <form [formGroup]="formHorario" (ngSubmit)="registrar()">
+
+                <div class="alert alert-light horarios" role="alert">
+                    <mat-form-field appearance="outline" class="inputs_horarios">
+                        <mat-label>Lunes: hora inicio</mat-label>
+                        <input type="time" matInput placeholder="Lunes: hora inicio" autocomplete="off"
+                            formControlName="horaInicioLunes" id="horaInicioLunes">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="inputs_horarios">
+                        <mat-label>Lunes: hora cierre</mat-label>
+                        <input type="time" matInput placeholder="Lunes: hora cierre" autocomplete="off"
+                            formControlName="horaFinLunes" id="horaFinLunes">
+                    </mat-form-field>
+
+                    <mat-checkbox
+                        (change)="funciones($event, 'horaInicioLunes', 'horaFinLunes')">Habilitar</mat-checkbox>
+                </div>
+
+                <div class="alert alert-light horarios" role="alert">
+                    <mat-form-field appearance="outline" class="inputs_horarios">
+                        <mat-label>Martes: hora inicio</mat-label>
+                        <input type="time" matInput placeholder="Martes: hora inicio" autocomplete="off"
+                            formControlName="horaIniciomartes" id="horaIniciomartes">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="inputs_horarios">
+                        <mat-label>Martes: hora cierre</mat-label>
+                        <input type="time" matInput placeholder="Martes: hora cierre" autocomplete="off"
+                            formControlName="horaFinmartes" id="horaFinmartes">
+                    </mat-form-field>
+
+                    <mat-checkbox
+                        (change)="funciones($event, 'horaIniciomartes', 'horaFinmartes')">Habilitar</mat-checkbox>
+                </div>
+
+                <div class="alert alert-light horarios" role="alert">
+                    <mat-form-field appearance="outline" class="inputs_horarios">
+                        <mat-label>Miercoles: hora inicio</mat-label>
+                        <input type="time" matInput placeholder="Miercoles: hora inicio" autocomplete="off"
+                            formControlName="horaIniciomiercoles" id="horaIniciomiercoles">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="inputs_horarios">
+                        <mat-label>Miercoles: hora cierre</mat-label>
+                        <input type="time" matInput placeholder="Miercoles: hora cierre" autocomplete="off"
+                            formControlName="horaFinmiercoles" id="horaFinmiercoles">
+                    </mat-form-field>
+
+                    <mat-checkbox
+                        (change)="funciones($event, 'horaIniciomiercoles', 'horaFinmiercoles')">Habilitar</mat-checkbox>
+                </div>
+
+                <div class="alert alert-light horarios" role="alert">
+                    <mat-form-field appearance="outline" class="inputs_horarios">
+                        <mat-label>Jueves: hora inicio</mat-label>
+                        <input type="time" matInput placeholder="Jueves: hora inicio" autocomplete="off"
+                            formControlName="horaIniciojueves" id="horaIniciojueves">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="inputs_horarios">
+                        <mat-label>Jueves: hora cierre</mat-label>
+                        <input type="time" matInput placeholder="Jueves: hora cierre" autocomplete="off"
+                            formControlName="horaFinjueves" id="horaFinjueves">
+                    </mat-form-field>
+
+                    <mat-checkbox
+                        (change)="funciones($event, 'horaIniciojueves', 'horaFinjueves')">Habilitar</mat-checkbox>
+                </div>
+
+                <div class="alert alert-light horarios" role="alert">
+                    <mat-form-field appearance="outline" class="inputs_horarios">
+                        <mat-label>Viernes: hora inicio</mat-label>
+                        <input type="time" matInput placeholder="Viernes: hora inicio" autocomplete="off"
+                            formControlName="horaInicioviernes" id="horaInicioviernes">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="inputs_horarios">
+                        <mat-label>Viernes: hora cierre</mat-label>
+                        <input type="time" matInput placeholder="Viernes: hora cierre" autocomplete="off"
+                            formControlName="horaFinviernes" id="horaFinviernes">
+                    </mat-form-field>
+
+                    <mat-checkbox
+                        (change)="funciones($event, 'horaInicioviernes', 'horaFinviernes')">Habilitar</mat-checkbox>
+                </div>
+
+                <div class="alert alert-light horarios" role="alert">
+                    <mat-form-field appearance="outline" class="inputs_horarios">
+                        <mat-label>Sábado: hora inicio</mat-label>
+                        <input type="time" matInput placeholder="Sábado: hora inicio" autocomplete="off"
+                            formControlName="horaIniciosabado" id="horaIniciosabado">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="inputs_horarios">
+                        <mat-label>Sábado: hora cierre</mat-label>
+                        <input type="time" matInput placeholder="Sábado: hora cierre" autocomplete="off"
+                            formControlName="horaFinsabado" id="horaFinsabado">
+                    </mat-form-field>
+
+                    <mat-checkbox
+                        (change)="funciones($event, 'horaIniciosabado', 'horaFinsabado')">Habilitar</mat-checkbox>
+                </div>
+
+                <div class="alert alert-light horarios" role="alert">
+                    <mat-form-field appearance="outline" class="inputs_horarios">
+                        <mat-label>Domingo: hora inicio</mat-label>
+                        <input type="time" matInput placeholder="Domingo: hora inicio" autocomplete="off"
+                            formControlName="horaIniciodomingo" id="horaIniciodomingo">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="inputs_horarios">
+                        <mat-label>Domingo: hora cierre</mat-label>
+                        <input type="time" matInput placeholder="Domingo: hora cierre" autocomplete="off"
+                            formControlName="horaFindomingo" id="horaFindomingo">
+                    </mat-form-field>
+
+                    <mat-checkbox (change)="funciones($event, 'horaIniciodomingo', 'horaFindomingo')" name="box"
+                        id="box">Habilitar</mat-checkbox>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</div>

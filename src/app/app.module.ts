@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatSidenavModule} from '@angular/material/sidenav';
 
@@ -67,6 +67,11 @@ import { MembresiaMiguelComponent } from './user/membresia-miguel/membresia-migu
 import { HomeMiguelComponent } from './user/home-miguel/home-miguel.component';
 import { PagoInscripcionComponent } from './user/pago-inscripcion/pago-inscripcion.component';
 import { QRCodeModule } from 'angularx-qrcode';
+import { NgxPayPalModule } from 'ngx-paypal';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { SucursalesAltaComponent } from './admin/sucursales-alta/sucursales-alta.component';
+import { SucursalesEditarComponent } from './admin/sucursales-editar/sucursales-editar.component';
+import { SucursalesListaComponent } from './admin/sucursales-lista/sucursales-lista.component';
 
 
 @NgModule({
@@ -110,7 +115,10 @@ import { QRCodeModule } from 'angularx-qrcode';
     PagosMiguelComponent,
     MembresiaMiguelComponent,
     HomeMiguelComponent,
-    PagoInscripcionComponent
+    PagoInscripcionComponent,
+    SucursalesAltaComponent,
+    SucursalesEditarComponent,
+    SucursalesListaComponent
   ],
   imports: [
     BrowserModule,
@@ -139,9 +147,12 @@ import { QRCodeModule } from 'angularx-qrcode';
     _MatSlideToggleRequiredValidatorModule,
     FlexLayoutModule,
     MatDialogModule,
-    QRCodeModule
+    QRCodeModule,
+    NgxPayPalModule,
+    NgxSpinnerModule
   ],
   providers: [],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
