@@ -71,7 +71,7 @@ const routes: Routes = [
   { path: "membresia-miguel", component: MembresiaMiguelComponent },
   { path: "pagos-miguel", component: PagosMiguelComponent },
   { path: "perfil-miguel", component: PerfilMiguelComponent },
-  { path: "pago-inscripcion", component: PagoInscripcionComponent},
+  { path: "pago-inscripcion/:idEmail", component: PagoInscripcionComponent},
 
   //componentes recepcionista
   { path: "stock", component: StockComponent },
