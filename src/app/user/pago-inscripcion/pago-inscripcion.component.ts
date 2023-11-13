@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
-import { PagoInscripcionService} from 'src/app/servicios/pago-inscripcion.service';
-import { Router,  ActivatedRoute } from '@angular/router';
+
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -17,7 +16,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   templateUrl: './pago-inscripcion.component.html',
   styleUrls: ['./pago-inscripcion.component.css']
 })
-export class PagoInscripcionComponent {
+export class PagoInscripcionComponent implements OnInit {
   hide = true;
   form: FormGroup;
   radioSeleccionado!: string;
@@ -29,7 +28,7 @@ export class PagoInscripcionComponent {
 
   constructor (private fb: FormBuilder, private payInscripcion: PagoInscripcionService, private activeRoute: ActivatedRoute){
 
-    this.correo = this.activeRoute.snapshot.paramMap.get('idEmail');
+  constructor (private fb: FormBuilder){
 
     this.form = this.fb.group({
       tc_nom: ['', Validators.compose([ Validators.required, Validators.pattern(/^[A-Za-zñÑáéíóú ]*[A-Za-z][A-Za-zñÑáéíóú ]*$/)])],
@@ -71,13 +70,6 @@ export class PagoInscripcionComponent {
       // Si la entrada supera los 5 caracteres (formato completo "MM/YY"), truncar la entrada
       this.fecha = this.fecha.slice(0, 5);
     }
-  }
-
-  ngOnInit(): void {
-    this.payInscripcion.consultarDataPago(this.correo).subscribe(respuesta =>{console.log(respuesta)
-    this.responseData=respuesta;
-    //console.log(this.responseData.titulo) 
-    });
   }
 
 }

@@ -1,4 +1,3 @@
-
 <div class="body">
   <!--SE AGREGA EL HEADER-->
 <div class="header_component">
@@ -119,6 +118,8 @@
             </div> 
 
             <div *ngIf="radioSeleccionado === 'contenedor2'">
+             <p>Contendior #2</p>
+             <ngx-paypal [config]="payPalConfig"></ngx-paypal>
               <img class="img-size" src="../../../assets/img/pagoEfectivo-img/pago_efectivo.png" alt="Pago en efectivo">
               <label style="text-align:center; font-weight: bold; display: block; margin: 0 auto;">Pasar a pagar a sucursal</label>
 
@@ -127,6 +128,7 @@
                   Confirmar pago en sucursal</button>
               </div><!--cierra div contenido bloque btns_ok_cancel-->
             </div>
+            
             
           </div><!--cierra div grid_hijo1-->
           <div class="grid_hijo2">

@@ -25,7 +25,6 @@ export class ConnectionService {
     return this.http.get(this.Api+"?nombreGym");
   }
   
-  
   //metodo traer datos filtrados - sucursales 
   filtrarMem(filtros: filtroSucursales):Observable<any> {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });

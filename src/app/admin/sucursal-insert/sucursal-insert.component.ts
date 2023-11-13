@@ -236,7 +236,7 @@ datosParaEnviar.nombreGym = this.formularioSucursales.value.nombreGym; // Reempl
 datosParaEnviar.telefono = this.formularioSucursales.value.telefono; // Reemplaza con el campo real del formulario
 datosParaEnviar.tipo = this.formularioSucursales.value.tipo; // Reemplaza con el campo real del formulario
 datosParaEnviar.Franquicia_idFranquicia = this.formularioSucursales.value.Franquicia_idFranquicia; // Asigna el valor adecuado
-datosParaEnviar.horarios = resultadoConcatenado; // Asigna la cadena JSON
+
 datosParaEnviar.casilleros =  this.formularioSucursales.value.casilleros; 
 datosParaEnviar.estacionamiento = this.formularioSucursales.value.estacionamiento;// Asigna el valor adecuado
 datosParaEnviar.energia = this.formularioSucursales.value.energia;// Asigna el valor adecuado

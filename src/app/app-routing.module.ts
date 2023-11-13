@@ -37,6 +37,9 @@ import { MembresiaMiguelComponent } from './user/membresia-miguel/membresia-migu
 import { PagosMiguelComponent } from './user/pagos-miguel/pagos-miguel.component';
 import { PerfilMiguelComponent } from './user/perfil-miguel/perfil-miguel.component';
 import { PagoInscripcionComponent } from './user/pago-inscripcion/pago-inscripcion.component';
+import { SucursalesAltaComponent } from './admin/sucursales-alta/sucursales-alta.component';
+import { SucursalesEditarComponent } from './admin/sucursales-editar/sucursales-editar.component';
+import { SucursalesListaComponent } from './admin/sucursales-lista/sucursales-lista.component';
 
 
 const routes: Routes = [
@@ -82,6 +85,9 @@ const routes: Routes = [
   { path: "gimnasioLista", component: SucursalListaComponent},
   { path: "gimnasioEdit/:id", component: SucursaEditComponent},
   { path: "horario/:id", component:HorariosComponent},
+  { path: "sucursales-lista", component: SucursalesListaComponent },
+  { path: "sucursales-alta", component: SucursalesAltaComponent},
+  { path: "sucursales-editar", component: SucursalesEditarComponent},
 
 
   //componentes trainer
