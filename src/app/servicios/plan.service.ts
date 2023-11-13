@@ -9,7 +9,7 @@ import { plan } from './plan';
 export class PlanService {
 
   API: string = 'https://olympus.arvispace.com/conPrincipal/Membresia.php';
-  apiProducts: string = 'https://olympus.arvispace.com/pruebasp/products.php';
+  apiProducts: string = 'https://olympus.arvispace.com/Products/products.php';
   constructor(private clienteHttp:HttpClient) {
   }
 
