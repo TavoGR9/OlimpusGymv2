@@ -71,6 +71,8 @@ export class AltaColaboradorComponent {
           this.toastr.success('Empleado agregado correctamente.', 'Exíto!!!');
           //redireccionar despues de insertar
           //this.router.navigateByUrl('/lista-colaboradores');
+          //limpiar los campos del formulario
+          this.form.reset();
           //marcar un formulario como no modificado o en su estado inicial.
           this.form.markAsPristine(); 
           //  marcar un control de formulario como no tocado, indicando que el usuario no ha interactuado con él.

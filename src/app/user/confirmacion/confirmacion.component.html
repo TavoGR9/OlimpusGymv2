@@ -3,46 +3,34 @@
     <div class="header_component">
         <app-header></app-header>
     </div>
-    <br/>
-    <div class="mi-div-con-borde">
-        <div class="elemento-interno">           
-            <div class="grid_fh1" style="text-align: center;">
-                <img style="width: 500px; height: 170px;" class="logo_f" src="../../../assets/img/login-img/logo.jpeg">
-            </div>
+
+    <div class="d-flex flex-row justify-content-center alig-items-center" id="ticket_user">
+        <div class="alert alert-light my-4 text-center" style="min-width: 500px;">
             <div style="text-align: center;">
-                <div style="line-height: 1;margin: 1px;">
-                    <p style="margin: 0; padding: 0;">Folio de compra</p>
-                    <p style="margin: 0; padding: 0;">458</p>
-                </div>
-                <div style="line-height: 1;margin: 40px;">
-                    <p style="margin: 0; padding: 0;">Fecha de compra</p>
-                    <p style="margin: 0; padding: 0;">21/09/2023</p>
-                </div>
-                <div style="line-height: 1;margin: 40px;">
-                    <p style="margin: 0; padding: 0;">Estado</p>
-                    <p style="margin: 0; padding: 0;">Entregado</p>
-                </div>
+                <img style="width: 350px;" class="logo_f" src="../../../assets/img/login-img/logo.jpeg" alt="logo">
+            </div>
+            <p>Folio de compra: #123</p>
+
+            <ul>
+                <li> imagen + articulo + cantidad + precio</li>
+            </ul>
+
+            <p>Total: $499</p>
+            <p>Estatus: Pagado</p>
+
+            <div style="text-align: center;color: green; font-size: 70px;">
+                <fa-icon [icon]="['fas', 'check-circle']"></fa-icon>
             </div>
         </div>
-        <div style="text-align: center;color: green; font-size: 70px;" >
-            <fa-icon [icon]="['fas', 'check-circle']" ></fa-icon>
-        </div>
-    </div> 
-    <br/>
-    <br/>
-    <div style="text-align: center;">
-        <button mat-raised-button style="background-color: #fd9727;font-size: 20px; width: 120px; height: 40px;">Aceptar</button>
-        <br/><br/>
-        <button mat-raised-button style="background-color: #fd9727;font-size: 20px; width: 120px; height: 40px;">Imprimir</button>
     </div>
-    
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <div class="d-flex flex-row justify-content-center alig-items-center mb-2">
+        <button mat-raised-button style="background-color: #fd9727; font-size: 16px;" (click)="imprimirPantalla()">
+            <mat-icon>description</mat-icon> Imprimir
+        </button>
+    </div>
+
     <!--SE AGREGA EL FOOTER-->
-    <div class="flex-container">
-        <div class="footer_component">
-            <app-footer></app-footer>
-        </div>
+    <div class="footer_component">
+        <app-footer></app-footer>
     </div>
 </div>
-
-
