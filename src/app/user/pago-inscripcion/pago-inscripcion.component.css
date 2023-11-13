@@ -1,8 +1,3 @@
-*{
-    padding: 0;
-    margin: 0;
-}
-
 /**propiedades del contenedor body**/
 .body {
     margin: 0;
@@ -56,7 +51,7 @@
 }
 .inputs_tc_l {
     width: 300px;
-    padding: 10px;
+    padding: 5px 5px;
     display: inline-block;
 }
 
@@ -119,6 +114,7 @@
     font-weight: bold;
     font-size: small;
     padding-left: 10px;
+    display: block;
 }
 
 /*propiedades contenedores de detalles */
@@ -131,14 +127,24 @@
 
 /**CONTENIDO BLOQUE BOTONES CANCELAR - FINALIZAR COMPRA**/
 .btns_ok_cancel {
-    text-align: right;
+    text-align: center;
 }
 
 /**propiedades botones cancelar - finalizar compra **/
 .btn_ok_cancel {
     width: 290px;
     font-size: larger;
-    margin: 50px 10px;
+    margin: 5px 5px;
     height: 50px;
 }
 
+input[type="radio"]:checked + label {
+    /* Agrega aquí los estilos para resaltar el radio button seleccionado */
+    /*background-color: #eee;*/
+    font-weight: bold;
+    border-bottom: #FD9727 solid;
+  }
+
+  input[type="radio"] + label{
+    cursor: pointer;
+  }
