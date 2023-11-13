@@ -97,7 +97,11 @@
         </div>
         <div id="carrousel-products">
             <div class="product" *ngFor="let produ of productsIndex">
-                <img src={{produ.urlImage}} alt="" width="200px">
+                <div class="image-produ-container">
+                    <div class="img-container">
+                        <img src="{{urlImages + produ.imageurl}}"  alt="">
+                    </div>
+                </div>
                 <div class="product-title">
                     <a href="https://olympus.arvispace.com/Ecommerce/" class="name_prod">{{produ.name}}</a>
                     <p class="precio_produ">${{produ.price}}</p>
