@@ -4,6 +4,8 @@ import { ErrorStateMatcher } from '@angular/material/core';
 import { PagoInscripcionService} from 'src/app/servicios/pago-inscripcion.service';
 import { Router,  ActivatedRoute } from '@angular/router';
 import { ICreateOrderRequest, IPayPalConfig } from 'ngx-paypal';
+import { MatDialog } from "@angular/material/dialog";
+import { MensajeEmergentesComponent } from "../mensaje-emergentes/mensaje-emergentes.component";
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -25,6 +27,7 @@ export class PagoInscripcionComponent implements OnInit {
   matcher = new MyErrorStateMatcher();
   fecha: string = '';
   correo: any;
+  idClient : any;
   // Inicializa responseData como un objeto vacío
   responseData: any = {};
   // Creacion de objeto de prueba para validaciones de pago
@@ -42,7 +45,8 @@ export class PagoInscripcionComponent implements OnInit {
   //Variable para menejar el pago de Paypal
   public payPalConfig?: IPayPalConfig;
 
-  constructor (private fb: FormBuilder, private payInscripcion: PagoInscripcionService, private activeRoute: ActivatedRoute){
+  constructor (private fb: FormBuilder, private payInscripcion: PagoInscripcionService, private activeRoute: ActivatedRoute,
+    public dialog: MatDialog, private router: Router){
 
     this.correo = this.activeRoute.snapshot.paramMap.get('idEmail');
 
@@ -166,6 +170,29 @@ export class PagoInscripcionComponent implements OnInit {
       console.log('onClick', data, actions);
     },
   };
+  }
+
+  confirPagEfectivo(): any {
+    this.idClient=this.responseData.ID_Cliente;
+    console.log(this.idClient);
+
+    if(this.idClient){
+
+      this.payInscripcion.idPagoSucursal(this.idClient).subscribe((resultado)=> {
+        console.log(resultado.msg);
+        this.dialog.open(MensajeEmergentesComponent, {
+          data: `A partir de hoy puede pasar a pagar su membresia en ${this.responseData.nombreGym}`,
+        })
+        .afterClosed()
+        .subscribe((cerrarDialogo: Boolean) => {
+          if (cerrarDialogo) {
+            this.router.navigateByUrl(`/index/`);
+          } else {
+            
+          }
+        });
+      });
+    }
   }
 /*
   componentRecibo(items, amount): void {

@@ -92,16 +92,16 @@
         </div>
 
         <!-- CONTENEDOR OPCION DE PAGO #2 PAGO EN EFECTIVO-->
-        <div *ngIf="radioSeleccionado === 'contenedor2'" class="my-3 col text-center">
-          <img width="100px" src="../../../assets/img/pagoEfectivo-img/pago_efectivo.png" alt="Pago en efectivo">
-          <label style="font-weight: bold; display: block; padding: 10px 0;">Pasar a pagar a
-            sucursal</label>
+        <div *ngIf="radioSeleccionado === 'contenedor2'">
+          <form (ngSubmit)="confirPagEfectivo()">
+            <img class="img-size" src="../../../assets/img/pagoEfectivo-img/pago_efectivo.png" alt="Pago en efectivo">
+            <label style="text-align:center; font-weight: bold; display: block; margin: 0 auto;">Pasar a pagar a sucursal</label>
 
-          <div class="btns_ok_cancel" style="text-align: center;">
-            <button routerLink="/index" type="submit" class="btn_ok_cancel" mat-raised-button
-              style="background: #FD9727; color: white;">
-              Confirmar pago en sucursal</button>
-          </div><!--cierra div contenido bloque btns_ok_cancel-->
+            <div class="btns_ok_cancel" style="text-align: center;">
+              <button type="submit" class="btn_ok_cancel" mat-raised-button style="background: #FD9727; color: white;">
+                Confirmar pago en sucursal</button>
+            </div><!--cierra div contenido bloque btns_ok_cancel     routerLink="/index"-->
+        </form>
         </div>
 
         <!-- CONTENEDOR OPCION DE PAGO #3 PAGO POR PAYPAL-->

@@ -14,4 +14,7 @@ export class PagoInscripcionService {
     return this.http.get(this.URLServices+"?consultar="+id);
   }
   
+  idPagoSucursal(id:any):Observable<any>{
+    return this.http.get(this.URLServices+"?consuProcAlmac="+id);
+  }
 }

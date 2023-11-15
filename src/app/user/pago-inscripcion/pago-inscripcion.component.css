@@ -138,6 +138,14 @@
     height: 50px;
 }
 
+/** TAMAÑO IMAGEN*/
+.img-size{
+    width: 150px;
+    height: 150px;
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin: 0 auto; /* Establece márgenes automáticos a la izquierda y la derecha para centrar horizontalmente */
+}
+
 input[type="radio"]:checked + label {
     /* Agrega aquí los estilos para resaltar el radio button seleccionado */
     /*background-color: #eee;*/
