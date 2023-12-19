@@ -35,7 +35,7 @@ export class SucursalesComponent implements OnInit {
       casilleros: [false],
       estacionamiento: [false],
       bicicletero: [false],
-      energia: [false]
+      regaderas: [false]
     })
   }
 
