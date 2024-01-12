@@ -62,7 +62,7 @@ const routes: Routes = [
   { path: "plan", component: PlanComponent },
   { path: "planLista", component: PlanListaComponent },
   { path: "planEditar/:id", component: PlanEditarComponent },
-  { path: "sucursal", component: SucursalComponent},
+  { path: "sucursal/:id/:idName", component: SucursalComponent},
   { path: "perfil-usuario", component: PerfilUsuarioComponent},
   { path: "editar-perfil", component: EditarPerfilComponent},
   { path: "confirmacion", component: ConfirmacionComponent},

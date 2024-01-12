@@ -78,6 +78,10 @@ export class AltaUsuarioComponent {
       this.idMembresia = this.activeRoute.snapshot.paramMap.get('id');
       this.nameMembresia = this.activeRoute.snapshot.paramMap.get('idName');
       this.precioId = this.activeRoute.snapshot.paramMap.get('idPrecio');
+
+      console.log(this.idMembresia);
+  console.log(this.nameMembresia);
+  console.log(this.precioId);
       
     this.form = this.fb.group({
       nombre: ['', Validators.compose([ Validators.required, Validators.pattern(/^[A-Za-zñÑáéíóú ]*[A-Za-z][A-Za-zñÑáéíóú ]*$/)])],
@@ -96,8 +100,12 @@ export class AltaUsuarioComponent {
       curp: ['', Validators.compose([ Validators.minLength(18), Validators.pattern(/^[A-ZÑ0-9]*[A-Z][A-ZÑ0-9]*$/)])],
       email: ['', Validators.compose([Validators.required, Validators.pattern(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)])],  
       pass: ['', Validators.compose([Validators.required, Validators.minLength(8)])],
+      tiene_huella:[''],
+      fotoUrl:[''],
+      peso:['', Validators.compose([Validators.pattern(/^(0|[1-9][0-9]*)$/), Validators.max(300)])],
+      estatura:['', Validators.compose([Validators.pattern(/^(0|[1-9][0-9]*)$/), Validators.max(250)])],
       Gimnasio_idGimnasio:[testService.idGym],
-      Membresia_idMem:[this.idMembresia]
+      Membresia_idMem:[this.idMembresia],
     })
   }
 

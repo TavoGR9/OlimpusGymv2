@@ -19,7 +19,7 @@
         <h2 class="title_section">Nuestros Planes</h2>
         <div class="flex-container">
         <div id="container-memberships">
-            <div class="table-membership">
+            <div class="table-container">
                 <table >
                     <tr >
                         <th>
@@ -80,10 +80,12 @@
                             </td>
                         </ng-container>
                     </tr>
-
-                </table>
+                </table> 
                 <!--<button class="choose" routerLink="/sucursales">Elige tu plan</button>-->
-                <button mat-raised-button class="choose" routerLink="/sucursales">Elige tu plan</button>
+                <button mat-raised-button class="choose mx-auto d-flex align-items-center" routerLink="/sucursales">
+                    Elige tu plan
+                </button>
+                
             </div>
         </div>
     </div>
@@ -140,22 +142,25 @@
                 </div>
             </div>
             <div class="info-section">
-                <h1>¡Lleva Tu Experiencia de Fitness al Siguiente Nivel!</h1>
+                <div class="letra">¡Lleva Tu Experiencia de Fitness al Siguiente Nivel!</div>
                 <p>Descarga la aplicacion oficial de Olimpus Gym hoy mismo y descubre una forma mas conveniente
                     y efectiva de alcanzar tus metas de salud y bienestar. Nuestra aplicacion te proporciona acceso
                     exclusivo a una serie de recursos y funciones diseñadas para mejorar tu experiencia en el gimnasio 
                     y mantenerte motivado en tu camino hacia la mejor version de ti mismo.
                 </p>
+                <br>
                 <div class="buttons-container">
                     <a href="https://play.google.com/store/games?device=windows" target="_blank"><button mat-raised-button><img src="assets/img/index-img/googleplay.jpg" alt=""></button></a>
                     <a href="https://www.apple.com/mx/app-store/" target="_blank"><button mat-raised-button><img src="assets/img/index-img/applelogo.png" alt=""></button></a>
-                    <div class="qr-code-app">
+                    <!--<div class="qr-code-app">
                         <img src="assets/img/index-img/qr_code_PNG6.png" alt="">
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
     </div>
+    <br><br><br>
+    <br>
 </div>
 <app-footer></app-footer>
 

@@ -49,6 +49,11 @@ body {
     justify-content: center;
 }
 
+.table-container {
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+    max-width: 100%;  /* Evita que la tabla sea más ancha que el contenedor */
+  }
+
 #search-bar button {
     width: 10%;
     height: 100%;
@@ -77,6 +82,13 @@ body {
     font-size: 1em;
     outline: none;
 }
+
+.letra {
+    font-size: 38px; /* Tamaño de fuente */
+    font-weight: bold; /* Peso de la fuente (negrita) */
+    color: #000000; /* Color del texto */
+}
+
 
 #search-bar input:hover {
     cursor: pointer;
@@ -108,12 +120,6 @@ body {
     box-sizing: border-box;
 }
 
-.table-membership table {
-    width: 80%;
-    box-sizing: border-box;
-    border-bottom: 1px solid #ccc;
-}
-
 table tr th img {
     display: block;
     width: 200px;
@@ -127,6 +133,7 @@ table tr td{
 table tr th {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    width: 230px;
 }
 
 table tr th span {
@@ -347,7 +354,7 @@ table tr td:nth-child(1) {
 /*----------MOBILE SECTION---------*/
 #movil-section {
     width: 100%;
-    height: 600px;
+    height: 100%;
     margin-top: 100px;
     display: flex;
     justify-content: center;
@@ -411,7 +418,6 @@ table tr td:nth-child(1) {
     align-items: center;
 }
 
-
 .buttons-container button {
     display: block;
     width: 150px;
@@ -448,3 +454,61 @@ app-footer {
     margin-top: 150px;
 }
 
+@media (max-width: 768px) {
+    /* Estilos para dispositivos móviles */
+    .letra {
+        font-size: 18px; /* Tamaño de fuente */
+        font-weight: bold; /* Peso de la fuente (negrita) */
+        color: #000000; /* Color del texto */
+    }
+    .image-section .container-image {
+        width: 80%;
+        height: 85%;
+        background-color: #fff;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+    }
+    #movil-banner .info-section {
+        padding: 3px;
+    }
+
+
+    .container-image,
+    .buttons-container button img {
+        width: 100%;
+        
+        height: auto;
+    }
+
+
+    .qr-code-app img {
+        width: 30%;
+        max-width: 150px; /* Ajusta el tamaño máximo según tu diseño */
+        height: auto;
+    }
+    
+
+    .info-virtualgym button {
+        margin-top: 30px;
+        width: 30%;
+        border-radius: 15px;
+        border: none;
+        background-color: #000000;
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px;
+        transition:all 300ms ease-in-out;
+    }
+
+
+    .buttons-container button {
+        display: block;
+        width: 50%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        border-radius: 15px;
+        transition: all 300ms ease-in-out;
+    }
+}

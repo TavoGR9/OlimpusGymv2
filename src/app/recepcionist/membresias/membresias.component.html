@@ -1,23 +1,57 @@
 <app-header></app-header>
-<div class="body-membresia">
+<div class="container mt-4">
+    <div>
     <h2 style="text-align: center;">MEMBRESÍAS</h2>
     <h6 style="text-align: center;color: orange;"> Tenemos el plan adecuado para ti</h6>
     <br/>
     <br/>
-    <section class="membresias-w" > 
-        <!--plans-wrapper-->
+    <div>
+        <div class="membresias-caja">
+            <div *ngFor="let item of plan" style="background-color:#ffff;display: flex; flex-wrap: wrap;" class="center">
+                <div class="membresia membresia--inverse" *ngIf="item.Gimnasio_idGimnasio === elID" style="padding-top: 60px; padding-bottom: 60px">
+                    <div style=" margin: 10px;">
+                        <p style="font-size: 23px;color: #fff;">{{ item.titulo }}</p>
+                        <h3 class="membresia-titulo precio" style="color: orange;">${{ item.precio }}</h3>
+                        <ul style="padding-left: 0;color: #fff;">
+                            <li >Incluye {{item.duracion}} meses de membresía</li>
+                            <li >{{ item.detalles }}</li>
+                            <!-- Agrega aquí más elementos HTML si es necesario -->
+                        </ul>  
+                        <div class="membresia-discla">
+                            <a routerLink="/registro/{{ item.idMem }}/{{ item.titulo }}/{{ item.precio }}" class="Button" style="color: white; font-family: Arial, Helvetica, sans-serif; position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);">Seleccionar Membresía</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+<!--<div class="body-membresia">
+    <div class="container mt-4">
+    <h2 style="text-align: center;">MEMBRESÍAS</h2>
+    <h6 style="text-align: center;color: orange;"> Tenemos el plan adecuado para ti</h6>
+    <br/>
+    <br/>
+    <div class="row">
+    <section> 
+        
         <div  class="membresias-caja">
             
             <div *ngFor="let item of plan" style="background-color:#ffff;display: flex; flex-wrap: wrap;
             " class="center">
             <div  class="membresia js-membresia membresia--inverse "  *ngIf="item.Gimnasio_idGimnasio === elID" style="padding-top: 60px; padding-bottom: 60px">
-                <div class="membresia-info" bis_skin_checked="1" style="flex: 1; margin: 10px;" >
-                    <p class="membresia-texto" style="font-size: 23px;">{{ item.titulo }}</p>
+                <div  bis_skin_checked="1" style="flex: 1; margin: 10px;" >
+                    <p style="font-size: 23px;color: #fff;">{{ item.titulo }}</p>
                     <h3 class="membresia-titulo precio" style="color: orange;">${{ item.precio }}</h3>
-                    <ul class="membresia-texto" style="padding-left: 0;">
-                        <li class="membresia-texto-item">Incluye {{item.duracion}} meses de membresía</li>
-                        <li class="membresia-texto-item">{{ item.detalles }}</li>
-                        <!-- Agrega aquí más elementos HTML si es necesario -->
+                    <ul style="padding-left: 0;color: #fff;">
+                        <li >Incluye {{item.duracion}} meses de membresía</li>
+                        <li >{{ item.detalles }}</li>
+                        
                     </ul>  
                     <div class="membresia-discla"></div>
                     <a routerLink="/registro/{{ item.idMem}}/{{item.titulo}}/{{item.precio}}" class="Button" style="color: white; font-family: Arial, Helvetica, sans-serif ;">Seleccionar Membresía</a>
@@ -27,7 +61,12 @@
         </div>
         
     </section>
+
+</div>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br>
     <div class="footerc">
         <app-footer></app-footer>
     </div>
-</div>
+</div>-->

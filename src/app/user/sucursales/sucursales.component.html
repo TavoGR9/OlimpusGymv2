@@ -2,24 +2,35 @@
     <!--SE AGREGA EL HEADER-->
     <div class="header_component">
         <app-header></app-header>
-      </div>
-
-      <div class="content_page">
+    </div>
+    <br>
+    <div class="row">
+        <div class="title_page">
+            <h3>Entonces, ¿En dónde quieres entrenar?</h3>
+            <br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+        </div>
+        <div class="col-sm-9">
+            <div class="row" style="width: 100%;">  
+                <div class="d-flex justify-content-center" style="text-align: left;">
+                    <mat-form-field appearance="outline" class="inputs_css">
+                        <input type="text"  [(ngModel)]="palabraClave" (input)="filtrarSucursales()" matInput placeholder="Busca tu Olimpus más cercano." autocomplete="off" autofocus="">
+                        <mat-icon matSuffix>place</mat-icon>
+                    </mat-form-field>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>            
+        </div>
+    </div>
+    <div class="content_page">
         <div class="margin_page">
-
-            <div class="title_page">
-                <h3>Entonces, ¿En dónde quieres entrenar?</h3>
-            </div><!--cierra div title page -->
-
-            <div class="content_searchbar" style ="text-align: center;">
-                <mat-form-field appearance="outline" class="inputs_css">
-                    <input type="text" matInput placeholder= "Busca tu Olimpus más cercano." autocomplete="off" autofocus="" >
-                    <mat-icon matSuffix>place</mat-icon>
-                </mat-form-field>
-            </div><!--cierra div content search bar-->
-
-            <div class="grid_padre">
-                <div class="h1_filters">
+            <div class="row">
+                <div class="col-sm-3">
                     <!--CONTENIDO - OPCIONES DE FILTRO-->
                     <div id="filters_container">
                         <div id="first-section-filters" class="filters">
@@ -27,10 +38,10 @@
                             <p class="txt_filters">Estructura</p>
 
                             <form [formGroup]="form">
-                            <mat-checkbox class="item-checkbox" formControlName="casilleros" (ngModelChange)="onNombreChange()" >Casilleros</mat-checkbox>
-                            <mat-checkbox class="item-checkbox" formControlName="estacionamiento" (ngModelChange)="onNombreChange()" >Estacionamiento</mat-checkbox>
-                            <mat-checkbox class="item-checkbox" formControlName="bicicletero" (ngModelChange)="onNombreChange()">Bicicletero</mat-checkbox>
-                            <mat-checkbox class="item-checkbox" formControlName="regaderas" (ngModelChange)="onNombreChange()">Regaderas</mat-checkbox>
+                                <mat-checkbox class="item-checkbox" formControlName="casilleros" (ngModelChange)="onNombreChange()">Casilleros</mat-checkbox>
+                                <mat-checkbox class="item-checkbox" formControlName="estacionamiento" (ngModelChange)="onNombreChange()">Estacionamiento</mat-checkbox>
+                                <mat-checkbox class="item-checkbox" formControlName="bicicletero" (ngModelChange)="onNombreChange()">Bicicletero</mat-checkbox>
+                                <mat-checkbox class="item-checkbox" formControlName="regaderas" (ngModelChange)="onNombreChange()">Regaderas</mat-checkbox>
                             </form>
                             <!--
                             <mat-checkbox class="item-checkbox" [(ngModel)]="casilleros" (ngModelChange)="onNombreChange($event, 'casilleros')" >Casilleros</mat-checkbox>
@@ -38,58 +49,91 @@
                             <mat-checkbox class="item-checkbox" [(ngModel)]="bicicletero" (ngModelChange)="onNombreChange($event, 'bicicletero')">Bicicletero</mat-checkbox>
                             <mat-checkbox class="item-checkbox" [(ngModel)]="energia" (ngModelChange)="onNombreChange($event, 'energia')">Energy</mat-checkbox>
                                 -->
-
-                        <!--Prueba checkbox -->
-
-
+                            <!--Prueba checkbox -->
                         </div>
-                    </div><!--cierra div filters container-->
+                    </div>
+                    <!--cierra div filters container-->
+                    <br>
+                    <div class="content_img_left"></div>
+                    <!--cierra div content_img_left-->
+                </div>
+                <!--cierra div h1 filters-->
 
-                    <div class="content_img_left"></div><!--cierra div content_img_left-->
-                </div><!--cierra div h1 filters-->
-
-                <div class="h2_items" >
-                    <div class="content_items" *ngFor="let sucursal of displayedGimnasios">
+                <div class="col-sm-9">
+                    <div *ngFor="let sucursal of displayedGimnasios" >
 
                         <div class="item_x">
                             <div class="content_img_item">
                                 <img src="../../../assets/img/sucs-img/suc1.jpeg" alt="img_sucursal" class="img_item">
-                            </div><!--cierra div content img item-->
-                            <div class="content_title_item">
+                            </div>
+                            <!--cierra div content img item-->
+                            <div>
                                 <h3 class="txt_title">{{sucursal.nombreGym}}</h3>
-                            </div><!--cierra div content title item-->
-                            <div class="content_addr_item">
-                                <p class="txt_addr">{{sucursal.calle + ' ' + sucursal.numInt + ' # ' + sucursal.numExt + ', ' + sucursal.colonia + ' '  + sucursal.codigoPostal + ', ' + sucursal.ciudad + ' ' + sucursal.estado}}</p>
-                            </div><!--cierra div content addr item-->
+                            </div>
+                            <!--cierra div content title item-->
+                            <div>
+                                <p class="txt_addr">{{sucursal.calle + ' ' + sucursal.numInt + ' # ' + sucursal.numExt + ', ' + sucursal.colonia + ' ' + sucursal.codigoPostal + ', ' + sucursal.ciudad + ' ' + sucursal.estado}}</p>
+                            </div>
+                            <!--cierra div content addr item-->
                             <div class="content_link_item">
-                                <a href="#">Ver academia</a>
-                            </div><!--cierra div content link item-->
-                            <br><div class="content_pack_item">
-                                <p class="txt_palnes" style ="text-align: center;">Inscripcion gratis</p>
+                                <a routerLink="../sucursal"  routerLink="../sucursal/{{sucursal.idGimnasio}}/{{sucursal.nombreGym}}">Ver academia</a>
+                            </div>
+                            <!-- cierra div content link item -->
+                            <br>
+                            <div class="content_pack_item">
+                                <p class="txt_palnes" style="text-align: center;">Inscripcion gratis</p>
                             </div>
                             <div class="grid_plan_item">
                                 <div class="h1_plan_item" *ngFor="let membresia of sucursal.membresias">
                                     <label class="txt_plan_name">{{membresia.titulo}}</label>
                                     <!--<label class="txt_old_price">{{"$" + " " + membresia.precio}}</label>-->
                                     <label class="txt_new_price">{{"$" + " " + membresia.precio}}</label>
-                                </div><!--cierra div h1 plan item-->
-                            </div><!--cierra div grid plan item-->
+                                </div>
+                                <!--cierra div h1 plan item-->
+                            </div>
+                            <!--cierra div grid plan item-->
                             <div class="content_btn_buy">
-                                <button routerLink="/membresias/{{ sucursal.idGimnasio}}/{{sucursal.nombreGym}}"  type="submit" class="btn_int" mat-raised-button style="background: #FD9727; color: white;">
+                                <button routerLink="/membresias/{{ sucursal.idGimnasio}}/{{sucursal.nombreGym}}" type="submit" class="btn_int" mat-raised-button style="background: #FD9727; color: white;bottom: 30px; left: 50%; transform: translateX(-50%);">
                                     ¡Inscribete ya!</button>
-                            </div><!--cierre de div content btn buy-->
-                        </div><!--cierra item x-->
-                    </div><!--cierra content items-->
-                </div><!--cierra div h2 items-->
-                <div class="load-more-container" #loadMoreMarker></div>
-                <button (click)="loadMoreGimnasios()" class="vermas" *ngIf="hasMoreRecords">Ver más gimnasios</button>
-            </div><!--cierre div grid padre-->
-        </div><!--cierra div margin page-->
-      </div><!--cierra div content page-->
-      
+                            </div>
+                            <!--cierre de div content btn buy-->
+                        </div>
+                        <!--cierra item x-->
+                    </div>
+
+                   
+                    <!--cierra content items-->
+                </div>
+                <!--cierra div h2 items-->
+                <div class="row">
+                    <div class="col-sm-3">
+
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="load-more-container" #loadMoreMarker></div>
+                        <button (click)="loadMoreGimnasios()" class="vermas" *ngIf="hasMoreRecords">Ver más gimnasios</button>
+                    </div>
+
+                </div>
+                
+            </div>
+            <!--cierre div grid padre-->
+        </div>
+        <!--cierra div margin page-->
+    </div>
+    <!--cierra div content page-->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
     <!--SE AGREGA EL FOOTER-->
     <div class="footer_component">
         <app-footer></app-footer>
-      </div>
-</div><!--cierra contenedor body-->
+    </div>
+</div>
+<!--cierra contenedor body-->

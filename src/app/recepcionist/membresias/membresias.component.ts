@@ -49,10 +49,6 @@ navegarPagina(url: String): void {
   this.router.navigate([ url ]);
 }
 
-
-
-
-
   ngOnInit(): void {
     this.planService.obternerPlan().subscribe(respuesta=>{console.log(respuesta)
     this.plan=respuesta;
