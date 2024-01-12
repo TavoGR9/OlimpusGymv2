@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatSidenavModule} from '@angular/material/sidenav';
 
@@ -26,7 +26,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import {MatTabsModule} from '@angular/material/tabs';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSlideToggleModule, _MatSlideToggleRequiredValidatorModule} from '@angular/material/slide-toggle';
 import { ProductosComponent } from './user/productos/productos.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { AsistenciaComponent } from './admin/asistencia/asistencia.component';
@@ -46,7 +46,32 @@ import { ConfirmacionComponent } from './user/confirmacion/confirmacion.componen
 import { PlanvirtualComponent } from './user/planvirtual/planvirtual.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
-
+import { PlanListaComponent } from './user/plan-lista/plan-lista.component';
+import { MatTableModule } from '@angular/material/table';
+import { PlanEditarComponent } from './user/plan-editar/plan-editar.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatRadioModule } from '@angular/material/radio';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MensajeEmergentesComponent } from './user/mensaje-emergentes/mensaje-emergentes.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MensajeEmergenteEliminarComponent } from './user/mensaje-emergente-eliminar/mensaje-emergente-eliminar.component';
+import { CarritoComponent } from './recepcionist/carrito/carrito.component';
+import { SucursalInsertComponent } from './admin/sucursal-insert/sucursal-insert.component';
+import { SucursalListaComponent } from './admin/sucursal-lista/sucursal-lista.component';
+import { SucursaEditComponent } from './admin/sucursa-edit/sucursa-edit.component';
+import { HorariosComponent } from './admin/horarios/horarios.component';
+import { PerfilMiguelComponent } from './user/perfil-miguel/perfil-miguel.component';
+import { PagosMiguelComponent } from './user/pagos-miguel/pagos-miguel.component';
+import { MembresiaMiguelComponent } from './user/membresia-miguel/membresia-miguel.component';
+import { HomeMiguelComponent } from './user/home-miguel/home-miguel.component';
+import { PagoInscripcionComponent } from './user/pago-inscripcion/pago-inscripcion.component';
+import { QRCodeModule } from 'angularx-qrcode';
+import { NgxPayPalModule } from 'ngx-paypal';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { SucursalesAltaComponent } from './admin/sucursales-alta/sucursales-alta.component';
+import { SucursalesEditarComponent } from './admin/sucursales-editar/sucursales-editar.component';
+import { SucursalesListaComponent } from './admin/sucursales-lista/sucursales-lista.component';
 
 
 @NgModule({
@@ -77,6 +102,23 @@ import { ToastrModule } from 'ngx-toastr';
     EditarPerfilComponent,
     ConfirmacionComponent,
     PlanvirtualComponent,
+    PlanListaComponent,
+    PlanEditarComponent,
+    MensajeEmergentesComponent,
+    MensajeEmergenteEliminarComponent,
+    CarritoComponent,
+    SucursalInsertComponent,
+    SucursalListaComponent,
+    SucursaEditComponent,
+    HorariosComponent,
+    PerfilMiguelComponent,
+    PagosMiguelComponent,
+    MembresiaMiguelComponent,
+    HomeMiguelComponent,
+    PagoInscripcionComponent,
+    SucursalesAltaComponent,
+    SucursalesEditarComponent,
+    SucursalesListaComponent
   ],
   imports: [
     BrowserModule,
@@ -96,10 +138,21 @@ import { ToastrModule } from 'ngx-toastr';
     MatSlideToggleModule,
     MatCheckboxModule,
     MatSidenavModule,
-    ToastrModule.forRoot(),
-    HttpClientModule,  
+    ToastrModule.forRoot({positionClass:'toast-bottom-left'}),
+    HttpClientModule, 
+    MatTableModule,
+    MatCardModule,
+    MatButtonToggleModule,
+    MatRadioModule,
+    _MatSlideToggleRequiredValidatorModule,
+    FlexLayoutModule,
+    MatDialogModule,
+    QRCodeModule,
+    NgxPayPalModule,
+    NgxSpinnerModule
   ],
   providers: [],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

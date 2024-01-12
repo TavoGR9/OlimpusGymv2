@@ -7,9 +7,14 @@
     background: #F3F3F3;
 }
 
+.grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
 /**propiedades contenedor padre**/
 .content_body {
-    width: 500px;
+    width: 78%;
     margin: 0 auto;
     text-align: center;
     align-items: center;
@@ -30,11 +35,12 @@
     width: 350px;
     height: 50px;
     font-size: larger;
+    margin-bottom: 30px;
 }
 
 /**propiedades inputs **/
 .inputs_properties {
-    width: 350px;
+    width: 70%;
 }
 
 /**propiedades btn redes sociales **/

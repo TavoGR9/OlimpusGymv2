@@ -1,0 +1,58 @@
+<div class="container mt-4">
+    <h2 class="mb-3">Lista de sucursales</h2>
+
+    <div style="text-align: right; margin-bottom: 50px;">
+        <button mat-raised-button routerLink="/admin/alta-colaborador" style="background-color: #fd9727; font-size: 16px; margin-right: 100px; "><mat-icon>add</mat-icon>AGREGAR SUCURSAL</button>
+      </div>
+
+    <div class="mb-3">
+        <mat-form-field class="example-full-width">
+            <mat-label>Nombre sucursal</mat-label>
+            <span matPrefix class="icon_search"><mat-icon>search</mat-icon></span>
+            <input matInput placeholder="Nombre colaborador" #txtSearch (keyup)="onSearchPokemon( txtSearch.value )">
+          </mat-form-field>
+    </div>
+    <div class="row">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                  <th scope="col">Sucursal</th>
+                  <th scope="col">Dirección</th>
+                  <th scope="col">Télefono</th>
+                  <th scope="col">Areas</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let gimnasio of gimnasios ">
+                  <td>{{ gimnasio.nombreGym }}</td>
+                  <td> {{ gimnasio.calle }}, #{{ gimnasio.numExt }} ext, #{{ gimnasio.numInt }} int, {{ gimnasio.colonia }}, {{ gimnasio.ciudad }}, {{ gimnasio.estado }}, {{ gimnasio.codigoPostal}} </td>
+                  <td> {{ gimnasio.telefono }} </td>
+                  <td> {{ gimnasio.energia }} </td>
+                  <td> 
+                    <button mat-icon-button color="primary" routerLink="/admin/editar-colaborador/{{ gimnasio.idGimnasio }}">
+                        <mat-icon>edit</mat-icon>
+                      </button>
+                      <button mat-icon-button color="warn" (click)="borrarR(gimnasio.idGimnasio)" >
+                        <mat-icon>delete</mat-icon>
+                      </button> 
+                    </td>
+                </tr>
+              </tbody>
+          </table>
+
+          <div style="text-align: right; margin-bottom: 50px;">
+            <button mat-icon-button color="primary" (click)="prevPage()">
+                <mat-icon>navigate_before</mat-icon>
+            </button>
+
+            <button mat-icon-button color="primary" (click)="nextPage()">
+                <mat-icon>navigate_next</mat-icon>
+            </button>  
+          </div>
+
+    </div>
+  </div>
+
+  
+  
+  

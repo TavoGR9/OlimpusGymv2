@@ -8,20 +8,6 @@ body {
     position: relative;
 }
 
-/*----------MAIN IMAGE SECTION---------
-#banner {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-#banner img {
-    width: 90%;
-    height: 600px;
-    border-radius: 15px;
-}*/
-
-/*--------------Alto - img - carrusel------*/
 .alto_img {
     height: 600px;
 }
@@ -44,24 +30,42 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+    background-color: #fff;
 }
 
 #search-bar {
     width: 90%;
+    height: 300px;
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 130px;
     border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
 }
+
+.container-bar-icon {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.table-container {
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+    max-width: 100%;  /* Evita que la tabla sea más ancha que el contenedor */
+  }
 
 #search-bar button {
     width: 10%;
+    height: 100%;
     padding: 25px;
     border-radius: 50px 0px 0px 50px;
     border-right: none;
     background-color: #000;
     color: #fff;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #search-bar button:hover {
@@ -70,6 +74,7 @@ body {
 
 #search-bar input {
     width: 30%;
+    height: 100%;
     padding: 25px;
     border-radius: 0px 50px 50px 0px;
     border: 1px solid #ccc;
@@ -78,85 +83,18 @@ body {
     outline: none;
 }
 
-/*----------PRODUCTS SECTION---------*/
-
-#products-section {
-    width: 100%;
-    margin-top: 100px;
-}
-
-.flex-container {
-    display: flex;
-    justify-content: center;
-}
-
-#container-content {
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    padding-block: 30px;
-    box-shadow: 5px 5px 15px #eee;
-    margin-top: 30px;
-    border-radius: 15px;
-}
-
-.container-button {
-    width: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2em;
-}
-
-.container-button > button > mat-icon {
-   transform: scale(3.0);
-   margin-left: 5px;
+.letra {
+    font-size: 38px; /* Tamaño de fuente */
+    font-weight: bold; /* Peso de la fuente (negrita) */
+    color: #000000; /* Color del texto */
 }
 
 
-.container-button button {
-    width: 100%;
-    height: 27%;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform-origin: center !important;
-    border-radius: 60%;
-}
-
-.container-button:hover {
+#search-bar input:hover {
     cursor: pointer;
 }
 
-#carrousel-products {
-    width: 90%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;
-}
 
-.product:hover {
-    cursor: pointer;
-}
-
-.product img {
-    width: 50%;
-    height: 80%;
-}
-
-.product .product-title {
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product-title a {
-    text-decoration: none;
-}
 
 /*----------MEMBERSHIP SECTION---------*/
 
@@ -172,36 +110,6 @@ body {
     margin-top: 50px;
 }
 
-/*
-.membership-card {
-    border-radius: 15px;
-    background-color: #F9A640;
-    padding: 40px;
-    text-align: center;
-    box-shadow: 5px 5px 10px #ccc;
-}
-
-.price-membership {
-    display: block;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2.5em;
-    font-weight: bold;
-    padding-bottom: 50px;
-
-}
-
-.membership-card .title-cards {
-    padding-bottom: 50px;
-}
-
-.learn-more button {
-    background-color: #000000;
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 15px;
-    border-radius: 15px;
-}*/
-
 .table-membership {
     width: 100%;
     display: flex;
@@ -210,12 +118,6 @@ body {
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
-}
-
-.table-membership table {
-    width: 80%;
-    box-sizing: border-box;
-    border-bottom: 1px solid #ccc;
 }
 
 table tr th img {
@@ -231,6 +133,7 @@ table tr td{
 table tr th {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    width: 230px;
 }
 
 table tr th span {
@@ -263,74 +166,137 @@ table tr td:nth-child(1) {
     margin-top: 50px;
     margin-bottom: 50px;
     padding: 10px;
-    background-color: #F9A640;
+    background-color: #F9A640 !important;
     border: none;
     border-radius: 15px;
+    transition: all 300ms ease-in-out;
 }
 
 .choose:hover {
     cursor: pointer;
+    transform: scale(1.1);
 }
 
+/*----------PRODUCTS SECTION---------*/
 
-
-/*----------RUTINS SECTION---------*/
-#rutins-section {
+#products-section {
+    width: 100%;
     margin-top: 100px;
-}
-
-/*#option-container {
-    width: 90%;
-    height: 800px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 50px;
-    border-radius: 15px;
-}
-
-.image-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0.8;
     box-sizing: border-box;
 }
 
-.image-section:hover {
-    opacity: 1;
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+#container-content {
+    width: 90%;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    padding-block: 30px;
+    box-shadow: 5px 5px 15px #eee;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.container-button {
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    box-sizing: border-box;
+}
+
+.container-button > button > mat-icon {
+   transform: scale(3.0);
+   margin-left: 5px;
+}
+
+
+.container-button button {
+    width: 100%;
+    height: 27%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: center !important;
+    border-radius: 60%;
+}
+
+.container-button:hover {
     cursor: pointer;
 }
 
-.info-section-container {
-    width: 50%;
+#carrousel-products {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
-    color: #ffffff;
+    box-sizing: border-box;
+}
+
+.product .name_prod {
+    display: block;
+    text-align: center;
+    font-weight:500;
+}
+
+.product .precio_produ {
+    display: block;
+    font-weight:700;
+}
+
+.product:hover {
+    cursor: pointer;
+}
+
+.product {
+    border: 1px solid #ffffff;
+}
+
+.product .image-produ-container {
+    display: flex;
+    justify-content: center;
+}
+
+.image-produ-container .img-container {
+    width: 40%;
+    height: 150px;
+}
+
+.img-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+.product .product-title {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
-#image-section-one {
-    background-image: url('../../../assets/img/index-img/equipo.jpg');
-    background-size: cover;
-    border-radius: 15px 0px 0px 0px;
+.product-title a {
+    text-decoration: none;
 }
 
-#image-section-two {
-    background-image: url('../../../assets/img/index-img/comunidad.jpg');
-    background-size: cover;
-    border-radius: 0px 15px 0px 0px;
-}
 
-#image-section-three {
-    background-image: url('../../../assets/img/index-img/entrenadores.jpg');
-    background-size: cover;
-    border-radius: 0px 0px 0px 15px;
-}
 
-#image-section-four {
-    background-image: url('../../../assets/img/index-img/areas.jpg');
-    background-size: cover;
-    border-radius: 0px 0px 15px 0px;
-}*/
+/*----------RUTINS SECTION VIRTUAL GYM---------*/
+#rutins-section {
+    margin-top: 100px;
+}
 
 .virtual-container {
     width: 90%;
@@ -376,28 +342,110 @@ table tr td:nth-child(1) {
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px;
+    transition:all 300ms ease-in-out;
 }
 
 .info-virtualgym button:hover {
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 
 /*----------MOBILE SECTION---------*/
 #movil-section {
+    width: 100%;
+    height: 100%;
     margin-top: 100px;
     display: flex;
     justify-content: center;
     margin-bottom: 100px;
+    box-sizing: border-box;
 }
 
 #movil-banner {
     width: 90%;
+    background-color: #F9A640;
+    border-radius: 15px;
+    display: flex;
+    box-sizing: border-box;
+    border-radius: 15px;
 }
 
-#movil-banner img {
-    width: 100%;
+
+#movil-banner .image-section {
+    width: 45%;
+    border-radius: 15px 0px 0px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section .container-image {
+    width: 80%;
+    height: 85%;
+    background-color: #fff;
     border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.container-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#movil-banner .info-section {
+    width: 55%;
+    padding: 80px;
+}
+
+.info-section h1 {
+    font-weight: 800;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.info-section p {
+    font-size: 1.2em;
+}
+
+.info-section .buttons-container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.buttons-container button {
+    display: block;
+    width: 150px;
+    height: 70px;
+    padding: 0;
+    margin: 0;
+    border-radius: 15px;
+    transition: all 300ms ease-in-out;
+}
+
+.buttons-container button:hover {
+    transform: scale(1.1);
+}
+
+.buttons-container button img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.buttons-container .qr-code-app {
+    width: 100px;
+    height: 100px;
+}
+
+.buttons-container .qr-code-app img {
+    width: 100%;
+    height: auto;
 }
 
 app-footer {
@@ -406,3 +454,61 @@ app-footer {
     margin-top: 150px;
 }
 
+@media (max-width: 768px) {
+    /* Estilos para dispositivos móviles */
+    .letra {
+        font-size: 18px; /* Tamaño de fuente */
+        font-weight: bold; /* Peso de la fuente (negrita) */
+        color: #000000; /* Color del texto */
+    }
+    .image-section .container-image {
+        width: 80%;
+        height: 85%;
+        background-color: #fff;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+    }
+    #movil-banner .info-section {
+        padding: 3px;
+    }
+
+
+    .container-image,
+    .buttons-container button img {
+        width: 100%;
+        
+        height: auto;
+    }
+
+
+    .qr-code-app img {
+        width: 30%;
+        max-width: 150px; /* Ajusta el tamaño máximo según tu diseño */
+        height: auto;
+    }
+    
+
+    .info-virtualgym button {
+        margin-top: 30px;
+        width: 30%;
+        border-radius: 15px;
+        border: none;
+        background-color: #000000;
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px;
+        transition:all 300ms ease-in-out;
+    }
+
+
+    .buttons-container button {
+        display: block;
+        width: 50%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        border-radius: 15px;
+        transition: all 300ms ease-in-out;
+    }
+}

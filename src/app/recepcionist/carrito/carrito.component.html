@@ -1,0 +1,86 @@
+<div class="body-component">
+    <!--HEADER-->
+    <div>
+        <app-header></app-header>
+    </div>
+
+    <!--BODY-->
+    <div>
+        <br>
+        <div class="grid">
+            <div style="text-align:right;">
+                <input class="input-wrapper" type="search" placeholder="Buscar"/>
+                <button mat-raised-button class="button-search"
+                    style="background-color: #f9a640; color: black; margin-right: 60px;">Buscar
+                </button>    
+            </div>
+            <div style="text-align:center;">
+                <button mat-raised-button class="button-search"
+                    style="background-color: #df7e54; color: black; margin: 0 auto; font-size: 13px;">Historial compras
+                </button> 
+            </div>
+        </div>
+
+        <br>
+
+        <!-- carrito.component.html -->
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Carrito</h1>
+        <a routerLink="/products" class="btn btn-default">Productos</a>
+        <br><br>
+  
+        <!--<div *ngIf="cart.length > 0; else emptyCart">
+          <table class="table table-bordered">
+            <thead>
+              <th>Cantidad</th>
+              <th>Producto</th>
+              <th>Precio Unitario</th>
+              <th>Total</th>
+              <th></th>
+            </thead>
+            <tr *ngFor="let item of cart">
+              <th>{{ item.quantity }}</th>
+              <td>{{ item.product.name }}</td>
+              <td>$ {{ item.product.price }}</td>
+              <td>$ {{ item.quantity * item.product.price }}</td>
+              <td style="width:260px;">
+              <button (click)="removeFromCart(item.product.id)" class="btn btn-danger">Eliminar</button>
+              </td>
+            </tr>
+          </table>-->
+  
+         <!-- <form class="form-horizontal" (ngSubmit)="processSale()" #saleForm="ngForm">
+            <div class="form-group">
+              <label for="email" class="col-sm-2 control-label">Email del cliente</label>
+              <div class="col-sm-5">
+                <input type="email" name="email" required class="form-control" id="email" placeholder="Email del cliente" ngModel>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary">Procesar Venta</button>
+              </div>
+            </div>
+          /form>-->
+        </div>
+  
+        <ng-template #emptyCart>
+          <p class="alert alert-warning">El carrito está vacío.</p>
+        </ng-template>
+        <br><br><hr>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+    </div>
+    
+    <!--FOOTER-->
+    <div>
+        <app-footer></app-footer>
+    </div>
+

@@ -1,4 +1,99 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<div class="body">
+    <app-header></app-header>
+    <div class="container mt-4"> 
+        <div *ngFor="let gym of datosGym" class="titulo">
+           {{ gym.nombreGym }}
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+            <br>
+            <h3>INFORMACIÓN DE LA SUCURSAL</h3>
+            <br>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img src="https://decumar.com/wp-content/uploads/2017/12/direccion-icono_orig.png" width="52px">
+                    </div>
+                    <div class="col-md-6 cuerpo" *ngFor="let gym of datosGym">
+                        {{ gym.calle }} #{{ gym.numExt }}, {{ gym.colonia }}, {{ gym.ciudad }} {{ gym.codigoPostal }} {{ gym.estado }}
+                    </div>
+                </div>
+            </div>
+<br>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img src="https://assets.stickpng.com/images/5a4525cd546ddca7e1fcbc84.png" width="52px">
+                    </div>
+                    <br>
+                    <div class="col-md-6 cuerpo" *ngFor="let gym of datosGym">
+                        <br>{{ gym.telefono }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <br>
+            <h3>HORARIO DE LA SUCURSAL</h3>
+            <br>
+            <div class="row">
+                
+                
+                <div class="col-md-2">
+                    <img src="https://acaddemia.com/wp-content/uploads/2021/08/icono-HORARIO.png" width="52px">
+                </div>
+                <br>
+                <div class="col-md-6 cuerpo">
+                    <table>
+                        <tr *ngFor="let horario of datosHorario">
+                          <td>{{ horario.diaSemana }}</td>
+                          <td>{{ horario.horaEntrada }}h</td>
+                          <td>{{ horario.horaSalida }}h</td>
+                        </tr>
+                      </table>
+                </div>
+            </div>
+
+            <!--<table class="mi-tabla">
+                <tr *ngFor="let horario of datosHorario">
+                  <td>{{ horario.diaSemana }}</td>
+                  <td>{{ horario.horaEntrada }}</td>
+                  <td>{{ horario.horaSalida }}</td>
+               
+                </tr>
+              </table>-->
+        </div>
+    </div>
+    <br><br>
+    <div>
+        <H3>MEMBRESÍAS Y PRECIOS</H3>
+        <h4>Mira nuestras asequibles membresías del gimnasio. Limpio, espacioso, y con muchísimo equipo. ¡Inscríbete Ya!</h4>
+        <br>
+        <div>
+            <div class="membresias-caja">
+                <div *ngFor="let item of plan" style="background-color:#ffff;display: flex; flex-wrap: wrap;" class="center">
+                    <div class="membresia membresia--inverse" *ngIf="item.Gimnasio_idGimnasio === elID" style="padding-top: 60px; padding-bottom: 60px">
+                        <div style=" margin: 10px;">
+                            <p class="titu">{{ item.titulo }}</p>
+                            <h3 class="membresia-titulo precio" style="color: orange;font-size: 1.5em;">${{ item.precio }}</h3>
+                            <ul style="padding-left: 0;color: #fff;">
+                                <p class="clase">Incluye {{item.duracion}} meses de membresía</p>
+                                <p class="clase">{{ item.detalles }}</p>
+                                <!-- Agrega aquí más elementos HTML si es necesario -->
+                            </ul>  
+                            <div class="membresia-discla">
+                                <a routerLink="/registro/{{ item.idMem }}/{{ item.titulo }}/{{ item.precio }}" class="Button" style="color: white; font-family: Arial, Helvetica, sans-serif; position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);">Seleccionar Membresía</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <div class="body">
 <app-header></app-header>
  <br>
@@ -13,7 +108,7 @@
         <tr>
           <th>
             <div>
-              <!-- <img class="Imagen1" src="assets/img/sucursal/COVADONGA.jpg" width="800" height="400"> -->
+             
               <div class="slide">
                 <div class="slide-inner">
                     <input class="slide-open" type="radio" id="slide-1"
@@ -93,3 +188,4 @@
 
 </div>
 </div>
+-->

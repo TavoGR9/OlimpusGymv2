@@ -12,6 +12,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { CarroComponent } from './carro/carro.component';
+import { HeaderMiguelComponent } from './header-miguel/header-miguel.component';
 
 
 
@@ -19,7 +20,8 @@ import { CarroComponent } from './carro/carro.component';
   declarations: [
     FooterComponent,
     HeaderComponent,
-    CarroComponent
+    CarroComponent,
+    HeaderMiguelComponent
   ],
   imports: [
     CommonModule,
@@ -38,7 +40,8 @@ import { CarroComponent } from './carro/carro.component';
     MatToolbarModule,
     MatMenuModule,
     FontAwesomeModule,
-    CarroComponent
+    CarroComponent,
+    HeaderMiguelComponent
   ]
 })
 export class SharedModule { 

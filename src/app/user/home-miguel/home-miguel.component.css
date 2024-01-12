@@ -1,0 +1,46 @@
+/**propiedades body **/
+.body {
+    margin: 0;
+    position: relative;
+    padding-bottom: 139px;
+    min-height: 100vh;
+}
+
+.container {
+    margin-bottom: 30px;
+}
+
+/*propiedades botones pagina*/
+.btn-gym {
+    background: #FD9727; 
+    color: white;
+    text-decoration: none;
+}
+
+/*propiedades contenedor imagen codigo qr*/
+.content-img {
+    text-align: center;
+}
+
+.qr_image {
+    width: 150px;
+}
+
+.qr-text {
+    font-size: small;
+    font-weight: bold;
+}
+
+/**************************PROPIEDADES CORRESPONDIENTES AL CODIGO QR **************************************/
+/* The div container */
+.qrcodeImage {
+    display: flex;
+    flex: 1;
+  }
+  
+  /* Add custom styles here */
+  .center {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }

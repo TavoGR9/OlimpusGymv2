@@ -1,7 +1,13 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 /**propiedades por inputs **/
 .inputs_properties {
     width: 300px;
-    padding-left: 15px;
+    padding: 10px;
+    display: inline-block;
 }
 
 /**propiedades titulo pagina**/
@@ -21,11 +27,12 @@
 .form_data {
     margin: auto;
     text-align: center;
+    padding-bottom: 15px;
 }
 
 /**propiedades btn cancelar**/
 #btn_canelar {
-    width: 300px;
+    width: 290px;
     height: 45px;
     margin: 10px 7px;
     font-size: larger;
@@ -33,7 +40,7 @@
 
 /**propiedades btn aceptar-guardar**/
 #btn_guardar {
-    width: 300px;
+    width: 290px;
     height: 45px;
     margin: 10px 7px;
     background: #FD9727; 
@@ -49,3 +56,14 @@
     min-height: 100vh;
 }
 
+/**propiedades mensajes de patrones **/
+/**contenedor de mensajes de error patrones**/
+.content_msg_pattern {
+    width: 300px;
+    border: #FD9727 solid;
+}
+
+.txt_msg {
+    font-size: x-small;
+    font-weight: bold;
+}

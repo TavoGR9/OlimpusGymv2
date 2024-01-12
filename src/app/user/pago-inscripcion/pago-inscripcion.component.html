@@ -1,0 +1,157 @@
+<div class="body">
+  <!--SE AGREGA EL HEADER-->
+  <div class="header_component">
+    <app-header></app-header>
+  </div>
+
+  <!--SE AGREGA EL CONTENIDO DE LA PANTALLA-->
+  <div class="container">
+    <h3 class="my-3">Finalizar compra</h3>
+    <div class="row">
+      <div class="col-md-8">
+        <h5 class="mb-3">Selecciona un metodo de pago.</h5>
+
+        <!-- RADIO BUTTONS CORRESPONDIENTES A LOS METODOS DE PAGO-->
+        <div class="form-check" id="ggg">
+          <input type="radio" name="opciones" (change)="cambiarSeleccion('contenedor1')" class="form-check-input" id="tc">
+          <label class="form-check-label" for="tc">Pago con Tarjeta</label>
+        </div>
+        <div class="form-check" id="ggg">
+          <input type="radio" name="opciones" (change)="cambiarSeleccion('contenedor2')" class="form-check-input" id="efectivo">
+          <label class="form-check-label" for="efectivo">Pago en efectivo</label>
+        </div>
+        <div class="form-check" id="ggg">
+          <input type="radio" name="opciones" (change)="cambiarSeleccion('contenedor3')" class="form-check-input" id="pp">
+          <label class="form-check-label" for="pp">Pago vía Paypal</label>
+        </div>
+
+        <!-- CONTENEDOR OPCION DE PAGO #1 PAGO CON TARJETA-->
+        <div *ngIf="radioSeleccionado === 'contenedor1'" class="my-3 col text-center">
+            <h5>Ingresa una nueva tarjeta</h5>
+          <form [formGroup]="form" (ngSubmit)="hacerAlgo()">
+            <mat-form-field appearance="outline" class="inputs_tc_l">
+              <mat-label>Titular de la tarjeta</mat-label>
+              <input type="text" matInput placeholder="Adolfo Tapia Ibarra" autocomplete="off" formControlName="tc_nom"
+                id="tc_nom" [errorStateMatcher]="matcher">
+              <mat-error *ngIf="form.get('tc_nom')?.hasError('required')"><strong class="txt_msg">**Campo
+                  requerido</strong></mat-error>
+              <mat-error *ngIf="form.get('tc_nom')?.hasError('pattern') && !form.get('tc_nom')?.hasError('required')">
+                <strong class="txt_msg">**Formato no valido, (solo letras)...</strong>
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="inputs_tc_l">
+              <mat-label>Número de la tarjeta</mat-label>
+              <input type="text" matInput placeholder="0000 0000 0000 0000" autocomplete="off" formControlName="tc_num"
+                id="tc_num" minlength="16" maxlength="16" [errorStateMatcher]="matcher">
+              <mat-error *ngIf="form.get('tc_num')?.hasError('required')"><strong class="txt_msg">**Campo
+                  requerido</strong></mat-error>
+              <mat-error *ngIf="form.get('tc_num')?.hasError('pattern') && !form.get('tc_num')?.hasError('required')">
+                <strong class="txt_msg">**Solo se permiten números</strong>
+              </mat-error>
+              <mat-error *ngIf="form.get('tc_num')?.hasError('minlength') && !form.get('tc_num')?.hasError('required')">
+                <strong class="txt_msg">**Minimo 16 carácteres...</strong>
+              </mat-error>
+            </mat-form-field>
+            <p></p>
+
+            <mat-form-field appearance="outline" class="inputs_tc_l">
+              <mat-label>Fecha de vencimiento</mat-label>
+              <input [(ngModel)]="fecha" (input)="formatearFecha()" type="text" matInput placeholder="MM/YY"
+                minlength="5" maxlength="5" autocomplete="off" formControlName="tc_fecha" id="tc_fecha"
+                [errorStateMatcher]="matcher">
+              <mat-error *ngIf="form.get('tc_fecha')?.hasError('required')"><strong class="txt_msg">**Campo
+                  requerido</strong></mat-error>
+              <mat-error
+                *ngIf="form.get('tc_fecha')?.hasError('pattern') && !form.get('tc_fecha')?.hasError('required')">
+                <strong class="txt_msg">**Ingresa una fecha válida</strong>
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="inputs_tc_l">
+              <mat-label>CVV</mat-label>
+              <input type="text" matInput placeholder="000" autocomplete="off" formControlName="tc_cvv" id="tc_cvv"
+                minlength="3" maxlength="3" [errorStateMatcher]="matcher">
+              <mat-error *ngIf="form.get('tc_cvv')?.hasError('required')"><strong class="txt_msg">**Campo
+                  requerido</strong></mat-error>
+              <mat-error *ngIf="form.get('tc_cvv')?.hasError('pattern') && !form.get('tc_cvv')?.hasError('required')">
+                <strong class="txt_msg">**Solo se permiten números</strong>
+              </mat-error>
+              <mat-error *ngIf="form.get('tc_cvv')?.hasError('minlength') && !form.get('tc_cvv')?.hasError('required')">
+                <strong class="txt_msg">**Minimo 3 carácteres...</strong>
+              </mat-error>
+            </mat-form-field>
+
+            <div class="btns_ok_cancel">
+              <button type="submit" class="btn_ok_cancel" mat-raised-button color="warn">
+                Cancelar</button>
+              <button type="submit" class="btn_ok_cancel" mat-raised-button style="background: #FD9727; color: white;">
+                Confirmar compra</button>
+            </div><!--cierra div contenido bloque btns_ok_cancel-->
+          </form>
+        </div>
+
+        <!-- CONTENEDOR OPCION DE PAGO #2 PAGO EN EFECTIVO-->
+        <div *ngIf="radioSeleccionado === 'contenedor2'">
+          <form (ngSubmit)="confirPagEfectivo()">
+            <img class="img-size" src="../../../assets/img/pagoEfectivo-img/pago_efectivo.png" alt="Pago en efectivo">
+            <label style="text-align:center; font-weight: bold; display: block; margin: 0 auto;">Pasar a pagar a sucursal</label>
+
+            <div class="btns_ok_cancel" style="text-align: center;">
+              <button type="submit" class="btn_ok_cancel" mat-raised-button style="background: #FD9727; color: white;">
+                Confirmar pago en sucursal</button>
+            </div><!--cierra div contenido bloque btns_ok_cancel     routerLink="/index"-->
+        </form>
+        </div>
+
+        <!-- CONTENEDOR OPCION DE PAGO #3 PAGO POR PAYPAL-->
+        <div *ngIf="radioSeleccionado === 'contenedor3'" class="my-3 col text-center">
+          <h5 style="padding: 25px 0;">Paga con tu cuenta de paypal.</h5>
+          <div style="width: 300px; margin: 0 auto;">
+            <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- INICIA APARTADO DE CORRESPONDIENTE A DETALLES DE LA COMPRA - RESUMEN-->
+      <div class="col-md-4">
+        <div class="alert alert-light">
+          <h5>Resumen de compra</h5>
+          <div class="header_details">
+            <label class="title_details" style="font-weight: bold;">{{responseData.titulo}} - {{responseData.duracion}} días</label>
+            <label class="subtitle_details">Detalles: {{responseData.detalles}}</label>
+            <label class="subtitle_details" style="font-weight: bold;">{{responseData.nombreGym}}</label>
+        </div>
+
+        <div class="grid_details">
+          <div class="data_month">
+              <label class="details_txt">Fecha Inicio: {{responseData.fechaInicio}}</label>
+              <label class="details_txt">Fecha termino: {{responseData.fechaFin}}</label>
+          </div>
+          <div class="price_month">
+              
+          </div>
+      </div>
+
+        <hr style="color: violet; margin: 0 auto;" width="90%">
+
+        <div class="grid_details">
+            <div class="data_month">
+                <label class="details_txt">Total</label>
+                <!--<label class="details_txt_desc">(datos que vienen de algun lugar)</label>--->
+            </div>
+            <div class="price_month">
+              <label class="details_txt">$ {{responseData.precio}}</label>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  <!--SE AGREGA EL FOOTER-->
+  <div class="footer_component">
+    <app-footer></app-footer>
+  </div>
+</div>
