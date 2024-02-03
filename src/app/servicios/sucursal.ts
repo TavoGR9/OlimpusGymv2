@@ -18,5 +18,6 @@ export class sucursal {
     estacionamiento!: number;
     energia!: number;
     bicicletero!: number;
+    estatus!: number;
     membresias: plan[] = [];
 }

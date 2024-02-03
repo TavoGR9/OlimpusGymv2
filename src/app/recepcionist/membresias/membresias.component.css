@@ -47,13 +47,13 @@ li {
     display: list-item;
     text-align: -webkit-match-parent;
 }
-.membresia-w {
-    display: table;
-    border-spacing: 22px;
-    max-width: 790px;
+.membresias-w {
+    display: flex;
+    justify-content: center;
+    width: 90%;
     margin: 0 auto;
-    padding: 75px 0;
-    width: 80%;
+    padding-block: 50px;
+    /*background-color: lightblue;*/
 }
 .membresia-box {
     text-align: justify;
@@ -62,11 +62,17 @@ li {
 }
 
 .membresias-caja {
+    width: 100%;
     display: flex;
     justify-content: center;
-    gap: 50px;
-    margin-bottom: 100px;
-    
+    /*background-color: purple;*/
+    gap: 50px; /* Esto añade espacio entre los elementos hijos */
+}
+
+.membresias-caja .center {
+    background-color: pink !important;
+    display: flex !important;
+    justify-content: center !important;
 }
 
 .membresia--inverse {
@@ -77,16 +83,15 @@ li {
 }
 
 .membresia {
-    vertical-align: top;
-    display: table-cell;
+    display: flex;
     width: 355px;
     height: 300px;
     padding: 0 0 10px;
-    
     text-align: center;
     border-radius: 15px;
     padding-bottom: 50px;
 }
+
 .membresia_info {
     padding: 0 40px;
     margin-top: 10px;
@@ -139,4 +144,68 @@ li {
 }
 .membresia-titulo .precio{
     font-size: 20px;
+}
+
+.services {
+    background-color: lightblue;
+    display: flex;
+    padding-block: 50px;
+    background-color: #f4f4f4;
+}
+
+.form_plan_service {
+    width: 50%;
+    /*background-color: lightcoral;*/
+    display: flex;
+    justify-content: center;
+}
+
+.form_plan_service form {
+   background-color: #ffffff;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    padding-block: 100px;
+    border-radius: 20px;
+}
+
+form mat-form-field {
+    width: 90%;
+}
+
+.detail_services {
+    /*background-color: lightpink;*/
+    width: 50%;
+}
+
+.personalize_plan {
+    /*background-color: pink;*/
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.personalize_plan_title {
+    text-align: center;
+}
+
+.detail_personalize_plan {
+    text-align: center;
+}
+
+.button {
+    margin-inline: 10px;
+    background-color: #F9A640;
+    padding-inline: 25px;
+}
+
+.inputformservice {
+   /* background-color: red;*/
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.inputformservice input {
+    background-color: white;
 }

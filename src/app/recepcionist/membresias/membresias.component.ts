@@ -3,6 +3,7 @@ import { plan } from 'src/app/servicios/plan';
 import { PlanService } from 'src/app/servicios/plan.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { TestService } from 'src/app/servicios/test.service';
+import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-membresias',
@@ -14,8 +15,9 @@ export class MembresiasComponent implements OnInit{
   membresias: any[] = []; // Declarar el tipo de elID como string o nulo
   elID: any;
   gymName: any;
+  formPlan: FormGroup;
 
-constructor(private activeRoute: ActivatedRoute,private router: Router, private planService: PlanService, private testService: TestService) {
+constructor(private activeRoute: ActivatedRoute,private router: Router, private planService: PlanService, private testService: TestService, private formulario: FormBuilder) {
   this.elID = this.activeRoute.snapshot.paramMap.get('id');
   this.gymName = this.activeRoute.snapshot.paramMap.get('idName');
   
@@ -42,6 +44,17 @@ constructor(private activeRoute: ActivatedRoute,private router: Router, private 
       }
     );
   }
+
+  this.formPlan = this.formulario.group({
+    titulo: ['Plan personalizado', [Validators.required, Validators.pattern(/^[^\d!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]+$/u)]],
+    detalles: ['Este es un plan personalizado', [Validators.required, Validators.pattern(/^[^\d!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]+$/u)]],
+    duracion: ['', [Validators.required, Validators.pattern(/^\d+$/)]],
+    servicioseleccionado: [[], Validators.required],
+    precio: ['', [Validators.required, Validators.pattern(/^\d+(\.\d{1,2})?$/)]],
+    status: ['1', [Validators.pattern(/^\d+$/)]],
+    tipo_membresia: [2, [Validators.required, Validators.pattern(/^\d+$/)]],
+    Gimnasio_idGimnasio: [this, Validators.required],
+  });
 }
 
 navegarPagina(url: String): void {
