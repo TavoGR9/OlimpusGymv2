@@ -33,8 +33,8 @@ export class SucursalService {
           s.casilleros = item.casilleros;
           s.estacionamiento = item.estacionamiento;
           s.energia = item.energia;
-          s.bicicletero = item.bicicletero
-          
+          s.bicicletero = item.bicicletero;
+          s.estatus = item.estatus;
           return s;
         })
       )

@@ -1,32 +1,107 @@
 <app-header></app-header>
 <div class="body-membresia">
-    <h2 style="text-align: center;">MEMBRESÍAS</h2>
+    <h2 style="text-align: center;">PLANES</h2>
     <h6 style="text-align: center;color: orange;"> Tenemos el plan adecuado para ti</h6>
-    <br/>
-    <br/>
-    <section class="membresias-w" > 
+    <br />
+    <br />
+    <section class="membresias-w">
         <!--plans-wrapper-->
-        <div  class="membresias-caja">
-            
+        <div class="membresias-caja">
+
             <div *ngFor="let item of plan" style="background-color:#ffff;display: flex; flex-wrap: wrap;
             " class="center">
-            <div  class="membresia js-membresia membresia--inverse "  *ngIf="item.Gimnasio_idGimnasio === elID" style="padding-top: 60px; padding-bottom: 60px">
-                <div class="membresia-info" bis_skin_checked="1" style="flex: 1; margin: 10px;" >
-                    <p class="membresia-texto" style="font-size: 23px;">{{ item.titulo }}</p>
-                    <h3 class="membresia-titulo precio" style="color: orange;">${{ item.precio }}</h3>
-                    <ul class="membresia-texto" style="padding-left: 0;">
-                        <li class="membresia-texto-item">Incluye {{item.duracion}} meses de membresía</li>
-                        <li class="membresia-texto-item">{{ item.detalles }}</li>
-                        <!-- Agrega aquí más elementos HTML si es necesario -->
-                    </ul>  
-                    <div class="membresia-discla"></div>
-                    <a routerLink="/registro/{{ item.idMem}}/{{item.titulo}}/{{item.precio}}" class="Button" style="color: white; font-family: Arial, Helvetica, sans-serif ;">Seleccionar Membresía</a>
+                <div class="membresia js-membresia membresia--inverse " *ngIf="item.Gimnasio_idGimnasio === elID"
+                    style="padding-top: 60px; padding-bottom: 60px">
+                    <div class="membresia-info" bis_skin_checked="1" style="flex: 1; margin: 10px;">
+                        <p class="membresia-texto" style="font-size: 23px;">{{ item.titulo }}</p>
+                        <h3 class="membresia-titulo precio" style="color: orange;">${{ item.precio }}</h3>
+                        <ul class="membresia-texto" style="padding-left: 0;">
+                            <li class="membresia-texto-item">Incluye {{item.duracion}} meses de membresía</li>
+                            <li class="membresia-texto-item">{{ item.detalles }}</li>
+                            <!-- Agrega aquí más elementos HTML si es necesario -->
+                        </ul>
+                        <div class="membresia-discla"></div>
+                        <a routerLink="/registro/{{ item.idMem}}/{{item.titulo}}/{{item.precio}}" class="Button"
+                            style="color: white; font-family: Arial, Helvetica, sans-serif ;">Seleccionar Membresía</a>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
-        
+
     </section>
+    <div class="personalize_plan">
+        <h2 class="personalize_plan_title">¿No te convencen los planes?</h2>
+        <p class="detail_personalize_plan">Ahora ya puedes crear tus propios planes personalizados, comienza ahora y elige tus servicios</p>
+        <div class="services">
+            <div class="form_plan_service">
+                <form>
+                    <mat-form-field class="inputformservice">
+                        <mat-label>Nombre</mat-label>
+                        <input type="text" name="nombre" id="nombre" readonly matInput placeholder="nombre">
+                    </mat-form-field>
+
+                    <mat-form-field class="inputformservice">
+                        <mat-label>Precio</mat-label>
+                        <input type="text" name="nombre" id="nombre" matInput placeholder="precio">
+                    </mat-form-field>
+
+                    <mat-form-field class="inputformservice">
+                        <mat-label>Duracion</mat-label>
+                        <input type="text" name="nombre" id="nombre" matInput placeholder="Duracion">
+                    </mat-form-field>
+
+                    <mat-form-field class="inputformservice">
+                        <mat-label>Detalles</mat-label>
+                        <input type="text" name="nombre" id="nombre" matInput placeholder="Detalles">
+                    </mat-form-field>
+
+                    <div class="botonera">
+                        <button mat-button class="button buttoncreate">crear</button>
+                        <button mat-button class="button buttoncanel">cancelar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="detail_services">
+                <div class="services">
+                    <h2>Servicios que puedes elegir</h2>
+                    <ul>
+                        <li>
+                            Gimnasio
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio vel, obcaecati quas
+                                aliquid magni voluptatem eos officia saepe quos dolor debitis harum sint minus ut totam
+                                incidunt ex enim? Sunt.</p>
+                        </li>
+                        <li>
+                            Cancha
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id eum vitae ipsam? Enim illum
+                                ullam deleniti voluptates recusandae possimus nihil sunt perferendis quibusdam, rerum
+                                non, nisi quaerat officia dolorem maiores.
+                            </p>
+                        </li>
+                        <li>
+                            Alberca
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus assumenda maiores
+                                quis, doloribus excepturi obcaecati debitis est placeat. Eum, reprehenderit. Quis
+                                magnam, quidem quae maxime quas ab illo suscipit ex.</p>
+                        </li>
+                        <li>
+                            Sauna
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum earum, voluptate vero non
+                                praesentium eaque neque voluptates inventore fugit velit eveniet aliquid obcaecati!
+                                Laudantium perferendis assumenda, labore quis cumque suscipit.</p>
+                        </li>
+                        <li>
+                            Yoga
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci id maxime natus
+                                blanditiis aperiam dolor est mollitia aliquam quis commodi voluptatibus omnis, minus,
+                                quidem excepturi aliquid repellat totam eius iste.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="footerc">
         <app-footer></app-footer>
     </div>
