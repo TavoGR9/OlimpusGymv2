@@ -1,8 +1,7 @@
-
-/**.footerc{
+/*footerc{
     position: absolute;
     bottom: 0;
-    width: 100%;----
+    width: 100%;
     padding: 1em 0;
     margin-top: auto; 
 }
@@ -47,13 +46,13 @@ li {
     display: list-item;
     text-align: -webkit-match-parent;
 }
-.membresias-w {
-    display: flex;
-    justify-content: center;
-    width: 90%;
+.membresia-w {
+    display: table;
+    border-spacing: 22px;
+    max-width: 790px;
     margin: 0 auto;
-    padding-block: 50px;
-    /*background-color: lightblue;*/
+    padding: 75px 0;
+    width: 80%;
 }
 .membresia-box {
     text-align: justify;
@@ -61,35 +60,34 @@ li {
     font-size: 0;
 }
 
-.membresias-caja {
-    width: 100%;
-    display: flex;
+/*.membresias-caja {
+    display: flex; 
     justify-content: center;
-    /*background-color: purple;*/
-    gap: 50px; /* Esto añade espacio entre los elementos hijos */
-}
+    margin-right: 100px;
+}*/
 
-.membresias-caja .center {
-    background-color: pink !important;
-    display: flex !important;
-    justify-content: center !important;
-}
+.membresias-caja {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+} 
 
 .membresia--inverse {
-    background: #1f2123;
-    border-color: #1f2123;
-    padding-top: 58px;
-    padding-bottom: 28px;
+    background: #1f2123;    
 }
 
 .membresia {
-    display: flex;
-    width: 355px;
-    height: 300px;
-    padding: 0 0 10px;
+    width: 342px;
+    height: 380px;
+    margin: 15px;
     text-align: center;
     border-radius: 15px;
     padding-bottom: 50px;
+    position: relative;  
+    display: table-cell;
+    vertical-align: top;
+    padding: 0 0 10px;
+    margin-bottom: 80px;   
 }
 
 .membresia_info {
@@ -107,13 +105,15 @@ li {
     text-align: center;
     text-transform: uppercase;
 }
-.membresia--inverse .membresia_list_item, .membresia--inverse .membresia_list_titulo, .membresia--inverse .membresia_list_trigger, .membresia--inverse .membresia_list__trigger__icon, .membresia--inverse .membresia-precio, .membresia--inverse .membresia-texto, .membresia--inverse .membresia-titulo {
-    color: #fff;
+.membresia--inverse .membresia_list_item, .membresia--inverse .membresia_list_titulo, .membresia--inverse .membresia_list_trigger, .membresia--inverse .membresia_list_trigger_icon, .membresia--inverse .membresia-precio, .membresia--inverse .membresia-texto, .membresia--inverse .membresia-titulo {
+    color: #fff;  
 }
 
 .membresia-discla {
-    height: 55px;
-    text-align: center;
+    position: absolute;
+    bottom: -50px; /* Ajusta este valor para mover más hacia abajo */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .membresia_button {
@@ -143,8 +143,26 @@ li {
     
 }
 .membresia-titulo .precio{
-    font-size: 20px;
+    font-size: 20px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .services {
     background-color: lightblue;
