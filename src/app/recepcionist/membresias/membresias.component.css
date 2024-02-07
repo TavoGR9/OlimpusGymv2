@@ -196,6 +196,20 @@ form mat-form-field {
 .detail_services {
     /*background-color: lightpink;*/
     width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail_services h2 {
+    text-align: center;
+}
+
+.services li {
+    font-weight: 700;
+}
+
+.services li p {
+    font-weight: 100;
 }
 
 .personalize_plan {

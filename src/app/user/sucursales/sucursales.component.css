@@ -4,7 +4,13 @@
     box-sizing: border-box;
 }
 
-/*propiedades body */
+.col-sm-9 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    margin: 0 auto; /* Añade un margen automático a los lados para centrar en la página si el contenedor es más ancho */
+  }
+
 .body {
     margin: 0;
     position: relative;
@@ -12,7 +18,6 @@
     min-height: 100vh;
 }
 
-/*propiedades grid padre*/
 .grid_padre {
     display: grid;
     grid-template-columns: 20% 80%;
@@ -20,38 +25,32 @@
     padding-bottom: 70px;
 }
 
-/*propiedades contenedor titulo*/
+
 .title_page {
     text-align: center;
     margin-top: 7px;
     margin-bottom: 7px;
 }
 
-/*propiedades contenedor filters*/
+
 .filters {
     margin: 10px 20px;
 }
 
-/*contenedor searchbar*/
-.content_searchbar {
-    width: 90%;
-    text-align: right;
-    width:1500px;
-}
 
-/*propiedades input search bar*/
+
 .inputs_css {
-    width: 40%;
+    width: 70%;
+    margin: 0 30px 30px 0;
 }
 
-/*propiedades checkbox*/
 .item-checkbox {
     display: block;
 }
 
-/*porpiedades contenedor de filtros */
+
 #filters_container {
-    margin: 0 50px;
+    margin: 0 30px;
     padding: 20px 0px;
     width: 90%;
     background: #F3F3F3;
@@ -59,7 +58,6 @@
 }
 
 
-/**INICIAN PROPIEDADES DE ITEMS**/
 
 .h2_items {
     display: flex;
@@ -68,16 +66,16 @@
 }
 
 .vermas {
-    width: 150px;
+    width: 20%;
     padding: 5px;
-    margin: 0 auto;
+    margin: 0 auto; /* Esto centrará el elemento horizontalmente */
     background-color: black;
     color: #ffffff;
     border: none;
     border-radius: 15px;
-    box-shadow: 5px 5px 15px #333;
     transition: transform 0.2s;
 }
+
 
 .vermas:hover {
     transform: scale(1.1);
@@ -85,84 +83,100 @@
 
 .item_x {
     width: 350px;
-    height: 450px;
+    height: 500px;
+    margin-bottom: 80px;
+    margin: 0 30px 30px 0;
     border-radius: 10px;
-    border: #CCCCCC solid;
-    margin: 0 50px;
-    display: inline-block;
-    margin-bottom: 50px;
-    margin-left:160px;
+    padding-bottom: 50px;
+    position: relative; 
+    padding: 0 0 10px;
+    border: #CCCCCC solid;   
+    box-sizing: border-box;
+    flex: 1 0 30%;
+    margin-bottom: 60px;
 }
 
-/*propiedades grid padre */
+
+.item_x:nth-child(3n+1) {
+    margin-left: 0; /* Elimina el margen izquierdo para el primer elemento de cada fila */
+  }
+
+
+
 .grid_plan_item {
     display: grid;
     grid-template-columns: 33% 33% 33%;
     padding-bottom: 15px;
 }
 
-/*propiedades btn inscribete ya*/
+
 .btn_int {
     width: 250px;
     height: 40px;
     font-size: medium;
 }
 
-/*propiedades content_link_item */
+
 .content_link_item {
     text-align: center;
 }
 
-/*propiedades contenedor content_pack_item */
+
 .content_pack_item {
     background: #C2DDB9;
 }
 
-/*propiedades texto txt planes*/
 .txt_palnes {
     margin: 15px;
     color: green;
 }
 
-/*propiedades texto direccion item*/
+
 .txt_addr {
     margin-left: 7px;
 }
 
-/*propiedades texto titulo*/
+
 .txt_title {
     margin-left: 7px;
 }
 
-/*propiedades contenedor btn item*/
+
 .content_btn_buy {
     text-align: center;
+
+
+    position: absolute;
+    bottom: -50px; /* Ajusta este valor para mover más hacia abajo */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-/*propiedades contenedores textos planes */
+
+
 .h1_plan_item, .h2_plan_item, .h3_plan_item {
     text-align: center;
 }
 
-/*propiedades textos planes*/
+
 .txt_plan_name, .txt_new_price {
     display: block;
     font-weight: bold;
 }
 
-/*propiedades textos planes*/
+
 .txt_old_price {
     display: block;
     text-decoration:line-through;
 }
 
-/*propiedades subtitulos en filtros*/
+
 .txt_filters {
     font-weight: bold; 
 }
 
-/*propiedades item img*/
+
 .img_item {
     width: 350px;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
 }
