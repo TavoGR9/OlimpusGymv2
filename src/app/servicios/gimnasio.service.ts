@@ -9,6 +9,8 @@ import { gimnasio } from './gimnasio';
 export class GimnasioService {
 
   API: string = 'http://localhost/plan/gimnasio.php'
+  APISERVICE: string = 'https://olympus.arvispace.com/puntoDeVenta/conf/serviciosGym.php';
+
   constructor(private clienteHttp:HttpClient) {
   }
 
@@ -33,6 +35,10 @@ export class GimnasioService {
     console.log("si entro aca") 
     return this.clienteHttp.get(this.API+"?borrar="+id)
     //this.message = "¡Error al eliminar!, Restricción en la base de datos";
+  }
+
+  getServicesForId(id: any): Observable<any> {
+    return this.clienteHttp.post(this.APISERVICE, { id: id });
   }
 
 }

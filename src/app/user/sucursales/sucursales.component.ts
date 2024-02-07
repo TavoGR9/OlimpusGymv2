@@ -2,11 +2,12 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ConnectionService } from 'src/app/servicios/connection.service';
 
 import { Component, OnInit, ViewChild, ElementRef,AfterViewInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { sucursal } from 'src/app/servicios/sucursal';
 import { plan } from 'src/app/servicios/plan';
 import { SucursalService } from 'src/app/servicios/sucursal.service';
 import { PlanService } from 'src/app/servicios/plan.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { TestService } from 'src/app/servicios/test.service';
 
 @Component({
   selector: 'app-sucursales',
@@ -23,14 +24,26 @@ export class SucursalesComponent implements OnInit {
   gimnasiosPerPage = 4;
   displayedGimnasios: sucursal[] = [];
   startIndex = 0;
+  elID: any;
+  gymName: any;
   public hasMoreRecords = true;
 
   constructor(
     private router: Router,
     private sucursalService: SucursalService,
     private planService: PlanService,
-    private http: ConnectionService, private fb: FormBuilder 
+    private http: ConnectionService, private fb: FormBuilder ,private activeRoute: ActivatedRoute,private testService: TestService
   ) {
+
+    this.elID = this.activeRoute.snapshot.paramMap.get('id');
+    this.gymName = this.activeRoute.snapshot.paramMap.get('idName');
+    console.log(this.elID);
+  console.log(this.gymName);
+
+  this.testService.idGym=this.elID;
+  this.testService.nameGym=this.gymName;
+
+
     this.form = this.fb.group({
       casilleros: [false],
       estacionamiento: [false],
@@ -79,6 +92,8 @@ export class SucursalesComponent implements OnInit {
         });
       });
     });
+
+    this.sucursalesFiltradas = this.sucursales;
   }
 
   loadMoreGimnasios() {
@@ -91,5 +106,38 @@ export class SucursalesComponent implements OnInit {
     if (endIndex >= this.sucursales.length) {
       this.hasMoreRecords = false; // Ya no hay más registros
     }
-  } 
+  }
+  
+  dataSourceReenovacion: any;
+  applyFilterReenovacion(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSourceReenovacion.filter = filterValue.trim().toLowerCase();
+  }
+
+  palabraClave: string = ''; 
+  gimnasios: any[] = [];
+  
+  sucursalesFiltradas: any[] = [];
+  
+  filtrarSucursales(): void {
+    // Aplica el filtro
+    this.displayedGimnasios = this.sucursales.filter((sucursal) =>
+      this.cumpleCriterio(sucursal)
+    );
+  }
+  
+  cumpleCriterio(sucursal: any): boolean {
+    // Implementa tu lógica de filtro aquí
+    const criterioBusqueda = this.palabraClave.toLowerCase();
+    return (
+      sucursal.nombreGym.toLowerCase().includes(criterioBusqueda) ||
+      sucursal.calle.toLowerCase().includes(criterioBusqueda) ||
+      sucursal.estado.toLowerCase().includes(criterioBusqueda) ||
+      sucursal.colonia.toLowerCase().includes(criterioBusqueda) ||
+      sucursal.ciudad.toLowerCase().includes(criterioBusqueda) ||
+      // Agrega más campos según sea necesario
+      false
+    );
+  }
+
 }
