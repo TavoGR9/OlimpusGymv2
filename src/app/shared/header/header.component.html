@@ -1,50 +1,28 @@
 
-<!--Toolbar-->
-<mat-toolbar>
-    <div class="grid_tool">
-        <div class="tool_logo">
-            <img class="logo_h" src="../../../assets/img/login-img/logo.jpeg">
-        </div>
-        <div class="tool_menu">
-            <button (click)="navegarPagina('index')" class="btn" mat-raised-button style="background: #FD9727; color: white;">
-                <p class="txt_btn_footer">Inicio</p></button>
-            <button (click)="navegarPagina('blog')" class="btn" mat-raised-button style="background: #FD9727; color: white;">
-                <p class="txt_btn_footer">Blog</p></button>
-            <button (click)="navegarPagina('tu-espacio')" class="btn" mat-raised-button style="background: #FD9727; color: white;">
-                <a class="txt_ext_link" href="https://olympus.arvispace.com/espacioCliente/">Tu espacio</a></button>
-            <button (click)="navegarPagina('sucursales')" class="btn" mat-raised-button style="background: #FD9727; color: white;">
-                <p class="txt_btn_footer">Sucursales</p></button>
-            <button (click)="navegarPagina('sobre-nosotros')" class="btn" mat-raised-button style="background: #FD9727; color: white;">
-                <p class="txt_btn_footer">Nosotros</p></button>
-            
-            <button (click)="navegarPagina('sucursales')" class="btn" mat-raised-button style="background: #FD9727; color: white;">
-                <p class="txt_btn_footer">¡Registrate!</p></button>
-<!---
-            <button class="btn_icon_user" mat-fab [matMenuTriggerFor]="menu" >
-                <fa-icon style="font-size: 40px;" [icon]="['fas', 'circle-user']"></fa-icon>
-              </button>
-              <mat-menu #menu="matMenu">
-                <button mat-menu-item (click)="navegarPagina('perfil-usuario')">
-                    <fa-icon style="font-size: 20px;" [icon]="['fas', 'circle-user']"></fa-icon>
-                  <span class="data_user">Mi perfil</span>
-                </button>
-                <hr width="90%" style="border-color: #6f42c1;">
-                <button mat-menu-item (click)="navegarPagina('login')">
-                    <fa-icon style="font-size: 20px;" [icon]="['fas', 'circle-user']"></fa-icon>
-                  <span class="data_user">Iniciar sesion</span>
-                </button>
-                <hr width="90%" style="border-color: #6f42c1;">
-                <button mat-menu-item >
-                    <fa-icon style="font-size: 20px;" [icon]="['fas', 'circle-user']"></fa-icon>
-                  <span class="data_user">Registrame</span>
-                </button>
-                <hr width="90%" style="border-color: #6f42c1;">
-                <button mat-menu-item>
-                    <fa-icon style="font-size: 20px;" [icon]="['fas', 'circle-user']"></fa-icon>
-                  <span class="data_user">Cerrar sesión</span>
-                </button>
-              </mat-menu>--->
-
-        </div>
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <img class="logo_h" src="../../../assets/img/login-img/logo.jpeg">
+        <button mat-fab class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background: #FD9727; color: white;">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item" id="ops" >
+                    <a class="nav-link" id="prueba" (click)="navegarPagina('index')" routerLinkActive="active">Inicio</a>
+                </li>
+                <li class="nav-item" id="ops" >
+                    <a class="nav-link" id="prueba" href="https://olympus.arvispace.com/espacioCliente/" routerLinkActive="active">Tu espacio</a>
+                </li>
+                <li class="nav-item" id="ops" >
+                    <a class="nav-link" id="prueba" (click)="navegarPagina('sucursales')" routerLinkActive="active">Sucursales</a>
+                </li>
+                <li class="nav-item" id="ops" >
+                    <a class="nav-link" id="prueba" (click)="navegarPagina('sobre-nosotros')" routerLinkActive="active">Nosotros</a>
+                </li>
+                <li class="nav-item" id="ops" >
+                    <a class="nav-link" id="prueba" (click)="navegarPagina('sucursales')" routerLinkActive="active">¡Registrate!</a>
+                </li>
+            </ul>
+          </div>
     </div>
-</mat-toolbar>
+</nav>

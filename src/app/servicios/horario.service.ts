@@ -7,6 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class horarioService {
   private apiUrl = 'http://localhost/plan/tablaHora.php'; // Cambia la URL a la de tu servicio PHP
+  APIHorario: string = 'https://olympus.arvispace.com/conPrincipal/horario.php'
+
 
   constructor(private http: HttpClient) {}
 
@@ -17,5 +19,9 @@ export class horarioService {
     };
 
     return this.http.get<any>(this.apiUrl, { params });
+  }
+
+  consultarHorario(id:any):Observable<any>{
+    return this.http.get(this.APIHorario+"?consultar="+id);
   }
 }

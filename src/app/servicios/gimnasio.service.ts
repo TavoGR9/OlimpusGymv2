@@ -8,7 +8,7 @@ import { gimnasio } from './gimnasio';
 })
 export class GimnasioService {
 
-  API: string = 'http://localhost/plan/gimnasio.php'
+  API: string = 'https://olympus.arvispace.com/gimnasioRoles/configuracion/administrador/gimnasio.php'
   APISERVICE: string = 'https://olympus.arvispace.com/puntoDeVenta/conf/serviciosGym.php';
 
   constructor(private clienteHttp:HttpClient) {
@@ -32,7 +32,7 @@ export class GimnasioService {
   }
 
   borrarSucursal(id:any):Observable<any>{
-    console.log("si entro aca") 
+ 
     return this.clienteHttp.get(this.API+"?borrar="+id)
     //this.message = "¡Error al eliminar!, Restricción en la base de datos";
   }

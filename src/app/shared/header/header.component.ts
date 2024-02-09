@@ -9,12 +9,9 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
 
   constructor(private router: Router) {
-
   }
-
+  
   navegarPagina(url: String): void {
-    console.log("Va a navegar", url);
-
     this.router.navigate([ url ]);
   }
 
