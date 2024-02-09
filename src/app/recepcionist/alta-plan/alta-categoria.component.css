@@ -1,0 +1,62 @@
+/* Agregar márgenes de 20px a los lados izquierdo y derecho sin afectar la parte superior e inferior */
+.mi-div-con-borde {
+    height: 750px; /* Altura */
+    background-color: #ffffff;
+    border: 1px solid #000;
+    color: #000000; /* Color del texto */
+    font-size: 18px; /* Tamaño de fuente */
+    border-radius: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  
+  /* Estilos para .inputs_properties */
+  .inputs_properties {
+    width: 230px;
+    padding-left: 15px;
+  }
+
+  .custom-tab-group .mat-tab-labels {
+    justify-content: flex-end;
+}
+  
+  /* Estilos para .label-with-margin */
+  .label-with-margin {
+    margin-right: 30px;
+  }
+  
+  /* Estilos para .large-text */
+  .large-text {
+    font-size: 20px;
+  }
+  
+  /* Estilos para .responsive-div */
+  .responsive-div {
+    width: 80%; /* El div ocupa todo el ancho disponible */
+    height: 100%;
+    margin: 0 auto; /* Centra el div horizontalmente en la pantalla */
+    padding: 20px; /* Agrega espaciado interno si es necesario */
+  }
+  
+  /* Estilos para .footer_component */
+  .footer_component {
+    position: relative;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    margin-top: 80px;
+   }
+  
+
+   /* Estilo para el rectángulo naranja en la parte superior del diálogo */
+.orange-header {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  padding: 8px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+  
+  

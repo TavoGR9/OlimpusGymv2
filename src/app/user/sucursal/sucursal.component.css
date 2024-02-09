@@ -1,145 +1,315 @@
-.mi-tabla {
-    margin-top: 2px;
-    margin-bottom: 50px;
-    margin-right: 100px;
-    margin-left:100px;
+.mi-tablas {
+  margin-top: 2px;
+  margin-bottom: 50px;
+  margin-right: 100px;
+  margin-left:100px;
 
-  }
-
-  .plan {
-    background-color: #DF7E54;
-    color:white;
-    font-size:200%;
-
-  }
-
-  .card{
-    border: 3px solid #DF7E54;
-    width:310px;
-  }
-
-  button{
-    width:250px;
-  }
-
-  .b2 {
-    border: 2px;
-    margin-right: 80px;
-    margin-left:80px;
-    background-color:#DF7E54;
-    color: white;
-    width: 150px;
-
-  }
-
-  .ayuda {
-    background-color: #000000;
-    color:white;
-    font-size:130%;
-
-  }
-
-  .tabla {
-    margin-top: 2px;
-    margin-bottom: 50px;
-    margin-left: 200px;
-    /* padding-right: 100px;
-    padding-left: 300px; */
-
-  }
-
-  .tool_logo{
-    border: 3px solid #DF7E54;
-  }
-
-  .uniforme{
-    background-color: #DF7E54;
-    color:white;
-    font-size:130%;
-    width:700px;
-    margin-left:330px;
-  }
-
- /**propiedades body **/
-.body {
-    margin: 0;
-    position: relative;
-    padding-bottom: 139px;
-    min-height:100vh;
 }
+
+.plan {
+  background-color: #DF7E54;
+  color:white;
+  font-size:200%;
+
+}
+
+.card{
+  border: 1px solid #DF7E54;
+  width:310px;
+}
+
+button{
+  width:250px;
+}
+
+.b2 {
+  border: 2px;
+  margin-right: 80px;
+  margin-left:80px;
+  background-color:#DF7E54;
+  color: white;
+  width: 150px;
+
+}
+
+.ayuda {
+  background-color: #000000;
+  color:white;
+  font-size:130%;
+
+}
+
+.tabla {
+  margin-top: 2px;
+  margin-bottom: 50px;
+  margin-left: 200px;
+  /* padding-right: 100px;
+  padding-left: 300px; */
+
+}
+
+.tool_logo{
+  border: 3px solid #DF7E54;
+}
+
+.uniforme{
+  background-color: #DF7E54;
+  color:white;
+  font-size:130%;
+  width:700px;
+  margin-left:330px;
+}
+
+/**propiedades body **/
+.body {
+  margin: 0;
+  position: relative;
+  padding-bottom: 139px;
+  min-height:100vh;
+  
+
+}
+
+
 
 /** CARRUSEL **/
 
 .slide {
-  position: relative;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.64);
-  margin-top: 0px;
-  margin-bottom: 0px;
+position: relative;
+box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.64);
+margin-top: 0px;
+margin-bottom: 0px;
 }
 
 .slide-inner {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: calc( 350px + 0em);
-  text-align: -webkit-center;
+position: relative;
+overflow: hidden;
+width: 100%;
+height: calc( 350px + 0em);
+text-align: -webkit-center;
 }
 
 .slide-open:checked + .slide-item {
-  position: static;
-  opacity: 100;
+position: static;
+opacity: 100;
 }
 
 .slide-item {
-  position: absolute;
-  opacity: 0;
-  /* -webkit-transition: opacity 0.6s ease-out;
-  transition: opacity 0.6s ease-out; */
+position: absolute;
+opacity: 0;
+/* -webkit-transition: opacity 0.6s ease-out;
+transition: opacity 0.6s ease-out; */
 }
 
 .slide-item img {
-  display: block;
-  /* height: auto; */
-  height: 400px;
-  max-width: 100%;
-  width: 80%;
-  text-align: center;
+display: block;
+/* height: auto; */
+height: 400px;
+max-width: 100%;
+width: 80%;
+text-align: center;
 }
 
 .slide-control {
-  background: rgba(0, 0, 0, 0);
-  border-radius: 50%;
-  color: #000;
-  cursor: pointer;
-  display: none;
-  font-size: 40px;
-  height: 40px;
-  line-height: 30px;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  text-align: center;
-  width: 40px;
-  z-index: 10;
+background: rgba(0, 0, 0, 0);
+border-radius: 50%;
+color: #000;
+cursor: pointer;
+display: none;
+font-size: 40px;
+height: 40px;
+line-height: 30px;
+position: absolute;
+top: 50%;
+-webkit-transform: translate(0, -50%);
+-ms-transform: translate(0, -50%);
+transform: translate(0, -50%);
+text-align: center;
+width: 40px;
+z-index: 10;
 }
 
 .slide-control.prev {
-  left: 2%;
+left: 2%;
 }
 
 .slide-control.next {
-  right: 2%;
+right: 2%;
 }
 
 .slide-control:hover {
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
+background: rgba(0, 0, 0, 0.8);
+color: #fff;
 }
 
 #slide-1:checked ~ .control-1,
 #slide-2:checked ~ .control-2,
 #slide-3:checked ~ .control-3 {
-  display: block;
+display: block;
 }
+
+
+
+
+
+
+.mi-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  color: #fff; /* Color del texto (blanco) */
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.mi-tabla td,
+.mi-tabla th {
+  padding: 10px;
+  text-align: left;
+  font-size: 20px; /* Tamaño de la letra para celdas normales */
+}
+
+.mi-tabla th {
+  background-color: #ff9100; /* Fondo naranja para encabezados */
+  color: #fff; /* Color del texto (blanco) para encabezados */
+  font-size: 20px; /* Tamaño de la letra para encabezados */
+}
+
+.mi-tabla td:first-child {
+  background-color: #d27300; /* Fondo naranja para la primera columna */
+}
+
+.mi-tabla td:nth-child(2),
+.mi-tabla td:nth-child(3) {
+  background-color: #1f2123; /* Fondo negro para las otras dos columnas */
+  color: #fff; /* Color del texto (blanco) para las otras dos columnas */
+  font-size: 20px; /* Tamaño de la letra para las otras dos columnas */
+}
+
+
+
+
+/* Puedes agregar estilos adicionales para otros elementos si es necesario */
+
+
+
+
+
+
+.titulo {
+font-size: 3rem; /* Puedes ajustar el tamaño del texto */
+font-weight: bold; /* Puedes ajustar el grosor del texto */
+color: #414141; /* Puedes ajustar el color del texto */
+margin-bottom: 10px; /* Puedes ajustar el margen inferior */
+/* Otros estilos según tus preferencias */
+}
+
+
+.membresias-caja {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+} 
+
+.membresia--inverse {
+  background: #1f2123;    
+}
+
+.membresia {
+  width: 342px;
+  height: 380px;
+  margin: 15px;
+  text-align: center;
+  border-radius: 15px;
+  padding-bottom: 50px;
+  position: relative;  
+  display: table-cell;
+  
+  vertical-align: top;
+  padding: 0 0 10px;
+  margin-bottom: 80px;   
+}
+
+
+.membresia_info {
+  padding: 0 40px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.membresia .membresia_info .membresia-titulo {
+  font-size: 25px;
+}
+.membresia-titulo {
+  font: 700 20px Roboto,helvetica,arial,sans-serif;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+}
+.membresia--inverse .membresia_list_item, .membresia--inverse .membresia_list_titulo, .membresia--inverse .membresia_list_trigger, .membresia--inverse .membresia_list__trigger__icon, .membresia--inverse .membresia-precio, .membresia--inverse .membresia-texto, .membresia--inverse .membresia-titulo {
+  color: #fff;  
+}
+
+.membresia-discla {
+  position: absolute;
+  bottom: -50px; /* Ajusta este valor para mover más hacia abajo */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.membresia_button {
+  width: 210px;
+}
+.membresia--buy, .membresia--leaked {
+  background-color: #fff;
+  border: 1px solid #dcd0e0;
+  color: #000;
+}
+
+.Button {
+  vertical-align: middle;
+  padding: 26px;
+  border: none;
+  border-radius: 2px;
+  background-color: #d27300;
+  font: 700 14px Roboto,helvetica,arial,sans-serif;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  outline: 0;
+  transition: background .5s ease;
+  border-radius: 15px;
+  
+}
+
+.cuerpo {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1em;
+  /* Otros estilos que desees agregar */
+}
+
+.clase{
+  font-size: 1.25em;
+}
+.titu{
+  font-size: 1.4em;
+  color: #fff
+}
+
+
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+}
+
+table td {
+/*padding: 20px;  Ajusta el valor según tu preferencia */
+ padding-right: 25px;
+}
+
+

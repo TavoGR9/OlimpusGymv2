@@ -78,16 +78,16 @@
                             <div class="content_link_item">
                                 <a routerLink="../sucursal"  routerLink="../sucursal/{{sucursal.idGimnasio}}/{{sucursal.nombreGym}}">Ver academia</a>
                             </div>
-                            <!-- cierra div content link item -->
+                           
                             <br>
                             <div class="content_pack_item">
-                                <p class="txt_palnes" style="text-align: center;">Inscripcion gratis</p>
+                                <p class="txt_palnes" style="text-align: center;">Inscríbete</p>
                             </div>
                             <div class="grid_plan_item">
-                                <div class="h1_plan_item" *ngFor="let membresia of sucursal.membresias">
-                                    <label class="txt_plan_name">{{membresia.titulo}}</label>
+                                <div class="h1_plan_item" *ngFor="let membresia of sucursal.membresias.slice(0, 3)">
+                                   <p><label class="txt_plan_name">{{membresia.titulo}}</label></p> 
                                     <!--<label class="txt_old_price">{{"$" + " " + membresia.precio}}</label>-->
-                                    <label class="txt_new_price">{{"$" + " " + membresia.precio}}</label>
+                                   <p><label class="txt_new_price">{{"$" + " " + membresia.precio}}</label></p>
                                 </div>
                                 <!--cierra div h1 plan item-->
                             </div>

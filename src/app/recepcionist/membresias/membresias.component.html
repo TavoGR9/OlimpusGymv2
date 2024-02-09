@@ -1,6 +1,23 @@
 <app-header></app-header>
+<div style="position: relative;">
+    <img src="../../../assets/img/GYMG.png" alt="Descripción de la imagen" style="width: 100%;">
+    <label class="personalize_plan_title labe" >Diseña tu plan</label>
+    <label class="personalize_plan_title lab">a tu manera</label>
+  <!-- <h1 style="position: absolute; top: 15%; left: 5%; color: white;" class="personalize_plan_title">Diseña tu plan</h1>
+    <h1 style="position: absolute; top: 25%; left: 5%; color: white;" class="personalize_plan_title">a tu manera</h1>--> 
+    <p  class="detail_personalize_plan la">Ahora ya puedes crear tus propios planes personalizados, comienza ahora y
+            elige tus servicios.</p>
+  
+    <button (click)="altaPlan()" style="position: absolute; top: 64%; left: 5%; background-color: #fd9727; color: white; width: 15%; height: 9%; border: none;">Comenzar ahora</button>
+    
+    <button (click)="scrollToPlanes()" style="position: absolute; top: 64%; right: 64%; width: 15%; height: 9%; border: none; cursor: pointer;">
+        Ver planes <span style="margin-left: 5px;">➔</span>
+      </button> 
+  </div>
+  
 <div class="body-membresia">
-    <div class="container mt-4">
+
+    <div #planesSection id="planes" class="container mt-4">
         <div>
             <h2 style="text-align: center;">PLANES</h2>
             <h6 style="text-align: center;color: orange;"> Tenemos el plan adecuado para ti</h6>
@@ -31,9 +48,10 @@
                     </div>
                 </div>
             </div>
-               
+               <br><br><br><br><br><br>
         </div>
     </div>
+<!--
     <div class="personalize_plan">
         <h2 class="personalize_plan_title">¿No te convencen los planes?</h2>
         <p class="detail_personalize_plan">Ahora ya puedes crear tus propios planes personalizados, comienza ahora y
@@ -63,14 +81,14 @@
                                     <label for="precio" class="large-text" style="margin-right: 28px;margin-left: 45px;">Precio:</label>
                                     <mat-form-field appearance="outline" class="inputs_properties" style="margin-right: 35px;" required>
                                         <mat-label>Precio</mat-label>
-                                        <input type="number" placeholder="Precio" matInput autocomplete="off" id="precio" formControlName="precio" readonly>
+                                        <input type="number" placeholder="Precio" matInput autocomplete="off" id="precio" formControlName="precio" readonly>-->
                                         <!--<mat-error *ngIf="isFieldInvalid('precio', 'required')">
                                             El precio es requerido.
                                           </mat-error>
                                           <mat-error *ngIf="isFieldInvalid('precio', 'pattern')">
                                             Solo se aceptan números.
                                           </mat-error>-->
-                                    </mat-form-field>
+                                   <!--</mat-form-field>
                                 </p>
                                 <p>
                                     <label for="detalles" class="large-text" style="display: inline-block; margin-right: 28px; vertical-align: top; margin-left: 45px;">Detalles:</label>
@@ -87,7 +105,7 @@
                                 </p>
                                 <br/>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-6">--> 
                                 
                                 <!--<p>
                                     <label for="duracion" class="large-text" style="margin-right: 40px;margin-left: 45px;">Duración:</label>
@@ -101,7 +119,7 @@
                                         </mat-select>
                                     </mat-form-field>
                                 </p>-->
-                                <p>
+                              <!--  <p>
                                     <label for="duracion" class="large-text" style="margin-right: 40px;margin-left: 45px;">Duración:</label>
                                     <mat-form-field style="width: 270px;height: 90px;" autocomplete="off" required>
                                         <mat-label style="font-family: Arial; font-size: 18px;">Seleccionar dias</mat-label>
@@ -121,9 +139,7 @@
                                     <mat-form-field required>
                                         <mat-label style="font-family: Arial; font-size: 18px;">Seleccionar servicios</mat-label>
                                         <mat-select formControlName="servicioseleccionado" multiple (selectionChange)="$event.value ? setPrice($event.value) : null">
-                                            <!--<mat-option *ngFor="let servicio of servicios" [value]="servicio">
-                                                {{servicio.nombre_servicio}}.......${{servicio.precio_unitario}}
-                                            </mat-option>-->
+                                            
         
                                             <ng-container *ngFor="let servicio of servicios">
                                                 <mat-option  [value]="servicio">
@@ -136,20 +152,14 @@
                                           </mat-error>
                                     </mat-form-field>
                                 </p>
-                                <!--<div class="services_selected">
+                                <div class="services_selected">
                                     <p><label style="margin-right: 40px;margin-left: 45px;" class="large-text">Servicios seleccionados:</label></p>
                                     <ul *ngFor="let selected of servicioSeleccionado">
                                         <li>{{selected.nombre_servicio}}</li>
                                     </ul>
-                                </div>-->
+                                </div>
     
-                                <!--<p><label style="margin-right: 40px;margin-left: 45px;" class="large-text">Estatus:</label></p>-->
-                               <!-- <p>
-                                        <mat-radio-group aria-label="Select an option" formControlName="status">
-                                            <mat-radio-button value=1>Activo</mat-radio-button>
-                                            <mat-radio-button value=0>Inactivo</mat-radio-button>
-                                          </mat-radio-group>
-                                </p>-->
+                              
     
                                 <!--<p>
                                     <label style="margin-left: 45px;" for="albercaAcc" class="large-text">Alberca:</label>
@@ -185,7 +195,7 @@
                                         <mat-radio-button value="Si" class="custom-radio-button" >Sí</mat-radio-button>
                                         <mat-radio-button value="No" class="custom-radio-button" >No</mat-radio-button>
                                     </mat-radio-group> 
-                                  </p>-->
+                                  </p>
                                 <br/>
                                 <br/>  
                             </div>
@@ -234,7 +244,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <div class="footerc">
         <app-footer></app-footer>
     </div>

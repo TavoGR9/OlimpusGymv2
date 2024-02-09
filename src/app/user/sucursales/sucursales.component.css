@@ -161,8 +161,9 @@
 
 .txt_plan_name, .txt_new_price {
     display: block;
-    font-weight: bold;
-}
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-bottom: 5px; /* Añade un pequeño margen inferior para separar los elementos */
+  }
 
 
 .txt_old_price {

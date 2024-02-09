@@ -37,8 +37,6 @@ export class SucursalesComponent implements OnInit {
 
     this.elID = this.activeRoute.snapshot.paramMap.get('id');
     this.gymName = this.activeRoute.snapshot.paramMap.get('idName');
-    console.log(this.elID);
-  console.log(this.gymName);
 
   this.testService.idGym=this.elID;
   this.testService.nameGym=this.gymName;
@@ -53,11 +51,11 @@ export class SucursalesComponent implements OnInit {
   }
 
   onNombreChange(){
-    console.log(this.form.value);
+
      
     this.http.filtrarSuc(this.form.value).subscribe({
       next: (resultData) => {
-        console.log(resultData);
+      
         this.sucursales = resultData;
         this.displayedGimnasios = this.sucursales.slice(0, this.gimnasiosPerPage); 
 
@@ -69,14 +67,13 @@ export class SucursalesComponent implements OnInit {
         
       },
       error: (error) => {
-        console.error(error);
+  
       }
     })
   }
   
   
   navegarPagina(url: string): void {
-    console.log('Va a navegar', url);
     this.router.navigate([url]);
   }
 

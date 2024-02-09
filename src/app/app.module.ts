@@ -72,6 +72,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { SucursalesAltaComponent } from './admin/sucursales-alta/sucursales-alta.component';
 import { SucursalesEditarComponent } from './admin/sucursales-editar/sucursales-editar.component';
 import { SucursalesListaComponent } from './admin/sucursales-lista/sucursales-lista.component';
+import { AltaPlanComponent } from './recepcionist/alta-plan/alta-categoria.component';
 
 
 @NgModule({
@@ -118,7 +119,8 @@ import { SucursalesListaComponent } from './admin/sucursales-lista/sucursales-li
     PagoInscripcionComponent,
     SucursalesAltaComponent,
     SucursalesEditarComponent,
-    SucursalesListaComponent
+    SucursalesListaComponent,
+    AltaPlanComponent
   ],
   imports: [
     BrowserModule,

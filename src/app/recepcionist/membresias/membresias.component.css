@@ -241,3 +241,56 @@ form mat-form-field {
 .inputformservice input {
     background-color: white;
 }
+
+.labe{
+    position: absolute; 
+    top: 15%; left: 5%; 
+    color: white;
+    font-size: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.lab{
+    position: absolute; 
+    top: 26%; 
+    left: 5%; 
+    color: white;
+    font-size: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.la{
+    position: absolute; 
+    top: 44%; 
+    left: 5%;
+    color: white;
+    font-size: 18px;
+}
+
+
+@media only screen and (max-width: 900px) {
+    label.personalize_plan_title {
+        font-size: 6vw;
+    }
+    
+    button {
+        font-size: 2vw;
+        height: 100%; 
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /* Ajusta los estilos según sea necesario para pantallas más pequeñas */
+    label.personalize_plan_title {
+        font-size: 6vw;
+    }
+
+    p.detail_personalize_plan {
+        font-size: 3vw;
+    }
+
+    button {
+        font-size: 2vw;
+        height: 100%; 
+    }
+}

@@ -96,22 +96,20 @@ export class AltaUsuarioComponent {
       curp: ['', Validators.compose([ Validators.minLength(18), Validators.pattern(/^[A-ZÑ0-9]*[A-Z][A-ZÑ0-9]*$/)])],
       email: ['', Validators.compose([Validators.required, Validators.pattern(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)])],  
       pass: ['', Validators.compose([Validators.required, Validators.minLength(8)])],
+      tiene_huella:[''],
+      fotoUrl:[''],
+      peso:['', Validators.compose([Validators.pattern(/^(0|[1-9][0-9]*)$/), Validators.max(300)])],
+      estatura:['', Validators.compose([Validators.pattern(/^(0|[1-9][0-9]*)$/), Validators.max(250)])],
       Gimnasio_idGimnasio:[testService.idGym],
-      Membresia_idMem:[this.idMembresia]
+      Membresia_idMem:[this.idMembresia],
     })
   }
 
   registrar(): any {
-    //console.log("Me presionaste");
-    //console.log(this.form.value.email);
-    console.log(this.form.value);
     this.email=this.form.value.email;
-    console.log(this.email);
-
     if(this.form.valid){
 
       this.clienteService.consultarEmail(this.email).subscribe((resultData) => {
-        console.log(resultData.msg);
         if(resultData.msg == 'emailExist'){
           this.toastr.warning('El correo ingresado ya existe.', 'Alerta!!!');
           

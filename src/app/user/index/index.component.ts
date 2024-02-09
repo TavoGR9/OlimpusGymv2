@@ -21,18 +21,18 @@ export class IndexComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.planService.obternerPlan().subscribe(respuesta=>{console.log(respuesta)
+    this.planService.obternerPlan().subscribe(respuesta=>{
     this.plan=respuesta;
     });
 
-    this.planService.obtenerProducts().subscribe(respuesta=>{console.log(respuesta)
+    this.planService.obtenerProducts().subscribe(respuesta=>{
+    
       this.products=respuesta;
       this.mostrarProducts();
     })
   }
 
   navegarPagina(url: String): void {
-    console.log("Va a navegar", url);
     this.router.navigate([ url ]);
   }
 
@@ -40,17 +40,16 @@ export class IndexComponent implements OnInit{
   mostrarProducts() {
     this.starIndex = 0;
     this.endIndex = 2;
-
     if(this.products) {
-      console.log("tengo datos :)");
+   
       for(let i = this.starIndex; i <= this.endIndex; i++) {
         const product = { ...this.products[i] };
         product.imageurl = this.products[i].imageurl;
         this.productsIndex.push(product);
-        console.log("ruta imagen:", product.imageurl);
+ 
       }
     } else {
-      console.log("algo salió mal :( ");
+
     }
 }
 
@@ -69,9 +68,6 @@ export class IndexComponent implements OnInit{
           const product = { ...this.products[i] };
           product.imageurl = this.products[i].imageurl;
           this.productsIndex.push(product);
-          console.log("URL de la imagen:", product.imageurl);
-          console.log("esto es lo que trae prodcut: ", product);
-          console.log("esto es lo que tiene productindex: ", this.productsIndex);
         }
       }
     } else {
@@ -101,7 +97,7 @@ export class IndexComponent implements OnInit{
       if (this.products[i] && 'name' in this.products[i]) {
         const product = { ...this.products[i] }; // Copia el producto
         this.productsIndex.push(product);
-        console.log("URL de la imagen:", product.imageurl);
+     
       }
     }
   

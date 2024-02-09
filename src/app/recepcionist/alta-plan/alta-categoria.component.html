@@ -1,0 +1,80 @@
+<div >
+   <div>
+      <form [formGroup]="formPlan">
+         <div >
+            <div class="row">
+               <div class="col-sm-6">
+                  <img src="../../../assets/img/GYMPLA.png" alt="Descripción de la imagen" style="width: 100%;">
+               </div>
+               <div class="col-sm-6">
+                  <br>
+                  <div class="row">
+                     <h5>Inicia tu plan ahora mismo de la manera más sencilla y conveniente posible.</h5>
+                     <br><br><br>
+                     <div class=" responsive-div">
+
+                     <div class="row">
+                              <label class="large-text">Titulo:</label>
+                              <mat-form-field appearance="outline" style="width: 100%;" required>
+                                 <mat-label>Titulo</mat-label>
+                                 <input type="text" matInput placeholder="Titulo" autocomplete="off" id="titulo" formControlName="titulo" readonly>
+                                 <mat-error *ngIf="isFieldInvalid('titulo', 'required')">
+                                    El título es requerido.
+                                 </mat-error>
+                                 <mat-error *ngIf="isFieldInvalid('titulo', 'pattern')">
+                                    Solo se aceptan letras.
+                                 </mat-error>
+                              </mat-form-field>
+                     </div>
+                     <div class="row">
+                        <label>Duración:</label>
+                                 <mat-form-field style="width: 100%" appearance="outline"  autocomplete="off" required>
+                                    <mat-label style="font-family: Arial; font-size: 18px;">Seleccionar dias</mat-label>
+                                    <input matInput type="number" name="duracion" id="duracion" formControlName="duracion">
+                                    <mat-error *ngIf="isFieldInvalid('duracion', 'required')">
+                                       la duracion es requerida.
+                                    </mat-error>
+                                    <mat-error *ngIf="isFieldInvalid('duracion', 'pattern')">
+                                       Solo se aceptan numeros.
+                                    </mat-error>
+                                 </mat-form-field>
+
+                     </div>
+                     <div class="row">
+                              <label>Elige tus servicios:</label>
+                              <mat-form-field required appearance="outline" style="width: 100%;"  >
+                                 <mat-label style="font-family: Arial; font-size: 18px;">Seleccionar servicios</mat-label>
+                                 <mat-select formControlName="servicioseleccionado" multiple (selectionChange)="$event.value ? setPrice($event.value) : null">
+                                    <!--<mat-option *ngFor="let servicio of servicios" [value]="servicio">
+                                       {{servicio.nombre_servicio}}.......${{servicio.precio_unitario}}
+                                       </mat-option>-->
+                                    <ng-container *ngFor="let servicio of servicios">
+                                       <mat-option  [value]="servicio">
+                                          ${{servicio.precio_unitario}}-{{servicio.nombre_servicio}}
+                                       </mat-option>
+                                    </ng-container>
+                                 </mat-select>
+                                 <mat-error *ngIf="isFieldInvalid('servicioseleccionado', 'required')">
+                                    los servicios son requeridos.
+                                 </mat-error>
+                              </mat-form-field> 
+                     </div>
+                     <div class="row">
+                        <label for="precio" class="large-text" >Precio:</label>
+                              <mat-form-field appearance="outline"  style="width: 100%;" required>
+                                 <mat-label>Precio</mat-label>
+                                 <input type="number" placeholder="Precio" matInput autocomplete="off" id="precio" formControlName="precio" readonly>
+                              </mat-form-field>
+                     </div>
+                     <div style="display: flex; justify-content: center;">
+                        <button  mat-stroked-button type="submit" (click)="validarFormulario()" style="background-color: #fd9727; font-size: 20px; margin-top: 17px; height: 40px; margin-right: 90px;">Aceptar</button>
+                        <button mat-stroked-button (click)="cancelar()" style="background-color: #000000; font-size: 20px; margin-top: 17px; height: 40px;color: white;">Cancelar</button>
+                     </div>
+                  </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </form>
+   </div>
+</div>

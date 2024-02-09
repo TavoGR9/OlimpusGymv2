@@ -14,7 +14,7 @@
 
 /**propiedades contenedor padre**/
 .content_body {
-    width: 1000px;
+    width: 78%;
     margin: 0 auto;
     text-align: center;
     align-items: center;
@@ -40,7 +40,7 @@
 
 /**propiedades inputs **/
 .inputs_properties {
-    width: 350px;
+    width: 70%;
 }
 
 /**propiedades btn redes sociales **/
