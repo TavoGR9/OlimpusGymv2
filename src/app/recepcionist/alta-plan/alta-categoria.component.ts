@@ -39,7 +39,7 @@ export class AltaPlanComponent implements OnInit {
     this.formPlan = this.formulario.group({
       titulo: ['Plan personalizado', [Validators.required, Validators.pattern(/^[^\d!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]+$/u)]],
       detalles: ['Este es un plan personalizado'],
-      duracion: ['', [Validators.required, Validators.pattern(/^\d+$/)]],
+      duracion: ['1', [Validators.required, Validators.pattern(/^\d+$/)]],
       servicioseleccionado: [[], Validators.required],
       precio: [''],
       status: ['1', [Validators.pattern(/^\d+$/)]],
@@ -54,6 +54,11 @@ export class AltaPlanComponent implements OnInit {
       if(respuesta){
         this.servicios = respuesta;
       }
+    });
+
+    const duracionControl = this.formPlan.get('duracion');
+    duracionControl?.valueChanges.subscribe(newValue => {
+      this.calculateTotalPay();
     });
    
   }
@@ -102,27 +107,53 @@ export class AltaPlanComponent implements OnInit {
     }
   }
 
+ 
   setPrice(servicios: any[]) {
-    this.prices = [];
-    if (servicios) {
-        servicios.forEach(servicio => {
-            this.prices.push(servicio.precio_unitario);
-        });
-
-        if (this.formPlan.value.duracion && this.formPlan.value.servicioseleccionado) {
-            this.totalPlanPersolnalized = this.prices.reduce((a, b) => a + b, 0);
-            this.totalPay = this.totalPlanPersolnalized * this.formPlan.value.duracion;
-
-            setTimeout(() => {
-                const precioControl = this.formPlan.get('precio');
-                if (precioControl) {
-                    precioControl.setValue(this.totalPay);
-                }
-            });
-        }
-    } else {
+    if (!servicios || !this.formPlan) {
+      console.log("No hay servicios o el formulario no está definido.");
+      return;
     }
-}
+
+    // Mapea los precios de los servicios
+    this.prices = servicios.map(servicio => servicio.precio_unitario);
+
+    // Imprime los precios antes de la reducción
+    console.log("Precios antes de la reducción:", this.prices);
+
+    // Reduce el array de precios
+    this.totalPlanPersolnalized = this.prices.reduce((a, b) => a + b, 0);
+
+    // Llama a la función para calcular el totalPay
+    this.calculateTotalPay();
+  }
+
+  calculateTotalPay() {
+    // Obtiene el control de duración del formulario
+    const duracionControl = this.formPlan.get('duracion');
+
+    // Verifica si hay un cambio en la duración
+    if (duracionControl && (duracionControl.dirty || duracionControl.value !== null)) {
+      // Multiplica por la duración solo si hay un cambio
+      this.totalPay = this.totalPlanPersolnalized * duracionControl.value;
+
+      // Imprime el totalPay
+      console.log("this.totalPay", this.totalPay);
+
+      // Utiliza setTimeout para asegurar que el valor se ha actualizado
+      setTimeout(() => {
+        const precioControl = this.formPlan.get('precio');
+        if (precioControl) {
+          precioControl.setValue(this.totalPay);
+        }
+      });
+    } else {
+      console.log("La duración no ha cambiado o es nula, no se realizó el cálculo.");
+    }
+  }
+
+
+
+
 cancelar(){
   this.dialogo.close(true);
 }
