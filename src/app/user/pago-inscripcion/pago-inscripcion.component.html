@@ -25,7 +25,7 @@
           <label class="form-check-label" for="pp">Pago vía Paypal</label>
         </div>
 
-        <!-- CONTENEDOR OPCION DE PAGO #1 PAGO CON TARJETA-->
+        <!-- CONTENEDOR OPCION DE PAGO #1 PAGO CON TARJETA
         <div *ngIf="radioSeleccionado === 'contenedor1'" class="my-3 col text-center">
             <h5>Ingresa una nueva tarjeta</h5>
           <form [formGroup]="form" (ngSubmit)="hacerAlgo()">
@@ -87,9 +87,9 @@
                 Cancelar</button>
               <button type="submit" class="btn_ok_cancel" mat-raised-button style="background: #FD9727; color: white;">
                 Confirmar compra</button>
-            </div><!--cierra div contenido bloque btns_ok_cancel-->
+            </div>
           </form>
-        </div>
+        </div>-->
 
         <!-- CONTENEDOR OPCION DE PAGO #2 PAGO EN EFECTIVO-->
         <div *ngIf="radioSeleccionado === 'contenedor2'">
