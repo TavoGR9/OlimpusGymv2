@@ -14,7 +14,7 @@
                      <div class=" responsive-div">
 
                      <div class="row">
-                              <label class="large-text">Titulo:</label>
+                              <label >Titulo:</label>
                               <mat-form-field appearance="outline" style="width: 100%;" required>
                                  <mat-label>Titulo</mat-label>
                                  <input type="text" matInput placeholder="Titulo" autocomplete="off" id="titulo" formControlName="titulo" readonly>
@@ -28,18 +28,18 @@
                      </div>
                      <div class="row">
                         <label>Duración:</label>
-                                 <mat-form-field style="width: 100%" appearance="outline"  autocomplete="off" required>
-                                    <mat-label style="font-family: Arial; font-size: 18px;">Seleccionar dias</mat-label>
-                                    <input matInput type="number" name="duracion" id="duracion" formControlName="duracion">
-                                    <mat-error *ngIf="isFieldInvalid('duracion', 'required')">
-                                       la duracion es requerida.
-                                    </mat-error>
-                                    <mat-error *ngIf="isFieldInvalid('duracion', 'pattern')">
-                                       Solo se aceptan numeros.
-                                    </mat-error>
-                                 </mat-form-field>
-
-                     </div>
+                        <mat-form-field style="width: 100%" appearance="outline" autocomplete="off" required>
+                          <mat-label style="font-family: Arial; font-size: 18px;">Seleccionar días</mat-label>
+                          <input matInput type="number" name="duracion" id="duracion" formControlName="duracion" min="1">
+                          <mat-error *ngIf="isFieldInvalid('duracion', 'required')">
+                            La duración es requerida.
+                          </mat-error>
+                          <mat-error *ngIf="isFieldInvalid('duracion', 'pattern')">
+                            Solo se aceptan números.
+                          </mat-error>
+                        </mat-form-field>
+                      </div>
+                      
                      <div class="row">
                               <label>Elige tus servicios:</label>
                               <mat-form-field required appearance="outline" style="width: 100%;"  >
@@ -60,7 +60,7 @@
                               </mat-form-field> 
                      </div>
                      <div class="row">
-                        <label for="precio" class="large-text" >Precio:</label>
+                        <label>Precio:</label>
                               <mat-form-field appearance="outline"  style="width: 100%;" required>
                                  <mat-label>Precio</mat-label>
                                  <input type="number" placeholder="Precio" matInput autocomplete="off" id="precio" formControlName="precio" readonly>

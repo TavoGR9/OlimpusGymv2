@@ -115,6 +115,7 @@ export class AltaUsuarioComponent {
           
         }
         if(resultData.msg == 'emailNotExist'){
+          console.log(this.form.value, "this.form.value");
           this.clienteService.agregarCliente(this.form.value).subscribe((respuesta) => {
             this.dialog.open(MensajeEmergentesComponent, {
               data: `Usuario registrado exitosamente`,
