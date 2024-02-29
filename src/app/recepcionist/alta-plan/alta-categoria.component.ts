@@ -88,6 +88,7 @@ export class AltaPlanComponent implements OnInit {
       });
       this.planService.agregarPlan(this.formPlan.value).subscribe(respuesta => {
         if(respuesta){
+          console.log(respuesta, "respuesta");
           this.dialog.open(MensajeEmergentesComponent, {
             data: `Tu plan se ha creado con éxito. Por favor, continúa con el siguiente paso en tu proceso.`,
           })
@@ -96,7 +97,10 @@ export class AltaPlanComponent implements OnInit {
             if (cerrarDialogo) {
               this.dialogo.close(true);
              // this.router.navigate(['/registro', respuesta.id]);
-             this.router.navigate(['/registro', respuesta.id, respuesta.precio, respuesta.titulo]);
+             this.router.navigate(['/registro', respuesta.registroInsertado.idMem, respuesta.registroInsertado.titulo, respuesta.registroInsertado.precio]).catch(error => {
+              console.error('Error de navegación:', error);
+            });
+            
             } else {
               // Hacer algo si no se quiere cerrar el diálogo
             }
